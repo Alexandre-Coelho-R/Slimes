@@ -1,0 +1,127 @@
+/* GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+header {
+    min-height: 100px;
+
+    display: flex;
+    align-items: center;
+    padding: 12px 6%;
+
+    border-bottom: 2px solid rgb(22, 139, 210);
+    background-color: rgb(7, 22, 65);
+
+    position: sticky;
+    top: 0;
+}
+
+/* Logo */
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo > img {
+    width: 250px;
+}
+
+/* Menu */
+#menus {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 2rem;
+}
+
+#menus a {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 12px 18px;
+
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    background-color: rgb(21, 42, 97);
+    border: 2px solid white;
+    border-radius: 30px;
+
+    transition: transform 0.25s ease;
+}
+
+#menus a#ativo {
+    background-color: green;
+}
+
+#menus a:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.2);
+}
+
+/* FOOTER */
+
+/* RESPONSIVIDADE */
+@media (width < 850px){
+    #logo {
+        display: none;
+    }
+    #menus {
+        width: 100%;
+        gap: 1rem;
+        margin: 0;
+        justify-content: space-evenly;
+    }
+}
+
+@media (width < 500px){
+    #menus {
+        gap: 0.5rem;
+    }
+    #menus a {
+        font-size: 15px;
+    }
+}
+
+@media (width < 400px){
+    #menus {
+        gap: 0.3rem;
+    }
+    #menus a {
+        padding: 10px 16px;
+        font-size: 12px;
+    }
+}
+
+@media (width < 350px){
+    header {
+        min-height: 80px;
+        padding: 8px 4px;
+    }
+    #menus a {
+        gap: 7px;
+        padding: 6px 10px;
+    }
+}
+
+@media (width < 250px){
+    #menus a p {
+        display: none;
+    }
+    #menus a {
+        font-size: 20px;
+    }
+}
+
+@media (width < 180px){
+    #menus {
+        gap: 0;
+    }
+    #menus a {
+        font-size: 15px;
+    }
+}
