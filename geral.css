@@ -27,7 +27,7 @@ header {
 }
 
 #logo > img {
-    width: 250px;
+    width: 300px;
 }
 
 /* Menu */
@@ -64,6 +64,11 @@ header {
 }
 
 /* FOOTER */
+
+footer {
+    height: 100px;
+    background-color: rgb(7, 22, 65);
+}
 
 /* RESPONSIVIDADE */
 @media (width < 850px){
