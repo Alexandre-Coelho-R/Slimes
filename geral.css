@@ -63,13 +63,6 @@ header {
     filter: brightness(1.2);
 }
 
-/* FOOTER */
-
-footer {
-    height: 100px;
-    background-color: rgb(7, 22, 65);
-}
-
 /* RESPONSIVIDADE */
 @media (width < 850px){
     #logo {
