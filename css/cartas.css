@@ -1,0 +1,99 @@
+main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Título */
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+/* Filtros */
+
+#filtros {
+    display: flex;
+    align-items: center;
+
+    padding: 0.5rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+#filtros > button {
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.3rem;
+    border-radius: 8px;
+}
+
+#filtros > button:hover {
+    cursor: pointer;
+}
+
+/* Catálogo */
+
+#catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    row-gap: 1rem;
+    column-gap: 0.5rem;
+}
+
+#catalogo > img {
+    width: 100%;
+    border-radius: 10px;
+    
+}
+
+#catalogo > img:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+/* Clicar em carta */
+
+#carta-ampliada {
+    display: none;
+}
+
+#carta-ampliada.aberta {
+    display: flex;
+
+    position: fixed;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    top: 0; bottom: 0; right: 0; left: 0;
+    background-color: hsla(0, 0%, 0%, 0.447);
+}
+
+#carta-ampliada > img {
+    max-width: 67dvw;
+    max-height: 67dvh;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* Responsividade */
+
+@media (width < 800px) {
+    #filtros {
+        padding-top: 2rem;
+        gap: 1.2rem;
+    }
+
+    #filtros > button{
+        font-size: 1rem;
+    }
+}
