@@ -64,25 +64,31 @@ h2 {
 /* Clicar em carta */
 
 #carta-ampliada {
-    display: none;
-}
-
-#carta-ampliada.aberta {
     display: flex;
-
     position: fixed;
     z-index: 1;
     justify-content: center;
     align-items: center;
     top: 0; bottom: 0; right: 0; left: 0;
     background-color: hsla(0, 0%, 0%, 0.447);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+
+#carta-ampliada.aberta {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s;
 }
 
 #carta-ampliada > img {
-    max-width: 67dvw;
-    max-height: 67dvh;
+    max-width: 70dvw;
+    max-height: 70dvh;
     object-fit: contain;
     border-radius: 10px;
+
+    transition: transform 0.12s ease-out;
 }
 
 /* Responsividade */
