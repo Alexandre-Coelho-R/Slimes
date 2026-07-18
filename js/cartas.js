@@ -10,7 +10,223 @@ const btFerramentas = document.getElementById("ferramentas");
 
 const cartaAmpliada = document.getElementById("carta-ampliada");
 
-const cartas = [{nome:"Slime slime",categoria:"Slime",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Slime mágico",categoria:"Slime",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Slime primitivo",categoria:"Slime",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Slime solar",categoria:"Slime",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Slime de grama",categoria:"Slime",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Slime MUITO MUITO MUITO grande",categoria:"Slime",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Slime Alquimista",categoria:"Slime",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Slime comum",categoria:"Slime",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Slime buraco negro",categoria:"Slime",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Slime enfermeiro",categoria:"Slime",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Slime elétrico",categoria:"Slime",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Slime aquático",categoria:"Slime",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Slime espadachim",categoria:"Slime",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Fragilizador",categoria:"Slime",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Slime clérigo",categoria:"Slime",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Atomislime",categoria:"Slime",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Slime de magma",categoria:"Slime",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Dj slime",categoria:"Slime",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Slime de cola",categoria:"Slime",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Slime Ferreiro",categoria:"Slime",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Slime mago",categoria:"Slime",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Draconislime",categoria:"Slime",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Slime pescador",categoria:"Slime",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Slime escavador",categoria:"Slime",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Slime cozinheiro",categoria:"Slime",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Slime Viking",categoria:"Slime",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Aspirador de slime",categoria:"Item",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Soprador de slime",categoria:"Item",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"kit caça slime",categoria:"Item",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"colheita de gosma",categoria:"Item",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Slimonomicon",categoria:"Item",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Poção de escudo",categoria:"Item",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Poção de cura",categoria:"Item",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"relação interespecífica",categoria:"Ferramenta",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Ritual de desespero",categoria:"Ferramenta",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Dança das cadeiras",categoria:"Ação",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Imitar",categoria:"Ação",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Pesquisar",categoria:"Ação",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Reciclar",categoria:"Ação",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"EU ESCOLHO VOCÊ",categoria:"Ação",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Impressora",categoria:"Ação",imagem:"imagens/cartas/necromante-provisorio.webp"},{nome:"Limpar",categoria:"Ação",imagem:"imagens/cartas/necromante-provisorio.webp"}];
+const cartas = [
+  {
+    nome: "Atomislime",
+    categoria: "slime",
+    imagem: "imagens/cartas/ss_atomislime.webp"
+  },
+  {
+    nome: "Dj slime",
+    categoria: "slime",
+    imagem: "imagens/cartas/ss_djslime.webp"
+  },
+  {
+    nome: "Draconislime",
+    categoria: "slime",
+    imagem: "imagens/cartas/ss_draconislime.webp"
+  },
+  {
+    nome: "Fragilizador",
+    categoria: "slime",
+    imagem: "imagens/cartas/ss_fragilizador.webp"
+  },
+  {
+    nome: "Slime Alquimista",
+    categoria: "slime",
+    imagem: "imagens/cartas/ss_slime_alquimista.webp"
+  },
+  {
+    nome: "Slime aquático",
+    categoria: "slime",
+    imagem: "imagens/cartas/ss_slimeaquatico.webp"
+  },
+  {
+    nome: "Slime buraco negro",
+    categoria: "slime",
+    imagem: "imagens/cartas/ss_buraconegro.webp"
+  },
+  {
+    nome: "Slime clérigo",
+    categoria: "slime",
+    imagem: "imagens/cartas/ss_slimeclerigo.webp"
+  },
+  {
+    nome: "Slime comum",
+    categoria: "slime",
+    imagem: "imagens/cartas/ss_slimecomum.webp"
+  },
+  {
+    nome: "Slime cozinheiro",
+    categoria: "slime",
+    imagem: "imagens/cartas/ss_slimecozinheiro.webp"
+  },
+  {
+    nome: "Slime de cola",
+    categoria: "slime",
+    imagem: "imagens/cartas/ss_slimedecola.webp"
+  },
+  {
+    nome: "Slime de grama",
+    categoria: "slime",
+    imagem: "imagens/cartas/ss_slimegrama.webp"
+  },
+  {
+    nome: "Slime de magma",
+    categoria: "slime",
+    imagem: "imagens/cartas/ss_slimemagma.webp"
+  },
+  {
+    nome: "Slime elétrico",
+    categoria: "slime",
+    imagem: "imagens/cartas/ss_slimeeletrico.webp"
+  },
+  {
+    nome: "Slime enfermeiro",
+    categoria: "slime",
+    imagem: "imagens/cartas/ss_slimeenfermeiro.webp"
+  },
+  {
+    nome: "Slime escavador",
+    categoria: "slime",
+    imagem: "imagens/cartas/ss_slimeescavador.webp"
+  },
+  {
+    nome: "Slime espadachim",
+    categoria: "slime",
+    imagem: "imagens/cartas/ss_slimeespadachim.webp"
+  },
+  {
+    nome: "Slime Ferreiro",
+    categoria: "slime",
+    imagem: "imagens/cartas/ss_slimeferreiro.webp"
+  },
+  {
+    nome: "Slime mágico",
+    categoria: "slime",
+    imagem: "imagens/cartas/ss_slimemagico.webp"
+  },
+  {
+    nome: "Slime mago",
+    categoria: "slime",
+    imagem: "imagens/cartas/ss_slimemago.webp"
+  },
+  {
+    nome: "Slime MUITO MUITO MUITO grande",
+    categoria: "slime",
+    imagem: "imagens/cartas/ss_slimegigante.webp"
+  },
+  {
+    nome: "Slime necromante",
+    categoria: "slime",
+    imagem: "imagens/cartas/ss_slimenecromante.webp"
+  },
+  {
+    nome: "Slime pescador",
+    categoria: "slime",
+    imagem: "imagens/cartas/ss_slimepescador.webp"
+  },
+  {
+    nome: "Slime primitivo",
+    categoria: "slime",
+    imagem: "imagens/cartas/ss_slimeprimitivo.webp"
+  },
+  {
+    nome: "Slime solar",
+    categoria: "slime",
+    imagem: "imagens/cartas/ss_slimesolar.webp"
+  },
+  {
+    nome: "Slime Viking",
+    categoria: "slime",
+    imagem: "imagens/cartas/ss_slimeviking.webp"
+  },
+  {
+    nome: "Aspirador de slime",
+    categoria: "item",
+    imagem: "imagens/cartas/ss_aspiradordeslime.webp"
+  },
+  {
+    nome: "colheita de gosma",
+    categoria: "item",
+    imagem: "imagens/cartas/ss_colheitadegosma.webp"
+  },
+  {
+    nome: "kit caça slime",
+    categoria: "item",
+    imagem: "imagens/cartas/ss_kitcacaslime.webp"
+  },
+  {
+    nome: "Poção de cura",
+    categoria: "item",
+    imagem: "imagens/cartas/ss_pocaodecura.webp"
+  },
+  {
+    nome: "Poção de escudo",
+    categoria: "item",
+    imagem: "imagens/cartas/ss_pocaodeescudo.webp"
+  },
+  {
+    nome: "Slimonomicon",
+    categoria: "item",
+    imagem: "imagens/cartas/ss_slimonomicon.webp"
+  },
+  {
+    nome: "Soprador de slime",
+    categoria: "item",
+    imagem: "imagens/cartas/ss_sopradordeslime.webp"
+  },
+  {
+    nome: "A CAIXA",
+    categoria: "item",
+    imagem: "imagens/cartas/ss_acaixa.webp"
+  },
+  {
+    nome: "Dança das cadeiras",
+    categoria: "ação",
+    imagem: "imagens/cartas/ss_dancacadeira.webp"
+  },
+  {
+    nome: "EU ESCOLHO VOCÊ",
+    categoria: "ação",
+    imagem: "imagens/cartas/ss_euescolhovoce.webp"
+  },
+  {
+    nome: "Imitar",
+    categoria: "ação",
+    imagem: "imagens/cartas/ss_imitar.webp"
+  },
+  {
+    nome: "Impressora",
+    categoria: "ação",
+    imagem: "imagens/cartas/ss_impressora.webp"
+  },
+  {
+    nome: "Limpar",
+    categoria: "ação",
+    imagem: "imagens/cartas/ss_limpar.webp"
+  },
+  {
+    nome: "Pesquisar",
+    categoria: "ação",
+    imagem: "imagens/cartas/ss_pesquisar.webp"
+  },
+  {
+    nome: "Reciclar",
+    categoria: "ação",
+    imagem: "imagens/cartas/ss_reciclar.webp"
+  },
+  {
+    nome: "relação interespecífica",
+    categoria: "ferramenta",
+    imagem: "imagens/cartas/ss_relacaointerespecifica.webp"
+  },
+  {
+    nome: "Ritual de desespero",
+    categoria: "ferramenta",
+    imagem: "imagens/cartas/ss_ritualdedesespero.webp"
+  }
+];
 
 //Função de mostrar cartas
 
@@ -105,25 +321,25 @@ btTodos.addEventListener("click", () => {
 });
 
 btSlimes.addEventListener("click", () => {
-    mostrarCartas(cartas.filter(carta => carta.categoria === "Slime"));
+    mostrarCartas(cartas.filter(carta => carta.categoria === "slime"));
     desativarCores();
     btSlimes.style.backgroundColor = "lightgreen";
 });
 
 btItens.addEventListener("click", () => {
-    mostrarCartas(cartas.filter(carta => carta.categoria === "Item"));
+    mostrarCartas(cartas.filter(carta => carta.categoria === "item"));
     desativarCores();
     btItens.style.backgroundColor = "lightgreen";
 });
 
 btAcoes.addEventListener("click", () => {
-    mostrarCartas(cartas.filter(carta => carta.categoria === "Ação"));
+    mostrarCartas(cartas.filter(carta => carta.categoria === "ação"));
     desativarCores();
     btAcoes.style.backgroundColor = "lightgreen";
 });
 
 btFerramentas.addEventListener("click", () => {
-    mostrarCartas(cartas.filter(carta => carta.categoria === "Ferramenta"));
+    mostrarCartas(cartas.filter(carta => carta.categoria === "ferramenta"));
     desativarCores();
     btFerramentas.style.backgroundColor = "lightgreen";
 });
