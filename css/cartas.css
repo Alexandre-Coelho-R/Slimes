@@ -71,26 +71,6 @@ main {
     cursor: pointer;
 }
 
-/* Deck */
-
-#deck {
-    display: none;
-}
-
-@media (width >= 1000px) {
-    main {
-        display: grid;
-        grid-template-columns: 70fr 30fr;
-    }
-
-    #deck {
-        display: flex;
-        height: 2000px;
-        width: 100%;
-        background-color: blueviolet;
-    }
-}
-
 /* Clicar em carta */
 
 #carta-ampliada {
