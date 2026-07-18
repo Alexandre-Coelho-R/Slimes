@@ -34,41 +34,54 @@
         </nav>
     </header>
 
+    <h1>Cartas do Pocket Slimes</h1>
+    <h2>Veja todas as cartas do jogo e monte seu deck!</h2>
+
+    <nav id="filtros">
+        <button id="todos" type="button">
+            <i class="fa-solid fa-table-cells-large"></i>
+            <p>Todas as cartas</p>
+        </button>
+
+        <button id="slimes" type="button">
+            <i class="fa-solid fa-droplet"></i>
+            <p>Slimes</p>
+        </button>
+
+        <button id="itens" type="button">
+            <i class="fa-solid fa-flask"></i>
+            <p>Itens</p>
+        </button>
+
+        <button id="acoes" type="button">
+            <i class="fa-solid fa-bolt"></i>
+            <p>Ações</p>
+        </button>
+
+        <button id="ferramentas" type="button">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <p>Ferramentas</p>
+        </button>
+    </nav>
+
     <main>
-        <!-- <h1>Cartas do Pocket Slimes</h1>
-        <h2>Veja todas as cartas do jogo!</h2> -->
-
-        <nav id="filtros">
-            <button id="todos" type="button">
-                <i class="fa-solid fa-table-cells-large"></i>
-                <p>Todas as cartas</p>
-            </button>
-
-            <button id="slimes" type="button">
-                <i class="fa-solid fa-droplet"></i>
-                <p>Slimes</p>
-            </button>
-
-            <button id="itens" type="button">
-                <i class="fa-solid fa-flask"></i>
-                <p>Itens</p>
-            </button>
-
-            <button id="acoes" type="button">
-                <i class="fa-solid fa-bolt"></i>
-                <p>Ações</p>
-            </button>
-
-            <button id="ferramentas" type="button">
-                <i class="fa-solid fa-screwdriver-wrench"></i>
-                <p>Ferramentas</p>
-            </button>
-        </nav>
-
         <section id="catalogo"></section>
 
-        <section id="carta-ampliada"></section>
+        <aside id="deck">
+            <div id="cabecalho-deck">
+                <h3>Meu deck</h3>
+                <p id="quantidade-cartas">0 cartas</p>
+            </div>
+
+            <section id="cartas-do-deck"></section>
+
+            <button id="limpar-deck" type="button">
+                Limpar deck
+            </button>
+        </aside>
     </main>
+
+    <section id="carta-ampliada"></section>
 
     <script src="js/cartas.js"></script>
 </body>

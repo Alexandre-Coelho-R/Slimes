@@ -1,18 +1,19 @@
-main {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
 /* Título */
 
 h1 {
-    font-size: 3rem;
+    font-size: 3.6rem;
+    color: rgb(7, 22, 65);
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 0.6rem;
+    font-family: 'Arial', sans-serif;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    color: rgb(140, 115, 190);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
 }
 
 /* Filtros */
@@ -20,7 +21,8 @@ h2 {
 #filtros {
     display: flex;
     align-items: center;
-
+    width: 100%;
+    justify-content: center;
     padding: 0.5rem;
     padding-top: 3rem;
     padding-bottom: 2rem;
@@ -41,19 +43,27 @@ h2 {
     cursor: pointer;
 }
 
+/* Main */
+
+main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Catálogo */
 
 #catalogo {
+    width: 95%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    row-gap: 1rem;
-    column-gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem 0.5rem;
 }
 
 #catalogo > img {
     width: 100%;
     border-radius: 10px;
-    
 }
 
 #catalogo > img:hover {
@@ -61,12 +71,32 @@ h2 {
     cursor: pointer;
 }
 
+/* Deck */
+
+#deck {
+    display: none;
+}
+
+@media (width >= 1000px) {
+    main {
+        display: grid;
+        grid-template-columns: 70fr 30fr;
+    }
+
+    #deck {
+        display: flex;
+        height: 2000px;
+        width: 100%;
+        background-color: blueviolet;
+    }
+}
+
 /* Clicar em carta */
 
 #carta-ampliada {
     display: flex;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     justify-content: center;
     align-items: center;
     top: 0; bottom: 0; right: 0; left: 0;
@@ -83,17 +113,29 @@ h2 {
 }
 
 #carta-ampliada > img {
-    max-width: 70dvw;
-    max-height: 70dvh;
+    height: 70dvh;
     object-fit: contain;
     border-radius: 10px;
-
     transition: transform 0.12s ease-out;
 }
 
 /* Responsividade */
 
+@media (width < 1000px) {
+    h1 {
+        margin-bottom: 0rem;
+    }
+    h2 {
+        display: none;
+    }
+}
+
 @media (width < 800px) {
+    h1 {
+        font-size: 2.8rem;
+        margin-top: 2rem;
+    }
+
     #filtros {
         padding-top: 2rem;
         gap: 1.2rem;
@@ -101,5 +143,25 @@ h2 {
 
     #filtros > button{
         font-size: 1rem;
+    }
+}
+
+@media (width < 580px){
+    h1 {
+        font-size: 2.4rem;
+        margin-top: 1.6rem;
+    }
+}
+
+@media (width < 480px){
+    h1 {
+        font-size: 2rem;
+        margin-top: 1.2rem;
+    }
+}
+
+@media (width < 300px){
+    h1 {
+        font-size: 1.7rem;
     }
 }
