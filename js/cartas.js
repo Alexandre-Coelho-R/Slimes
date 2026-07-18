@@ -312,6 +312,15 @@ cartaAmpliada.addEventListener("click", (evento) => {
     }
 });
 
+document.addEventListener("keydown", (evento) => {
+  if (evento.key === "Escape"){
+    if (cartaAmpliada.classList.contains("aberta")){
+        cartaAmpliada.classList.remove("aberta");
+        cartaAmpliada.innerHTML = "";
+    }
+  }
+});
+
 // Ao clicar nos filtros
 
 btTodos.addEventListener("click", () => {
