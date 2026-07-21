@@ -57,9 +57,9 @@ section {
     display: flex;
     align-items: center;
         
-    border: 1px solid black;
-    border-radius: 10px;
-    background-color: transparent;
+    border: 1px solid rgba(66, 84, 98, 0.709);
+    border-radius: 15px;
+    background-color: rgba(168, 219, 255, 0.527);
 
     padding: 0.5rem;
     font-size: 1.5rem;
@@ -67,7 +67,7 @@ section {
 }
 
 #botoes > button:hover {
-    background-color: rgba(0, 128, 0, 0.622);
+    background-color: rgba(0, 128, 0, 0.563);
     cursor: pointer;
 }
 
