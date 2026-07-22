@@ -85,8 +85,8 @@ section {
 }
 
 .secundario > i {
-    background-color: rgba(188, 184, 194, 0.256);
-    border: 1px solid rgba(188, 184, 194, 0.306);
+    background-color: rgb(245, 240, 253);
+    border: 1px solid rgba(0, 0, 0, 0.11);
     border-radius: 100%;
     padding: 3rem;
     font-size: 3rem;
