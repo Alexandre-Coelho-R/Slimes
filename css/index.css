@@ -74,7 +74,11 @@ section {
 #principal > img {
     object-fit: contain;
     width: 45%;
-}   
+}
+
+#principal > .dois {
+    display: none
+}
 
 /* Sections secundários */
 
@@ -111,7 +115,7 @@ section {
     font-size: 1rem;
     font-family: 'Arial', sans-serif;
     color: black;
-    text-align: justify;
+    text-align: left;
     margin: auto;
     margin-left: 0;
 }
@@ -276,6 +280,15 @@ section {
     }
 }
 
+@media (width < 500px){
+    #principal > .um {
+        display: none;
+    }
+    #principal > .dois {
+        display: inline;
+    }
+}
+
 @media (width < 450px) {
     main {
         padding: 1.2rem;
@@ -366,6 +379,21 @@ section {
         font-size: 0.9rem;
     }
     .secundario-textos > p {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (width < 250px) {
+    #textos > h2 {
+        display: none;
+    }
+    #textos > h1 {
+        margin-bottom: 0.768rem;
+    }
+}
+
+@media (width < 200px) {
+    .secundario-textos > p {
+        overflow-wrap: anywhere;
     }
 }

@@ -137,3 +137,9 @@ h2 {
         font-size: 1.7rem;
     }
 }
+
+@media (width <= 250px){
+    #catalogo {
+        grid-template-columns: 1fr;
+    }
+}
