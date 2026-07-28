@@ -147,9 +147,9 @@ const cartas = [
     imagem: "imagens/cartas/ss_aspiradordeslime.webp"
   },
   {
-    nome: "colheita de gosma",
+    nome: "Árvore de slime",
     categoria: "item",
-    imagem: "imagens/cartas/ss_colheitadegosma.webp"
+    imagem: "imagens/cartas/ss_arvoreslime.webp"
   },
   {
     nome: "kit caça slime",
