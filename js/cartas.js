@@ -281,8 +281,10 @@ function ampliarCarta(carta){
         const centroY = coordenadas.top + coordenadas.height / 2;
         const centroX = coordenadas.left + coordenadas.width / 2;
 
-        const relativoY = (2 * (mouseY - centroY) / coordenadas.height) * -15;
-        const relativoX = (2 * (mouseX - centroX) / coordenadas.width) * 15;
+        const mudanca = 15;
+
+        const relativoY = (2 * (mouseY - centroY) / coordenadas.height) * -mudanca;
+        const relativoX = (2 * (mouseX - centroX) / coordenadas.width) * mudanca;
 
         cartaCriada.style.transform = `
             perspective(800px)
@@ -351,4 +353,11 @@ btFerramentas.addEventListener("click", () => {
     mostrarCartas(cartas.filter(carta => carta.categoria === "ferramenta"));
     desativarCores();
     btFerramentas.style.backgroundColor = "lightgreen";
+
+    for (let i = 0; i < 10; i++){
+      const sabor_imagem = document.createElement("img");
+      sabor_imagem.src = "";
+      sabor_imagem.alt = "";
+      catalogo.appendChild(sabor_imagem);
+    }
 });
