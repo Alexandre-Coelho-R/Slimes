@@ -358,6 +358,7 @@ btFerramentas.addEventListener("click", () => {
       const sabor_imagem = document.createElement("img");
       sabor_imagem.src = "";
       sabor_imagem.alt = "";
+      sabor_imagem.style.cursor = "default";
       catalogo.appendChild(sabor_imagem);
     }
 });

@@ -64,6 +64,18 @@ header {
     filter: brightness(1.2);
 }
 
+footer {
+    min-height: 150px;
+
+    display: flex;
+    align-items: center;
+    padding: 12px 6%;
+
+    border-top: 2px solid rgb(22, 139, 210);
+    background-color: rgb(7, 22, 65);
+}
+
+
 /* RESPONSIVIDADE */
 @media (width < 850px){
     #logo {
