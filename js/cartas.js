@@ -228,6 +228,8 @@ const cartas = [
   }
 ];
 
+const possuiMouse = window.matchMedia("(pointer: fine)").matches;
+
 //Função de mostrar cartas
 
 function mostrarCartas(lista){
@@ -272,34 +274,36 @@ function ampliarCarta(carta){
 
     //Movimento ao mexer o mouse
 
-    cartaCriada.addEventListener("mousemove", (evento) => {
-        const coordenadas = cartaCriada.getBoundingClientRect();
+    if (possuiMouse){
+      cartaCriada.addEventListener("mousemove", (evento) => {
+          const coordenadas = cartaCriada.getBoundingClientRect();
 
-        const mouseX = evento.clientX;
-        const mouseY = evento.clientY;
+          const mouseX = evento.clientX;
+          const mouseY = evento.clientY;
 
-        const centroY = coordenadas.top + coordenadas.height / 2;
-        const centroX = coordenadas.left + coordenadas.width / 2;
+          const centroY = coordenadas.top + coordenadas.height / 2;
+          const centroX = coordenadas.left + coordenadas.width / 2;
 
-        const mudanca = 15;
+          const mudanca = 15;
 
-        const relativoY = (2 * (mouseY - centroY) / coordenadas.height) * -mudanca;
-        const relativoX = (2 * (mouseX - centroX) / coordenadas.width) * mudanca;
+          const relativoY = (2 * (mouseY - centroY) / coordenadas.height) * -mudanca;
+          const relativoX = (2 * (mouseX - centroX) / coordenadas.width) * mudanca;
 
-        cartaCriada.style.transform = `
-            perspective(800px)
-            rotateX(${relativoY}deg)
-            rotateY(${relativoX}deg)
-        `;
-    });
-
-    cartaCriada.addEventListener("mouseout", (evento) => {
+          cartaCriada.style.transform = `
+              perspective(800px)
+              rotateX(${relativoY}deg)
+              rotateY(${relativoX}deg)
+          `;
+      });      
+      
+      cartaCriada.addEventListener("mouseout", () => {
         cartaCriada.style.transform = `
             perspective(800px)
             rotateX(0deg)
             rotateY(0deg)
         `
-    });
+      });
+    }
 }
 
 //Inicialização
@@ -357,10 +361,7 @@ btFerramentas.addEventListener("click", () => {
     const larguraTela = window.innerWidth;
     if (larguraTela > 800) {
       for (let i = 2; i < larguraTela / 230; i++){
-        const sabor_imagem = document.createElement("img");
-        sabor_imagem.src = "";
-        sabor_imagem.alt = "";
-        sabor_imagem.style.cursor = "default";
+        const sabor_imagem = document.createElement("div");
         catalogo.appendChild(sabor_imagem);
       }
     }
