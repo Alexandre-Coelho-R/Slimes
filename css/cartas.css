@@ -14,6 +14,7 @@ h2 {
     color: rgb(140, 115, 190);
     text-align: center;
     font-family: 'Arial', sans-serif;
+    text-wrap: balance;
 }
 
 /* Filtros */
@@ -24,7 +25,7 @@ h2 {
     width: 100%;
     justify-content: center;
     padding: 0.5rem;
-    padding-top: 3rem;
+    padding-top: 2rem;
     padding-bottom: 2rem;
     gap: 2rem;
     flex-wrap: wrap;
@@ -51,7 +52,7 @@ h2 {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem 0.5rem;
     margin: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 #catalogo > img {
@@ -87,6 +88,7 @@ h2 {
 
 #carta-ampliada > img {
     height: 70dvh;
+    max-width: 80dvw;
     object-fit: contain;
     border-radius: 10px;
     transition: transform 0.12s ease-out;
@@ -94,28 +96,27 @@ h2 {
 
 /* Responsividade */
 
-@media (width < 1000px) {
-    h1 {
-        margin-bottom: 0rem;
-    }
-    h2 {
-        display: none;
-    }
-}
-
 @media (width < 800px) {
     h1 {
         font-size: 2.8rem;
         margin-top: 2rem;
     }
 
+    h2 {
+        font-size: 1.3rem;
+    }
+
     #filtros {
-        padding-top: 2rem;
+        padding-top: 1.6rem;
         gap: 1.2rem;
     }
 
     #filtros > button{
         font-size: 1rem;
+    }
+
+    #catalogo {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
@@ -124,6 +125,17 @@ h2 {
         font-size: 2.4rem;
         margin-top: 1.6rem;
     }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    #catalogo {
+        width: 98%;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem 0.35rem;
+        margin-bottom: 3rem;
+    }
 }
 
 @media (width < 480px){
@@ -131,15 +143,13 @@ h2 {
         font-size: 2rem;
         margin-top: 1.2rem;
     }
-}
 
-@media (width < 300px){
-    h1 {
-        font-size: 1.7rem;
+    h2 {
+        font-size: 1rem;
     }
 }
 
-@media (width <= 250px){
+@media (width < 270px) {
     #catalogo {
         grid-template-columns: 1fr;
     }

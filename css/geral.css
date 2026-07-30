@@ -5,11 +5,12 @@
     box-sizing: border-box;
 }
 
-html, body {
-    min-height: 100dvh;
+html {
+    min-height: 100%;
 }
 
 body {
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
 }
@@ -71,58 +72,6 @@ header {
 #menus a:hover {
     transform: translateY(-2px);
     filter: brightness(1.2);
-}
-
-/* RESPONSIVIDADE */
-@media (width < 850px){
-    #logo {
-        display: none;
-    }
-    #menus {
-        width: 100%;
-        gap: 1rem;
-        margin: 0;
-        justify-content: space-evenly;
-    }
-}
-
-@media (width < 500px){
-    #menus {
-        gap: 0.5rem;
-    }
-    #menus a {
-        font-size: 15px;
-    }
-}
-
-@media (width < 400px){
-    #menus {
-        gap: 0.3rem;
-    }
-    #menus a {
-        padding: 10px 16px;
-        font-size: 12px;
-    }
-}
-
-@media (width < 350px){
-    header {
-        min-height: 80px;
-        padding: 8px 4px;
-    }
-    #menus a {
-        gap: 7px;
-        padding: 6px 10px;
-    }
-}
-
-@media (width < 250px){
-    #menus a p {
-        display: none;
-    }
-    #menus a {
-        font-size: 18px;
-    }
 }
 
 /* FOOTER */
@@ -191,6 +140,50 @@ footer {
 #redes_contato > a:hover {
     transform: scale(1.03);
     cursor: pointer;
+}
+
+/* RESPONSIVIDADE */
+@media (width < 850px){
+    #logo {
+        display: none;
+    }
+    #menus {
+        width: 100%;
+        gap: 1rem;
+        margin: 0;
+        justify-content: space-evenly;
+    }
+}
+
+@media (width < 500px){
+    #menus {
+        gap: 0.5rem;
+    }
+    #menus a {
+        font-size: 16px;
+    }
+}
+
+@media (width < 400px){
+    #menus {
+        gap: 0.3rem;
+    }
+    #menus a {
+        padding: 10px 16px;
+    }
+    #menus a p {
+        display: none;
+    }
+    #menus a {
+        font-size: 20px;
+    }
+}
+
+@media (width < 350px){
+    header {
+        min-height: 80px;
+        padding: 8px 4px;
+    }
 }
 
 @media (width < 800px) {

@@ -259,7 +259,7 @@ function desativarCores(){
 //Função de ampliar carta quando clica nela
 
 function ampliarCarta(carta){
-    if (window.innerWidth < 500) return;
+    if (window.innerWidth < 270) return;
 
     cartaAmpliada.innerHTML = "";
 
@@ -354,11 +354,14 @@ btFerramentas.addEventListener("click", () => {
     desativarCores();
     btFerramentas.style.backgroundColor = "lightgreen";
 
-    for (let i = 0; i < 10; i++){
-      const sabor_imagem = document.createElement("img");
-      sabor_imagem.src = "";
-      sabor_imagem.alt = "";
-      sabor_imagem.style.cursor = "default";
-      catalogo.appendChild(sabor_imagem);
+    const larguraTela = window.innerWidth;
+    if (larguraTela > 800) {
+      for (let i = 2; i < larguraTela / 230; i++){
+        const sabor_imagem = document.createElement("img");
+        sabor_imagem.src = "";
+        sabor_imagem.alt = "";
+        sabor_imagem.style.cursor = "default";
+        catalogo.appendChild(sabor_imagem);
+      }
     }
 });
