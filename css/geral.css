@@ -92,7 +92,7 @@ footer {
 
 /* Textos do footer */
 
-#informacoes {
+.informacoes {
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
@@ -107,8 +107,35 @@ footer {
     text-align: center;
 }
 
-.footer_secao:hover{
+.footer_titulo {
+    color: white;
+    font-size: 2.25rem;
+    text-align: center;
+    font-weight: 1000;
+    color: rgb(119, 206, 221);
+}
+
+.informacoes > a:hover{
     transform: scale(1.01);
+}
+
+#subir {
+    width: 50px;
+    height: 50px;
+    border-radius: 100% ;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+    background-color: rgb(119, 206, 221);
+}
+
+#subir{
+    transform: scale(1.01);
+}
+
+li {
+    margin-bottom: 0.5rem;
+    overflow-wrap: break-word;
 }
 
 /* Redes sociais */
@@ -143,6 +170,32 @@ footer {
 }
 
 /* RESPONSIVIDADE */
+
+@media (width > 800px) {
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .bloco {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .informacoes {
+        flex-direction: column;
+    }
+    #redes_contato {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 2rem;
+    }
+    .footer_titulo {
+        margin-top: auto;
+    }
+}
+
 @media (width < 850px){
     #logo {
         display: none;
@@ -187,12 +240,16 @@ footer {
 }
 
 @media (width < 800px) {
-    #informacoes {
+    .informacoes {
         gap: 1.5rem;
     }
 
     .footer_secao {
         font-size: 1.6rem;
+    }
+
+    .footer_titulo {
+        font-size: 2rem;
     }
 
     #redes_contato {
@@ -205,12 +262,16 @@ footer {
 }
 
 @media (width < 700px) {
-    #informacoes {
+    .informacoes {
         gap: 1.4rem;
     }
 
     .footer_secao {
         font-size: 1.35rem;
+    }
+
+    .footer_titulo {
+        font-size: 1.7rem;
     }
 
     #redes_contato > a > img {
@@ -219,12 +280,16 @@ footer {
 }
 
 @media (width < 600px) {
-    #informacoes {
+    .informacoes {
         gap: 1.2rem;
     }
 
     .footer_secao {
         font-size: 1.2rem;
+    }
+
+    .footer_titulo {
+        font-size: 1.5rem;
     }
 
     #redes_contato {
@@ -256,7 +321,7 @@ footer {
 }
 
 @media (width < 300px) {
-    #informacoes {
+    .informacoes {
         flex-direction: column;
     }
     #redes_contato {
