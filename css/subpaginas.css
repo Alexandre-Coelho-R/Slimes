@@ -1,0 +1,38 @@
+h1 {
+    font-size: 3.6rem;
+    color: rgb(7, 22, 65);
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 0.6rem;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Responsividade */
+
+@media (width < 800px) {
+    h1 {
+        font-size: 2.8rem;
+        margin-top: 2rem;
+    }
+}
+
+@media (width < 580px){
+    h1 {
+        font-size: 2.4rem;
+        margin-top: 1.6rem;
+    }
+}
+
+@media (width < 480px){
+    h1 {
+        font-size: 2rem;
+        margin-top: 1.2rem;
+    }
+}
+
+@media (width < 480px){
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
