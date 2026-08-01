@@ -8,7 +8,10 @@
 </head>
 
 <body>
-    <?php include "componentes/header.php"?>
+    <?php 
+    $pagina_ativada = "cartas.php";
+    include "componentes/header.php";
+    ?>
 
     <main>
         <h1>Cartas do Pocket Slimes</h1>

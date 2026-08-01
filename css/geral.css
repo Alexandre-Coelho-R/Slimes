@@ -65,7 +65,7 @@ header {
     transition: transform 0.25s ease;
 }
 
-#menus a#ativo {
+#menus a.ativo {
     background-color: green;
 }
 

@@ -7,7 +7,10 @@
 </head>
 
 <body>
-    <?php include "componentes/header.php"?>
+    <?php 
+    $pagina_ativada = "index.php";
+    include "componentes/header.php";
+    ?>
 
     <main>
         <section id="principal">

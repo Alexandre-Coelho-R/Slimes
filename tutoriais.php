@@ -7,7 +7,10 @@
 </head>
 
 <body>
-    <?php include "componentes/header.php"?>
+    <?php 
+    $pagina_ativada = "tutoriais.php";
+    include "componentes/header.php";
+    ?>
 
     <main>
         <h1>Tutoriais do jogo</h1>
