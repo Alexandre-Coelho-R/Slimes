@@ -20,16 +20,16 @@
                 <legend>Envie uma mensagem</legend>
 
                 <label for="nome">Nome:</label>
-                <input type="text" name="nome" id="nome" required>
+                <input type="text" name="nome" id="nome" required maxlength="60">
 
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="email" required>
+                <input type="email" name="email" id="email" required maxlength="60">
 
                 <label for="assunto">Assunto:</label>
-                <input type="text" name="assunto" id="assunto" required>
+                <input type="text" name="assunto" id="assunto" required maxlength="60">
 
                 <label for="mensagem">Mensagem:</label>
-                <textarea name="mensagem" id="mensagem" required></textarea>
+                <textarea name="mensagem" id="mensagem" required  maxlength="1000"></textarea>
 
                 <button type="submit">Enviar</button>
             </fieldset>
