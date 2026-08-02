@@ -343,6 +343,9 @@ footer {
 }
 
 @media (width < 500px) {
+    .informacoes {
+        flex-direction: column;
+    }
     footer {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
@@ -373,10 +376,6 @@ footer {
 }
 
 @media (width < 350px) {
-    .informacoes {
-        flex-direction: column;
-    }
-    
     .footer_secao > li {
         font-size: 1.2rem;
     }
