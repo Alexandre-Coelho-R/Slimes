@@ -13,9 +13,9 @@
     <main>
         <h1>Contato</h1>
 
-        <p class="p_subpaginas">Nosso e-mail é pocket.slimes.cti@gmail.com. Você pode preencher o formulário abaixo para enviar uma mensagem se você tiver um aplicativo de e-mail configurado no dispositivo.</p>
+        <p class="p_subpaginas">Nosso e-mail é pocket.slimes.cti@gmail.com. Você pode preencher o formulário abaixo para enviar uma mensagem pelo aplicativo de e-mail configurado no dispositivo.</p>
 
-        <form id="form_contato">
+        <form id="form_contato" class="ultimo_conteiner">
             <fieldset>
                 <label for="nome">Nome:</label>
                 <input type="text" name="nome" id="nome" required maxlength="60">

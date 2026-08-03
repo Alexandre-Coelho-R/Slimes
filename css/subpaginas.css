@@ -22,6 +22,10 @@ h1 {
     margin-right: auto;
 }
 
+.ultimo_conteiner {
+    margin-bottom: 4rem;
+}
+
 /* Contato */
 
 #form_contato {
@@ -29,7 +33,6 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 4rem;
 }
 
 #form_contato fieldset {
@@ -78,6 +81,35 @@ h1 {
     padding: 0.2rem;
 }
 
+/* Desenvolvedores */
+
+#nozes {
+    width: 55%;
+    max-width: 700px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-self: center;
+    gap: 2rem;
+}
+
+#nozes > div {
+    display: grid;
+    grid-template-columns: 40fr 60fr;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.imagem_do_membro {
+    width: 100%;
+    object-fit: contain;
+}
+
+.nome_do_membro {
+    font-size: 1.5rem;
+    text-align: center;
+    text-wrap: balance;
+}
+
 /* Responsividade */
 
 @media (width < 1300px) {
@@ -85,6 +117,27 @@ h1 {
         font-size: 1.3rem;
         margin-bottom: 2rem;
         width: 85%;
+    }
+}
+
+@media (width < 1200px) {
+    #nozes {
+        width: 65%;
+    }
+
+    .nome_do_membro {
+        font-size: 1.4rem;
+    }
+}
+
+@media (width < 900px) {
+    #nozes {
+        width: 75%;
+        gap: 1.5rem;
+    }
+
+    .nome_do_membro {
+        font-size: 1.3rem;
     }
 }
 
@@ -101,8 +154,24 @@ h1 {
         width: 90%;
     }
 
-    #form_contato {
+    .ultimo_conteiner {
         margin-bottom: 3rem;
+    }
+
+    #nozes {
+        width: 85%;
+        gap: 1.2rem;
+    }
+}
+
+@media (width < 650px) {
+    #nozes {
+        width: 90%;
+        gap: 1rem;
+    }
+
+    .nome_do_membro {
+        font-size: 1.2rem;
     }
 }
 
@@ -123,6 +192,10 @@ h1 {
         width: 85%;
         padding: 1.2rem;
     }
+    
+    #nozes {
+        width: 90%;
+    }
 }
 
 @media (width < 480px){
@@ -138,7 +211,7 @@ h1 {
         width: 98%;
     }
 
-    #form_contato {
+    .ultimo_conteiner {
         margin-bottom: 2rem;
     }
 
@@ -170,5 +243,27 @@ h1 {
 
     #form_contato button {
         font-size: 1.4rem;
+    }
+
+    .nome_do_membro {
+        margin: 0 2rem;
+    }
+}
+
+@media (width < 390px) {
+    .nome_do_membro {
+        margin: 0;
+    }
+}
+
+@media (width < 350px) {
+    .nome_do_membro {
+        font-size: 1.1rem;
+    }
+}
+
+@media (width < 300px) {
+    .nome_do_membro {
+        font-size: 1rem;
     }
 }

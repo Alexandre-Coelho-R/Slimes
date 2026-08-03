@@ -11,6 +11,28 @@
 
     <main>
         <h1>Desenvolvedores</h1>
+
+        <section id="nozes" class="ultimo_conteiner">
+            <div>
+                <img class="imagem_do_membro" src="imagens/membros/frederico.webp" alt="Foto do membro Frederico">
+                <p class="nome_do_membro">Frederico Alvares Eckhardt nº 07</p>
+            </div>
+
+            <div>
+                <img class="imagem_do_membro" src="imagens/membros/kaua.webp" alt="Foto do membro Kauã">
+                <p class="nome_do_membro">Kauã Cesar da Silva Bento nº 19</p>
+            </div>
+
+            <div>
+                <img class="imagem_do_membro" src="imagens/membros/luca.webp" alt="Foto do membro Luca">
+                <p class="nome_do_membro">Luca Bressan Moretti nº 22</p>
+            </div>
+
+            <div>
+                <img class="imagem_do_membro" src="imagens/membros/renan.webp" alt="Foto do membro Renan">
+                <p class="nome_do_membro">Renan Alexandre Coelho nº 28</p>
+            </div>
+        </section>
     </main>
 
     <?php include "componentes/footer.php"?>
