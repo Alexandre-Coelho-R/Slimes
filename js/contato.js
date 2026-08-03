@@ -1,13 +1,5 @@
-const inputs = document.querySelectorAll("input[type='text'], input[type='email']");
 const textarea = document.querySelector("textarea");
 const formulario = document.getElementById("form_contato");
-
-inputs.forEach(input => {
-    input.addEventListener("input", () => {
-        input.style.width = `${1.1 * Math.max(18, input.value.length)}ch`;
-    })
-}
-)
 
 textarea.addEventListener("input", () => {
     textarea.style.height = "auto";

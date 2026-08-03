@@ -17,8 +17,6 @@
 
         <form id="form_contato">
             <fieldset>
-                <legend>Envie uma mensagem</legend>
-
                 <label for="nome">Nome:</label>
                 <input type="text" name="nome" id="nome" required maxlength="60">
 
