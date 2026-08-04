@@ -1,16 +1,13 @@
 const botao = document.getElementById("subir");
 
 function verificarScroll() {
-    if (document.documentElement.scrollHeight <= window.innerHeight + 3) {
-        botao.style.display = "none";
-    } else {
-        botao.style.display = "";
-    }
+    botao.style.display = (window.scrollY == 0) ? "none" : "";
 }
 
 botao.addEventListener("click", () => {
     window.scrollTo({top: 0, behavior: "smooth"});
 });
 
+window.addEventListener("scroll", verificarScroll);
 window.addEventListener("load", verificarScroll);
 window.addEventListener("resize", verificarScroll);
