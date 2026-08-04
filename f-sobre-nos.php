@@ -11,6 +11,12 @@
 
     <main>
         <h1>Sobre nós</h1>
+
+        <!-- 
+        nossa_historia
+        nossa_proposta
+        identidade_visual
+         -->
     </main>
 
     <?php include "componentes/footer.php"?>

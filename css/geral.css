@@ -15,6 +15,10 @@ body {
     flex-direction: column;
 }
 
+:root {
+  --azul-marinho: rgb(7, 22, 65);
+}
+
 /* HEADER */
 header {
     min-height: 100px;
@@ -24,7 +28,7 @@ header {
     padding: 12px 6%;
 
     border-bottom: 2px solid rgb(22, 139, 210);
-    background-color: rgb(7, 22, 65);
+    background-color: var(--azul-marinho);
 
     position: sticky;
     top: 0;
@@ -80,7 +84,7 @@ footer {
     min-height: 200px;
     padding: 1.5rem 10px;
     border-top: 2px solid rgb(22, 139, 210);
-    background-color: rgb(7, 22, 65);
+    background-color: var(--azul-marinho);
 
     display: flex;
     align-items: center;
