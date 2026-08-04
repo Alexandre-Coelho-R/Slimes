@@ -61,11 +61,11 @@ h1 {
     padding: 0 0.8rem;
 }
 
-#form_contato  input {
+#form_contato input {
     font-size: 1rem;
     width: 40ch;
     max-width: 90%;
-    text-align: center;
+    text-align: left;
     margin-bottom: 1.2rem;
 }
 
@@ -145,7 +145,8 @@ h1 {
 #mvv > div > p {
     font-size: 1.2rem;
     color: black;
-    text-align: left;
+    text-align: justify;
+    hyphens: auto;
 }
 
 #mvv > div > ul {
@@ -257,7 +258,7 @@ h1 {
 
 @media (width < 700px) {
     #mvv {
-        width: 97%;
+        width: 95%;
         gap: 1rem;
     }
 
