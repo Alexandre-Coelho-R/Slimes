@@ -5,7 +5,7 @@
         <a href="f-contato.php" class="footer_secao">Contato</a>
         <a href="f-desenvolvedores.php" class="footer_secao">Desenvolvedores</a>
         <a href="f-sobre-nos.php" class="footer_secao">Sobre nós</a>
-        <a href="f-m-v-l.php" class="footer_secao">Missão, visão e valores</a>
+        <a href="f-mvv.php" class="footer_secao">Missão, visão e valores</a>
     </div>
     </div>
 

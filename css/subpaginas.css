@@ -110,6 +110,51 @@ h1 {
     text-wrap: balance;
 }
 
+/* Missão, visão e valores */
+
+#mvv {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+    justify-self: center;
+    gap: 2rem;
+}
+
+#mvv > div {
+    border: 2px solid black;
+    border-radius: 2%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    color: lightblue;
+    text-align: center;
+}
+
+#mvv > div > i {
+    font-size: 6rem;
+    color: rgb(7, 22, 65);
+    margin-bottom: 1.5rem;
+}
+
+#mvv > div > h2 {
+    font-size: 2.5rem;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+#mvv > div > p {
+    font-size: 1.2rem;
+    color: black;
+    text-align: left;
+}
+
+#mvv > div > ul {
+    font-size: 1.2rem;
+    color: black;
+    text-align: left;
+    align-self: center;
+}
+
 /* Responsividade */
 
 @media (width < 1300px) {
@@ -128,6 +173,25 @@ h1 {
     .nome_do_membro {
         font-size: 1.4rem;
     }
+    
+    #mvv {
+        width: 90%;
+        gap: 2rem;
+    }
+
+    #mvv > div {
+        padding: 1rem;
+    }
+
+    #mvv > div > i {
+        font-size: 5.5rem;
+        margin-bottom: 1.2rem;
+    }
+
+    #mvv > div > h2 {
+        font-size: 2.2rem;
+        margin-bottom: 0.8rem;
+    }
 }
 
 @media (width < 900px) {
@@ -138,6 +202,33 @@ h1 {
 
     .nome_do_membro {
         font-size: 1.3rem;
+    }
+
+    #mvv {
+        width: 95%;
+        gap: 1.5rem;
+    }
+
+    #mvv > div {
+        padding: 0.8rem;
+    }
+
+    #mvv > div > i {
+        font-size: 5rem;
+        margin-bottom: 1rem;
+    }
+
+    #mvv > div > h2 {
+        font-size: 2.2rem;
+        margin-bottom: 0.7rem;
+    }
+
+    #mvv > div > p {
+        font-size: 1.1rem;
+    }
+
+    #mvv > div > ul {
+        font-size: 1.1rem;
     }
 }
 
@@ -164,6 +255,23 @@ h1 {
     }
 }
 
+@media (width < 700px) {
+    #mvv {
+        width: 97%;
+        gap: 1rem;
+    }
+
+    #mvv > div > i {
+        font-size: 4.5rem;
+        margin-bottom: 0.8rem;
+    }
+
+    #mvv > div > h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
 @media (width < 650px) {
     #nozes {
         width: 90%;
@@ -172,6 +280,10 @@ h1 {
 
     .nome_do_membro {
         font-size: 1.2rem;
+    }
+
+    #mvv {
+        gap: 0.7rem;
     }
 }
 
@@ -195,6 +307,14 @@ h1 {
     
     #nozes {
         width: 90%;
+    }
+}
+
+@media (width < 520px) {
+    #mvv {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
     }
 }
 
