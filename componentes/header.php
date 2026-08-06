@@ -27,7 +27,7 @@ $pagina_ativada = $pagina_ativada ?? "";
     </nav>
 
     <div id="acoes-header">
-        <a href="login.php">
+        <a href="usuario.php">
             <i class="fa-solid fa-user"></i>
         </a>
 

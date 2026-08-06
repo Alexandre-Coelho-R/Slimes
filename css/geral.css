@@ -28,6 +28,11 @@ header {
     align-items: center;
     padding: 1rem 4%;
     background-color: var(--azul-marinho);
+    border-bottom: 2px solid blue;
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 header a {
