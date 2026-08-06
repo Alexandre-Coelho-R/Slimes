@@ -20,9 +20,6 @@
                 <label for="nome">Nome:</label>
                 <input type="text" name="nome" id="nome" required maxlength="60">
 
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" required maxlength="60">
-
                 <label for="assunto">Assunto:</label>
                 <input type="text" name="assunto" id="assunto" required maxlength="60">
 
