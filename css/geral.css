@@ -20,53 +20,53 @@ body {
 }
 
 /* HEADER */
+
 header {
     min-height: 100px;
-
+    width: 100%;
     display: flex;
     align-items: center;
-    padding: 12px 6%;
-
-    border-bottom: 2px solid rgb(22, 139, 210);
+    padding: 1rem 5%;
     background-color: var(--azul-marinho);
-
-    position: sticky;
-    top: 0;
-    z-index: 1;
 }
 
-/* Logo */
+header a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(10, 32, 91);
+}
+
 #logo {
     display: flex;
     align-items: center;
 }
 
 #logo > img {
-    width: 300px;
+    width: 220px;
+    object-fit: contain;
+    display: block;
 }
 
-/* Menu */
 #menus {
+    margin: 0 auto;
     display: flex;
     align-items: center;
-    margin-left: auto;
-    gap: 2rem;
+    gap: 3rem;
+    font-size: 1.5rem;
 }
 
-#menus a {
+#menus > a {
     display: flex;
     align-items: center;
-    gap: 9px;
-    padding: 12px 18px;
+    gap: 0.5rem;
 
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    background-color: rgb(21, 42, 97);
-    border: 2px solid white;
+    padding: 0.6rem 1rem;
+    border: 1px solid black;
     border-radius: 30px;
 
-    transition: transform 0.25s ease;
+    transition:
+        transform 0.2s,
+        filter 0.2s;
 }
 
 #menus a.ativo {
@@ -76,6 +76,29 @@ header {
 #menus a:hover {
     transform: translateY(-2px);
     filter: brightness(1.2);
+}
+
+#acoes-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    font-size: 1.5rem;
+}
+
+#acoes-header > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem;
+    background-color: transparent;
+}
+
+#menu-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
 }
 
 /* FOOTER */
@@ -177,37 +200,6 @@ footer {
 
 /* RESPONSIVIDADE */
 
-@media (width < 500px){
-    #menus {
-        gap: 0.5rem;
-    }
-    #menus a {
-        font-size: 16px;
-    }
-}
-
-@media (width < 400px){
-    #menus {
-        gap: 0.3rem;
-    }
-    #menus a {
-        padding: 10px 16px;
-    }
-    #menus a p {
-        display: none;
-    }
-    #menus a {
-        font-size: 20px;
-    }
-}
-
-@media (width < 350px){
-    header {
-        min-height: 80px;
-        padding: 8px 4px;
-    }
-}
-
 @media (width > 1100px) {
     footer {
         display: grid;
@@ -254,15 +246,6 @@ footer {
 }
 
 @media (width < 850px){
-    #logo {
-        display: none;
-    }
-    #menus {
-        width: 100%;
-        gap: 1rem;
-        margin: 0;
-        justify-content: space-evenly;
-    }
     #subir {
         width: 40px;
         height: 40px;
