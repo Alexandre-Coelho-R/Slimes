@@ -103,6 +103,10 @@ header a {
     color: rgb(133, 255, 133);
 }
 
+#acoes-header a.ativo {
+    color: green;
+}
+
 #menu-mobile {
     display: none;
 }
@@ -231,10 +235,14 @@ header a {
         filter 0.2s;
     }
 
+    #menu-mobile i {
+        transition: transform 0.3s ease;
+    }
+
     #menu-mobile:hover {
         transform: translateY(-1px);
         filter: brightness(1.1);
-        color: green;
+        color: rgb(91, 139, 91);
         cursor: pointer;
     }
 

@@ -3,11 +3,14 @@
 const botao_hamburguer = document.getElementById("menu-mobile");
 const menus = document.getElementById("menus");
 const icone = document.getElementById("simbolo_hamburguer");
+let rotacionado = false;
 
 botao_hamburguer.addEventListener("click", () => {
     menus.classList.toggle("aberto");
     icone.classList.toggle("fa-bars");
     icone.classList.toggle("fa-xmark");
+    icone.style.transform = rotacionado ? "rotate(0deg)" : "rotate(180deg)";
+    rotacionado = !rotacionado;
 });
 
 // Scroll

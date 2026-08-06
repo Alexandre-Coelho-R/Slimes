@@ -27,11 +27,11 @@ $pagina_ativada = $pagina_ativada ?? "";
     </nav>
 
     <div id="acoes-header">
-        <a href="usuario.php">
+        <a href="usuario.php" class="<?php echo $pagina_ativada === "usuario.php" ? "ativo" : ""?>">
             <i class="fa-solid fa-user"></i>
         </a>
 
-        <a id="carrinho" href="carrinho.php">
+        <a href="carrinho.php" class="<?php echo $pagina_ativada === "carrinho.php" ? "ativo" : ""?>">
             <i class="fa-solid fa-cart-shopping"></i>
         </a>
 

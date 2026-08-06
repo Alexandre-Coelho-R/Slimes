@@ -7,8 +7,10 @@
 </head>
 
 <body>
-    <?php include "componentes/header.php"?>
-
+    <?php
+    $pagina_ativada = "carrinho.php";
+    include "componentes/header.php";
+    ?>
     <main>
     </main>
 
