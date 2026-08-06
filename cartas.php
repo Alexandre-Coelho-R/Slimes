@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <?php include "componentes/head.php"?>
-    <script src="js/cartas.js" defer></script>
-    <link rel="stylesheet" href="css/cartas.css">
+    <?php include "assets/componentes/head.php"?>
+    <script src="assets/js/cartas.js" defer></script>
+    <link rel="stylesheet" href="assets/css/cartas.css">
     <title>Pocket Slimes - Cartas</title>
 </head>
 
 <body>
     <?php 
     $pagina_ativada = "cartas.php";
-    include "componentes/header.php";
+    include "assets/componentes/header.php";
     ?>
 
     <main>
@@ -49,6 +49,6 @@
 
     </main>
 
-    <?php include "componentes/footer.php"?>
+    <?php include "assets/componentes/footer.php"?>
 </body>
 </html>

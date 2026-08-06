@@ -1,40 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <?php include "componentes/head.php"?>
-    <link rel="stylesheet" href="css/index.css">
+    <?php include "assets/componentes/head.php"?>
+    <link rel="stylesheet" href="assets/css/index.css">
     <title>Pocket Slimes - Início</title>
 </head>
 
 <body>
     <?php 
     $pagina_ativada = "index.php";
-    include "componentes/header.php";
+    include "assets/componentes/header.php";
     ?>
 
     <main>
-        <section id="principal">
+        <section id="hero-section">
             <div id="textos">
                 <h1>Pocket Slimes</h1>
-                <h2>Jogo de cartas de alunos do CTI Bauru!</h2>
-                <div id="botoes">
-                    <a class="botao" href="tutoriais.php">
-                        <i class="fa-solid fa-gamepad"></i>
-                        <span>Ver tutoriais</span>
-                    </a>
-
-                    <a class="botao" href="cartas.php">
-                        <i class="fa-solid fa-images"></i>
-                        <span>Abrir catálogo</span>
-                    </a>                 
-                </div>
+                <h2>O melhor (e único) TCG de slimes do mundo!</h2>
             </div>
-            <img class="um" src="imagens/cartas.webp" alt="Imagem contendo algumas das cartas do jogo">
-            <img class="dois" src="imagens/cartas2.webp" alt="Imagem contendo algumas das cartas do jogo">
+            <img class="um" src="assets/imagens/cartas.webp" alt="Imagem contendo algumas das cartas do jogo">
+            <img class="dois" src="assets/imagens/cartas2.webp" alt="Imagem contendo algumas das cartas do jogo">
         </section>
 
 
-        <section class="secundario">
+        <section class="site-navigation">
             <i class="fa-solid fa-book-open"></i>
             <div class="secundario-textos">
                 <h1 class="sem-emoji">Apresentação do projeto</h1>
@@ -43,7 +32,7 @@
             </div>
         </section>
        
-        <section class="secundario">
+        <section class="site-navigation">
             <i class="fa-solid fa-calendar-days"></i>
             <div class="secundario-textos">
                 <h1 class="sem-emoji">Como comprar o jogo?</h1>
@@ -52,7 +41,7 @@
             </div>
         </section>
         
-        <section class="secundario">
+        <section class="site-navigation">
             <i class="fa-solid fa-envelope"></i>
             <div class="secundario-textos">
                 <h1 class="sem-emoji">Equipe e contato</h1>
@@ -62,6 +51,6 @@
         </section>
     </main>
 
-    <?php include "componentes/footer.php"?>
+    <?php include "assets/componentes/footer.php"?>
 </body>
 </html>

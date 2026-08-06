@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <?php include "componentes/head.php"?>
-    <link rel="stylesheet" href="css/tutoriais.css">
+    <?php include "assets/componentes/head.php"?>
+    <link rel="stylesheet" href="assets/css/tutoriais.css">
     <title>Pocket Slimes - Tutoriais</title>
 </head>
 
 <body>
     <?php 
     $pagina_ativada = "tutoriais.php";
-    include "componentes/header.php";
+    include "assets/componentes/header.php";
     ?>
 
     <main>
@@ -25,6 +25,6 @@
         </section>
     </main>
 
-    <?php include "componentes/footer.php"?>
+    <?php include "assets/componentes/footer.php"?>
 </body>
 </html>

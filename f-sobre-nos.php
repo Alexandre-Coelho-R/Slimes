@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <?php include "componentes/head.php"?>
-    <link rel="stylesheet" href="css/subpaginas.css">
+    <?php include "assets/componentes/head.php"?>
+    <link rel="stylesheet" href="assets/css/subpaginas.css">
     <title>Pocket Slimes - Sobre nós</title>
 </head>
 
 <body>
-    <?php include "componentes/header.php"?>
+    <?php include "assets/componentes/header.php"?>
 
     <main>
         <h1>Sobre nós</h1>
