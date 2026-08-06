@@ -1,3 +1,17 @@
+// Header
+
+const botao_hamburguer = document.getElementById("menu-mobile");
+const menus = document.getElementById("menus");
+const icone = document.getElementById("simbolo_hamburguer");
+
+botao_hamburguer.addEventListener("click", () => {
+    menus.classList.toggle("aberto");
+    icone.classList.toggle("fa-bars");
+    icone.classList.toggle("fa-xmark");
+});
+
+// Scroll
+
 const botao = document.getElementById("subir");
 
 function verificarScroll() {

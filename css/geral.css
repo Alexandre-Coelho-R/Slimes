@@ -79,8 +79,8 @@ header a {
 }
 
 #menus a:hover {
-    transform: translateY(-2px);
-    filter: brightness(1.2);
+    transform: translateY(-1px);
+    filter: brightness(1.1);
 }
 
 #acoes-header {
@@ -105,6 +105,20 @@ header a {
 
 #menu-mobile {
     display: none;
+}
+
+#menus.aberto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 105px; left: 0; right: 0; bottom: 0;
+    padding-top: 2rem;
+    gap: 2rem;
+    background-color: var(--azul-marinho); 
+    width: 100dvw;
+    height: calc(100dvh - 105px);
+    z-index: 100;
 }
 
 @media (width < 1300px) {
@@ -211,7 +225,17 @@ header a {
         background: none;
         border: none;
         color: white;
-        font-size: 1.8rem;
+        font-size: 2rem;
+        transition:
+        transform 0.2s,
+        filter 0.2s;
+    }
+
+    #menu-mobile:hover {
+        transform: translateY(-1px);
+        filter: brightness(1.1);
+        color: green;
+        cursor: pointer;
     }
 
     #acoes-header {
@@ -245,7 +269,7 @@ header a {
     }
 
     #menu-mobile {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
 
     #acoes-header {
@@ -269,7 +293,7 @@ header a {
     }
 
     #menu-mobile {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
     #acoes-header {

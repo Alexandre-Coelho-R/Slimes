@@ -36,7 +36,7 @@ $pagina_ativada = $pagina_ativada ?? "";
         </a>
 
         <button id="menu-mobile" type="button">
-            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-bars" id="simbolo_hamburguer"></i>
         </button>
     </div>
 </header>
