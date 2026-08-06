@@ -4,7 +4,7 @@ $pagina_ativada = $pagina_ativada ?? "";
 
 <header>
     <a href="index.php" id="logo">
-        <img src="imagens/logo_provisoria.png" alt="Logo do projeto Pocket Slimes">
+        <img src="imagens/logo.webp" alt="Logo do projeto Pocket Slimes">
     </a>
 
     <nav id="menus">
