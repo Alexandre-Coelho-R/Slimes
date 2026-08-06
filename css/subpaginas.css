@@ -284,7 +284,9 @@ h1 {
     }
 
     #mvv {
-        gap: 0.7rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
     }
 }
 
@@ -308,14 +310,6 @@ h1 {
     
     #nozes {
         width: 90%;
-    }
-}
-
-@media (width < 520px) {
-    #mvv {
-        display: flex;
-        flex-direction: column;
-        gap: 1.2rem;
     }
 }
 
