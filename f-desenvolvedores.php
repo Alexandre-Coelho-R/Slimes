@@ -2,35 +2,76 @@
 <html lang="pt-br">
 <head>
     <?php include "componentes/head.php"?>
-    <link rel="stylesheet" href="assets/css/subpaginas.css">
+    <link rel="stylesheet" href="assets/css/geral.css">
     <title>Pocket Slimes - Desenvolvedores</title>
 </head>
 
 <body>
-    <?php include "assets/componentes/header.php"?>
+    <?php include "assets/componentes/header.php"  ?>
 
     <main>
-        <h1>Desenvolvedores</h1>
+        <h1 class="title">Desenvolvedores</h1>
 
-        <section id="nozes" class="ultimo_conteiner">
+        <section id="devs">
             <div>
-                <img class="imagem_do_membro" src="assets/imagens/membros/frederico.webp" alt="Foto do membro Frederico">
-                <p class="nome_do_membro">Frederico Alvares Eckhardt nº 07</p>
+                <img class="member-image" src="assets/imagens/membros/frederico.webp" alt="Foto do membro Frederico">
+                <div>
+                    <h2>Frederico Eckhardt</h2>
+                    <h2>N° 18</h2>
+                    <p><b>Produções</b></p>
+                    <ul>
+                        <li>Artista plástico;</li>
+                        <li>Produção das moedas comemorativas;</li>
+                        <li>Planejamento e confecção do stand de vendas;</li>
+                    </ul>
+                </div>
             </div>
 
             <div>
-                <img class="imagem_do_membro" src="assets/imagens/membros/kaua.webp" alt="Foto do membro Kauã">
-                <p class="nome_do_membro">Kauã Cesar da Silva Bento nº 19</p>
+                <img class="member-img" src="assets/imagens/membros/kaua.webp" alt="Foto do membro Kauã">
+                <div>
+                    <h2>Kauã César da Silva Bento</h2>
+                    <h2>N° 18</h2>
+
+                    <p><b>Produções</b></p>
+                    <ul>
+                        <li>Desenvolvedor das mecânicas de jogo;</li>
+                        <li>Balanceamento e confecção dos decks;</li>
+                        <li>Beta tester;</li>
+                        <li>Confecção do stand de vendas;</li>
+                    </ul>
+                </div>
             </div>
 
             <div>
-                <img class="imagem_do_membro" src="assets/imagens/membros/luca.webp" alt="Foto do membro Luca">
-                <p class="nome_do_membro">Luca Bressan Moretti nº 22</p>
+                <img class="member-img" src="assets/imagens/membros/luca.webp" alt="Foto do membro Luca">
+                <div>
+                    <h2>Luca Bressan Moretti</h2>
+                    <h2>N° 22</h2>
+                    <p><b>Produções</b></p>
+                    <ul>
+                        <li>Iniciativa do projeto e líder do grupo;</li>
+                        <li>Desenvolvedor front-end;</li>
+                        <li>Artista gráfico, confecção das cartas e artes para o jogo e à empresa;</li>
+                        <li>Beta tester;</li>
+                        <li>Criador do conceito visual do jogo;</li>
+                    </ul>
+                </div>
             </div>
 
             <div>
-                <img class="imagem_do_membro" src="assets/imagens/membros/renan.webp" alt="Foto do membro Renan">
-                <p class="nome_do_membro">Renan Alexandre Coelho nº 28</p>
+                <img class="member-img" src="assets/imagens/membros/renan.webp" alt="Foto do membro Renan">
+                <div>
+                    <h2>Renan Alexandre Coelho</h2>
+                    <h2>N° 28</h2>
+                    <p><b>Produções</b></p>
+                    <ul>
+                        <li>Desenvolvedor back-end;</li>
+                        <li>Integração do website com banco de dados;</li>
+                        <li>Confecção da estrutura do website;</li>
+                        <li>Desenvolvedor da aplicação em C# do caixa;</li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>

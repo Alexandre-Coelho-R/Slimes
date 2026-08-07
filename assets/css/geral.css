@@ -5,20 +5,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html {
     min-height: 100%;
 }
-
-/* HEADER */
-
+.title {
+    font-size: var(--big-text-size);
+    text-align: center;
+    
+    color: var(--middle-color-2);
+}
+/* 
+-----------------------------------
+HEADER
+----------------------------------- 
+*/
 header {
     min-height: 100px;
     width: 100%;
     display: flex;
     align-items: center;
-    padding: 1rem 5%;
+    justify-content: space-between;
+    padding: 5vh;
     background-color: var(--bigger-color);
 }
 
@@ -31,45 +41,15 @@ header a:not(#logo) {
 #logo {
     display: flex;
     align-items: center;
-    height: 15vh;
-    width: 0 auto;
+    height: 10vh;
 }
 
 #logo > img {
     width: 220px;
     object-fit: contain;
     display: block;
-}
-
-#menus {
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    font-size: 1.5rem;
-}
-
-#menus > a {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-
-    padding: 0.6rem 1rem;
-    border: 1px solid black;
-    border-radius: 30px;
-
-    transition:
-        transform 0.2s,
-        filter 0.2s;
-}
-
-#menus a.ativo {
-    background-color: green;
-}
-
-#menus a:hover {
-    transform: translateY(-2px);
-    filter: brightness(1.2);
+    width: 10vw;
+    height: 0 auto;
 }
 
 #acoes-header {
@@ -77,7 +57,7 @@ header a:not(#logo) {
     align-items: center;
     gap: 2rem;
 
-    font-size: var(--normal-text-size);
+    font-size: var(--medium-text-size);
 }
 
 #acoes-header > a {
@@ -88,14 +68,70 @@ header a:not(#logo) {
     background-color: transparent;
 }
 
-#menu-mobile {
+#header-navigation {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    display: none;
+    align-content: center;
+    justify-content: space-evenly;
+
+    background-color: var(--bigger-color);
+}
+#header-navigation a {
+    width:100%;
+    padding-top: .5rem;    
+    padding-bottom: .5rem;
+    
+    align-items: center;
+    
+    font-size: var(--normal-text-size);
+    color: white;
+    font-style: bold;
+    text-align: center;
+    text-decoration: none;
+
+    transition: 0.5s cubic-bezier(0.03, 0.46, 0.32, 0.98);
+}
+#header-navigation a:nth-child(1) {
+    border-left: 5px solid rgb(255, 0, 0);
+        
+    background:linear-gradient(rgb(255, 0, 0),rgb(255, 0, 0));
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    
+}
+#header-navigation a:nth-child(2) {
+    border-left: 5px solid rgb(255, 145, 0);
+
+    background:linear-gradient(rgb(255, 145, 0),rgb(255, 145, 0));
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    
+}
+#header-navigation a:nth-child(3) {
+    border-left: 5px solid rgb(0, 38, 255);
+
+    background:linear-gradient(rgb(0, 38, 255),rgb(0, 38, 255));
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+}
+#header-navigation a:nth-child(4) {
+    border-left: 5px solid rgb(255, 0, 255);
+
+    background:linear-gradient(rgb(255, 0, 255),rgb(255, 0, 255));
+    background-size: 0 100%;
+    background-repeat: no-repeat;
 }
 
-/* FOOTER */
+#header-navigation a:nth-child(n):hover {
+    background-size: 100% 100%;
+}
+
+/* 
+-----------------------------------
+FOOTER
+----------------------------------- 
+*/
 
 footer {
     min-height: 10vh;
@@ -135,7 +171,11 @@ footer {
     font-size: var(--normal-text-size);
 }
 
-/* Redes sociais */
+/* 
+-----------------------------------
+REDES SOCIAIS
+----------------------------------- 
+*/
 
 #redes_contato {
     display: flex;
@@ -162,4 +202,41 @@ footer {
 #redes_contato > a:hover {
     scale: 1.2;
     cursor: pointer;
+}
+/* 
+-----------------------------------------
+DESENVOLVEDORES
+----------------------------------------- 
+*/
+#devs{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-evenly;
+    padding: 3rem;
+
+}
+#devs > div {
+    width: 20%;
+    height: 100%;
+    background-color: var(--smaller-color);
+}
+
+#devs > div > img {
+    width: 100%;
+}
+#devs > div {
+    height: 100%;
+}
+#devs > div > div {
+    padding: 3rem;
+}
+#devs > div > div > ul {
+    list-style: none;
+    font-size: var(--normal-text-size);
+}
+#devs ul > li {
+    padding: .3rem;
 }

@@ -50,8 +50,8 @@
                     <img src="assets/imagens/Banner.png" alt="Banner">
                 </div>
                 <div class="site-navigation-text">
-                    <h2>Conheça nossos conteúdos</h2>
-                    <p>Nesse artigo, você será apresentado às diversas formas as quais estamos presentes na internet, principalmente redes socias. Venha ver nossos vídeos de curiosidades sobre o jogo e algumas ideias de decks para você testar!</p>
+                    <h2>Conheça a gente mais a fundo</h2>
+                    <p>Nesse artigo, você entenderá um pouco mais sobre a nossa empresa, nossas missões, visões e valores, além dos nossos conteúdos nas redes sociais</p>
                 </div>
             </a>
         
@@ -61,7 +61,7 @@
                 </div>
                 <div class="site-navigation-text">
                     <h2>Como comprar e retirar seus produtos?</h2>
-                    <p>Nesse artigo você aprenderá como funciona a compra dos produtos de Slime Smash, tanto dos boosters quanto dos decks prontos. Você verá como comprá-los no site, onde e quando retirá-los PRESENCIALMENTE. Não tenha mais dúvidas!</p>
+                    <p>Nesse artigo você aprenderá como funciona a compra dos produtos de Slime Smash. Você verá como comprá-los no site, onde e quando retirá-los. Não tenha mais dúvidas!</p>
                 </div>
             </a>
 

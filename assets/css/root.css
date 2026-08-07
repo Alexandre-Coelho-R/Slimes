@@ -1,10 +1,15 @@
 :root {
     --bigger-color: #283739;
     --middle-color-1: #A9C52F;
-    --middle-color-2: #2C5D63;
+    --middle-color-2: #578E7E;
     --smaller-color: #F7EEBB;
+
+
 
      --normal-text-size: clamp(12px, 4vw, 20px);
      --medium-text-size: clamp(15px, 5vw, 30px);
-    --title-font-size: clamp(50px,16vw,200px);
+     --big-text-size: clamp(30px, 7vw, 60px);
+     --title-font-size: clamp(50px,16vw,200px);
+
+    --logo-size: clamp(125px,)
 }
