@@ -7,7 +7,7 @@ $pagina_ativada = $pagina_ativada ?? "";
         <img src="assets/imagens/Logo.png" alt="Logo do projeto Pocket Slimes">
     </a>
     <div id="acoes-header">
-        <a href="../../login.php">
+        <a href="../../usuario.php">
             <i class="fa-solid fa-user"></i>
         </a>
         <a id="carrinho" href="../../carrinho.php">

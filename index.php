@@ -31,7 +31,7 @@
                 <i class="fa fa-search-plus" aria-hidden="true"></i>
                 Conheça mais
             </a>
-            <a href="carrinho.php">
+            <a href="produtos.php">
                 Comprar agora
                 <i class="fa-solid fa-cart-shopping"></i>
             </a>

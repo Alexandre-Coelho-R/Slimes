@@ -349,3 +349,57 @@ MISSÃO VISÃO E VALORES
     transform: translateY(-10px);
     scale: 1.1;
 }
+/* 
+----------------
+ARTICLES
+----------------
+*/
+
+.topic > .img-area {
+    grid-area: image;
+    width: 100%;
+}
+.topic > .img-area > img {
+    max-width:100%;
+}
+.topic > .text-area {
+    grid-area: texto;
+    color: var(--middle-color-2);
+    font-size: var(--normal-text-size);
+    text-align: justify;
+}
+
+
+@media (max-width: 630px) {
+    .topic {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 0fr;
+    grid-template-areas: "image" "texto";
+    gap:2vw;
+    padding: 1rem;
+    }
+
+    .topic:nth-child(2n) > .text-area, .topic:nth-child(2n) {
+        background-color: var(--middle-color-2);
+        color: white;
+        grid-template-areas: "image" "texto";
+    }
+    
+}
+
+@media (min-width: 630px) {
+    .topic {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "texto image";
+    gap:2vw;
+    padding: 1rem;
+    }
+
+    .topic:nth-child(2n) > .text-area, .topic:nth-child(2n) {
+        background-color: var(--middle-color-2);
+        color: white;
+        grid-template-areas: "image texto";
+    }
+}

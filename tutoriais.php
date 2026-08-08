@@ -13,16 +13,36 @@
     ?>
 
     <main>
-        <h1>Tutoriais do jogo</h1>
-        <h2>Aprenda a jogar o jogo em poucos minutos!</h2>
-
-        <section>   
-            <h3>Vídeos explicativos</h3>
-        </section>
-        
-        <section>
-            <h3>Guia de como jogar</h3>
-        </section>
+        <h1>COMO JOGAR SLIME SMASH?</h1>
+        <article>
+            <section class="topic">
+                <div class="img-area">
+                    <img src="assets/imagens/Banner.png" alt="Banner">
+                </div>
+                <div class="text-area">
+                    <h3>Lorem Ipsum Dolor</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cumque vel quaerat consectetur, fugit magnam architecto reprehenderit expedita distinctio dolorem. Nemo consequatur aliquid laborum corrupti sit, aut consectetur reiciendis itaque.</p>
+                </div>
+            </section>
+            <section class="topic">
+                <div class="img-area">
+                    <img src="assets/imagens/Banner.png" alt="Banner">
+                </div>
+                <div class="text-area">
+                    <h3>Lorem Ipsum Dolor</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cumque vel quaerat consectetur, fugit magnam architecto reprehenderit expedita distinctio dolorem. Nemo consequatur aliquid laborum corrupti sit, aut consectetur reiciendis itaque.</p>
+                </div>
+            </section>
+            <section class="topic">
+                <div class="img-area">
+                    <img src="assets/imagens/Banner.png" alt="Banner">
+                </div>
+                <div class="text-area">
+                    <h3>Lorem Ipsum Dolor</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cumque vel quaerat consectetur, fugit magnam architecto reprehenderit expedita distinctio dolorem. Nemo consequatur aliquid laborum corrupti sit, aut consectetur reiciendis itaque.</p>
+                </div>
+            </section>
+        </article>
     </main>
 
     <?php include "assets/componentes/footer.php"?>
