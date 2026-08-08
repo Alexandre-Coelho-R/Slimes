@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <?php include "componentes/head.php"?>
+    <?php include "assets/componentes/head.php"?>
     <link rel="stylesheet" href="assets/css/geral.css">
+
     <title>Pocket Slimes - Desenvolvedores</title>
 </head>
 

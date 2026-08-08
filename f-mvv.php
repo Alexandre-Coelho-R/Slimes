@@ -9,12 +9,14 @@
 <body>
     <?php include "assets/componentes/header.php"?>
 
-    <main>
-        <h1>Quem somos?</h1>
+    <main id="about-us-main">
+        <section>
+            <h1>Quem somos?</h1>
 
-        <p class="p_subpaginas">Conheça os princípios que orientam o Pocket Slimes</p>
+            <h2>Conheça os princípios que orientam a Pocket Slimes</h2>
+        </section>
 
-        <section id="mvv" class="ultimo_conteiner">
+        <section id="principles">
             <div>
                 <i class="fa-solid fa-bullseye"></i>
                 <h2>Missão</h2>

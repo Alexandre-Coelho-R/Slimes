@@ -12,9 +12,6 @@
     scroll-behavior: smooth;
     font-family: 'Segoe UI';
 }
-html, body {
-    overflow-x: hidden;
-}
 
 main {
     display: flex;
