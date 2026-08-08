@@ -109,6 +109,7 @@ main {
         gap: 2rem;
         display: flex;
         align-items: center;
+        align-content: start;
         justify-content: space-evenly;
         flex-direction: row;
         
@@ -149,7 +150,8 @@ main {
         padding: 3rem;
         gap: 2rem;
         display: grid;
-        align-items: center;
+        align-items: start;
+        align-content: start;
         justify-content: space-evenly;
         flex-direction: column;
         

@@ -27,8 +27,14 @@
 
 
         <div id="hero-buttons">
-            <a href="#first-section">Conheça mais</a>
-            <a href="carrinho.php">Comprar agora</a>
+            <a href="#first-section">
+                <i class="fa fa-search-plus" aria-hidden="true"></i>
+                Conheça mais
+            </a>
+            <a href="carrinho.php">
+                Comprar agora
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
         </div>
 
     </section>
