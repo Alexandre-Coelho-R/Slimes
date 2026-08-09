@@ -19,6 +19,6 @@
          -->
     </main>
 
-    <?php include "componentes/footer.php"?>
+    <?php include "assets/componentes/footer.php"?>
 </body>
 </html>
