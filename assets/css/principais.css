@@ -1,3 +1,140 @@
+/*
+---------------------------------
+GERAL
+--------------------------------- 
+*/
+
+.h1-com-margin {
+    margin-top: 0.5rem;
+}
+
+/*
+---------------------------------
+CARTAS
+--------------------------------- 
+*/
+
+/* Filtros */
+
+#filtros {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+#filtros > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem;
+    border-radius: 8px;
+    font-size: var(--normal-text-size);
+    border: 2px solid var(--middle-color-2);
+    color: var(--middle-color-2);
+    cursor: pointer;
+
+}
+
+#filtros > button:hover {
+    background-color: var(--middle-color-2);
+    color: white;
+}
+
+/* Catálogo */
+
+#catalogo {
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem 0.5rem;
+    margin: auto;
+}
+
+#catalogo > img {
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--smaller-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#catalogo > img:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+/* Clicar em carta */
+
+#carta-ampliada {
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    top: 0; bottom: 0; right: 0; left: 0;
+    background-color: color-mix(var(--middle-color-2), transparent 30%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+
+#carta-ampliada.aberta {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s;
+}
+
+#carta-ampliada > img {
+    max-width: 90vw;
+    max-height: 80dvh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+    transition: transform 0.12s ease-out;
+}
+
+/* Responsividade */
+
+@media (width < 800px) {
+    #filtros {
+        gap: 1.2rem;
+    }
+
+    #filtros > button{
+        font-size: 1rem;
+    }
+
+    #catalogo {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (width < 580px){
+    #filtros {
+        gap: 0.8rem;
+    }
+    
+    #catalogo {
+        width: 98%;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem 0.35rem;
+    }
+}
+
+@media (width < 270px) {
+    #catalogo {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* 
 ----------------
 TUTORIAIS
@@ -48,167 +185,5 @@ TUTORIAIS
         background-color: var(--middle-color-2);
         color: white;
         grid-template-areas: "image" "texto";
-    }
-}
-
-
-/*  */
-/*  */
-/*  */
-
-/* Título */
-
-h1 {
-    font-size: 3.6rem;
-    color: var(--azul-marinho);
-    text-align: center;
-    margin-top: 2.5rem;
-    margin-bottom: 0.6rem;
-    font-family: 'Arial', sans-serif;
-}
-
-h2 {
-    font-size: 1.6rem;
-    color: rgb(140, 115, 190);
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-    text-wrap: balance;
-}
-
-/* Filtros */
-
-#filtros {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-    padding: 0.5rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-#filtros > button {
-    font-size: 1.2rem;
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0.3rem;
-    border-radius: 8px;
-}
-
-#filtros > button:hover {
-    cursor: pointer;
-}
-
-/* Catálogo */
-
-#catalogo {
-    width: 95%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem 0.5rem;
-    margin: auto;
-    margin-bottom: 3rem;
-}
-
-#catalogo > img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-#catalogo > img:hover {
-    transform: scale(1.01);
-    cursor: pointer;
-}
-
-/* Clicar em carta */
-
-#carta-ampliada {
-    display: flex;
-    position: fixed;
-    z-index: 10;
-    justify-content: center;
-    align-items: center;
-    top: 0; bottom: 0; right: 0; left: 0;
-    background-color: rgba(0, 0, 0, 0.447);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
-}
-
-#carta-ampliada.aberta {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.3s ease, visibility 0s;
-}
-
-#carta-ampliada > img {
-    height: 70dvh;
-    max-width: 80dvw;
-    object-fit: contain;
-    border-radius: 10px;
-    transition: transform 0.12s ease-out;
-}
-
-/* Responsividade */
-
-@media (width < 800px) {
-    h1 {
-        font-size: 2.8rem;
-        margin-top: 2rem;
-    }
-
-    h2 {
-        font-size: 1.3rem;
-    }
-
-    #filtros {
-        padding-top: 1.6rem;
-        gap: 1.2rem;
-    }
-
-    #filtros > button{
-        font-size: 1rem;
-    }
-
-    #catalogo {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-
-@media (width < 580px){
-    h1 {
-        font-size: 2.4rem;
-        margin-top: 1.6rem;
-    }
-
-    h2 {
-        font-size: 1.1rem;
-    }
-
-    #catalogo {
-        width: 98%;
-        grid-template-columns: 1fr 1fr;
-        gap: 0.7rem 0.35rem;
-        margin-bottom: 3rem;
-    }
-}
-
-@media (width < 480px){
-    h1 {
-        font-size: 2rem;
-        margin-top: 1.2rem;
-    }
-
-    h2 {
-        font-size: 1rem;
-    }
-}
-
-@media (width < 270px) {
-    #catalogo {
-        grid-template-columns: 1fr;
     }
 }

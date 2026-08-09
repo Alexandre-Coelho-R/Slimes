@@ -6,8 +6,9 @@ include "assets/componentes/head-header.php";
 ?>
 
 <main>
-    <h1>Cartas do Pocket Slimes</h1>
-    <h2>Veja todas as cartas do jogo e monte seu deck!</h2>
+    <h1 class="title h1-com-margin">Cartas do Pocket Slimes</h1>
+    <h2 class="subtitle">Veja todas as cartas do jogo e monte seu deck!</h2>
+
     <nav id="filtros">
         <button id="todos" type="button">
             <i class="fa-solid fa-table-cells-large"></i>

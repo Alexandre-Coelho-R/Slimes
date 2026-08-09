@@ -102,6 +102,7 @@ main {
 @media (width >= 1170px) {
     #other-pages {
         padding: 3rem;
+        padding-bottom: 0;
         gap: 2rem;
         display: flex;
         align-items: center;
@@ -139,6 +140,7 @@ main {
 @media (width < 1170px) {
     #other-pages {
         padding: 3rem;
+        padding-bottom: 0;
         gap: 2rem;
         display: grid;
         align-items: start;

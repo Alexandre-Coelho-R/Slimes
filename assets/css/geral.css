@@ -28,14 +28,35 @@ html {
 }
 
 body {
+    min-height: 100dvh;
     overflow-x: clip;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
+    flex: 1;
     width: 100%;
 }
 
+.title {
+    font-size: var(--big-text-size);
+    text-align: center;
+    color: var(--bigger-color);
+    text-wrap: balance;
+    overflow-wrap: break-word
+}
+
+.subtitle {
+    font-size: var(--normal-text-size);
+    text-align: center;
+    color: var(--middle-color-2);
+    margin-top: 0.3rem;
+    margin-bottom: 2rem;
+    text-wrap: balance;
+    width: 96%;
+}
 
 /* 
 -----------------------------------
@@ -155,6 +176,7 @@ footer {
     min-height: 10vh;
     padding: 1.5rem;
     background-color: var(--bigger-color);
+    margin-top: clamp(1.5rem, 4vw, 4rem);
 
     display: flex;
     align-items: center;

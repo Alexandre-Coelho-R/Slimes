@@ -4,22 +4,6 @@ GERAL
 --------------------------------- 
 */
 
-.title {
-    font-size: var(--big-text-size);
-    text-align: center;
-    color: var(--bigger-color);
-}
-
-.subtitle {
-    font-size: var(--normal-text-size);
-    text-align: center;
-    color: var(--middle-color-2);
-    margin-top: 0.3rem;
-    margin-bottom: 2rem;
-    text-wrap: balance;
-    width: 97%;
-}
-
 main {
     padding-top: 0.5rem;
     
@@ -152,6 +136,7 @@ DESENVOLVEDORES
     align-items: stretch;
     justify-content: space-evenly;
     padding: 3rem;
+    padding-bottom: 0;
     gap:1rem;
 
 }
