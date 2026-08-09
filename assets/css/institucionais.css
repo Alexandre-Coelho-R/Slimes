@@ -170,26 +170,71 @@ MISSÃO VISÃO E VALORES
 */
 
 #principles {
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    align-content: center;
-    justify-content: center;
+    width: min(90%, 1200px);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: clamp(1rem, 2vw, 2rem);
+    align-items: stretch;
 }
-#principles div {
-    width: 20%;
-    text-align: justify;
-    padding: 2rem;
+
+#principles > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: clamp(1rem, 2.5vw, 2rem);
 
     background-color: var(--smaller-color);
 
-    transition: 0.2s ease-out;
-}
-#principles p {
-    font-size: var(--normal-text-size);
+    border: 2px solid var(--middle-color-2);
+    border-radius: 12px;
+
+    text-align: center;
+    transition: transform 0.2s ease-out;
 }
 
-#principles div:hover {
-    transform: translateY(-10px);
-    scale: 1.1;
+#principles > div:hover {
+    transform: translateY(-5px) scale(1.02);
+}
+
+#principles > div > i {
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    color: var(--middle-color-2);
+    margin-bottom: clamp(0.8rem, 2vw, 1.5rem);
+}
+
+#principles > div > h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: var(--bigger-color);
+    margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
+}
+
+#principles > div > p {
+    font-size: var(--normal-text-size);
+    color: var(--bigger-color);
+    text-align: justify;
+    hyphens: auto;
+    line-height: 1.5;
+}
+
+#principles > div > ul {
+    font-size: var(--normal-text-size);
+    color: var(--bigger-color);
+    text-align: left;
+    align-self: center;
+    padding-left: 1.5rem;
+    line-height: 1.5;
+}
+
+@media (width < 850px) {
+    #principles {
+        width: min(90%, 550px);
+        grid-template-columns: 1fr;
+    }
+
+    #principles > div:hover {
+        transform: translateY(-5px) scale(1.01);
+    }
 }
