@@ -7,11 +7,12 @@
 
     --normal-text-size: clamp(12px, 4vw, 20px);
     --medium-text-size: clamp(15px, 5vw, 30px);
-    --sabor-medium-text-size: clamp(18px, 4vw, 25px); /*Estou usando nos ícones do header*/
     --big-text-size: clamp(30px, 7vw, 60px);
     --title-font-size: clamp(50px,16vw,200px);
 
     --logo-size: clamp(80px,8vw,140px);
+
+    --sabor-medium-text-size: clamp(18px, 4vw, 25px); /*Estou usando nos ícones do header*/
 }
 
 * {

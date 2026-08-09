@@ -34,51 +34,108 @@ CONTATO
 --------------------------------- 
 */
 
-#form-contato > fieldset {
-    background: var(--smaller-color);
-    width: 50vw;
-    height: 70vh;
-    
+#form-contato {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+}
 
-    padding: 0.5rem;
-    margin: 2rem;
-    border: 3px var(--middle-color-2) solid;
+#form-contato fieldset {
+    width: 75%;
+    max-width: 750px;
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 2rem;
+
+    background-color: var(--smaller-color);
+
+    border: 3px solid var(--middle-color-2);
     border-radius: 10px;
 }
 
 #form-contato label {
-    font-size: var(--medium-text-size);
-    padding-left: 3px;
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+
+    margin-bottom: 0.6rem;
+    padding-left: 2px;
 }
 
-#form-contato input, #form-contato textarea{
-    padding-left: 5px;
-    border: 0px;
+#form-contato input, #form-contato textarea {
+    width: 100%;
+
+    padding: 0.4rem 0.5rem;
+
+    border: 0;
     border-radius: 5px;
 
-    background: white;
+    background-color: rgb(255, 255, 255);
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    margin-bottom: 1.2rem;
+}
 
-    font-size: var(--medium-text-size);
+#form-contato textarea {
+    min-height: 5rem;
+    resize: none;
+    margin-bottom: 2.5rem;
 }
 
 #form-contato button {
-    border: 0px;
+    padding: 0.5rem 1.5rem;
+
+    border: 0;
     border-radius: 10px;
 
-    height: 10%;
-    width: 30%;
-
-    align-self: center;
-    
-    font-size: var(--medium-text-size);
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
     font-weight: bold;
 
-    background: linear-gradient(var(--middle-color-1),rgb(96, 155, 1));
+    background: linear-gradient(var(--middle-color-1), rgb(96, 155, 1));
+
     color: white;
-   
+
+    cursor: pointer;
+    transition: 0.2s ease-out;
+}
+
+#form-contato button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+/* Responsividade */
+
+@media (width < 800px) {
+    #form-contato fieldset {
+        width: 90%;
+        padding: 1.2rem;
+    }
+}
+
+@media (width < 580px) {
+    #form-contato fieldset {
+        width: 85%;
+        padding: 1.2rem;
+    }
+}
+
+@media (width < 480px) {
+    #form-contato fieldset {
+        width: 95%;
+        padding: 0.8rem;
+    }
+
+    #form-contato input, #form-contato textarea {
+        max-width: 95%;
+        margin-bottom: 1rem;
+    }
+
+    #form-contato textarea {
+        margin-bottom: 2rem;
+    }
 }
 
 /*
