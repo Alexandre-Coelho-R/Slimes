@@ -9,7 +9,7 @@
 <body>
     <?php include "assets/componentes/header.php"?>
 
-    <main id="about-us-main">
+    <main id="sobre-nos-main">
         <section>
             <h1>Quem somos?</h1>
 

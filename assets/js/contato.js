@@ -1,5 +1,5 @@
 const textarea = document.querySelector("textarea");
-const formulario = document.getElementById("form_contato");
+const formulario = document.getElementById("form-contato");
 
 textarea.addEventListener("input", () => {
     textarea.style.height = "auto";
@@ -10,15 +10,12 @@ formulario.addEventListener("submit", (eventolegal) => {
     eventolegal.preventDefault();
 
     const nome = document.getElementById("nome").value;
-    const email = document.getElementById("email").value;
     const assunto = document.getElementById("assunto").value;
     const mensagem = document.getElementById("mensagem").value;
 
     const corpo = 
-`Nome: ${nome}
-Email: ${email}
+`Nome: ${nome}.
 
-Mensagem:
 ${mensagem}`;
 
     window.location.href = `mailto:pocket.slimes.cti@gmail.com?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;

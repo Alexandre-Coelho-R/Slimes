@@ -13,13 +13,12 @@
     <main id="main-contato">
         <h1>Contato</h1>
 
+        <p>Nosso e-mail é pocket.slimes.cti@gmail.com. Você pode preencher o formulário abaixo para enviar uma mensagem pelo aplicativo de e-mail configurado no dispositivo.</p>
+
         <form id="form-contato">
             <fieldset>
                 <label for="nome">Nome:</label> 
                 <input type="text" name="nome" id="nome" required maxlength="60" placeholder="Slime de magma">
-
-                <label for="email">Email:</label> 
-                <input type="email" name="email" id="email" required maxlength="60" placeholder="slime.de.cola@slimail.com">
 
                 <label for="assunto">Assunto:</label> 
                 <input type="text" name="assunto" id="assunto" required maxlength="60">
