@@ -11,7 +11,7 @@ include "assets/componentes/head-header.php";
     <h2 class="hero-subtitle">O melhor jogo TCG do CTI</h2>
 
     <div id="hero-buttons">
-        <a href="#first-section">
+        <a href="#other-pages">
             <i class="fa fa-search-plus" aria-hidden="true"></i>
             Conheça mais
         </a>
@@ -26,7 +26,7 @@ include "assets/componentes/head-header.php";
 <main>
     <nav id="other-pages">
 
-        <a class="site-navigation" id="first-section" href="tutoriais.php">
+        <a class="site-navigation" href="tutoriais.php">
             <img src="assets/imagens/banner.webp" alt="Banner">
             <div class="site-navigation-text">
                 <h2>Como Jogar?</h2>

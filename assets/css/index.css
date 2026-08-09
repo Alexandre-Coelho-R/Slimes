@@ -13,7 +13,7 @@ main {
 /* Section principal */
 
 #hero-section {
-    height: 100vh;
+    height: 100dvh;
 
     display: flex;
     flex-direction: column;
@@ -64,7 +64,7 @@ main {
 .hero-title, .hero-subtitle {
     font-family: 'SlimeFont';
     color: white;
-    -webkit-text-stroke: 10px black;
+    -webkit-text-stroke: clamp(5px, 0.7vw, 10px) black;
     paint-order: stroke fill;
 }
 
@@ -99,7 +99,7 @@ main {
     transform: scale(1.05);
 }
 
-@media (width > 1170px) {
+@media (width >= 1170px) {
     #other-pages {
         padding: 3rem;
         gap: 2rem;

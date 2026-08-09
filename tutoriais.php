@@ -8,7 +8,7 @@ include "assets/componentes/head-header.php";
     <article>
         <section class="topic">
             <div class="img-area">
-                <img src="assets/imagens/Banner.png" alt="Banner">
+                <img src="assets/imagens/banner.webp" alt="Banner">
             </div>
             <div class="text-area">
                 <h3>Lorem Ipsum Dolor</h3>
@@ -17,7 +17,7 @@ include "assets/componentes/head-header.php";
         </section>
         <section class="topic">
             <div class="img-area">
-                <img src="assets/imagens/Banner.png" alt="Banner">
+                <img src="assets/imagens/banner.webp" alt="Banner">
             </div>
             <div class="text-area">
                 <h3>Lorem Ipsum Dolor</h3>
@@ -26,7 +26,7 @@ include "assets/componentes/head-header.php";
         </section>
         <section class="topic">
             <div class="img-area">
-                <img src="assets/imagens/Banner.png" alt="Banner">
+                <img src="assets/imagens/banner.webp" alt="Banner">
             </div>
             <div class="text-area">
                 <h3>Lorem Ipsum Dolor</h3>

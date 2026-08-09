@@ -7,10 +7,11 @@
 
     --normal-text-size: clamp(12px, 4vw, 20px);
     --medium-text-size: clamp(15px, 5vw, 30px);
+    --sabor-medium-text-size: clamp(18px, 4vw, 25px); /*Estou usando nos ícones do header*/
     --big-text-size: clamp(30px, 7vw, 60px);
     --title-font-size: clamp(50px,16vw,200px);
 
-    --logo-size: clamp(125px,10vw,220px);
+    --logo-size: clamp(80px,8vw,140px);
 }
 
 * {
@@ -42,12 +43,11 @@ HEADER
 ----------------------------------- 
 */
 header {
-    min-height: 100px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5vh;
+    padding: clamp(0.5rem, 1.5vh, 0.8rem) clamp(0.8rem, 3vw, 2rem);
     background-color: var(--bigger-color);
 }
 
@@ -70,23 +70,23 @@ header a:not(#logo) {
 #acoes-header {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
 
-    font-size: var(--medium-text-size);
+    font-size: var(--sabor-medium-text-size);
 }
 
 #acoes-header > a {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.6rem;
-    background-color: transparent;
+    border-radius: 10%;
+    padding: 0.5rem;
 }
 
 #header-navigation {
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 5;
 
     display: flex;
     flex-direction: row;
@@ -105,7 +105,6 @@ header a:not(#logo) {
     
     font-size: var(--normal-text-size);
     color: white;
-    font-style: bold;
     text-align: center;
     text-decoration: none;
 
@@ -215,7 +214,6 @@ REDES SOCIAIS
     width: 4rem;
     border-radius: 30%;
     max-width: 30px;
-    max-height: auto;
 }
 
 #redes_contato > a:hover {
@@ -296,9 +294,11 @@ FORM CONTATO
 
 #form-contato label {
     font-size: var(--medium-text-size);
+    padding-left: 3px;
 }
 
-#form-contato input, textarea{
+#form-contato input, #form-contato textarea{
+    padding-left: 5px;
     border: 0px;
     border-radius: 5px;
 
@@ -383,37 +383,35 @@ ARTICLES
     text-align: justify;
 }
 
-
-@media (max-width: 630px) {
+@media (width >= 630px) {
     .topic {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 0fr;
-    grid-template-areas: "image" "texto";
-    gap:2vw;
-    padding: 1rem;
-    }
-
-    .topic:nth-child(2n) > .text-area, .topic:nth-child(2n) {
-        background-color: var(--middle-color-2);
-        color: white;
-        grid-template-areas: "image" "texto";
-    }
-    
-}
-
-@media (min-width: 630px) {
-    .topic {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "texto image";
-    gap:2vw;
-    padding: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "texto image";
+        gap:2vw;
+        padding: 1rem;
     }
 
     .topic:nth-child(2n) > .text-area, .topic:nth-child(2n) {
         background-color: var(--middle-color-2);
         color: white;
         grid-template-areas: "image texto";
+    }
+}
+
+@media (width < 630px) {
+    .topic {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 0fr;
+        grid-template-areas: "image" "texto";
+        gap:2vw;
+        padding: 1rem;
+    }
+
+    .topic:nth-child(2n) > .text-area, .topic:nth-child(2n) {
+        background-color: var(--middle-color-2);
+        color: white;
+        grid-template-areas: "image" "texto";
     }
 }
