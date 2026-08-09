@@ -1,10 +1,12 @@
 <?php 
 $titulo = "Tutoriais";
+$css = "principais.css";
 include "assets/componentes/head-header.php";
 ?>
 
 <main>
     <h1>COMO JOGAR SLIME SMASH?</h1>
+    
     <article>
         <section class="topic">
             <div class="img-area">

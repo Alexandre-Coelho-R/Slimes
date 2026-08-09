@@ -1,13 +1,13 @@
 <?php 
 $titulo = "Contato";
+$css = "institucionais.css";
 $js = "contato.js";
 include "assets/componentes/head-header.php";
 ?>
 
-<main id="main-contato">
-    <h1>Contato</h1>
-
-    <p>Nosso e-mail é pocket.slimes.cti@gmail.com. Você pode preencher o formulário abaixo para enviar uma mensagem pelo aplicativo de e-mail configurado no dispositivo.</p>
+<main>
+    <h1 class="title">Contato</h1>
+    <p class="subtitle">Nosso e-mail é pocket.slimes.cti@gmail.com. Você também pode preencher o formulário abaixo para enviar uma mensagem.</p>
 
     <form id="form-contato">
         <fieldset>

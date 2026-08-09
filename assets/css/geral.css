@@ -31,11 +31,10 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.title {
-    font-size: var(--big-text-size);
-    text-align: center;
-    color: var(--middle-color-2);
+main {
+    width: 100%;
 }
+
 
 /* 
 -----------------------------------
@@ -189,11 +188,7 @@ footer {
     font-size: var(--normal-text-size);
 }
 
-/* 
------------------------------------
-REDES SOCIAIS
------------------------------------ 
-*/
+/* Redes Sociais */
 
 #redes_contato {
     display: flex;
@@ -219,199 +214,4 @@ REDES SOCIAIS
 #redes_contato > a:hover {
     scale: 1.2;
     cursor: pointer;
-}
-/* 
------------------------------------------
-DESENVOLVEDORES
------------------------------------------ 
-*/
-#devs{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: space-evenly;
-    padding: 3rem;
-    gap:1rem;
-
-}
-#devs > div {
-    width: 400px;
-    height: 100%;
-    background-color: var(--smaller-color);
-}
-
-#devs > div > img {
-    width: 100%;
-}
-#devs > div {
-    height: 100%;
-}
-#devs > div > div {
-    padding: 3rem;
-}
-#devs > div > div > ul {
-    list-style: none;
-    font-size: var(--medium-text-size);
-}
-#devs ul > li {
-    padding: .3rem;
-}
-#devs p {
-    font-size: var(--medium-text-size);
-}
-
-/* 
----------------------------------
-FORM CONTATO
---------------------------------- 
-*/
-#main-contato h1 {
-    color: var(--middle-color-2);
-    font-size: var(--big-text-size);
-}
-#main-contato {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-}
-#form-contato > fieldset {
-    background: var(--smaller-color);
-    width: 50vw;
-    height: 70vh;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-
-    padding: 0.5rem;
-    margin: 2rem;
-    border: 3px var(--middle-color-2) solid;
-    border-radius: 10px;
-}
-
-#form-contato label {
-    font-size: var(--medium-text-size);
-    padding-left: 3px;
-}
-
-#form-contato input, #form-contato textarea{
-    padding-left: 5px;
-    border: 0px;
-    border-radius: 5px;
-
-    background: white;
-
-    font-size: var(--medium-text-size);
-}
-
-#form-contato button {
-    border: 0px;
-    border-radius: 10px;
-
-    height: 10%;
-    width: 30%;
-
-    align-self: center;
-    
-    font-size: var(--medium-text-size);
-    font-weight: bold;
-
-    background: linear-gradient(var(--middle-color-1),rgb(96, 155, 1));
-    color: white;
-   
-}
-/* 
---------------------------
-MISSÃO VISÃO E VALORES
--------------------------- 
-*/
-#sobre-nos-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: space-evenly;
-    gap: 2rem;
-
-    height: 50vh;
-}
-
-#principles {
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    align-content: center;
-    justify-content: center;
-}
-#principles div {
-    width: 20%;
-    text-align: justify;
-    padding: 2rem;
-
-    background-color: var(--smaller-color);
-
-    transition: 0.2s ease-out;
-}
-#principles p {
-    font-size: var(--small-text-size);
-}
-
-#principles div:hover {
-    transform: translateY(-10px);
-    scale: 1.1;
-}
-/* 
-----------------
-ARTICLES
-----------------
-*/
-
-.topic > .img-area {
-    grid-area: image;
-    width: 100%;
-}
-.topic > .img-area > img {
-    max-width:100%;
-}
-.topic > .text-area {
-    grid-area: texto;
-    color: var(--middle-color-2);
-    font-size: var(--normal-text-size);
-    text-align: justify;
-}
-
-@media (width >= 630px) {
-    .topic {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "texto image";
-        gap:2vw;
-        padding: 1rem;
-    }
-
-    .topic:nth-child(2n) > .text-area, .topic:nth-child(2n) {
-        background-color: var(--middle-color-2);
-        color: white;
-        grid-template-areas: "image texto";
-    }
-}
-
-@media (width < 630px) {
-    .topic {
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 0fr;
-        grid-template-areas: "image" "texto";
-        gap:2vw;
-        padding: 1rem;
-    }
-
-    .topic:nth-child(2n) > .text-area, .topic:nth-child(2n) {
-        background-color: var(--middle-color-2);
-        color: white;
-        grid-template-areas: "image" "texto";
-    }
 }

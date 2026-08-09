@@ -1,0 +1,153 @@
+/*
+---------------------------------
+GERAL
+--------------------------------- 
+*/
+
+.title {
+    font-size: var(--big-text-size);
+    text-align: center;
+    color: var(--bigger-color);
+}
+
+.subtitle {
+    font-size: var(--normal-text-size);
+    text-align: center;
+    color: var(--middle-color-2);
+    margin-top: 0.3rem;
+    margin-bottom: 2rem;
+    text-wrap: balance;
+    width: 97%;
+}
+
+main {
+    padding-top: 0.5rem;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 
+---------------------------------
+CONTATO
+--------------------------------- 
+*/
+
+#form-contato > fieldset {
+    background: var(--smaller-color);
+    width: 50vw;
+    height: 70vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    padding: 0.5rem;
+    margin: 2rem;
+    border: 3px var(--middle-color-2) solid;
+    border-radius: 10px;
+}
+
+#form-contato label {
+    font-size: var(--medium-text-size);
+    padding-left: 3px;
+}
+
+#form-contato input, #form-contato textarea{
+    padding-left: 5px;
+    border: 0px;
+    border-radius: 5px;
+
+    background: white;
+
+    font-size: var(--medium-text-size);
+}
+
+#form-contato button {
+    border: 0px;
+    border-radius: 10px;
+
+    height: 10%;
+    width: 30%;
+
+    align-self: center;
+    
+    font-size: var(--medium-text-size);
+    font-weight: bold;
+
+    background: linear-gradient(var(--middle-color-1),rgb(96, 155, 1));
+    color: white;
+   
+}
+
+/*
+-----------------------------------------
+DESENVOLVEDORES
+----------------------------------------- 
+*/
+
+#devs{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-evenly;
+    padding: 3rem;
+    gap:1rem;
+
+}
+#devs > div {
+    width: 400px;
+    height: 100%;
+    background-color: var(--smaller-color);
+}
+
+#devs > div > img {
+    width: 100%;
+}
+#devs > div > div {
+    padding: 3rem;
+}
+#devs > div > div > ul {
+    list-style: none;
+    font-size: var(--medium-text-size);
+}
+#devs ul > li {
+    padding: .3rem;
+}
+#devs p {
+    font-size: var(--medium-text-size);
+}
+
+/* 
+--------------------------
+MISSÃO VISÃO E VALORES
+-------------------------- 
+*/
+
+#principles {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    align-content: center;
+    justify-content: center;
+}
+#principles div {
+    width: 20%;
+    text-align: justify;
+    padding: 2rem;
+
+    background-color: var(--smaller-color);
+
+    transition: 0.2s ease-out;
+}
+#principles p {
+    font-size: var(--normal-text-size);
+}
+
+#principles div:hover {
+    transform: translateY(-10px);
+    scale: 1.1;
+}

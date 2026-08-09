@@ -1,6 +1,6 @@
 <?php 
 $titulo = "Cartas";
-$css = "cartas.css";
+$css = "principais.css";
 $js = "cartas.js";
 include "assets/componentes/head-header.php";
 ?>

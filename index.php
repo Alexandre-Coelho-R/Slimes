@@ -4,26 +4,26 @@ $css = "index.css";
 include "assets/componentes/head-header.php";
 ?>
 
-<section id="hero-section">
-    <img src="assets/imagens/banner.webp" alt="Banner">
-    
-    <h1 class="hero-title">SLIME SMASH</h1>
-    <h2 class="hero-subtitle">O melhor jogo TCG do CTI</h2>
-
-    <div id="hero-buttons">
-        <a href="#other-pages">
-            <i class="fa fa-search-plus" aria-hidden="true"></i>
-            Conheça mais
-        </a>
-        <a href="produtos.php">
-            Comprar agora
-            <i class="fa-solid fa-cart-shopping"></i>
-        </a>
-    </div>
-
-</section>
-
 <main>
+    <section id="hero-section">
+        <img src="assets/imagens/banner.webp" alt="Banner">
+        
+        <h1 class="hero-title">SLIME SMASH</h1>
+        <h2 class="hero-subtitle">O melhor jogo TCG do CTI</h2>
+
+        <div id="hero-buttons">
+            <a href="#other-pages">
+                <i class="fa fa-search-plus" aria-hidden="true"></i>
+                Conheça mais
+            </a>
+            <a href="produtos.php">
+                Comprar agora
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+        </div>
+
+    </section>
+
     <nav id="other-pages">
 
         <a class="site-navigation" href="tutoriais.php">

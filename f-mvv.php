@@ -1,14 +1,12 @@
 <?php 
 $titulo = "Propósito";
+$css = "institucionais.css";
 include "assets/componentes/head-header.php";
 ?>
 
-<main id="sobre-nos-main">
-    <section>
-        <h1>Quem somos?</h1>
-
-        <h2>Conheça os princípios que orientam a Pocket Slimes</h2>
-    </section>
+<main>
+    <h1 class="title">Quem somos?</h1>
+    <h2 class="subtitle">Conheça os princípios que orientam a Pocket Slimes</h2>
 
     <section id="principles">
         <div>
