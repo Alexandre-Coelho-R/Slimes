@@ -6,7 +6,7 @@ include "assets/componentes/head-header.php";
 
 <main>
     <h1 class="title">Desenvolvedores</h1>
-    <h2 class="subtitle">Conheça os time por trás do Pocket Slimes</h2>
+    <h2 class="subtitle">Conheça o time por trás do Pocket Slimes</h2>
 
     <section id="devs">
         <div>

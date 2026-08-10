@@ -5,7 +5,7 @@
     --middle-color-2: #578E7E;
     --smaller-color: #F7EEBB;
 
-    --normal-text-size: clamp(12px, 4vw, 20px);
+    --normal-text-size: clamp(12px, 3vw, 20px);
     --medium-text-size: clamp(15px, 5vw, 30px);
     --big-text-size: clamp(30px, 7vw, 60px);
     --title-font-size: clamp(50px,16vw,200px);
