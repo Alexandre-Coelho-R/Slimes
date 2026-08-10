@@ -7,7 +7,7 @@ include "assets/componentes/head-header.php";
 
 <main>
     <h1 class="title">Contato</h1>
-    <p class="subtitle">Nosso e-mail é pocket.slimes.cti@gmail.com. Você também pode preencher o formulário abaixo para enviar uma mensagem.</p>
+    <h2 class="subtitle">Nosso e-mail é pocket.slimes.cti@gmail.com. Você também pode preencher o formulário abaixo para enviar uma mensagem.</p>
 
     <form id="form-contato">
         <fieldset>
