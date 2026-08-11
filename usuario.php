@@ -17,10 +17,10 @@ include "assets/componentes/head-header.php";
             <h2 class="title">Login</h2>
             <form>
                 <label for="email-l">Email:</label>
-                <input type="email" name="email-l" id="email-l" placeholder="seu-email@gmail.com" required>
+                <input type="email" name="email-l" id="email-l" placeholder="seu-email@gmail.com" required maxlength="80">
 
                 <label for="senha-l">Senha:</label>
-                <input type="password" name="senha-l" id="senha-l" placeholder="Digite sua senha..." required>
+                <input type="password" name="senha-l" id="senha-l" placeholder="Digite sua senha..." required minlength="5" maxlength="30">
                 
                 <button type="submit">Logar</button>
             </form>
@@ -32,13 +32,13 @@ include "assets/componentes/head-header.php";
             <h2 class="title">Cadastro</h2>
             <form>
                 <label for="nome-c">Nome:</label>
-                <input type="text" name="nome-c" id="nome-c" placeholder="Seu nome aqui..." required>
+                <input type="text" name="nome-c" id="nome-c" placeholder="Seu nome aqui..." required minlength="2" maxlength="80">
 
                 <label for="email-c">Email:</label>
-                <input type="email" name="email-c" id="email-c" placeholder="seu-email@gmail.com" required>
+                <input type="email" name="email-c" id="email-c" placeholder="seu-email@gmail.com" required  maxlength="80">
 
                 <label for="senha-c">Senha:</label>
-                <input type="password" name="senha-c" id="senha-c" placeholder="Digite sua senha..." required>
+                <input type="password" name="senha-c" id="senha-c" placeholder="Digite sua senha..." required minlength="5" maxlength="30">
                 
                 <button type="submit">Cadastrar</button>
             </form>

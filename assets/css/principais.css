@@ -213,8 +213,11 @@ USUÁRIO
     gap: 0.8rem;
     padding: 1rem;
     padding-top: 0.5rem;
+}
+
+.login-cadastro > form > label {
     font-size: calc(var(--normal-text-size) * 1.1);
-    color: var(--middle-color-2);
+    color: color-mix(in srgb,var(--middle-color-2) 50%, black 50%);
     font-weight: 450;
 }
 
@@ -226,17 +229,19 @@ USUÁRIO
 .login-cadastro > form > button {
     font-size: calc(var(--normal-text-size) * 1.2);
     align-self: center;
-    padding: 0.3rem;
+    padding: 0.4rem;
     border-radius: 3px;
     border: 0;
     margin-top: 1rem;
     cursor: pointer;
+
+    color: color-mix(in srgb,var(--middle-color-2) 25%, black 75%);
+    background-color: var(--middle-color-2);
 }
 
 .login-cadastro > form > button:hover {
     transform: scale(1.03);
-    background-color: green;
-    color: wheat;
+    background-color: #82D322;
 }
 
 #linha {
