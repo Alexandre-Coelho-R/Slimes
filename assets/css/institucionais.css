@@ -4,9 +4,7 @@ GERAL
 --------------------------------- 
 */
 
-main {
-    padding-top: 0.5rem;
-    
+main {    
     display: flex;
     flex-direction: column;
     align-items: center;
