@@ -26,6 +26,8 @@ include "assets/componentes/head-header.php";
             </form>
         </section>
 
+        <div id="linha"></div>
+        
         <section id="cadastrar" class="login-cadastro">
             <h2 class="title">Cadastro</h2>
             <form>
