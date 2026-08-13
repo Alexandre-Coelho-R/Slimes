@@ -13,7 +13,7 @@ if ($email === "" || $senha === "") voltarPagina("Preencha todos os campos.");
 
 // Verificar as credenciais
 
-$sql = "SELECT id_usuario, nome, email, senha
+$sql = "SELECT id_usuario, nome, email, senha, admin
         FROM usuario
         WHERE email = :email";
 
@@ -30,6 +30,7 @@ if (!password_verify($senha, $usuario["senha"])) voltarPagina("Email ou senha in
 $_SESSION["usuario_id"] = $usuario["id_usuario"];
 $_SESSION["usuario_nome"] = $usuario["nome"];
 $_SESSION["usuario_email"] = $usuario["email"];
+$_SESSION["usuario_admin"] = $usuario["admin"];
 
 header("Location: ../..//usuario.php");
 exit;
