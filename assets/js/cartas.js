@@ -17,7 +17,7 @@ const cartas = [
     imagem: "assets/imagens/cartas/ss_atomislime.webp"
   },
   {
-    nome: "Dj slime",
+    nome: "DJ Slime",
     categoria: "slime",
     imagem: "assets/imagens/cartas/ss_djslime.webp"
   },
@@ -27,14 +27,9 @@ const cartas = [
     imagem: "assets/imagens/cartas/ss_draconislime.webp"
   },
   {
-    nome: "Fragilizador",
+    nome: "Slime alquimista",
     categoria: "slime",
-    imagem: "assets/imagens/cartas/ss_fragilizador.webp"
-  },
-  {
-    nome: "Slime Alquimista",
-    categoria: "slime",
-    imagem: "assets/imagens/cartas/ss_slime_alquimista.webp"
+    imagem: "assets/imagens/cartas/ss_slimealquimista.webp"
   },
   {
     nome: "Slime aquático",
@@ -44,7 +39,7 @@ const cartas = [
   {
     nome: "Slime buraco negro",
     categoria: "slime",
-    imagem: "assets/imagens/cartas/ss_buraconegro.webp"
+    imagem: "assets/imagens/cartas/ss_slimeburaconegro.webp"
   },
   {
     nome: "Slime clérigo",
@@ -69,12 +64,12 @@ const cartas = [
   {
     nome: "Slime de grama",
     categoria: "slime",
-    imagem: "assets/imagens/cartas/ss_slimegrama.webp"
+    imagem: "assets/imagens/cartas/ss_slimedegrama.webp"
   },
   {
     nome: "Slime de magma",
     categoria: "slime",
-    imagem: "assets/imagens/cartas/ss_slimemagma.webp"
+    imagem: "assets/imagens/cartas/ss_slimedemagma.webp"
   },
   {
     nome: "Slime elétrico",
@@ -97,9 +92,14 @@ const cartas = [
     imagem: "assets/imagens/cartas/ss_slimeespadachim.webp"
   },
   {
-    nome: "Slime Ferreiro",
+    nome: "Slime ferreiro",
     categoria: "slime",
     imagem: "assets/imagens/cartas/ss_slimeferreiro.webp"
+  },
+  {
+    nome: "Slime gigantesco",
+    categoria: "slime",
+    imagem: "assets/imagens/cartas/ss_slimegigantesco.webp"
   },
   {
     nome: "Slime mágico",
@@ -112,11 +112,6 @@ const cartas = [
     imagem: "assets/imagens/cartas/ss_slimemago.webp"
   },
   {
-    nome: "Slime MUITO MUITO MUITO grande",
-    categoria: "slime",
-    imagem: "assets/imagens/cartas/ss_slimegigante.webp"
-  },
-  {
     nome: "Slime necromante",
     categoria: "slime",
     imagem: "assets/imagens/cartas/ss_slimenecromante.webp"
@@ -125,6 +120,11 @@ const cartas = [
     nome: "Slime pescador",
     categoria: "slime",
     imagem: "assets/imagens/cartas/ss_slimepescador.webp"
+  },
+  {
+    nome: "Slime pistoleiro",
+    categoria: "slime",
+    imagem: "assets/imagens/cartas/ss_slimepistoleiro.webp"
   },
   {
     nome: "Slime primitivo",
@@ -137,24 +137,34 @@ const cartas = [
     imagem: "assets/imagens/cartas/ss_slimesolar.webp"
   },
   {
-    nome: "Slime Viking",
+    nome: "Slime viking",
     categoria: "slime",
     imagem: "assets/imagens/cartas/ss_slimeviking.webp"
   },
   {
+    nome: "A caixa",
+    categoria: "item",
+    imagem: "assets/imagens/cartas/ss_acaixa.webp"
+  },
+  {
     nome: "Aspirador de slime",
     categoria: "item",
-    imagem: "assets/imagens/cartas/ss_aspiradordeslime.webp"
+    imagem: "assets/imagens/cartas/ss_aspiradordeslimes.webp"
   },
   {
     nome: "Árvore de slime",
     categoria: "item",
-    imagem: "assets/imagens/cartas/ss_arvoreslime.webp"
+    imagem: "assets/imagens/cartas/ss_arvoredegosma.webp"
   },
   {
-    nome: "kit caça slime",
+    nome: "Kit caça slime",
     categoria: "item",
     imagem: "assets/imagens/cartas/ss_kitcacaslime.webp"
+  },
+  {
+    nome: "Mapa de gosmas",
+    categoria: "item",
+    imagem: "assets/imagens/cartas/ss_mapadegosmas.webp"
   },
   {
     nome: "Poção de cura",
@@ -162,32 +172,22 @@ const cartas = [
     imagem: "assets/imagens/cartas/ss_pocaodecura.webp"
   },
   {
-    nome: "Poção de escudo",
-    categoria: "item",
-    imagem: "assets/imagens/cartas/ss_pocaodeescudo.webp"
-  },
-  {
     nome: "Slimonomicon",
     categoria: "item",
     imagem: "assets/imagens/cartas/ss_slimonomicon.webp"
   },
   {
-    nome: "Soprador de slime",
-    categoria: "item",
-    imagem: "assets/imagens/cartas/ss_sopradordeslime.webp"
-  },
-  {
-    nome: "A CAIXA",
-    categoria: "item",
-    imagem: "assets/imagens/cartas/ss_acaixa.webp"
+    nome: "Apostar tudo",
+    categoria: "ação",
+    imagem: "assets/imagens/cartas/ss_apostartudo.webp"
   },
   {
     nome: "Dança das cadeiras",
     categoria: "ação",
-    imagem: "assets/imagens/cartas/ss_dancacadeira.webp"
+    imagem: "assets/imagens/cartas/ss_dancadascadeiras.webp"
   },
   {
-    nome: "EU ESCOLHO VOCÊ",
+    nome: "Eu escolho você",
     categoria: "ação",
     imagem: "assets/imagens/cartas/ss_euescolhovoce.webp"
   },
@@ -212,14 +212,9 @@ const cartas = [
     imagem: "assets/imagens/cartas/ss_pesquisar.webp"
   },
   {
-    nome: "Reciclar",
-    categoria: "ação",
-    imagem: "assets/imagens/cartas/ss_reciclar.webp"
-  },
-  {
-    nome: "relação interespecífica",
+    nome: "Relação interespecífica",
     categoria: "ferramenta",
-    imagem: "assets/imagens/cartas/ss_relacaointerespecifica.webp"
+    imagem: "assets/imagens/cartas/ss_relacaointerespecie.webp"
   },
   {
     nome: "Ritual de desespero",
