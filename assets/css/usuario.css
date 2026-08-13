@@ -1,0 +1,22 @@
+/* Página de edição de produtos */
+
+#tabela-produtos {
+    width: 85%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+
+#tabela-produtos td, #tabela-produtos th {
+    border: 1px solid black;
+    padding: 12px;
+    text-align: center;
+}
+
+#tabela-produtos tr:first-child {
+    font-weight: bold;
+}
+
+#tabela-produtos a {
+    text-decoration: none;
+}

@@ -1,16 +1,18 @@
 <?php
+session_start();
 $titulo = "Editar produtos";
+$css = "usuario.css";
 include "assets/componentes/head-header.php";
 ?>
 
 <main>
-    <?php if($_SESSION["usuario_admin"] ?? true):?>
+    <?php if($_SESSION["usuario_admin"] ?? false):?>
         <?php
             include "assets/funcoes/utilidades.php";
             $conn = conectar_bd();
             $select = $conn -> query("SELECT * FROM produto");
             
-            echo "<table border=1'>
+            echo "<table id='tabela-produtos'>
                 <tr>
                     <td>Id</td>
                     <td>Nome</td>
@@ -45,8 +47,10 @@ include "assets/componentes/head-header.php";
             
         ?>
     <?php else:?>
-        <h1>Você não tem permissão de acessar essa página</h2>
+        <h1>Você não tem permissão de acessar essa página</h1>
     <?php endif;?>
+
+    <a href="usuario.php">Voltar à página de login e cadastro</a>
 </main>
 
 <?php include "assets/componentes/footer.php"?>

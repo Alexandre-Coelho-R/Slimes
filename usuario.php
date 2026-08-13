@@ -14,13 +14,13 @@ include "assets/componentes/head-header.php";
     <section id="logado">
         <h2 class="title">Seja bem-vindo, <?=htmlspecialchars($_SESSION["usuario_nome"])?>!</h2>
         <div>
+            <?php if($_SESSION["usuario_admin"] ?? false):?>
+                <a href="editar-produtos.php" class="subtitle">Gerenciar produtos</a>
+            <?php endif;?>
             <a href="f-contato.php" class="subtitle">Entrar em contato</a>
             <a href="assets/funcoes/alterar-senha.php" class="subtitle">Alterar Senha</a>
             <a href="assets/funcoes/logout.php" class="subtitle">Deslogar no navegador</a>
             <a href="assets/funcoes/deletar.php" class="subtitle" id="delete-conta">Deletar conta</a>
-            <?php if($_SESSION["usuario_admin"] ?? true):?>
-                <a href="editar-produtos.php" class="subtitle">Gerenciar produtos</a>
-            <?php endif;?>
         </div>
     </section>
 
