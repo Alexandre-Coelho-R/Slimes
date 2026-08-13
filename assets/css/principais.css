@@ -305,9 +305,9 @@ USUÁRIO
 
 #logado a:hover {
     background-color: var(--middle-color-1);
-    scale: 1.01;
+    scale: 1.03;
 }
 
-#logado > div > #deslogar:hover {
+#logado > div > #delete-conta:hover {
     background-color: red;
 }

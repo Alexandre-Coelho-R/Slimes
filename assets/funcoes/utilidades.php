@@ -15,4 +15,11 @@ function conectar_bd() {
 
     return $conn;
 }
+
+function voltarPagina($mensagem = "") {
+    session_start();
+    $_SESSION["mensagem"] = $mensagem;
+    header("Location: ../../info.php");
+    exit;
+}
 ?>
