@@ -33,6 +33,6 @@ $insert->bindValue(":senha", password_hash($senha, PASSWORD_DEFAULT));
 
 $insert->execute();
 
-header("Location: usuario.php");
+header("Location: ../../usuario.php");
 exit;
 ?>
