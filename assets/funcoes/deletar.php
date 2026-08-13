@@ -4,6 +4,8 @@ session_start();
 include "utilidades.php";
 $conn = conectar_bd();
 
+// Verificar se usuário existe e deletá-lo
+
 if (isset($_SESSION["usuario_id"])) {
     $sql = "DELETE FROM usuario WHERE id_usuario=:id_usuario";
     $delete = $conn -> prepare($sql);
