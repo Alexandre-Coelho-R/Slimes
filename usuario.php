@@ -9,14 +9,15 @@ include "assets/componentes/head-header.php";
 ?>
 
 <main>
-    <?php if (isset($_SESSION["usuario_id"])):?>
+    <?php if (isset($_SESSION["usuario_nome"])):?>
 
     <section id="logado">
         <h2 class="title">Seja bem-vindo, <?=htmlspecialchars($_SESSION["usuario_nome"])?>!</h2>
         <div>
             <a href="f-contato.php" class="subtitle">Entrar em contato</a>
-            <a href="alterar-senha.php" class="subtitle">Alterar Senha</a>
-            <a href="logout.php" class="subtitle" id="deslogar">Deslogar</a>
+            <a href="assets/funcoes/alterar-senha.php" class="subtitle">Alterar Senha</a>
+            <a href="assets/funcoes/logout.php" class="subtitle">Deslogar no navegador</a>
+            <a href="assets/funcoes/deletar.php" class="subtitle" id="delete-conta">Deletar conta</a>
         </div>
     </section>
 
