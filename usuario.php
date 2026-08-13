@@ -18,9 +18,9 @@ include "assets/componentes/head-header.php";
                 <a href="editar-produtos.php" class="subtitle">Gerenciar produtos</a>
             <?php endif;?>
             <a href="f-contato.php" class="subtitle">Entrar em contato</a>
-            <a href="assets/funcoes/alterar-senha.php" class="subtitle">Alterar Senha</a>
-            <a href="assets/funcoes/logout.php" class="subtitle">Deslogar no navegador</a>
-            <a href="assets/funcoes/deletar.php" class="subtitle" id="delete-conta">Deletar conta</a>
+            <a href="" class="subtitle">Alterar Senha</a>
+            <a href="assets/funcoes/logout-usuario.php" class="subtitle">Deslogar no navegador</a>
+            <a href="assets/funcoes/deletar-usuario.php" class="subtitle" id="delete-conta">Deletar conta</a>
         </div>
     </section>
 
@@ -29,7 +29,7 @@ include "assets/componentes/head-header.php";
     <div id="logar-cadastrar">
         <section class="login-cadastro">
             <h2 class="title">Login</h2>
-            <form action="assets/funcoes/logar.php" method="POST">
+            <form action="assets/funcoes/logar-usuario.php" method="POST">
                 <label for="email-l">Email:</label>
                 <input type="email" name="email" id="email-l" placeholder="seu-email@gmail.com" required maxlength="100">
 
@@ -45,7 +45,7 @@ include "assets/componentes/head-header.php";
         
         <section class="login-cadastro">
             <h2 class="title">Cadastro</h2>
-            <form action="assets/funcoes/cadastrar.php" method="POST">
+            <form action="assets/funcoes/cadastrar-usuario.php" method="POST">
                 <label for="nome-c">Nome:</label>
                 <input type="text" name="nome" id="nome-c" placeholder="Seu nome aqui..." required minlength="2" maxlength="80">
 
