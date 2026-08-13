@@ -19,7 +19,7 @@ function conectar_bd() {
 function voltarPagina($mensagem = "") {
     session_start();
     $_SESSION["mensagem"] = $mensagem;
-    header("Location: /info.php");
+    header("Location: ../../info.php");
     exit;
 }
 ?>

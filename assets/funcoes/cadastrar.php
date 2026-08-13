@@ -50,5 +50,5 @@ $_SESSION["usuario_id"] = $id;
 $_SESSION["usuario_nome"] = $nome;
 $_SESSION["usuario_email"] = $email;
 
-header("Location: /usuario.php");
+header("Location: ../..//usuario.php");
 ?>
