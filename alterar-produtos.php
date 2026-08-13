@@ -21,14 +21,17 @@ include "assets/componentes/head-header.php";
                 </tr>";
 
             while ($linha = $select->fetch() ) { 
+                $excluido = $linha["excluido"] ? "Sim" : "Não";
+                $data_exclusao = $linha['data_exclusao'];
+                if ($data_exclusao === null) $data_exclusao = "Não possui";
                 echo "
                     <tr>
                         <td>{$linha['id_produto']}</td>
                         <td>{$linha['nome']}</td>
                         <td>{$linha['descricao']}</td>
                         <td>{$linha['valor_unitario']}</td>
-                        <td>{$linha['excluido']}</td>
-                        <td>{$linha['data_exclusao']}</td>
+                        <td>{$excluido}</td>
+                        <td>{$data_exclusao}</td>
                         <td>
                             <a href='assets/funcoes/alterarProduto.php?id{$linha['id_produto']}'>Alterar</a>
                         </td>
