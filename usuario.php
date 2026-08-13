@@ -9,18 +9,21 @@ include "assets/componentes/head-header.php";
 ?>
 
 <main>
-    <div id="usuario">
-        <?php if (isset($_SESSION["usuario_id"])):?>
+    <?php if (isset($_SESSION["usuario_id"])):?>
 
-        <section id="logado">
-            <h2>Seja bem-vindo, <?=htmlspecialchars($_SESSION["usuario_nome"])?>!</h2>
-            <a href="alterar-senha.php">Alterar Senha</a>
-            <a href="logout.php">Deslogar</a>
-        </section>
+    <section id="logado">
+        <h2 class="title">Seja bem-vindo, <?=htmlspecialchars($_SESSION["usuario_nome"])?>!</h2>
+        <div>
+            <a href="f-contato.php" class="subtitle">Entrar em contato</a>
+            <a href="alterar-senha.php" class="subtitle">Alterar Senha</a>
+            <a href="logout.php" class="subtitle" id="deslogar">Deslogar</a>
+        </div>
+    </section>
 
-        <?php else:?>
-        
-        <section id="logar" class="login-cadastro">
+    <?php else:?>
+
+    <div id="logar-cadastrar">
+        <section class="login-cadastro">
             <h2 class="title">Login</h2>
             <form action="assets/funcoes/logar.php" method="POST">
                 <label for="email-l">Email:</label>
@@ -36,7 +39,7 @@ include "assets/componentes/head-header.php";
 
         <div id="linha"></div>
         
-        <section id="cadastrar" class="login-cadastro">
+        <section class="login-cadastro">
             <h2 class="title">Cadastro</h2>
             <form action="assets/funcoes/cadastrar.php" method="POST">
                 <label for="nome-c">Nome:</label>
@@ -51,9 +54,9 @@ include "assets/componentes/head-header.php";
                 <button type="submit">Cadastrar</button>
             </form>
         </section>
-
-        <?php endif;?>
     </div>
+
+    <?php endif;?>
 </main>
 
 <?php
