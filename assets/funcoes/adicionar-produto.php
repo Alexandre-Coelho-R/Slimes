@@ -1,6 +1,7 @@
 <?php
 
 include "utilidades.php";
+verificarAdmin();
 $conn = conectar_bd();
 
 $sql = "INSERT INTO produto (nome, descricao, valor_unitario)

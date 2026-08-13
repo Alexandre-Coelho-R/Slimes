@@ -1,6 +1,7 @@
 <?php
 
 include "utilidades.php";
+verificarAdmin();
 $conn = conectar_bd();
 
 // Deletar produto

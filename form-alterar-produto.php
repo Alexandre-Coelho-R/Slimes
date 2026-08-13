@@ -6,6 +6,7 @@ include "assets/componentes/head-header.php";
 
 <?php
 include "assets/funcoes/utilidades.php";
+verificarAdmin();
 $conn = conectar_bd();
 
 $sql = "SELECT nome, descricao, valor_unitario
