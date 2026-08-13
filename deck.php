@@ -3,8 +3,8 @@ $titulo = "Deck";
 $css = "deck.css";
 $js = "produtos.js";
 
-include "assets/componentes/lista-deck.php";
 include "assets/componentes/head-header.php";
+include "assets/funcoes/lista-deck.php";
 
 $deck = $_GET['deck'] ?? '';
 

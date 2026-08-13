@@ -21,7 +21,7 @@ include "assets/componentes/head-header.php";
 
     <div class="carrossel">
 
-        <button class="seta seta-esquerda">‹</button>
+        <button class="seta seta-esquerda"></button>
 
         <div class="produtos">
 

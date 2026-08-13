@@ -22,11 +22,11 @@ include "assets/componentes/head-header.php";
         
         <section id="logar" class="login-cadastro">
             <h2 class="title">Login</h2>
-            <form action="logar.php" method="POST">
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email-l" placeholder="seu-email@gmail.com" required maxlength="80">
+            <form action="assets/funcoes/logar.php" method="POST">
+                <label for="email-l">Email:</label>
+                <input type="email" name="email" id="email-l" placeholder="seu-email@gmail.com" required maxlength="100">
 
-                <label for="senha">Senha:</label>
+                <label for="senha-l">Senha:</label>
                 <input type="password" name="senha" id="senha-l" placeholder="Digite sua senha..." required minlength="5" maxlength="30">
                 
                 <button type="submit">Logar</button>
@@ -38,14 +38,14 @@ include "assets/componentes/head-header.php";
         
         <section id="cadastrar" class="login-cadastro">
             <h2 class="title">Cadastro</h2>
-            <form action="cadastrar.php" method="POST">
-                <label for="nome">Nome:</label>
+            <form action="assets/funcoes/cadastrar.php" method="POST">
+                <label for="nome-c">Nome:</label>
                 <input type="text" name="nome" id="nome-c" placeholder="Seu nome aqui..." required minlength="2" maxlength="80">
 
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email-c" placeholder="seu-email@gmail.com" required maxlength="80">
+                <label for="email-c">Email:</label>
+                <input type="email" name="email" id="email-c" placeholder="seu-email@gmail.com" required maxlength="100">
 
-                <label for="senha">Senha:</label>
+                <label for="senha-c">Senha:</label>
                 <input type="password" name="senha" id="senha-c" placeholder="Digite sua senha..." required minlength="5" maxlength="30">
                 
                 <button type="submit">Cadastrar</button>
