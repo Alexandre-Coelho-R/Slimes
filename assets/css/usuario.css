@@ -20,3 +20,48 @@
 #tabela-produtos a {
     text-decoration: none;
 }
+
+/* Form de edição ou alteração dos produtos */
+
+form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+
+    border: 1px solid #aaa;
+    border-radius: 7px;
+
+    font-size: 16px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--middle-color-2);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(0.9);
+}

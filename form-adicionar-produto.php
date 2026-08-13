@@ -1,5 +1,6 @@
 <?php 
 $titulo = "Adicionar produto";
+$css = "usuario.css";
 include "assets/componentes/head-header.php";
 ?>
 
@@ -13,7 +14,7 @@ include "assets/componentes/head-header.php";
             <input type="text" name="descricao" id="descricao" required>
 
             <label for="valor">Valor:</label> 
-            <input type="number" name="valor" id="valor" required>
+            <input type="number" name="valor" id="valor" min="0" step="0.01" required>
 
             <button type="submit">Enviar</button>
         </fieldset>

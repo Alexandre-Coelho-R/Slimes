@@ -4,7 +4,7 @@ function conectar_bd() {
         $conn = new PDO("pgsql:host=projetoscti.com.br;port=54432;dbname=cti_db;user=ra2557048;password=GV4H2M6ARl9tDj");
         $conn->exec("SET search_path TO ra2557048");
     } catch (PDOException $e) {
-        voltarPagina("Erro na conexão com o banco.");
+        voltarPagina("Erro na conexão com o banco de dados.");
     }
 
     return $conn;
