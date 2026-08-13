@@ -147,6 +147,11 @@ const cartas = [
     imagem: "assets/imagens/cartas/ss_acaixa.webp"
   },
   {
+    nome: "Soprador de slime",
+    categoria: "item",
+    imagem: "assets/imagens/cartas/ss_sopradordeslime.webp"
+  },
+  {
     nome: "Aspirador de slime",
     categoria: "item",
     imagem: "assets/imagens/cartas/ss_aspiradordeslimes.webp"
@@ -177,6 +182,11 @@ const cartas = [
     imagem: "assets/imagens/cartas/ss_slimonomicon.webp"
   },
   {
+    nome: "Impressora",
+    categoria: "item",
+    imagem: "assets/imagens/cartas/ss_impressora.webp"
+  },
+  {
     nome: "Apostar tudo",
     categoria: "ação",
     imagem: "assets/imagens/cartas/ss_apostartudo.webp"
@@ -195,11 +205,6 @@ const cartas = [
     nome: "Imitar",
     categoria: "ação",
     imagem: "assets/imagens/cartas/ss_imitar.webp"
-  },
-  {
-    nome: "Impressora",
-    categoria: "ação",
-    imagem: "assets/imagens/cartas/ss_impressora.webp"
   },
   {
     nome: "Limpar",
