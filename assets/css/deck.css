@@ -11,10 +11,7 @@
     background:transparent;
 }
 
-
-/* =========================
-   CABEÇALHO DO DECK
-========================= */
+/*HEADER DO DECK*/
 
 /* Organiza o nome e as informações do deck */
 .cabecalho-deck{
@@ -27,9 +24,7 @@
 }
 
 
-/* =========================
-   CONTEÚDO DO DECK
-========================= */
+/* CONTEÚDO DO DECK*/
 
 /* Divide a página entre a lista e o preview */
 .conteudo-deck{
@@ -40,11 +35,9 @@
 }
 
 
-/* =========================
-   LISTA DE CARTAS
-========================= */
+/*LISTA DE CARTAS*/
 
-/* Espaçamento da lista */
+/*Espaçamento da lista*/
 .lista-cartas{
     padding:25px 20px 25px 10px;
 }
@@ -80,9 +73,7 @@
 }
 
 
-/* =========================
-   QUANTIDADE DA CARTA
-========================= */
+/*QUANTIDADE DA CARTA*/
 
 /* Número de cartas */
 .qtd{
@@ -98,9 +89,7 @@
 }
 
 
-/* =========================
-   PREVIEW DA CARTA
-========================= */
+/*PREVIEW DA CARTA*/
 
 /* Área onde aparece a carta grande */
 .carta-preview{
@@ -121,9 +110,7 @@
 }
 
 
-/* =========================
-   RESPONSIVIDADE
-========================= */
+/*RESPONSIVIDADE*/
 
 /* Ajustes para telas menores */
 @media(max-width:700px){
@@ -144,3 +131,5 @@
         align-items:flex-start;
     }
 }
+
+/* 

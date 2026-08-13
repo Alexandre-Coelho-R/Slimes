@@ -8,7 +8,7 @@ $js = "usuario.js";
 include "assets/componentes/head-header.php";
 ?>
 
-<main>
+<main id="contato-main">
     <?php if (isset($_SESSION["usuario_id"])):?>
 
     <section id="logado">

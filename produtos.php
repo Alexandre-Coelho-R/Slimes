@@ -17,11 +17,9 @@ include "assets/componentes/head-header.php";
 
 <section class="categoria">
 
-    <h2 style="text-align: center;">Anciao fulcral</h2>
+    <h2 style="text-align: center;">Produtos</h2>
 
     <div class="carrossel">
-
-        <button class="seta seta-esquerda"></button>
 
         <div class="produtos">
 
@@ -47,8 +45,6 @@ include "assets/componentes/head-header.php";
             </a>
 
         </div>
-
-        <button class="seta seta-direita">›</button>
 
     </div>
 </section>

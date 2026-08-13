@@ -1,6 +1,6 @@
 <?php 
 $titulo = "Início";
-$css = "index.css";
+$css = "geral.css";
 include "assets/componentes/head-header.php";
 ?>
 

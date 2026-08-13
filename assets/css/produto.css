@@ -1,7 +1,9 @@
-/* PÁGINA DE PRODUTOS */
+/*
+----------------------------
+PÁGINA DE PRODUTOS
+--------------------------- 
+*/
 .pagina-produtos{
-    max-width:1200px;
-    margin:30px auto;
     padding:20px;
 }
 
@@ -84,16 +86,3 @@
     border-radius:5px;
     font-size:11px;
 }
-
-/* SETAS */
-.seta{
-    position:absolute;
-    top:40%;
-    border:0;
-    background:none;
-    color:var(--middle-color-2);
-    font-size:45px;
-    cursor:pointer;
-}
-.seta-esquerda{left:-35px}
-.seta-direita{right:-35px}
