@@ -1,5 +1,5 @@
 <?php
-$titulo = "Alterar Produtos";
+$titulo = "Editar produtos";
 include "assets/componentes/head-header.php";
 ?>
 
@@ -33,15 +33,15 @@ include "assets/componentes/head-header.php";
                         <td>{$excluido}</td>
                         <td>{$data_exclusao}</td>
                         <td>
-                            <a href='assets/funcoes/alterarProduto.php?id{$linha['id_produto']}'>Alterar</a>
+                            <a href='form-alterar-produto.php?id={$linha['id_produto']}'>Alterar</a>
                         </td>
                         <td>
-                            <a href='assets/funcoes/excluirProduto.php?id={$linha['id_produto']}'>Excluir</a>
+                            <a href='assets/funcoes/excluir-produto.php?id={$linha['id_produto']}'>Excluir</a>
                         </td>
                     </tr>";   
             }
 
-            echo "</table> <a href='assets/funcoes/adicionarProduto.php'>Adicionar</a>";         
+            echo "</table> <a href='form-adicionar-produto.php'>Adicionar</a>";         
             
         ?>
     <?php else:?>

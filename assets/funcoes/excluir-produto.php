@@ -10,6 +10,6 @@ $delete = $conn -> prepare($sql);
 $delete -> bindParam(":id", $_GET["id"]);
 $delete -> execute();
 
-header("Location: ../../alterar-produtos.php");
+header("Location: ../../editar-produtos.php");
 exit;
 ?>

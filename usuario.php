@@ -19,7 +19,7 @@ include "assets/componentes/head-header.php";
             <a href="assets/funcoes/logout.php" class="subtitle">Deslogar no navegador</a>
             <a href="assets/funcoes/deletar.php" class="subtitle" id="delete-conta">Deletar conta</a>
             <?php if($_SESSION["usuario_admin"] ?? true):?>
-                <a href="alterar-produtos.php" class="subtitle">Gerenciar produtos</a>
+                <a href="editar-produtos.php" class="subtitle">Gerenciar produtos</a>
             <?php endif;?>
         </div>
     </section>
