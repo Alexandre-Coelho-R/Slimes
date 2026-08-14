@@ -22,8 +22,9 @@ include "assets/componentes/head-header.php";
                 <td>Data exclusão</td>
             </tr>";
 
-        while ($linha = $select->fetch() ) { 
-            $excluido = $linha["excluido"] ? "Sim" : "Não";
+        while ($linha = $select->fetch() ) {
+            $excluido =  $linha["excluido"] ? "Sim" : "Não";
+            $excluido2 =  $linha["excluido"] ? "Incluir" : "Excluir";
             $data_exclusao = $linha['data_exclusao'];
             if ($data_exclusao === null) $data_exclusao = "Não possui";
             echo "
@@ -38,7 +39,7 @@ include "assets/componentes/head-header.php";
                         <a href='form-alterar-produto.php?id={$linha['id_produto']}'>Alterar</a>
                     </td>
                     <td>
-                        <a href='assets/funcoes/excluir-produto.php?id={$linha['id_produto']}'>Excluir</a>
+                        <a href='assets/funcoes/excluir-produto.php?id={$linha['id_produto']}&deletar=$excluido2}'>$excluido2</a>
                     </td>
                 </tr>";   
         }
