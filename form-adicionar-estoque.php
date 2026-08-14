@@ -8,7 +8,7 @@ include "assets/componentes/head-header.php";
 ?>
 
 <main>
-    <form method="POST" action="assets/funcoes/incrementar-estoque.php">
+    <form method="POST" action="assets/funcoes/adicionar-estoque.php">
         <fieldset>
             <label for="produto">Produto:</label>
             <select name="produto" id="produto" required>
