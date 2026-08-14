@@ -10,17 +10,17 @@ $nome = trim($_POST["nome"] ?? "");
 $email = trim($_POST["email"] ?? "");
 $senha = trim($_POST["senha"] ?? "");
 
-if ($nome === "" || $email === "" || $senha === "") voltarPagina("Preencha todos os campos.");
-if (strlen($nome) < 2 || strlen($nome) > 80) voltarPagina("Nome inválido.");
-if (strlen($email) < 5 || strlen($email) > 100) voltarPagina("Email inválido.");
-if (strlen($senha) < 5 || strlen($senha) > 30)voltarPagina("Senha inválida.");
+if ($nome === "" || $email === "" || $senha === "") voltarInfo("Preencha todos os campos.");
+if (strlen($nome) < 2 || strlen($nome) > 80) voltarInfo("Nome inválido.");
+if (strlen($email) < 5 || strlen($email) > 100) voltarInfo("Email inválido.");
+if (strlen($senha) < 5 || strlen($senha) > 30)voltarInfo("Senha inválida.");
 
 // Verificar se email já está cadastrado
 
 $sql = "SELECT id_usuario FROM usuario WHERE email = :email";
 $insert = $conn->prepare($sql);
 $insert->execute([":email" => $email]);
-if ($insert->fetch()) voltarPagina("Este email já está cadastrado.");
+if ($insert->fetch()) voltarInfo("Este email já está cadastrado.");
 
 // Cadastrar o usuário
 
@@ -45,6 +45,5 @@ $_SESSION["usuario_id"] = $id;
 $_SESSION["usuario_nome"] = $nome;
 $_SESSION["usuario_email"] = $email;
 
-header("Location: ../../usuario.php");
-exit;
+voltarPagina("../../usuario.php")
 ?>

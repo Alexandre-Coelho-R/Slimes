@@ -17,6 +17,5 @@ $update->execute([
 	":id_produto" => $_POST["id_produto"],
 ]);
 
-header("Location: ../../editar-produtos.php");
-exit;
+voltarPagina("../../editar-produtos.php");
 ?>

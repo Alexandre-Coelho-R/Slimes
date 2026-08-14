@@ -15,7 +15,7 @@ $select->bindValue(":id_entrada", $_GET["id"]);
 $select->execute();
 $entrada = $select->fetch(PDO::FETCH_ASSOC);
 
-if(!$entrada) voltarPagina("Entrada não encontrado");
+if(!$entrada) voltarInfo("Entrada não encontrado");
 ?>
 
 <main>

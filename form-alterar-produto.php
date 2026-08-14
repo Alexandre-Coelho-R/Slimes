@@ -15,7 +15,7 @@ $select->bindValue(":id_produto", $_GET["id"]);
 $select->execute();
 $produto = $select->fetch(PDO::FETCH_ASSOC);
 
-if(!$produto) voltarPagina("Produto não encontrado");
+if(!$produto) voltarInfo("Produto não encontrado");
 ?>
 
 <main>

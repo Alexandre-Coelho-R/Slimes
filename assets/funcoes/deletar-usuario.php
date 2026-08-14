@@ -17,9 +17,9 @@ if (isset($_SESSION["usuario_id"])) {
     ]);
     session_unset();
     session_destroy();
-    voltarPagina("Sucesso na operação");
+    voltarInfo("Sucesso na operação");
 } else {
-    voltarPagina("Falha na operação");
+    voltarInfo("Falha na operação");
 }
 
 exit;

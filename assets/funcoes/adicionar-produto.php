@@ -15,6 +15,5 @@ $inserto->execute([
 	":valor_unitario" => $_POST["valor"],
 ]);
 
-header("Location: ../../editar-produtos.php");
-exit;
+voltarPagina("../../editar-estoque.php")
 ?>

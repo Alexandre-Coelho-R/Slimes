@@ -16,6 +16,5 @@ $inserto->execute([
 	":obs" => $_POST["obs"],
 ]);
 
-header("Location: ../../adicionar-estoque.php");
-exit;
+voltarPagina("../../adicionar-estoque.php");
 ?>

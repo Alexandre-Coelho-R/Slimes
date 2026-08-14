@@ -18,6 +18,5 @@ $update->execute([
     ":id_entrada" => $_POST["id_entrada"],    
 ]);
 
-header("Location: ../../editar-estoque.php");
-exit;
+voltarPagina("../../editar-estoque.php")
 ?>

@@ -24,6 +24,5 @@ if ($_GET["deletar"] == "Incluir") {
     $deletar -> execute([":id_produto" => $_GET["id"]]);
 }
 
-header("Location: ../../editar-produtos.php");
-exit;
+voltarPagina("../../editar-produtos.php");
 ?>
