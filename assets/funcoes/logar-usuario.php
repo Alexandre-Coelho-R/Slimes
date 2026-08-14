@@ -8,7 +8,6 @@ $conn = conectar_bd();
 
 $email = trim($_POST["email"] ?? "");
 $senha = $_POST["senha"] ?? "";
-
 if ($email === "" || $senha === "") voltarPagina("Preencha todos os campos.");
 
 // Verificar as credenciais
@@ -17,9 +16,10 @@ $sql = "SELECT id_usuario, nome, email, senha, admin, excluido
         FROM usuario
         WHERE email = :email";
 $select = $conn->prepare($sql);
-$select->bindValue(":email", $email);
-$select->execute();
+$select->execute([":email" => $email]);
 $usuario = $select->fetch(PDO::FETCH_ASSOC);
+
+// + Consistência de dados
 
 if (!$usuario) voltarPagina("Email não cadastrado");
 if ($usuario["excluido"]) voltarPagina("Email não cadastrado");

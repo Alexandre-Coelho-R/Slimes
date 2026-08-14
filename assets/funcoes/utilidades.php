@@ -21,5 +21,4 @@ function verificarAdmin() {
     if (session_status() != PHP_SESSION_ACTIVE) session_start();
     if (!($_SESSION["usuario_admin"] ?? false)) voltarPagina("Você não tem permissão para acessar essa página");
 }
-
 ?>

@@ -9,11 +9,13 @@ $sql = "UPDATE produto
         WHERE id_produto=:id_produto";
 
 $update = $conn -> prepare($sql);
-$update->bindValue(':nome', $_POST['nome']);
-$update->bindValue(':descricao', $_POST['descricao']);
-$update->bindValue(':valor_unitario', $_POST['valor']);
-$update->bindValue(':id_produto', $_POST['id_produto']);
-$update->execute();
+
+$update->execute([
+	":nome" => $_POST["nome"],
+	":descricao" => $_POST["descricao"],
+	":valor_unitario" => $_POST["valor"],
+	":id_produto" => $_POST["id_produto"],
+]);
 
 header("Location: ../../editar-produtos.php");
 exit;

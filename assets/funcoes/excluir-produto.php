@@ -11,8 +11,7 @@ if ($_GET["deletar"] == "Excluir"){
             SET excluido=TRUE, data_exclusao=CURRENT_TIMESTAMP
             WHERE id_produto=:id_produto";
     $deletar = $conn -> prepare($sql);
-    $deletar -> bindValue(":id_produto", $_GET["id"]);
-    $deletar -> execute();
+    $deletar -> execute([":id_produto" => $_GET["id"]]);
 }
 
 // Reinserir o produto
@@ -22,8 +21,7 @@ if ($_GET["deletar"] == "Incluir") {
             SET excluido=FALSE, data_exclusao=null
             WHERE id_produto=:id_produto";
     $deletar = $conn -> prepare($sql);
-    $deletar -> bindValue(":id_produto", $_GET["id"]);
-    $deletar -> execute();
+    $deletar -> execute([":id_produto" => $_GET["id"]]);
 }
 
 header("Location: ../../editar-produtos.php");

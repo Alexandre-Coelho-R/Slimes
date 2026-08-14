@@ -11,9 +11,10 @@ if (isset($_SESSION["usuario_id"])) {
     SET nome='excluido', email=:email, excluido=TRUE, data_exclusao=CURRENT_TIMESTAMP, imagem=null
     WHERE id_usuario=:id_usuario";
     $deletar = $conn -> prepare($sql);
-    $deletar -> bindValue(":email", "excluido_" . $_SESSION["usuario_id"]);
-    $deletar -> bindValue(":id_usuario", $_SESSION["usuario_id"]);
-    $deletar -> execute();
+    $deletar -> execute([
+        ":email" => "excluido_" . $_SESSION["usuario_id"],
+        ":id_usuario" => $_SESSION["usuario_id"],
+    ]);
     session_unset();
     session_destroy();
     voltarPagina("Sucesso na operação");

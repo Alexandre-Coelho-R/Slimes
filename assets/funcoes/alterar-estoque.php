@@ -9,12 +9,14 @@ $sql = "UPDATE entrada
         WHERE id_entrada=:id_entrada";
 
 $update = $conn -> prepare($sql);
-$update->bindValue(':fk_produto', $_POST['fk_produto']);
-$update->bindValue(':quantidade', $_POST['quantidade']);
-$update->bindValue(':custo_unitario', $_POST['custo_unitario']);
-$update->bindValue(':obs', $_POST['obs']);
-$update->bindValue(':id_entrada', $_POST['id_entrada']);
-$update->execute();
+
+$update->execute([
+    ":fk_produto" => $_POST["fk_produto"],
+    ":quantidade" => $_POST["quantidade"],
+    ":custo_unitario" => $_POST["custo_unitario"],
+    ":obs" => $_POST["obs"],
+    ":id_entrada" => $_POST["id_entrada"],    
+]);
 
 header("Location: ../../editar-estoque.php");
 exit;

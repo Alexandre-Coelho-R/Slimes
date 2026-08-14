@@ -19,26 +19,24 @@ if (strlen($senha) < 5 || strlen($senha) > 30)voltarPagina("Senha inválida.");
 
 $sql = "SELECT id_usuario FROM usuario WHERE email = :email";
 $insert = $conn->prepare($sql);
-$insert->bindValue(":email", $email);
-$insert->execute();
+$insert->execute([":email" => $email]);
 if ($insert->fetch()) voltarPagina("Este email já está cadastrado.");
 
 // Cadastrar o usuário
 
 $sql = "INSERT INTO usuario (nome, email, senha) VALUES (:nome, :email, :senha)";
-
 $insert = $conn->prepare($sql);
-$insert->bindValue(":nome", $nome);
-$insert->bindValue(":email", $email);
-$insert->bindValue(":senha", password_hash($senha, PASSWORD_DEFAULT));
-$insert->execute();
+$insert->execute([
+    ":nome" => $nome,
+    ":email" => $email,
+    ":senha" => password_hash($senha, PASSWORD_DEFAULT),
+]);
 
 // Pegar ID
 
 $sql = "SELECT id_usuario FROM usuario WHERE email = :email";
 $select = $conn->prepare($sql);
-$select->bindValue(":email", $email);
-$select->execute();
+$select->execute([":email" => $email]);
 $id = $select->fetchColumn();
 
 // Colocar informações na session
