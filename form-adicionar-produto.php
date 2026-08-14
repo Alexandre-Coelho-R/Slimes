@@ -1,4 +1,7 @@
 <?php 
+include "assets/funcoes/utilidades.php";
+verificarAdmin();
+
 $titulo = "Adicionar produto";
 $css = "usuario.css";
 include "assets/componentes/head-header.php";

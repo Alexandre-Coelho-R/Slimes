@@ -1,18 +1,15 @@
-<?php 
-$titulo = "Alterar produto";
-$css = "usuario.css";
-include "assets/componentes/head-header.php";
-?>
-
 <?php
 include "assets/funcoes/utilidades.php";
 verificarAdmin();
-$conn = conectar_bd();
 
+$titulo = "Alterar produto";
+$css = "usuario.css";
+include "assets/componentes/head-header.php";
+
+$conn = conectar_bd();
 $sql = "SELECT nome, descricao, valor_unitario
         FROM produto
         WHERE id_produto = :id_produto";
-
 $select = $conn->prepare($sql);
 $select->bindValue(":id_produto", $_GET["id"]);
 $select->execute();

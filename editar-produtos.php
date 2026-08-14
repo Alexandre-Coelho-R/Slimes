@@ -1,5 +1,8 @@
 <?php
 session_start();
+include "assets/funcoes/utilidades.php";
+verificarAdmin();
+
 $titulo = "Editar produtos";
 $css = "usuario.css";
 include "assets/componentes/head-header.php";
@@ -7,8 +10,6 @@ include "assets/componentes/head-header.php";
 
 <main>
     <?php
-        include "assets/funcoes/utilidades.php";
-        verificarAdmin();
         $conn = conectar_bd();
         $select = $conn -> query("SELECT * FROM produto");
         
@@ -39,7 +40,7 @@ include "assets/componentes/head-header.php";
                         <a href='form-alterar-produto.php?id={$linha['id_produto']}'>Alterar</a>
                     </td>
                     <td>
-                        <a href='assets/funcoes/excluir-produto.php?id={$linha['id_produto']}&deletar=$excluido2}'>$excluido2</a>
+                        <a href='assets/funcoes/excluir-produto.php?id={$linha['id_produto']}&deletar=$excluido2'>$excluido2</a>
                     </td>
                 </tr>";   
         }
