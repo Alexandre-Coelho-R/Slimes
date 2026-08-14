@@ -8,7 +8,7 @@ $conn = conectar_bd();
 
 if (isset($_SESSION["usuario_id"])) {
     $sql = "UPDATE usuario
-    SET nome='excluido', email='excluido', excluido=TRUE, data_exclusao=CURRENT_TIMESTAMP
+    SET nome='excluido', email='excluido', excluido=TRUE, data_exclusao=CURRENT_TIMESTAMP, imagem=null
     WHERE id_usuario=:id_usuario";
     $deletar = $conn -> prepare($sql);
     $deletar -> bindParam(":id_usuario", $_SESSION["usuario_id"]);
