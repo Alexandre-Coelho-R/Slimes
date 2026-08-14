@@ -13,7 +13,7 @@ if ($email === "" || $senha === "") voltarPagina("Preencha todos os campos.");
 
 // Verificar as credenciais
 
-$sql = "SELECT id_usuario, nome, email, senha, admin
+$sql = "SELECT id_usuario, nome, email, senha, admin, excluido
         FROM usuario
         WHERE email = :email";
 $select = $conn->prepare($sql);
@@ -21,8 +21,9 @@ $select->bindValue(":email", $email);
 $select->execute();
 $usuario = $select->fetch(PDO::FETCH_ASSOC);
 
-if (!$usuario) voltarPagina("Email ou senha incorretos.");
-if (!password_verify($senha, $usuario["senha"])) voltarPagina("Email ou senha incorretos.");
+if (!$usuario) voltarPagina("Email não cadastrado");
+if ($usuario["excluido"]) voltarPagina("Email não cadastrado");
+if (!password_verify($senha, $usuario["senha"])) voltarPagina("Senha incorreta.");
 
 // Colocar informações na session
 
