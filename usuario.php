@@ -16,6 +16,7 @@ include "assets/componentes/head-header.php";
         <div>
             <?php if($_SESSION["usuario_admin"] ?? false):?>
                 <a href="editar-produtos.php" class="subtitle">Gerenciar produtos</a>
+                <a href="adicionar-estoque.php" class="subtitle">Gerenciar estoque</a>
             <?php endif;?>
             <a href="f-contato.php" class="subtitle">Entrar em contato</a>
             <a href="" class="subtitle">Alterar Senha</a>
