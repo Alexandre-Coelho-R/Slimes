@@ -30,7 +30,7 @@ if(!$entrada) voltarInfo("Entrada não encontrado");
                     if ($linha["excluido"]) continue;
                     $id = $linha["id_produto"];
                     $nome = $linha["nome"];
-                    $selected = ($id === $entrada['fk_produto']) ? 'selected' : '';
+                    $selected = ($id == $entrada['fk_produto']) ? 'selected' : '';
                     echo "<option value=$id $selected>($id) $nome</option>";
                 }
                 ?>
