@@ -12,6 +12,7 @@ include "assets/componentes/head-header.php";
         <fieldset>
             <label for="produto">Produto:</label>
             <select name="produto" id="produto" required>
+                <option disabled selected>Escolha um produto</option>
                 <?php
                 $conn = conectar_bd();
                 $select = $conn -> query("SELECT id_produto, nome, excluido FROM produto");
