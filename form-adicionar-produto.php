@@ -22,6 +22,8 @@ include "assets/componentes/head-header.php";
             <button type="submit">Enviar</button>
         </fieldset>
     </form>
+
+    <a href="editar-produtos.php">Voltar à página de produtos</a>
 </main>
     
 <?php include "assets/componentes/footer.php"?> 

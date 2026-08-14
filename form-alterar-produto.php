@@ -35,6 +35,8 @@ if(!$produto) voltarPagina("Produto não encontrado");
             <button type="submit">Enviar</button>
         </fieldset>
     </form>
+
+    <a href="editar-produtos.php">Voltar à página de produtos</a>
 </main>
     
 <?php include "assets/componentes/footer.php"?> 
