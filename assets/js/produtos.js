@@ -1,38 +1,3 @@
-// ========================================
-// TROCA A CARTA DESTAQUE AO PASSAR O MOUSE
-// ========================================
-
-const itensDaLista = document.querySelectorAll('.carta-item');
-const imagemDestaque = document.getElementById('imagem-destaque');
-
-itensDaLista.forEach(item => {
-    // Detecta quando o mouse entra na carta
-    item.addEventListener('mouseenter', function() {
-        // Pega o caminho da imagem no atributo data-imagem
-        const novaImagem = this.getAttribute('data-imagem');
-        // Troca a imagem grande
-        if (novaImagem) {
-            imagemDestaque.src = novaImagem;
-        }
-    });
-});
-
-
-// ========================================
-// TROCA A CARTA GRANDE NO DECK
-// ========================================
-
-const cartas = document.querySelectorAll(".linha-carta");
-const destaque = document.querySelector("#carta-destaque");
-
-cartas.forEach(carta => {
-    // Quando o mouse passa sobre uma carta da lista
-    carta.addEventListener("mouseenter", () => {
-        // Pega a imagem definida no data-imagem
-        destaque.src = carta.dataset.imagem;
-    });
-});
-
 // =========================
 // BOTÕES DO CARRINHO
 // =========================
@@ -47,7 +12,7 @@ const itensCarrinho = document.querySelectorAll(".item-carrinho");
 function atualizarTotal(){
     let total = 0;
 
-    document.querySelectorAll(".item-carrinho").forEach(item => {
+    itensCarrinho.forEach(item => {
         const preco = Number(item.dataset.preco);
         const quantidade = Number(
             item.querySelector(".quantidade").textContent
@@ -56,8 +21,7 @@ function atualizarTotal(){
     });
 
 
-    const valorFormatado =
-        `R$ ${total.toFixed(2).replace(".", ",")}`;
+    const valorFormatado = `R$ ${total.toFixed(2).replace(".", ",")}`;
 
     const subtotal = document.querySelector("#subtotal");
     const totalElemento = document.querySelector("#total");
