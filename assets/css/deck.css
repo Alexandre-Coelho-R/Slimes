@@ -11,10 +11,7 @@
     background:transparent;
 }
 
-
-/* =========================
-   CABEÇALHO DO DECK
-========================= */
+/*HEADER DO DECK*/
 
 /* Organiza o nome e as informações do deck */
 .cabecalho-deck{
@@ -27,9 +24,7 @@
 }
 
 
-/* =========================
-   CONTEÚDO DO DECK
-========================= */
+/* CONTEÚDO DO DECK*/
 
 /* Divide a página entre a lista e o preview */
 .conteudo-deck{
@@ -40,11 +35,9 @@
 }
 
 
-/* =========================
-   LISTA DE CARTAS
-========================= */
+/*LISTA DE CARTAS*/
 
-/* Espaçamento da lista */
+/*Espaçamento da lista*/
 .lista-cartas{
     padding:25px 20px 25px 10px;
 }
@@ -80,9 +73,7 @@
 }
 
 
-/* =========================
-   QUANTIDADE DA CARTA
-========================= */
+/*QUANTIDADE DA CARTA*/
 
 /* Número de cartas */
 .qtd{
@@ -98,9 +89,7 @@
 }
 
 
-/* =========================
-   PREVIEW DA CARTA
-========================= */
+/*PREVIEW DA CARTA*/
 
 /* Área onde aparece a carta grande */
 .carta-preview{
@@ -121,9 +110,7 @@
 }
 
 
-/* =========================
-   RESPONSIVIDADE
-========================= */
+/*RESPONSIVIDADE*/
 
 /* Ajustes para telas menores */
 @media(max-width:700px){
@@ -143,4 +130,25 @@
         flex-direction:column;
         align-items:flex-start;
     }
+}
+/* BOTÃO ADICIONAR AO CARRINHO */
+
+.valor-deck form{
+    margin-top:8px;
+}
+
+.valor-deck button{
+    border:1px solid var(--middle-color-2);
+    padding:6px 10px;
+    border-radius:5px;
+    background:transparent;
+    color:var(--middle-color-2);
+    font-size:11px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.valor-deck button:hover{
+    background:var(--middle-color-2);
+    color:var(--smaller-color);
 }

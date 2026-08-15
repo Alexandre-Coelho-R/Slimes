@@ -277,37 +277,132 @@ USUÁRIO
 
 /* Logado */
 
-#logado {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* =========================
+   ÁREA DO USUÁRIO
+========================= */
+
+#logado{
+    width:min(900px, 90%);
+    margin:40px auto 60px;
+    text-align:center;
 }
 
-#logado > h2 {
-    font-size: calc(var(--big-text-size) * 0.8);
-    margin-bottom: 5rem;
+
+/* TÍTULO */
+
+#logado > h2{
+    margin:0 0 8px;
+    color:var(--bigger-color);
+    font-size:1.6rem;
 }
 
-#logado > div {
-    display: flex;
-    gap: 3rem;
+
+/* DETALHE ABAIXO DO TÍTULO */
+
+#logado > h2::after{
+    content:"";
+    display:block;
+    width:45px;
+    height:3px;
+    margin:10px auto 22px;
+    background:var(--middle-color-1);
+    border-radius:5px;
 }
 
-#logado a {
-    text-decoration: none;
-    background-color: var(--middle-color-2);
-    color: var(--bigger-color);
-    width: auto;
-    padding: 0.4rem;
-    border-radius: 10px;
+
+/* =========================
+   OPÇÕES
+========================= */
+
+#logado > div{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:10px;
 }
 
-#logado a:hover {
-    background-color: var(--middle-color-1);
-    scale: 1.03;
+
+/* =========================
+   LINKS
+========================= */
+
+#logado a{
+    min-height:70px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    padding:10px;
+
+    background:#f5f3df;
+    color:var(--bigger-color);
+
+    text-decoration:none;
+    font-size:13px;
+    font-weight:bold;
+
+    border-radius:8px;
+
+    box-shadow:0 3px 9px #28373918;
+
+    transition:.25s;
 }
 
-#logado > div > #delete-conta:hover {
-    background-color: red;
+
+/* HOVER */
+
+#logado a:hover{
+    background:var(--middle-color-1);
+    color:var(--bigger-color);
+    transform:translateY(-4px);
+    box-shadow:0 6px 14px #28373930;
+}
+
+
+/* =========================
+   DELETAR CONTA
+========================= */
+
+#logado #delete-conta{
+    background:#f1dddd;
+    color:#a33333;
+}
+
+#logado #delete-conta:hover{
+    background:#d62828;
+    color:white;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media(max-width:800px){
+
+    #logado > div{
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+}
+
+@media(max-width:500px){
+
+    #logado{
+        margin:30px auto 45px;
+    }
+
+    #logado > h2{
+        font-size:1.4rem;
+    }
+
+    #logado > div{
+        grid-template-columns:1fr;
+    }
+
+    #logado a{
+        min-height:55px;
+    }
+
 }
