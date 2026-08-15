@@ -23,52 +23,6 @@ itensDaLista.forEach(item => {
 
 
 // ========================================
-// CONTROLE DOS CARROSSÉIS DE PRODUTOS
-// ========================================
-
-document.querySelectorAll(".carrossel").forEach(carrossel => {
-
-    // Área onde ficam os produtos
-    const produtos = carrossel.querySelector(".produtos");
-
-    // Botões de navegação
-    const esquerda = carrossel.querySelector(".seta-esquerda");
-    const direita = carrossel.querySelector(".seta-direita");
-
-
-    // ------------------------------------
-    // BOTÃO DIREITO
-    // ------------------------------------
-
-    direita.addEventListener("click", () => {
-
-        // Move os produtos para a direita
-        produtos.scrollBy({
-            left: 700,
-            behavior: "smooth"
-        });
-
-    });
-
-
-    // ------------------------------------
-    // BOTÃO ESQUERDO
-    // ------------------------------------
-
-    esquerda.addEventListener("click", () => {
-
-        // Move os produtos para a esquerda
-        produtos.scrollBy({
-            left: -700,
-            behavior: "smooth"
-        });
-
-    });
-
-});
-
-
-// ========================================
 // TROCA A CARTA GRANDE NO DECK
 // ========================================
 
@@ -86,6 +40,7 @@ cartas.forEach(carta => {
     });
 
 });
+
 // =========================
 // BOTÕES DO CARRINHO
 // =========================
