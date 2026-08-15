@@ -4,6 +4,7 @@ session_start();
 
 $titulo = "Carrinho";
 $css = "vendas.css";
+$js = "carrinho.js";
 
 include "assets/componentes/head-header.php";
 
