@@ -13,7 +13,7 @@ include "assets/componentes/head-header.php";
     <!-- USUÁRIO CADASTRADO -->
     <section id="logado">
         <div id="user-img">
-            <h2 class="title">Seja bem-vindo, <?=htmlspecialchars($_SESSION["usuario_nome"])?>!</h2>
+            <h2>Seja bem-vindo, <?=htmlspecialchars($_SESSION["usuario_nome"])?>!</h2>
             <img src="assets/user-prefs/"<?php echo 'sei la'; ?> alt="Profile picture">
         </div>
         <div id="user-actions">

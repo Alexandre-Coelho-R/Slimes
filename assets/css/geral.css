@@ -7,14 +7,19 @@
 
     --normal-text-size: clamp(12px, 2.2vw, 20px);
     --medium-text-size: clamp(16px, 3.5vw, 30px);
+    --medium-big-text-size: clamp(18px, 2.2vw, 25px);
     --big-text-size: clamp(30px, 5vw, 60px);
+    
     --title-font-size: clamp(50px, 12vw, 200px);
 
     --logo-size: clamp(80px,8vw,140px);
-
-    --sabor-medium-text-size: clamp(18px, 2.2vw, 25px);
+    --profile-pic-size: clamp(250px, 30vw, 500px);
+    
 }
-
+@font-face {
+    font-family: 'SlimeFont';
+    src: url(../fontes/SlimeSmash20-Regular.otf);
+}
 * {
     margin: 0;
     padding: 0;
@@ -95,7 +100,7 @@ header a:not(#logo) {
     align-items: center;
     gap: 1.5rem;
 
-    font-size: var(--sabor-medium-text-size);
+    font-size: var(--medium-big-text-size);
 }
 
 #acoes-header > a {
