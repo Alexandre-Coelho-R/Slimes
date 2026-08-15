@@ -6,19 +6,15 @@ const itensDaLista = document.querySelectorAll('.carta-item');
 const imagemDestaque = document.getElementById('imagem-destaque');
 
 itensDaLista.forEach(item => {
-
     // Detecta quando o mouse entra na carta
     item.addEventListener('mouseenter', function() {
-
         // Pega o caminho da imagem no atributo data-imagem
         const novaImagem = this.getAttribute('data-imagem');
-
         // Troca a imagem grande
         if (novaImagem) {
             imagemDestaque.src = novaImagem;
         }
     });
-
 });
 
 
@@ -30,15 +26,11 @@ const cartas = document.querySelectorAll(".linha-carta");
 const destaque = document.querySelector("#carta-destaque");
 
 cartas.forEach(carta => {
-
     // Quando o mouse passa sobre uma carta da lista
     carta.addEventListener("mouseenter", () => {
-
         // Pega a imagem definida no data-imagem
         destaque.src = carta.dataset.imagem;
-
     });
-
 });
 
 // =========================
@@ -53,29 +45,22 @@ const itensCarrinho = document.querySelectorAll(".item-carrinho");
 // =========================
 
 function atualizarTotal(){
-
     let total = 0;
 
     document.querySelectorAll(".item-carrinho").forEach(item => {
-
         const preco = Number(item.dataset.preco);
-
         const quantidade = Number(
             item.querySelector(".quantidade").textContent
         );
-
         total += preco * quantidade;
-
     });
 
 
     const valorFormatado =
         `R$ ${total.toFixed(2).replace(".", ",")}`;
 
-
     const subtotal = document.querySelector("#subtotal");
     const totalElemento = document.querySelector("#total");
-
 
     if(subtotal){
         subtotal.textContent = valorFormatado;
@@ -84,7 +69,6 @@ function atualizarTotal(){
     if(totalElemento){
         totalElemento.textContent = valorFormatado;
     }
-
 }
 
 
@@ -93,7 +77,6 @@ function atualizarTotal(){
 // =========================
 
 itensCarrinho.forEach(item => {
-
     const menos =
         item.querySelector(".menos");
 
@@ -112,7 +95,6 @@ itensCarrinho.forEach(item => {
 
     const precoOriginal =
         Number(item.dataset.preco);
-
 
     // =========================
     // AUMENTAR QUANTIDADE
@@ -139,7 +121,6 @@ itensCarrinho.forEach(item => {
 
     });
 
-
     // =========================
     // DIMINUIR QUANTIDADE
     // =========================
@@ -165,9 +146,7 @@ itensCarrinho.forEach(item => {
 
 
             atualizarTotal();
-
         }
-
     });
 
 

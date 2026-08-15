@@ -1,6 +1,6 @@
 <?php  
 $titulo = "Deck"; 
-$css = "deck.css"; 
+$css = "vendas.css"; 
 $js = "produtos.js"; 
  
 include "assets/componentes/head-header.php"; 
@@ -18,7 +18,6 @@ $produto = $decks[$deck];
 <main class="pagina-deck"> 
  
     <section class="cabecalho-deck"> 
- 
         <div> 
             <h1><?= $produto['nome'] ?></h1> 
         </div> 
@@ -26,93 +25,40 @@ $produto = $decks[$deck];
         <div class="valor-deck"> 
             <span>Valor do Deck</span> 
             <strong><?= $produto['preco'] ?></strong>
-
-
+            
             <!-- ADICIONAR AO CARRINHO -->
 
-            <form
-                action="assets/funcoes/carrin.php"
-                method="POST"
-                class="form-carrinho"
-            >
+            <form action="assets/funcoes/carrin.php" method="POST" class="form-carrinho">
+                <input type="hidden" name="acao "value="adicionar">
 
-                <input
-                    type="hidden"
-                    name="acao"
-                    value="adicionar"
-                >
+                <input type="hidden" name="id "value="<?= htmlspecialchars($deck) ?>">
 
-                <input
-                    type="hidden"
-                    name="id"
-                    value="<?= htmlspecialchars($deck) ?>"
-                >
+                <input type="hidden" name="nome "value="<?= htmlspecialchars($produto['nome']) ?>">
 
-                <input
-                    type="hidden"
-                    name="nome"
-                    value="<?= htmlspecialchars($produto['nome']) ?>"
-                >
+                <input type="hidden" name="preco "value="<?= htmlspecialchars($produto['preco']) ?>">
 
-                <input
-                    type="hidden"
-                    name="preco"
-                    value="<?= htmlspecialchars($produto['preco']) ?>"
-                >
+                <input type="hidden" name="imagem "value="assets/imagens/cartas/<?= htmlspecialchars($produto['cartas'][0]['imagem']) ?>">
 
-                <input
-                    type="hidden"
-                    name="imagem"
-                    value="assets/imagens/cartas/<?= htmlspecialchars($produto['cartas'][0]['imagem']) ?>"
-                >
-
-                <button type="submit">
-                    Adicionar
-                </button>
-
+                <button type="submit">Adicionar</button>
             </form>
-
         </div> 
  
     </section> 
  
  
     <section class="conteudo-deck"> 
- 
         <div class="lista-cartas"> 
- 
             <?php foreach ($produto['cartas'] as $carta): ?> 
- 
-                <div  
-                    class="linha-carta" 
-                    data-imagem="assets/imagens/cartas/<?= $carta['imagem'] ?>" 
-                > 
- 
-                    <span class="qtd"> 
-                        <?= $carta['qtd'] ?> 
-                    </span> 
- 
-                    <span class="nome-carta"> 
-                        <?= $carta['nome'] ?> 
-                    </span> 
- 
+                <div class="linha-carta" data-imagem="assets/imagens/cartas/<?= $carta['imagem'] ?>" > 
+                    <span class="qtd"><?= $carta['qtd'] ?></span> 
+                    <span class="nome-carta"><?= $carta['nome'] ?></span> 
                 </div> 
- 
             <?php endforeach; ?> 
- 
         </div> 
- 
  
         <div class="carta-preview"> 
- 
-            <img  
-                id="carta-destaque" 
-                src="assets/imagens/cartas/<?= $produto['cartas'][0]['imagem'] ?>" 
-                alt="Carta selecionada" 
-            > 
- 
+            <img id="carta-destaque" src="assets/imagens/cartas/<?= $produto['cartas'][0]['imagem'] ?>" alt="Carta selecionada"> 
         </div> 
- 
     </section> 
  
 </main> 
