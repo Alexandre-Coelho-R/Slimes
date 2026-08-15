@@ -277,7 +277,6 @@ USUÁRIO
 
 /* Logado */
 
-<<<<<<< HEAD
 #logado {
     margin:1rem;
     display: grid;
@@ -294,10 +293,6 @@ USUÁRIO
     display: flex;
     flex-direction: column;
 }
-#user-actions {
-    overflow-y: scroll;
-    height: 100vh;
-}
 #mod-powers {
     background-color: rgba(117, 253, 27, 0.55);
     padding:1rem;
@@ -309,49 +304,6 @@ USUÁRIO
     width: auto;
     padding: 0.8rem;
     margin: 2rem;
-=======
-/* =========================
-   ÁREA DO USUÁRIO
-========================= */
-
-#logado{
-    width:min(900px, 90%);
-    margin:40px auto 60px;
-    text-align:center;
-}
-
-
-/* TÍTULO */
-
-#logado > h2{
-    margin:0 0 8px;
-    color:var(--bigger-color);
-    font-size:1.6rem;
-}
-
-
-/* DETALHE ABAIXO DO TÍTULO */
-
-#logado > h2::after{
-    content:"";
-    display:block;
-    width:45px;
-    height:3px;
-    margin:10px auto 22px;
-    background:var(--middle-color-1);
-    border-radius:5px;
-}
-
-
-/* =========================
-   OPÇÕES
-========================= */
-
-#logado > div{
-    display:grid;
-    grid-template-columns:repeat(4, 1fr);
-    gap:10px;
->>>>>>> a43c0f9e1c476805515476c8b8bcc15eb0410b89
 }
 #user-img {
     grid-area: pfp;
@@ -367,9 +319,11 @@ USUÁRIO
 
 
 
-/* =========================
+/* 
+=========================
    LINKS
-========================= */
+========================= 
+*/
 
 #logado a{
     min-height:70px;
@@ -381,18 +335,14 @@ USUÁRIO
 
     padding:10px;
 
-    background:#f5f3df;
+    background: var(--middle-color-2);
     color:var(--bigger-color);
 
     text-decoration:none;
-    font-size:13px;
+    font-size:var(--normal-text-size);
     font-weight:bold;
 
-    border-radius:8px;
-
-    box-shadow:0 3px 9px #28373918;
-
-    transition:.25s;
+    transition: .2s ease-out;
 }
 
 
@@ -405,50 +355,7 @@ USUÁRIO
     box-shadow:0 6px 14px #28373930;
 }
 
-
-/* =========================
-   DELETAR CONTA
-========================= */
-
-#logado #delete-conta{
-    background:#f1dddd;
-    color:#a33333;
-}
-
 #logado #delete-conta:hover{
-    background:#d62828;
+    background: red;
     color:white;
-}
-
-
-/* =========================
-   RESPONSIVIDADE
-========================= */
-
-@media(max-width:800px){
-
-    #logado > div{
-        grid-template-columns:repeat(2, 1fr);
-    }
-
-}
-
-@media(max-width:500px){
-
-    #logado{
-        margin:30px auto 45px;
-    }
-
-    #logado > h2{
-        font-size:1.4rem;
-    }
-
-    #logado > div{
-        grid-template-columns:1fr;
-    }
-
-    #logado a{
-        min-height:55px;
-    }
-
 }
