@@ -10,15 +10,23 @@ include "assets/componentes/head-header.php";
 
 <main>
     <?php if (isset($_SESSION["usuario_nome"])):?>
-
+    <!-- USUÁRIO CADASTRADO -->
     <section id="logado">
-        <h2 class="title">Seja bem-vindo, <?=htmlspecialchars($_SESSION["usuario_nome"])?>!</h2>
-        <div>
-            <?php if($_SESSION["usuario_admin"] ?? false):?>
-                <a href="editar-produtos.php" class="subtitle">Gerenciar produtos</a>
-                <a href="editar-estoque.php" class="subtitle">Gerenciar estoque</a>
+        <div id="user-img">
+            <h2 class="title">Seja bem-vindo, <?=htmlspecialchars($_SESSION["usuario_nome"])?>!</h2>
+            <img src="assets/user-prefs/"<?php echo 'sei la'; ?> alt="Profile picture">
+        </div>
+        <div id="user-actions">
+            <?php if($_SESSION["usuario_admin"] ?? false): ?>
+                <div id="mod-powers">
+                    <h2>PODERES DE MODERADOR</h2>
+                    <a href="editar-produtos.php" class="subtitle">Gerenciar produtos</a>
+                    <a href="editar-estoque.php" class="subtitle">Gerenciar estoque</a>
+                </div>
             <?php endif;?>
+            <h2>Tem algo a nos dizer?</h2>
             <a href="f-contato.php" class="subtitle">Entrar em contato</a>
+            <h2>Opções de conta</h2>
             <a href="" class="subtitle">Alterar Senha</a>
             <a href="assets/funcoes/logout-usuario.php" class="subtitle">Deslogar no navegador</a>
             <a href="assets/funcoes/deletar-usuario.php" class="subtitle" id="delete-conta">Deletar conta</a>
@@ -26,7 +34,7 @@ include "assets/componentes/head-header.php";
     </section>
 
     <?php else:?>
-
+    <!-- USUÁRIO NÃO CADASTRADO -->
     <div id="logar-cadastrar">
         <section class="login-cadastro">
             <h2 class="title">Login</h2>

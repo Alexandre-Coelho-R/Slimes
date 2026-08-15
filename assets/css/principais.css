@@ -278,30 +278,49 @@ USUÁRIO
 /* Logado */
 
 #logado {
-    width: 100%;
+    margin:1rem;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: "pfp profile-prefs";
+    gap:2rem;
+}
+#logado h2 {
+    color: var(--middle-color-2);
+}
+
+#user-actions, #mod-powers {
+    grid-area: profile-prefs;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
-
-#logado > h2 {
-    font-size: calc(var(--big-text-size) * 0.8);
-    margin-bottom: 5rem;
+#user-actions {
+    overflow-y: scroll;
+    height: 100vh;
 }
-
-#logado > div {
-    display: flex;
-    gap: 3rem;
+#mod-powers {
+    background-color: rgba(117, 253, 27, 0.55);
+    padding:1rem;
 }
-
-#logado a {
+#user-actions a {
     text-decoration: none;
     background-color: var(--middle-color-2);
     color: var(--bigger-color);
     width: auto;
-    padding: 0.4rem;
-    border-radius: 10px;
+    padding: 0.8rem;
+    margin: 2rem;
 }
+#user-img {
+    grid-area: pfp;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid var(--bigger-color);
+}
+#user-img img{
+    height: 500px;
+    width: 500px;
+}
+
 
 #logado a:hover {
     background-color: var(--middle-color-1);
