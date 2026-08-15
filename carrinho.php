@@ -56,15 +56,7 @@ $carrinho = $_SESSION['carrinho'] ?? [];
 
                             <form action="assets/funcoes/carrin.php" method="POST">
                                 <input type="hidden" name="acao" value="adicionar">
-
                                 <input type="hidden" name="id" value="<?= htmlspecialchars($id) ?>">
-
-                                <input type="hidden" name="nome" value="<?= htmlspecialchars($produto['nome']) ?>">
-
-                                <input type="hidden" name="preco" value="<?= $produto['preco'] ?>">
-
-                                <input type="hidden" name="imagem" value="<?= htmlspecialchars($produto['imagem']) ?>">
-
                                 <button type="submit">+</button>
                             </form>
 
@@ -73,9 +65,7 @@ $carrinho = $_SESSION['carrinho'] ?? [];
 
                         <form action="assets/funcoes/carrin.php" method="POST">
                             <input type="hidden" name="acao" value="remover">
-
                             <input type="hidden" name="id" value="<?= htmlspecialchars($id) ?>">
-
                             <button type="submit" class="remover">&times;</button>
                         </form>
                     </article>

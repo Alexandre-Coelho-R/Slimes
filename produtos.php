@@ -8,42 +8,56 @@ include "assets/componentes/head-header.php";
 <main class="pagina-produtos"> 
     <section class="banner-produtos"> 
         <img src="assets/imagens/banner.webp" alt="Banner da loja"> 
-    </div> 
+    </section> 
  
     <h2 style="text-align: center;">Produtos</h2> 
 
     <section class="produtos"> 
-        <div class="produto">
-            <a href="deck.php?deck=anciao">
-                <div class="imagem-produto"> 
-                    <img src="assets/imagens/cartas/ss_acaixa.webp"> 
-                    <span class="quantidade">
-                        42<br><small>unid</small>
-                    </span> 
-                </div>
-            </a>
+        <?php
+        include "assets/funcoes/utilidades.php";
+        $conn = conectar_bd();
+        $select = $conn -> query("SELECT * FROM produto WHERE excluido=FALSE");
 
-            <p class="nome">67</p> 
-            <strong>R$ 67,00</strong>
+        while ($linha = $select->fetch() ) {
+            $categoria = $linha["categoria"] ?? "";
+            if ($categoria == "deck") { // Adicionar mais depois
+                $link = "deck.php?id=" . $linha["id_produto"];
+            } else {
+                $link = "";
+            }
+            
+            if (empty($linha["imagem"])) {
+                $imagem = "assets/imagens/produtos/imagem-substituta.webp";
+            } else {
+                $imagem = "assets/imagens/produtos/" . $linha["imagem"] . ".webp";
+            }
 
-            <form action="assets/funcoes/carrin.php" method="POST" class="form-carrinho">
+            $imagem = "assets/imagens/cartas/ss_slimedecola.webp"; // Temporário
 
-                <input type="hidden" name="acao" value="adicionar">
+            $quantidade = 76; // Temporário
 
-                <input type="hidden" name="id" value="anciao">
+            echo "
+            <div class='produto'>
+                <a href='$link'>
+                    <div class='imagem-produto'>
+                        <img src='$imagem'>
+                        <span class='quantidade'>$quantidade<br><small>unid</small></span>
+                    </div>
+                </a>
 
-                <input type="hidden" name="nome" value="67">
+                <p class='nome'>{$linha['nome']}</p>
+                <strong>R$ {$linha['valor_unitario']}</strong>
 
-                <input type="hidden" name="preco" value="67">
-
-                <input type="hidden" name="imagem" value="assets/imagens/cartas/ss_acaixa.webp">
-
-                <button type="submit">
-                    Adicionar
-                </button>
-            </form>
-        </div>
-    </div> 
+                <form action='assets/funcoes/carrin.php' method='POST' class='form-carrinho'>
+                    <input type='hidden' name='id' value='{$linha["id_produto"]}'>
+                    <button type='submit'>Adicionar</button>
+                </form>
+            </div>
+            ";
+        
+        }
+        ?>
+    </section> 
 </main> 
  
 <?php include "assets/componentes/footer.php"; ?>
