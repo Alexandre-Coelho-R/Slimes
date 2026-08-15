@@ -15,5 +15,5 @@ $inserto->execute([
 	":valor_unitario" => $_POST["valor"],
 ]);
 
-voltarPagina("../../editar-produtos.php")
+voltarPagina("../../editar-produtos.php");
 ?>

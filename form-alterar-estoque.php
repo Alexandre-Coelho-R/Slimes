@@ -51,7 +51,7 @@ if(!$entrada) voltarInfo("Entrada não encontrado");
         </fieldset>
     </form>
 
-    <a href="editar-produtos.php">Voltar à página de produtos</a>
+    <a href="editar-estoque.php">Voltar à página de produtos</a>
 </main>
     
 <?php include "assets/componentes/footer.php"?> 

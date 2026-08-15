@@ -45,5 +45,5 @@ $_SESSION["usuario_id"] = $id;
 $_SESSION["usuario_nome"] = $nome;
 $_SESSION["usuario_email"] = $email;
 
-voltarPagina("../../usuario.php")
+voltarPagina("../../usuario.php");
 ?>

@@ -18,5 +18,5 @@ $update->execute([
     ":id_entrada" => $_POST["id_entrada"],    
 ]);
 
-voltarPagina("../../editar-estoque.php")
+voltarPagina("../../editar-estoque.php");
 ?>
