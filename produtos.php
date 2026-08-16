@@ -54,7 +54,6 @@ include "assets/componentes/head-header.php";
                 </form>
             </div>
             ";
-        
         }
         ?>
     </section> 

@@ -1,51 +1,49 @@
 <?php  
 $titulo = "Deck"; 
 $css = "vendas.css"; 
-$js = "produtos.js"; 
+$js = "deck.js"; 
  
 include "assets/componentes/head-header.php"; 
-include "assets/funcoes/lista-deck.php"; 
- 
-$deck = $_GET['deck'] ?? ''; 
- 
-if (!isset($decks[$deck])) { 
-    die("Deck não encontrado."); 
-} 
- 
-$produto = $decks[$deck]; 
+include "assets/funcoes/utilidades.php";
+
+if (!isset($_GET['id'])) voltarInfo("Deck não encontrado.");
+
+$conn = conectar_bd();
+
+$sql = "SELECT nome, descricao, valor_unitario FROM produto WHERE id_produto=:id_produto AND excluido=false";
+$select = $conn -> prepare($sql);
+$select -> execute([":id_produto" => $_GET["id"]]);
+$produto = $select -> fetch(PDO::FETCH_ASSOC);
+
+if (!$produto) voltarInfo("Produto não encontrado.");
+
+$sql = "SELECT * FROM deck_carta WHERE fk_produto=:id_produto";
+$select = $conn -> prepare($sql);
+$select -> execute([":id_produto" => $_GET["id"]]);
+$cartas = $select -> fetch(PDO::FETCH_ASSOC);
+
+if (!$produto) voltarInfo("Produto não encontrado.");
 ?> 
  
 <main class="pagina-deck"> 
  
     <section class="cabecalho-deck"> 
-        <div> 
-            <h1><?= $produto['nome'] ?></h1> 
-        </div> 
+        <h1><?=$produto['nome']?></h1> 
  
         <div class="valor-deck"> 
             <span>Valor do Deck</span> 
-            <strong><?= $produto['preco'] ?></strong>
+            <strong>R$ <?=$produto['valor_unitario']?></strong>
             
             <!-- ADICIONAR AO CARRINHO -->
 
             <form action="assets/funcoes/carrin.php" method="POST" class="form-carrinho">
                 <input type="hidden" name="acao "value="adicionar">
-
-                <input type="hidden" name="id "value="<?= htmlspecialchars($deck) ?>">
-
-                <input type="hidden" name="nome "value="<?= htmlspecialchars($produto['nome']) ?>">
-
-                <input type="hidden" name="preco "value="<?= htmlspecialchars($produto['preco']) ?>">
-
-                <input type="hidden" name="imagem "value="assets/imagens/cartas/<?= htmlspecialchars($produto['cartas'][0]['imagem']) ?>">
-
+                <input type="hidden" name="id "value=<?=$_GET["id"]?>>
                 <button type="submit">Adicionar</button>
             </form>
         </div> 
- 
     </section> 
- 
- 
+
     <section class="conteudo-deck"> 
         <div class="lista-cartas"> 
             <?php foreach ($produto['cartas'] as $carta): ?> 
