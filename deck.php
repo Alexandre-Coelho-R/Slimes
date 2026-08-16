@@ -16,13 +16,6 @@ $select -> execute([":id_produto" => $_GET["id"]]);
 $produto = $select -> fetch(PDO::FETCH_ASSOC);
 
 if (!$produto) voltarInfo("Produto não encontrado.");
-
-$sql = "SELECT * FROM deck_carta WHERE fk_produto=:id_produto";
-$select = $conn -> prepare($sql);
-$select -> execute([":id_produto" => $_GET["id"]]);
-$cartas = $select -> fetch(PDO::FETCH_ASSOC);
-
-if (!$produto) voltarInfo("Produto não encontrado.");
 ?> 
  
 <main class="pagina-deck"> 
@@ -44,6 +37,13 @@ if (!$produto) voltarInfo("Produto não encontrado.");
         </div> 
     </section> 
 
+    <?php
+    $sql = "SELECT * FROM deck_carta WHERE fk_produto=:id_produto";
+    $select = $conn -> prepare($sql);
+    $select -> execute([":id_produto" => $_GET["id"]]);
+    $cartas = $select -> fetch(PDO::FETCH_ASSOC);
+    ?>
+
     <section class="conteudo-deck"> 
         <div class="lista-cartas"> 
             <?php foreach ($produto['cartas'] as $carta): ?> 
@@ -58,7 +58,7 @@ if (!$produto) voltarInfo("Produto não encontrado.");
             <img id="carta-destaque" src="assets/imagens/cartas/<?= $produto['cartas'][0]['imagem'] ?>" alt="Carta selecionada"> 
         </div> 
     </section> 
- 
+
 </main> 
  
 <?php include "assets/componentes/footer.php" ?>
