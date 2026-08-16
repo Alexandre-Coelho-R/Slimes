@@ -2,9 +2,7 @@
 
 session_start();
 
-if (!isset($_SESSION['carrinho'])) {
-    $_SESSION['carrinho'] = [];
-}
+if (!isset($_SESSION['carrinho'])) $_SESSION['carrinho'] = [];
 
 $acao = $_POST['acao'] ?? '';
 $id = $_POST['id'] ?? '';
@@ -16,23 +14,17 @@ $id = $_POST['id'] ?? '';
 if ($acao === 'adicionar') {
 
     if ($id !== '') {
-
-        if (isset($_SESSION['carrinho'][$id])) {
-
+        if (isset($_SESSION['carrinho'][$id])) { 
             $_SESSION['carrinho'][$id]['quantidade']++;
-
         } else {
-
             $_SESSION['carrinho'][$id] = [
                 'nome' => $_POST['nome'] ?? '',
                 'preco' => (float) ($_POST['preco'] ?? 0),
                 'imagem' => $_POST['imagem'] ?? '',
                 'quantidade' => 1
             ];
-
         }
     }
-
     /*
      * Se veio do produtos.php/deck.php,
      * retorna "OK" para o JavaScript.

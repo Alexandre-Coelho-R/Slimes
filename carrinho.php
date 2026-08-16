@@ -9,13 +9,11 @@ $js = "carrinho.js";
 include "assets/componentes/head-header.php";
 
 $carrinho = $_SESSION['carrinho'] ?? [];
-
 ?>
 
 <main class="pagina-carrinho">
 
     <h1>Seu carrinho</h1>
-
     <p class="subtitulo">Confira seus produtos antes de finalizar.</p>
 
 
@@ -23,53 +21,46 @@ $carrinho = $_SESSION['carrinho'] ?? [];
         <section class="carrinho">
 
             <?php if (empty($carrinho)): ?>
-
                 <p>Seu carrinho está vazio.</p>
-
             <?php else: ?>
 
-                <?php foreach ($carrinho as $id => $produto): ?>
+            <?php foreach ($carrinho as $id => $produto): ?>
 
-                    <article class="item-carrinho">
+                <article class="item-carrinho">
 
-                        <img src="<?= htmlspecialchars($produto['imagem']) ?>" alt="<?= htmlspecialchars($produto['nome']) ?>">
+                    <img src="<?= $produto['imagem'] ?>" alt="<?= $produto['nome'] ?>">
 
-                        <div class="info-produto">
-                            <h2><?= htmlspecialchars($produto['nome']) ?></h2>
-                            <p>Quantidade: <?= $produto['quantidade'] ?></p>
-                        </div>
+                    <div class="info-produto">
+                        <h2><?= $produto['nome'] ?></h2>
+                        <p>Quantidade: <?= $produto['quantidade'] ?></p>
+                    </div>
 
+                    <strong class="preco">R$<?= number_format($produto['preco'] * $produto['quantidade'], 2, ',', '.')?></strong>
 
-                        <strong class="preco">
-                            R$<?= number_format($produto['preco'] * $produto['quantidade'], 2, ',', '.')?>
-                        </strong>
-
-
-                        <div class="quantidade-carrinho">
-                            <form action="assets/funcoes/carrin.php" method="POST">
-                                <input type="hidden" name="acao" value="diminuir">
-                                <input type="hidden" name="id" value="<?= htmlspecialchars($id) ?>">
-                                <button type="submit">&minus;</button>
-                            </form>
-
-                            <span><?= $produto['quantidade'] ?></span>
-
-                            <form action="assets/funcoes/carrin.php" method="POST">
-                                <input type="hidden" name="acao" value="adicionar">
-                                <input type="hidden" name="id" value="<?= htmlspecialchars($id) ?>">
-                                <button type="submit">+</button>
-                            </form>
-
-                        </div>
-
-
-                        <form action="assets/funcoes/carrin.php" method="POST">
-                            <input type="hidden" name="acao" value="remover">
-                            <input type="hidden" name="id" value="<?= htmlspecialchars($id) ?>">
-                            <button type="submit" class="remover">&times;</button>
+                    <div class="quantidade-carrinho">
+                        <form action="assets/funcoes/carrinho.php" method="POST">
+                            <input type="hidden" name="acao" value="diminuir">
+                            <input type="hidden" name="id" value="<?=$id?>">
+                            <button type="submit">&minus;</button>
                         </form>
-                    </article>
-                <?php endforeach; ?>
+
+                        <span><?= $produto['quantidade'] ?></span>
+
+                        <form action="assets/funcoes/carrinho.php" method="POST">
+                            <input type="hidden" name="acao" value="adicionar">
+                            <input type="hidden" name="id" value="<?=$id?>">
+                            <button type="submit">+</button>
+                        </form>
+                    </div>
+
+
+                    <form action="assets/funcoes/carrinho.php" method="POST">
+                        <input type="hidden" name="acao" value="remover">
+                        <input type="hidden" name="id" value="<?=$id?>">
+                        <button type="submit" class="remover">&times;</button>
+                    </form>
+                </article>
+            <?php endforeach; ?>
 
             <?php endif; ?>
         </section>
@@ -82,7 +73,8 @@ $carrinho = $_SESSION['carrinho'] ?? [];
             <?php
             $total = 0;
             foreach ($carrinho as $produto) {
-                $total += $produto['preco'] * $produto['quantidade'];}
+                $total += $produto['preco'] * $produto['quantidade'];
+            }
             ?>
 
             <div>

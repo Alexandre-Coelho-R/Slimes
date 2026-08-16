@@ -29,7 +29,7 @@ if (!$produto) voltarInfo("Produto não encontrado.");
             
             <!-- ADICIONAR AO CARRINHO -->
 
-            <form action="assets/funcoes/carrin.php" method="POST" class="form-carrinho">
+            <form action="assets/funcoes/carrinho.php" method="POST" class="form-carrinho">
                 <input type="hidden" name="acao "value="adicionar">
                 <input type="hidden" name="id_produto"value=<?=$_GET["id"]?>>
                 <button type="submit">Adicionar</button>
