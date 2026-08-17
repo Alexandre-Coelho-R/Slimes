@@ -10,12 +10,8 @@
     
     <title>Pocket Slimes - <?= $titulo ?? ""?></title>
     <?php
-    if (isset($css)) {
-        echo "<link rel='stylesheet' href='assets/css/$css'>";
-    }
-    if (isset($js)) {
-        echo "<script src='assets/js/$js' defer></script>";
-    }
+    if (isset($css)) echo "<link rel='stylesheet' href='assets/css/$css'>";
+    if (isset($js)) echo "<script src='assets/js/$js' type='module'></script>";
     ?>
 </head>
 

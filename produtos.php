@@ -48,8 +48,9 @@ include "assets/componentes/head-header.php";
                 <p class='nome'>{$linha['nome']}</p>
                 <strong>R$ {$linha['valor_unitario']}</strong>
 
-                <form action='assets/funcoes/carrinho.php' method='POST' class='form-carrinho'>
-                    <input type='hidden' name='id' value='{$linha["id_produto"]}'>
+                <form class='form-carrinho'>
+                    <input type='hidden' name='acao' value='adicionar'>
+                    <input type='hidden' name='id_produto' value='{$linha["id_produto"]}'>
                     <button type='submit'>Adicionar</button>
                 </form>
             </div>
