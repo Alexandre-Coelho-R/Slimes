@@ -1,4 +1,8 @@
 <?php
+
+session_start();
+$logado = isset($_SESSION["usuario_id"]) ? true : false;
+
 $titulo = "Deck";
 $css = "vendas.css";
 $js = "deck.js";
@@ -57,6 +61,18 @@ $cartas = $select->fetchAll(PDO::FETCH_ASSOC);
         <?php endif; ?>
     </section>
 
+    
+    <div id="modal-login">
+        <button id="fechar-modal">&times;</button>
+
+        <h2>Login necessário</h2>
+
+        <p>Você precisa estar logado para adicionar produtos ao carrinho.</p>
+
+        <a href="login.php" id="ir-login">Fazer login</a>
+    </div>
+
+    <script>const usuarioLogado = <?=json_encode($logado)?></script>
 </main>
 
 <?php include "assets/componentes/footer.php"; ?>

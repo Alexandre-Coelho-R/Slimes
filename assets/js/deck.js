@@ -1,7 +1,8 @@
 // Adicionar ao carrinho
 
-import { adicionarCarrinho } from "./funcoes.js";
+import { adicionarCarrinho, controleCarrinho } from "./funcoes.js";
 adicionarCarrinho();
+controleCarrinho();
 
 // ========================================
 // TROCA A CARTA GRANDE NO DECK

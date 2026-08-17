@@ -705,3 +705,9 @@ PÁGINA DE PRODUTOS
     background:var(--middle-color-2);
     color:var(--smaller-color);
 }
+
+/* Tela modal */
+
+#modal-login {
+    display: none;
+}
