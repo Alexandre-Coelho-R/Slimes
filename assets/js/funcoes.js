@@ -16,9 +16,11 @@ export function adicionarCarrinho () {
                     method: "POST",
                     body: new FormData(this)
                 });
+
+                const resultado = await resposta.text();
                 
-                if (resposta.text() == "erro") botao.textContent = "Erro";
-                if (resposta.text() == "sucesso") botao.textContent = "Adicionado ✓";
+                if (resultado == "erro") botao.textContent = "Erro";
+                if (resultado == "sucesso") botao.textContent = "Adicionado ✓";
             } catch (erro) {
                 botao.textContent = "Erro";
             } finally {

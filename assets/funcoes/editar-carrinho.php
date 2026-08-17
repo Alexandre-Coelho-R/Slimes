@@ -18,7 +18,7 @@ $conn = conectar_bd();
 
 $sql = "SELECT id_compra FROM compra WHERE status='carrinho' AND fk_usuario=:id_usuario";
 $select = $conn -> prepare($sql);
-$select -> execute([":id_usuario" => $_SESSION["id_usuario"]]);
+$select -> execute([":id_usuario" => $_SESSION["usuario_id"]]);
 $resultado = $select -> fetch(PDO::FETCH_ASSOC);
 
 // Pegar id_compra
@@ -29,7 +29,7 @@ if ($resultado) {
     $sql = "INSERT INTO compra (fk_usuario, sessao)
             VALUES (:id_usuario, 'seila')";
     $insert = $conn -> prepare($sql);
-    $insert -> execute([":id_usuario" => $_SESSION["id_usuario"]]);
+    $insert -> execute([":id_usuario" => $_SESSION["usuario_id"]]);
     
     $id_compra = $conn -> lastInsertId();
 }
