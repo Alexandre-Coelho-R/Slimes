@@ -9,7 +9,7 @@ controleCarrinho();
 // ========================================
 
 const cartas = document.querySelectorAll(".linha-carta");
-const destaque = document.querySelector("#carta-destaque");
+const destaque = document.getElementById("carta-destaque");
 
 cartas.forEach(carta => {
     carta.addEventListener("mouseenter", () => {

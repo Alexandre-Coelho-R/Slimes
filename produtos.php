@@ -70,7 +70,7 @@ include "assets/componentes/head-header.php";
 
         <p>Você precisa estar logado para adicionar produtos ao carrinho.</p>
 
-        <a href="login.php" id="ir-login">Fazer login</a>
+        <a href="usuario.php" id="ir-login">Fazer login</a>
     </div>
 
     <script>const usuarioLogado = <?=json_encode($logado)?></script>

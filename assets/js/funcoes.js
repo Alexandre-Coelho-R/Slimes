@@ -41,9 +41,7 @@ export function controleCarrinho() {
     const modalLogin = document.getElementById("modal-login");
     const fecharModal = document.getElementById("fechar-modal");
 
-    if (modalLogin && fecharModal) {
-        fecharModal.addEventListener("click", function () {
-            modalLogin.style.display = "none";
-        });
-    }
+    fecharModal.addEventListener("click", function () {
+        modalLogin.style.display = "none";
+    });
 }
