@@ -16,19 +16,12 @@ export function adicionarCarrinho () {
                     method: "POST",
                     body: new FormData(this)
                 });
-
-                if (!resposta.ok) throw new Error("Erro ao adicionar");
-
-                botao.textContent = "Adicionado ✓";
-
-                setTimeout(() => {
-                    botao.textContent = textoOriginal;
-                }, 1200);
-
+                
+                if (resposta.text() == "erro") botao.textContent = "Erro";
+                if (resposta.text() == "sucesso") botao.textContent = "Adicionado ✓";
             } catch (erro) {
-                console.error(erro);
                 botao.textContent = "Erro";
-
+            } finally {
                 setTimeout(() => {
                     botao.textContent = textoOriginal;
                 }, 1200);

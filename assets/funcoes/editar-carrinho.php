@@ -3,135 +3,94 @@
 session_start();
 include "utilidades.php";
 
-$conn = conectar_bd();
+if (!verificarLogin()) voltarInfo("Você não está logado");
 
 $acao = $_POST["acao"] ?? "";
 $id_produto = (int) ($_POST["id_produto"] ?? 0);
 
-function buscarProduto($conn, $id_produto) {
-    $sql = "SELECT id_produto, valor_unitario FROM produto WHERE id_produto=:id_produto AND excluido=FALSE";
-    $select = $conn->prepare($sql);
-    $select->execute([":id_produto" => $id_produto]);
-    return $select->fetch(PDO::FETCH_ASSOC);
+if ($id_produto === 0 && $acao !== "limpar") {
+    echoFechar("erro");
 }
 
-function pegarCarrinhoUsuario($conn, $id_usuario) {
-    $sql = "SELECT id_compra FROM compra WHERE fk_usuario=:id_usuario AND status='carrinho' ORDER BY id_compra DESC LIMIT 1";
-    $select = $conn->prepare($sql);
-    $select->execute([":id_usuario" => $id_usuario]);
-    $id_compra = $select->fetchColumn();
+$conn = conectar_bd();
 
-    if ($id_compra) return $id_compra;
+// Verificar se usuário tem carrinho ou não
 
-    $sql = "INSERT INTO compra (status, fk_usuario, sessao) VALUES ('carrinho', :id_usuario, :sessao) RETURNING id_compra";
-    $insert = $conn->prepare($sql);
-    $insert->execute([
-        ":id_usuario" => $id_usuario,
-        ":sessao" => session_id()
-    ]);
+$sql = "SELECT id_compra FROM compra WHERE status='carrinho' AND fk_usuario=:id_usuario";
+$select = $conn -> prepare($sql);
+$select -> execute([":id_usuario" => $_SESSION["id_usuario"]]);
+$resultado = $select -> fetch(PDO::FETCH_ASSOC);
 
-    return $insert->fetchColumn();
+// Pegar id_compra
+
+if ($resultado) {
+    $id_compra = $resultado["id_compra"];
+}  else {
+    $sql = "INSERT INTO compra (fk_usuario, sessao)
+            VALUES (:id_usuario, 'seila')";
+    $insert = $conn -> prepare($sql);
+    $insert -> execute([":id_usuario" => $_SESSION["id_usuario"]]);
+    
+    $id_compra = $conn -> lastInsertId();
 }
 
-if (isset($_SESSION["usuario_id"])) {
-    $id_usuario = $_SESSION["usuario_id"];
-
-    if ($acao === "adicionar") {
-        $produto = buscarProduto($conn, $id_produto);
-        if (!$produto) voltarInfo("Produto não encontrado.");
-
-        $id_compra = pegarCarrinhoUsuario($conn, $id_usuario);
-
-        $sql = "INSERT INTO compra_produto (fk_produto, fk_compra, quantidade, valor_unitario) VALUES (:fk_produto, :fk_compra, 1, :valor_unitario) ON CONFLICT (fk_produto, fk_compra) DO UPDATE SET quantidade=compra_produto.quantidade+1";
-        $insert = $conn->prepare($sql);
-        $insert->execute([
-            ":fk_produto" => $id_produto,
-            ":fk_compra" => $id_compra,
-            ":valor_unitario" => $produto["valor_unitario"]
-        ]);
-
-        voltarPagina("../../carrinho.php");
-    }
-
-    $id_compra = pegarCarrinhoUsuario($conn, $id_usuario);
-
-    if ($acao === "diminuir") {
-        $sql = "UPDATE compra_produto SET quantidade=quantidade-1 WHERE fk_compra=:fk_compra AND fk_produto=:fk_produto";
-        $update = $conn->prepare($sql);
-        $update->execute([
-            ":fk_compra" => $id_compra,
-            ":fk_produto" => $id_produto
-        ]);
-
-        $sql = "DELETE FROM compra_produto WHERE fk_compra=:fk_compra AND fk_produto=:fk_produto AND quantidade<=0";
-        $delete = $conn->prepare($sql);
-        $delete->execute([
-            ":fk_compra" => $id_compra,
-            ":fk_produto" => $id_produto
-        ]);
-
-        voltarPagina("../../carrinho.php");
-    }
-
-    if ($acao === "remover") {
-        $sql = "DELETE FROM compra_produto WHERE fk_compra=:fk_compra AND fk_produto=:fk_produto";
-        $delete = $conn->prepare($sql);
-        $delete->execute([
-            ":fk_compra" => $id_compra,
-            ":fk_produto" => $id_produto
-        ]);
-
-        voltarPagina("../../carrinho.php");
-    }
-
-    if ($acao === "limpar") {
-        $sql = "DELETE FROM compra_produto WHERE fk_compra=:fk_compra";
-        $delete = $conn->prepare($sql);
-        $delete->execute([":fk_compra" => $id_compra]);
-
-        voltarPagina("../../carrinho.php");
-    }
-
-    voltarPagina("../../carrinho.php");
-}
-
-if (!isset($_SESSION["carrinho"])) $_SESSION["carrinho"] = [];
+// Tratar as diferentes ações
 
 if ($acao === "adicionar") {
-    $produto = buscarProduto($conn, $id_produto);
-    if (!$produto) voltarInfo("Produto não encontrado.");
+    $sql = "SELECT *
+            FROM compra_produto
+            WHERE fk_compra=:id_compra AND fk_produto=:id_produto";
+    $select = $conn -> prepare($sql);
+    $select -> execute([":id_compra" => $id_compra, ":id_produto" => $id_produto]);
+    $resultado = $select -> fetch(PDO::FETCH_ASSOC);
 
-    if (isset($_SESSION["carrinho"][$id_produto])) {
-        $_SESSION["carrinho"][$id_produto]++;
+    if ($resultado) { // Se já existe
+        $sql = "UPDATE compra_produto
+                SET quantidade = quantidade + 1
+                WHERE fk_compra=:id_compra AND fk_produto=:id_produto";
+        $update = $conn -> prepare($sql);
+        $update -> execute([":id_produto" => $id_produto, ":id_compra" => $id_compra]);
+    } else { // Se não existe
+        $sql = "INSERT INTO compra_produto (fk_produto, fk_compra, quantidade)
+                VALUES (:id_produto, :id_compra, 1)";
+        $insert = $conn -> prepare($sql);
+        $insert -> execute([":id_produto" => $id_produto, ":id_compra" => $id_compra]);
+    }
+} else if ($acao === "diminuir") {
+    $sql = "SELECT quantidade
+            FROM compra_produto
+            WHERE fk_compra=:id_compra AND fk_produto=:id_produto";
+    $select = $conn -> prepare($sql);
+    $select -> execute([":id_compra" => $id_compra, ":id_produto" => $id_produto]);
+    $resultado = $select -> fetch(PDO::FETCH_ASSOC);
+
+    if (!$resultado) echoFechar("erro");
+
+    if ($resultado["quantidade"] == 1) {
+        $sql = "DELETE FROM compra_produto
+                WHERE fk_compra=:id_compra AND fk_produto=:id_produto";
+        $delete = $conn -> prepare($sql);
+        $delete -> execute([":id_produto" => $id_produto, ":id_compra" => $id_compra]);
     } else {
-        $_SESSION["carrinho"][$id_produto] = 1;
+        $sql = "UPDATE compra_produto
+                SET quantidade = quantidade - 1
+                WHERE fk_compra=:id_compra AND fk_produto=:id_produto";
+        $update = $conn -> prepare($sql);
+        $update -> execute([":id_produto" => $id_produto, ":id_compra" => $id_compra]);
     }
-
-    voltarPagina("../../carrinho.php");
+} else if ($acao === "remover") {
+    $sql = "DELETE FROM compra_produto
+            WHERE fk_compra=:id_compra AND fk_produto=:id_produto";
+    $delete = $conn -> prepare($sql);
+    $delete -> execute([":id_produto" => $id_produto, ":id_compra" => $id_compra]);
+} else if ($acao === "limpar") {
+    $sql = "DELETE FROM compra_produto
+            WHERE fk_compra=:id_compra";
+    $delete = $conn -> prepare($sql);
+    $delete -> execute([":id_compra" => $id_compra]);
+} else {
+    echoFechar("erro");
 }
 
-if ($acao === "diminuir") {
-    if (isset($_SESSION["carrinho"][$id_produto])) {
-        $_SESSION["carrinho"][$id_produto]--;
-
-        if ($_SESSION["carrinho"][$id_produto] <= 0) {
-            unset($_SESSION["carrinho"][$id_produto]);
-        }
-    }
-
-    voltarPagina("../../carrinho.php");
-}
-
-if ($acao === "remover") {
-    unset($_SESSION["carrinho"][$id_produto]);
-    voltarPagina("../../carrinho.php");
-}
-
-if ($acao === "limpar") {
-    $_SESSION["carrinho"] = [];
-    voltarPagina("../../carrinho.php");
-}
-
-voltarPagina("../../carrinho.php");
-
+echoFechar("sucesso");
 ?>
