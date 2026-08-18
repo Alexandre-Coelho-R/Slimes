@@ -32,17 +32,48 @@ if (isset($_SESSION["usuario_id"])){
                 <p>Seu carrinho está vazio.</p>
             <?php else: ?>
                 <?php
-                $sql = "SELECT *
-                        FROM compra_produto
+                $sql = "SELECT produto.id_produto, produto.nome, produto.valor_unitario, produto.imagem, compra_produto.quantidade
+                        FROM produto
+                        INNER JOIN compra_produto
+                        ON produto.id_produto = compra_produto.fk_produto
                         WHERE fk_compra=:id_compra";
                 $select = $conn -> prepare($sql);
                 $select -> execute([":id_compra" => $id_compra]);
                 $resultados = $select -> fetchAll(PDO::FETCH_ASSOC);
-                // Mudar depois para pegar os nomes dos produtos 
+                
+                $total = 0;
                 ?>
 
                 <?php foreach ($resultados as $resultado): ?>
-                    <!-- Mostrar cada produto -->
+                    <article class="item-carrinho">
+                        <img src="<?=$resultado["imagem"]?>" alt="<?=$resultado["imagem"]?>">
+                        <div class="info-produto">
+                            <h2><?=$resultado["imagem"]?></h2>
+                            <p>Quantidade: <?=$resultado["quantidade"]?></p>
+                        </div>
+                        <strong class="preco"><?=$resultado["valor_unitario"]?></strong>
+                        <div class="quantidade-carrinho">
+                            <form class="form-carrinho">
+                                <input type="hidden" name="acao" value="diminuir">
+                                <input type="hidden" name="id" value="<?=$resultado["id_produto"]?>">
+                                <button type="submit">-</button>
+                            </form>
+
+                            <span><?=$resultado["quantidade"]?></span>
+                            
+                            <form class="form-carrinho">
+                                <input type="hidden" name="acao" value="adicionar">
+                                <input type="hidden" name="id" value="<?=$resultado["id_produto"]?>">
+                                <button type="submit">+</button>
+                            </form>
+                        </div>
+
+                        <form class="form-carrinho">
+                            <input type="hidden" name="acao" value="remover">
+                            <input type="hidden" name="id" value="<?=$resultado["id_produto"]?>">
+                            <button type="submit" class="remover">x</button>
+                        </form>
+                    </article>
                 <?php endforeach;?>
             <?php endif;?>
         </section>
@@ -52,7 +83,7 @@ if (isset($_SESSION["usuario_id"])){
 
             <div>
                 <span>Subtotal</span>
-                <strong>R$ <?= number_format(6, 2, ',', '.') ?></strong>
+                <strong>R$ <?= $total ?? 0 ?></strong>
             </div>
 
             <div>
@@ -62,7 +93,7 @@ if (isset($_SESSION["usuario_id"])){
 
             <div class="total">
                 <span>Total</span>
-                <strong>R$ <?= number_format(7, 2, ',', '.') ?></strong>
+                <strong>R$ <?= $total ?? 0 ?>></strong>
             </div>
 
             <button class="finalizar">Finalizar compra</button>
