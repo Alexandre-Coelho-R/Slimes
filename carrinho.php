@@ -36,7 +36,7 @@ if (isset($_SESSION["usuario_id"])){
                         FROM produto
                         INNER JOIN compra_produto
                         ON produto.id_produto = compra_produto.fk_produto
-                        WHERE fk_compra=:id_compra";
+                        WHERE compra_produto.fk_compra=:id_compra";
                 $select = $conn -> prepare($sql);
                 $select -> execute([":id_compra" => $id_compra]);
                 $resultados = $select -> fetchAll(PDO::FETCH_ASSOC);
@@ -45,10 +45,11 @@ if (isset($_SESSION["usuario_id"])){
                 ?>
 
                 <?php foreach ($resultados as $resultado): ?>
+                    <?php $total += $resultado["valor_unitario"] * $resultado["quantidade"];;?>
                     <article class="item-carrinho">
-                        <img src="<?=$resultado["imagem"]?>" alt="<?=$resultado["imagem"]?>">
+                        <img src="<?=$resultado["imagem"]?>" alt="<?=$resultado["nome"]?>">
                         <div class="info-produto">
-                            <h2><?=$resultado["imagem"]?></h2>
+                            <h2><?=$resultado["nome"]?></h2>
                             <p>Quantidade: <?=$resultado["quantidade"]?></p>
                         </div>
                         <strong class="preco"><?=$resultado["valor_unitario"]?></strong>
@@ -93,7 +94,7 @@ if (isset($_SESSION["usuario_id"])){
 
             <div class="total">
                 <span>Total</span>
-                <strong>R$ <?= $total ?? 0 ?>></strong>
+                <strong>R$ <?= $total ?? 0 ?></strong>
             </div>
 
             <button class="finalizar">Finalizar compra</button>
