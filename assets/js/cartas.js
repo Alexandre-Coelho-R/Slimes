@@ -90,9 +90,25 @@ function ampliarCarta(carta){
 let cartas = [];
 
 async function carregarCartas() {
-	const resultado = await fetch("assets/funcoes/buscar-cartas.php");
-	cartas = await resultado.json();
-	mostrarCartas(cartas);
+    try {
+        const resultado = await fetch("assets/funcoes/buscar-cartas.php");
+        cartas = await resultado.json();
+	    mostrarCartas(cartas);
+    } catch (e) {
+        mostrarMensagem();
+    }
+}
+
+// Mostrar mensagem
+
+function mostrarMensagem() {
+    if (cartas.length === 0) {
+        catalogo.innerHTML = "";
+        const aviso = document.createElement("h2");
+        aviso.textContent = "Erro de conexão.";
+        aviso.classList.add("subtitle");    
+        catalogo.appendChild(aviso);
+    }
 }
 
 //Inicialização
@@ -122,24 +138,28 @@ btTodos.addEventListener("click", () => {
     mostrarCartas(cartas);
     desativarCores();
     btTodos.style.backgroundColor = "lightgreen";
+    mostrarMensagem();
 });
 
 btSlimes.addEventListener("click", () => {
     mostrarCartas(cartas.filter(carta => carta.categoria === "slime"));
     desativarCores();
     btSlimes.style.backgroundColor = "lightgreen";
+    mostrarMensagem();
 });
 
 btItens.addEventListener("click", () => {
     mostrarCartas(cartas.filter(carta => carta.categoria === "item"));
     desativarCores();
     btItens.style.backgroundColor = "lightgreen";
+    mostrarMensagem();
 });
 
 btAcoes.addEventListener("click", () => {
     mostrarCartas(cartas.filter(carta => carta.categoria === "ação"));
     desativarCores();
     btAcoes.style.backgroundColor = "lightgreen";
+    mostrarMensagem();
 });
 
 btFerramentas.addEventListener("click", () => {
@@ -154,4 +174,6 @@ btFerramentas.addEventListener("click", () => {
         catalogo.appendChild(sabor_imagem);
       }
     }
+
+    mostrarMensagem();
 });

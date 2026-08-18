@@ -1,7 +1,8 @@
 <?php 
 $titulo = "Início";
 $css = "index.css";
-$js='slideshow.js';
+$js= "index.js";
+
 include "assets/componentes/head-header.php";
 ?>
 

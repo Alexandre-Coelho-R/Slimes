@@ -39,7 +39,6 @@ include "assets/componentes/head-header.php";
     <section id="catalogo"></section>
     
     <section id="carta-ampliada"></section>
-
 </main>
 
 <?php include "assets/componentes/footer.php"?>
