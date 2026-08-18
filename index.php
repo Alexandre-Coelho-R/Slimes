@@ -1,6 +1,7 @@
 <?php 
 $titulo = "Início";
 $css = "index.css";
+$js='slideshow.js';
 include "assets/componentes/head-header.php";
 ?>
 
@@ -23,6 +24,29 @@ include "assets/componentes/head-header.php";
         </div>
 
     </section>
+
+        <div class="slideshow-container">
+
+        <div class="mySlides fade">
+        <img src="assets/imagens/Banner.webp" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+        <img src="assets/imagens/slideshow/BoosterSlide.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+        <img src="assets/imagens/Banner.webp" style="width:100%">
+        </div>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        </div>
 
     <nav id="other-pages">
 
