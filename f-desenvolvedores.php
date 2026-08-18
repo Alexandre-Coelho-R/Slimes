@@ -16,7 +16,8 @@ include "assets/componentes/head-header.php";
             <div class="devs-texto">
                 <h2>Davi Henrique Fernandes Silva nº 03</h2>
                 <ul>
-                    <li>Refugiado de guerra;</li>
+                    <li>Escrileitor profissional;</li>
+                    <li>Audioleitor também;</li>
                     <li>Gerenciador das redes sociais.</li>
                 </ul>
             </div>
