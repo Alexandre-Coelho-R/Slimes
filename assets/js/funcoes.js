@@ -51,12 +51,17 @@ export function mexerCarrinho () {
                     method: "POST",
                     body: new FormData(this)
                 });
+
+                const resultado = await resposta.text();
+
+                if (resultado === "sucesso") {
+                    location.reload();
+                } else {
+                    console.error(resultado);
+                }
                 
             } catch (erro) {
-            } finally {
-                setTimeout(() => {
-                    botao.textContent = textoOriginal;
-                }, 1200);
+            
             }
         });
     });

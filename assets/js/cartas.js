@@ -63,10 +63,10 @@ function ampliarCarta(carta){
           const centroY = coordenadas.top + coordenadas.height / 2;
           const centroX = coordenadas.left + coordenadas.width / 2;
 
-          const mudanca = 15;
+          const mudanca = 30;
 
-          const relativoY = (2 * (mouseY - centroY) / coordenadas.height) * -mudanca;
-          const relativoX = (2 * (mouseX - centroX) / coordenadas.width) * mudanca;
+          const relativoY = (mouseY - centroY) / coordenadas.height * -mudanca;
+          const relativoX = (mouseX - centroX) / coordenadas.width * mudanca;
 
           cartaCriada.style.transform = `
               perspective(800px)
