@@ -4,6 +4,7 @@ session_start();
 
 $titulo = "Carrinho";
 $css = "vendas.css";
+$js = "carrinho.js";
 
 include "assets/componentes/head-header.php";
 include "assets/funcoes/utilidades.php";
@@ -56,7 +57,7 @@ if (isset($_SESSION["usuario_id"])){
                         <div class="quantidade-carrinho">
                             <form class="form-carrinho">
                                 <input type="hidden" name="acao" value="diminuir">
-                                <input type="hidden" name="id" value="<?=$resultado["id_produto"]?>">
+                                <input type="hidden" name="id_produto" value="<?=$resultado["id_produto"]?>">
                                 <button type="submit">-</button>
                             </form>
 
@@ -64,14 +65,14 @@ if (isset($_SESSION["usuario_id"])){
                             
                             <form class="form-carrinho">
                                 <input type="hidden" name="acao" value="adicionar">
-                                <input type="hidden" name="id" value="<?=$resultado["id_produto"]?>">
+                                <input type="hidden" name="id_produto" value="<?=$resultado["id_produto"]?>">
                                 <button type="submit">+</button>
                             </form>
                         </div>
 
                         <form class="form-carrinho">
                             <input type="hidden" name="acao" value="remover">
-                            <input type="hidden" name="id" value="<?=$resultado["id_produto"]?>">
+                            <input type="hidden" name="id_produto" value="<?=$resultado["id_produto"]?>">
                             <button type="submit" class="remover">x</button>
                         </form>
                     </article>

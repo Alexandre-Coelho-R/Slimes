@@ -40,3 +40,24 @@ export function controleCarrinho() {
         modalLogin.style.display = "none";
     });
 }
+
+export function mexerCarrinho () {
+    document.querySelectorAll(".form-carrinho").forEach(form => {
+        form.addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            try {
+                const resposta = await fetch("assets/funcoes/editar-carrinho.php", {
+                    method: "POST",
+                    body: new FormData(this)
+                });
+                
+            } catch (erro) {
+            } finally {
+                setTimeout(() => {
+                    botao.textContent = textoOriginal;
+                }, 1200);
+            }
+        });
+    });
+}
