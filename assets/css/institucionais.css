@@ -146,11 +146,6 @@ DESENVOLVEDORES
     grid-template-columns: 35fr 65fr;
 }
 
-#devs > div:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 18px rgba(40, 55, 57, 0.1);
-}
-
 .devs-imagem {
     width: 100%;
     height: 100%;

@@ -11,6 +11,19 @@ include "assets/componentes/head-header.php";
     <section id="devs">
         <div>
             <div class="devs-imagem">
+                <img src="assets/imagens/membros/davi.webp" alt="Foto do membro Davi">
+            </div>
+            <div class="devs-texto">
+                <h2>Davi Henrique Fernandes Silva nº 03</h2>
+                <ul>
+                    <li>Refugiado de guerra;</li>
+                    <li>Gerenciador das redes sociais.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div>
+            <div class="devs-imagem">
                 <img src="assets/imagens/membros/frederico.webp" alt="Foto do membro Frederico">
             </div>
             <div class="devs-texto">
