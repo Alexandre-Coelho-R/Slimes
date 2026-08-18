@@ -31,7 +31,19 @@ if (isset($_SESSION["usuario_id"])){
             <?php if (!isset($id_compra)): ?>
                 <p>Seu carrinho está vazio.</p>
             <?php else: ?>
-                
+                <?php
+                $sql = "SELECT *
+                        FROM compra_produto
+                        WHERE fk_compra=:id_compra";
+                $select = $conn -> prepare($sql);
+                $select -> execute([":id_compra" => $id_compra]);
+                $resultados = $select -> fetchAll(PDO::FETCH_ASSOC);
+                // Mudar depois para pegar os nomes dos produtos 
+                ?>
+
+                <?php foreach ($resultados as $resultado): ?>
+                    <!-- Mostrar cada produto -->
+                <?php endforeach;?>
             <?php endif;?>
         </section>
                 
