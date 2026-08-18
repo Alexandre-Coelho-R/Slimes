@@ -9,14 +9,14 @@ $js = "produtos.js";
 include "assets/componentes/head-header.php"; 
 ?> 
  
-<main class="pagina-produtos"> 
-    <section class="banner-produtos"> 
+<main> 
+    <!-- <section id="banner-produtos"> 
         <img src="assets/imagens/banner.webp" alt="Banner da loja"> 
-    </section> 
+    </section>  -->
  
-    <h2 style="text-align: center;">Produtos</h2> 
+    <h2 class="title">Produtos</h2> 
 
-    <section class="produtos"> 
+    <section id="produtos"> 
         <?php
         include "assets/funcoes/utilidades.php";
         $conn = conectar_bd();
@@ -42,14 +42,12 @@ include "assets/componentes/head-header.php";
 
             echo "
             <div class='produto'>
-                <a href='$link'>
-                    <div class='imagem-produto'>
-                        <img src='$imagem'>
-                        <span class='quantidade'>$quantidade<br><small>unid</small></span>
-                    </div>
+                <a href='$link' class='imagem-produto'>
+                    <img src='$imagem'>
+                    <span class='quantidade'>$quantidade<br><small>unid</small></span>
                 </a>
 
-                <p class='nome'>{$linha['nome']}</p>
+                <p>{$linha['nome']}</p>
                 <strong>R$ {$linha['valor_unitario']}</strong>
 
                 <form class='form-carrinho'>
