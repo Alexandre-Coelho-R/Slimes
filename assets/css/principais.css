@@ -45,6 +45,7 @@ CARTAS
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem 0.5rem;
     margin: auto;
+    padding: 1rem;
 }
 
 #catalogo > img {

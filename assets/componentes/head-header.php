@@ -16,7 +16,7 @@
 </head>
 
 <body>
-<header>
+<header id="top">
     <a href="index.php" id="logo">
         <img src="assets/imagens/logo.webp" alt="Logo do projeto Pocket Slimes">
     </a>

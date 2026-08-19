@@ -6,7 +6,7 @@ include "assets/componentes/head-header.php";
 ?>
 
 <main>
-    <h1 class="title">Cartas do Pocket Slimes</h1>
+    <h1 class="title">Cartas de Slime Smash</h1>
     <h2 class="subtitle">Veja todas as cartas do jogo e monte seu deck!</h2>
 
     <nav id="filtros">

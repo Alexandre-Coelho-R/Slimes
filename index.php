@@ -25,30 +25,30 @@ include "assets/componentes/head-header.php";
         </div>
 
     </section>
+        <a href="produtos.php">
+            <div class="slideshow-container">
 
-        <div class="slideshow-container">
+            <div class="mySlides">
+            <img src="assets/imagens/slideshow/decksslide.png" style="width:100%">
+            </div>
 
-        <div class="mySlides fade">
-        <img src="assets/imagens/slideshow/BoosterSlide.png" style="width:100%">
-        </div>
+            <div class="mySlides">
+            <img src="assets/imagens/slideshow/boosterslide.png" style="width:100%">
+            </div>
 
-        <div class="mySlides fade">
-        <img src="assets/imagens/slideshow/BoosterSlide.png" style="width:100%">
-        </div>
+            <div class="mySlides">
+            <img src="assets/imagens/slideshow/moedasslide.png" style="width:100%">
+            </div>
 
-        <div class="mySlides fade">
-        <img src="assets/imagens/slideshow/BoosterSlide.png" style="width:100%">
-        </div>
-
-        </div>
-        <br>
-
-        <div style="text-align:center">
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        </div>
-
+            </div>
+            <br>
+            </a>
+            <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            </div>
+        
     <nav id="other-pages">
 
         <a class="site-navigation" href="tutoriais.php">

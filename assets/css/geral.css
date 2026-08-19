@@ -183,7 +183,6 @@ footer {
     min-height: 10vh;
     padding: 1.5rem;
     background-color: var(--bigger-color);
-    margin-top: clamp(1.5rem, 4vw, 4rem);
 
     display: flex;
     align-items: center;
@@ -192,6 +191,32 @@ footer {
     gap: 1rem;
 }
 
+footer ul {
+    color: white;
+    text-align: start;
+    list-style-type: none;
+}
+#back-to-top {
+    font-family: 'SlimeFont';
+    color: white;
+    -webkit-text-stroke: clamp(5px, 0.7vw, 10px) black;
+    paint-order: stroke fill;
+    font-size: var(--medium-text-size);
+    
+    text-decoration: none;
+}
+#back-to-top {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+
+    padding:1em;
+    background: var(--middle-color-2);
+    width: 100%;
+    border-top: 5px solid var(--middle-color-1);
+}
 /* Textos do footer */
 
 .informacoes {
