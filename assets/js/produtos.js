@@ -1,5 +1,4 @@
 // Adicionar ao carrinho
 
-import { adicionarCarrinho, controleCarrinho } from "./funcoes.js";
+import { adicionarCarrinho } from "./funcoes.js";
 adicionarCarrinho();
-controleCarrinho();

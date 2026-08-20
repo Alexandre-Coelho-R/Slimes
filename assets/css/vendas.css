@@ -11,11 +11,13 @@ PÁGINA DE PRODUTOS
 #banner-container {
     position: relative;
     width: 100%;
+    overflow: hidden;
 }
 
 #banner-produtos {
-    height: 250px;
+    height: clamp(200px, 15vw, 250px);
     width: 100%;
+    object-position: center;
     object-fit: cover;
 }
 
@@ -130,13 +132,24 @@ PÁGINA DE PRODUTOS
 
 @media (width < 1000px) {
     #banner-produtos {
-        display: none;
-    }
-    #main-produtos {
-        margin-top: clamp(0.7rem, 1.1vw, 1.2rem);
+        transform: scale(1.2);
+        height: clamp(150px, 20vw, 200px);
     }
 }
 
+@media (width < 600px) {
+    #banner-produtos {
+        transform: scale(1.5);
+        height: clamp(130px, 25vw, 170px);
+    }
+}
+
+@media (width < 400px) {
+    #banner-produtos {
+        transform: scale(2.0);
+        height: clamp(120px, 30vw, 150px);
+    }
+}
 
 /* =========================
    PÁGINA DO CARRINHO
@@ -710,10 +723,4 @@ PÁGINA DE PRODUTOS
 .valor-deck button:hover{
     background:var(--middle-color-2);
     color:var(--smaller-color);
-}
-
-/* Tela modal */
-
-#modal-login {
-    display: none;
 }

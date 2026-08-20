@@ -32,15 +32,6 @@ export function adicionarCarrinho () {
     });
 }
 
-export function controleCarrinho() {
-    const modalLogin = document.getElementById("modal-login");
-    const fecharModal = document.getElementById("fechar-modal");
-
-    fecharModal.addEventListener("click", function () {
-        modalLogin.style.display = "none";
-    });
-}
-
 export function mexerCarrinho () {
     document.querySelectorAll(".form-carrinho").forEach(form => {
         form.addEventListener("submit", async function(event) {
