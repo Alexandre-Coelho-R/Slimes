@@ -9,12 +9,11 @@ $js = "produtos.js";
 include "assets/componentes/head-header.php"; 
 ?> 
  
-<main> 
-    <!-- <section id="banner-produtos"> 
-        <img src="assets/imagens/banner.webp" alt="Banner da loja"> 
-    </section>  -->
+<main id="main-produtos"> 
+    <img id="banner-produtos" src="assets/imagens/banner.webp" alt="Banner da loja"> 
  
-    <h2 class="title">Produtos</h2> 
+    <h1 class="title">Produtos</h1>
+    <h2 class="subtitle"></h2>
 
     <section id="produtos"> 
         <?php

@@ -8,9 +8,15 @@ PÁGINA DE PRODUTOS
     margin-top: 0;
 }
 
+#banner-produtos {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
 #produtos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
     gap: 2rem;
     width: 85%;
     margin: 2rem auto;
@@ -19,8 +25,7 @@ PÁGINA DE PRODUTOS
 .produto {
     border-radius: 15px;
     padding: 1rem;
-    background-color: color-mix(var(--middle-color-2), transparent 90%);
-    border: 1px solid color-mix(black, transparent 65%);
+    border: 2px solid color-mix(black, transparent 80%);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -29,6 +34,7 @@ PÁGINA DE PRODUTOS
 
 .produto:hover {
     transform: translateY(-5px);
+    background-color: color-mix(var(--middle-color-1), transparent 60%);
 }
 
 .imagem-produto {
@@ -40,7 +46,7 @@ PÁGINA DE PRODUTOS
 }
 
 .imagem-produto > img {
-    width: 70%;
+    width: 75%;
     object-fit: contain;
 }
 
@@ -101,6 +107,17 @@ PÁGINA DE PRODUTOS
     background:var(--middle-color-2);
     color:var(--smaller-color);
 }
+
+@media (width < 1000px) {
+    #banner-produtos {
+        display: none;
+    }
+    #main-produtos {
+        margin-top: clamp(0.7rem, 1.1vw, 1.2rem);
+    }
+}
+
+
 /* =========================
    PÁGINA DO CARRINHO
 ========================= */
