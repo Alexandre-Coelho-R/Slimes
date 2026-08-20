@@ -8,10 +8,30 @@ PÁGINA DE PRODUTOS
     margin-top: 0;
 }
 
+#banner-container {
+    position: relative;
+    width: 100%;
+}
+
 #banner-produtos {
     height: 250px;
     width: 100%;
     object-fit: cover;
+}
+
+#banner-container h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    
+    font-family: 'SlimeFont';
+    color: white;
+    -webkit-text-stroke: clamp(5px, 0.7vw, 10px) black;
+    paint-order: stroke fill;
+
+    font-size: calc(var(--title-font-size) * 0.9);
 }
 
 #produtos {
@@ -25,7 +45,6 @@ PÁGINA DE PRODUTOS
 .produto {
     border-radius: 15px;
     padding: 1rem;
-    border: 2px solid color-mix(black, transparent 80%);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -35,6 +54,7 @@ PÁGINA DE PRODUTOS
 .produto:hover {
     transform: translateY(-5px);
     background-color: color-mix(var(--middle-color-1), transparent 60%);
+    border: 1px solid color-mix(black, transparent 75%);
 }
 
 .imagem-produto {

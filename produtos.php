@@ -10,10 +10,11 @@ include "assets/componentes/head-header.php";
 ?> 
  
 <main id="main-produtos"> 
-    <img id="banner-produtos" src="assets/imagens/banner.webp" alt="Banner da loja"> 
- 
-    <h1 class="title">Produtos</h1>
-    <h2 class="subtitle"></h2>
+
+    <div id="banner-container">
+        <img id="banner-produtos" src="assets/imagens/banner.webp" alt="Banner da loja"> 
+        <h1>PRODUTOS</h1>
+    </div>
 
     <section id="produtos"> 
         <?php
