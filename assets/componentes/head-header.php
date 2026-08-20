@@ -10,17 +10,13 @@
     
     <title>Pocket Slimes - <?= $titulo ?? ""?></title>
     <?php
-    if (isset($css)) {
-        echo "<link rel='stylesheet' href='assets/css/$css'>";
-    }
-    if (isset($js)) {
-        echo "<script src='assets/js/$js' defer></script>";
-    }
+    if (isset($css)) echo "<link rel='stylesheet' href='assets/css/$css'>";
+    if (isset($js)) echo "<script src='assets/js/$js' type='module'></script>";
     ?>
 </head>
 
 <body>
-<header id="topo-da-pagina">
+<header id="top">
     <a href="index.php" id="logo">
         <img src="assets/imagens/logo.webp" alt="Logo do projeto Pocket Slimes">
     </a>

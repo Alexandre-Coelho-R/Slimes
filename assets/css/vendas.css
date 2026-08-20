@@ -1,0 +1,659 @@
+/* 
+---------------------------- 
+PÁGINA DE PRODUTOS 
+---------------------------  
+*/ 
+
+#main-produtos {
+    margin-top: 0;
+}
+
+#produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    gap: 2rem;
+    width: 85%;
+    margin: 2rem auto;
+}
+
+.produto {
+    border-radius: 15px;
+    padding: 1rem;
+    background-color: var(--middle-color-1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+}
+
+.imagem-produto {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin-bottom: 0.7rem;
+    position: relative;
+}
+
+.imagem-produto > img {
+    width: 70%;
+    object-fit: contain;
+}
+
+.quantidade {
+    position: absolute;
+
+    top: -3px;
+    right: 10px;
+
+    background-color: var(--bigger-color);
+    color: white;
+
+    padding: 7px 10px;
+
+    border-radius: 12px;
+
+    text-align: center;
+    line-height: 1;
+}
+
+.quantidade small {
+    font-size: 0.7rem;
+    font-weight: normal;
+}
+
+.produto > p {
+    text-align: center;
+}
+
+.produto > strong {
+    text-align: center;
+}
+
+.form-carrinho > button{
+    width: 100%;
+    background-color: var(--middle-color-2);
+}
+
+/* =========================
+   PÁGINA DO CARRINHO
+========================= */
+
+.pagina-carrinho{
+    width:min(1100px,90%);
+    margin:45px auto 70px;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.pagina-carrinho h1{
+    margin:0;
+    color:var(--bigger-color);
+    font-size:2rem;
+}
+
+.subtitulo{
+    margin:8px 0 30px;
+    color:var(--middle-color-2);
+}
+
+
+/* =========================
+   ÁREA PRINCIPAL
+========================= */
+
+.area-carrinho{
+    display:grid;
+    grid-template-columns:1fr 300px;
+    gap:50px;
+    align-items:start;
+}
+
+
+/* =========================
+   LISTA DE PRODUTOS
+========================= */
+
+.carrinho{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+
+/* =========================
+   PRODUTO
+========================= */
+
+.item-carrinho{
+    display:grid;
+
+    grid-template-columns:
+        75px
+        1fr
+        100px
+        90px
+        30px;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:10px 0;
+
+    border-bottom:1px solid #ddd;
+}
+
+
+/* =========================
+   IMAGEM
+========================= */
+
+.item-carrinho img{
+    width:75px;
+    height:105px;
+    object-fit:contain;
+}
+
+
+/* =========================
+   INFORMAÇÕES
+========================= */
+
+.info-produto{
+    text-align:left;
+}
+
+.info-produto h2{
+    margin:0 0 5px;
+
+    color:var(--bigger-color);
+
+    font-size:1rem;
+}
+
+.info-produto p{
+    margin:0;
+
+    color:#777;
+
+    font-size:13px;
+}
+
+
+/* =========================
+   PREÇO
+========================= */
+
+.preco{
+    color:var(--middle-color-2);
+
+    font-size:15px;
+
+    text-align:left;
+
+    white-space:nowrap;
+}
+
+
+/* =========================
+   QUANTIDADE
+========================= */
+
+.quantidade-carrinho{
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:8px;
+}
+
+.quantidade-carrinho button{
+    width:28px;
+    height:28px;
+
+    border:1px solid var(--middle-color-2);
+
+    border-radius:5px;
+
+    background:transparent;
+
+    color:var(--bigger-color);
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.quantidade-carrinho button:hover{
+    background:var(--middle-color-1);
+
+    transform:scale(1.08);
+}
+
+.quantidade-carrinho .quantidade{
+    min-width:18px;
+
+    text-align:center;
+
+    color:var(--bigger-color);
+}
+
+
+/* =========================
+   REMOVER
+========================= */
+
+.remover{
+    border:0;
+
+    background:transparent;
+
+    color:#a33333;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.remover:hover{
+    color:#d62828;
+
+    transform:scale(1.1);
+}
+
+
+/* =========================
+   RESUMO
+========================= */
+
+.resumo-carrinho{
+    width:100%;
+
+    position:sticky;
+
+    top:30px;
+
+    padding-left:25px;
+
+    border-left:2px solid var(--middle-color-1);
+}
+
+
+/* =========================
+   TÍTULO DO RESUMO
+========================= */
+
+.resumo-carrinho h2{
+    margin:0 0 20px;
+
+    color:var(--bigger-color);
+
+    font-size:1.2rem;
+}
+
+
+/* =========================
+   LINHAS
+========================= */
+
+.resumo-carrinho div{
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:8px 0;
+
+    color:var(--bigger-color);
+}
+
+
+/* =========================
+   TOTAL
+========================= */
+
+.resumo-carrinho .total{
+    margin-top:8px;
+
+    padding-top:15px;
+
+    border-top:2px solid var(--middle-color-1);
+
+    font-size:18px;
+}
+
+
+/* =========================
+   FINALIZAR
+========================= */
+
+.finalizar{
+    width:100%;
+
+    margin-top:18px;
+
+    padding:12px;
+
+    border:0;
+
+    border-radius:7px;
+
+    background:var(--middle-color-2);
+
+    color:var(--smaller-color);
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.finalizar:hover{
+    background:var(--middle-color-1);
+
+    color:var(--bigger-color);
+
+    transform:translateY(-3px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:800px){
+
+    .area-carrinho{
+        grid-template-columns:1fr;
+
+        gap:30px;
+    }
+
+    .resumo-carrinho{
+        position:static;
+
+        padding-left:0;
+
+        padding-top:20px;
+
+        border-left:0;
+
+        border-top:2px solid var(--middle-color-1);
+    }
+
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media(max-width:600px){
+
+    .pagina-carrinho{
+        width:94%;
+
+        margin-top:30px;
+    }
+
+    .pagina-carrinho h1{
+        font-size:1.7rem;
+    }
+
+    .item-carrinho{
+        grid-template-columns:
+            60px
+            1fr
+            80px
+            30px;
+
+        gap:10px;
+    }
+
+    .item-carrinho img{
+        width:60px;
+        height:85px;
+    }
+
+    .preco{
+        text-align:right;
+
+        font-size:13px;
+    }
+
+    .quantidade-carrinho{
+        grid-column:3;
+    }
+
+    .remover{
+        grid-column:4;
+    }
+
+    .info-produto h2{
+        font-size:14px;
+    }
+
+    .info-produto p{
+        font-size:11px;
+    }
+
+}
+
+
+/* =========================
+   CELULAR PEQUENO
+========================= */
+
+@media(max-width:450px){
+
+    .item-carrinho{
+        grid-template-columns:
+            55px
+            1fr
+            25px;
+
+        gap:8px;
+    }
+
+    .item-carrinho img{
+        width:55px;
+        height:75px;
+    }
+
+    .info-produto h2{
+        font-size:13px;
+    }
+
+    .preco{
+        grid-column:2;
+
+        text-align:left;
+
+        font-size:13px;
+    }
+
+    .quantidade-carrinho{
+        grid-column:2;
+
+        justify-content:flex-start;
+    }
+
+    .remover{
+        grid-column:3;
+        grid-row:1;
+    }
+
+}
+
+/* =========================
+   DECK
+========================= */
+
+
+/* Área principal da página */
+.pagina-deck{
+    max-width:1200px;
+    margin:25px auto;
+    padding:0;
+    background:transparent;
+}
+
+/*HEADER DO DECK*/
+
+/* Organiza o nome e as informações do deck */
+.cabecalho-deck{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 10px;
+    background:transparent;
+    border-bottom:2px solid var(--middle-color-1);
+}
+
+
+/* CONTEÚDO DO DECK*/
+
+/* Divide a página entre a lista e o preview */
+.conteudo-deck{
+    display:grid;
+    grid-template-columns:65% 35%;
+    min-height:500px;
+    background:transparent;
+}
+
+
+/*LISTA DE CARTAS*/
+
+/*Espaçamento da lista*/
+.lista-cartas{
+    padding:25px 20px 25px 10px;
+}
+
+
+/* Título da lista de cartas */
+.lista-cartas h3{
+    margin:0 0 12px;
+    padding-bottom:8px;
+    color:var(--bigger-color);
+    border-bottom:2px solid var(--middle-color-1);
+}
+
+
+/* Cada carta dentro da lista */
+.linha-carta{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:12px 10px;
+    border-bottom:1px solid #ddd;
+    color:var(--bigger-color);
+    cursor:pointer;
+    transition:.2s;
+}
+
+
+/* Efeito ao passar o mouse sobre uma carta */
+.linha-carta:hover{
+    background:var(--smaller-color);
+    border-radius:5px;
+    transform:translateX(4px);
+}
+
+
+/*QUANTIDADE DA CARTA*/
+
+/* Número de cartas */
+.qtd{
+    width:35px;
+    color:var(--middle-color-2);
+    font-weight:bold;
+}
+
+
+/* Nome da carta */
+.nome-carta{
+    font-size:14px;
+}
+
+
+/*PREVIEW DA CARTA*/
+
+/* Área onde aparece a carta grande */
+.carta-preview{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:25px;
+    background:transparent;
+}
+
+
+/* Imagem da carta em destaque */
+.carta-preview img{
+    width:300px;
+    max-height:430px;
+    object-fit:contain;
+    filter:drop-shadow(0 10px 15px #28373935);
+}
+
+
+/*RESPONSIVIDADE*/
+
+/* Ajustes para telas menores */
+@media(max-width:700px){
+
+    /* Coloca a lista em uma única coluna */
+    .conteudo-deck{
+        grid-template-columns:1fr;
+    }
+
+    /* Coloca o preview antes da lista */
+    .carta-preview{
+        order:-1;
+    }
+
+    /* Organiza o cabeçalho verticalmente */
+    .cabecalho-deck{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+}
+/* BOTÃO ADICIONAR AO CARRINHO */
+
+.valor-deck form{
+    margin-top:8px;
+}
+
+.valor-deck button{
+    border:1px solid var(--middle-color-2);
+    padding:6px 10px;
+    border-radius:5px;
+    background:transparent;
+    color:var(--middle-color-2);
+    font-size:11px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.valor-deck button:hover{
+    background:var(--middle-color-2);
+    color:var(--smaller-color);
+}
+
+/* Tela modal */
+
+#modal-login {
+    display: none;
+}

@@ -1,3 +1,4 @@
+
 <nav id="header-navigation">
     <a href="index.php">
         <p>Início</p>
@@ -12,6 +13,7 @@
         <p>Cartas</p>
     </a>
 </nav>
+
 <footer>
     <div class="bloco">
         
@@ -24,6 +26,17 @@
     </div>
 
     <div class="bloco">
+        <ul>
+            <h2>Desenvolvedores</h2>
+            <li>03 - Davi Henrique Fernandes Silva </li>
+            <li>07 - Frederico Alves Eckhardt</li>
+            <li>18 - Kauã César da Silva Bendo</li>
+            <li>22 - Luca Bressan Moretti</li>
+            <li>28 - Renan Alexandre Coelho</li>
+        </ul>
+    </div>
+
+    <div class="bloco">
         
         <div id="redes_contato">
             <a href="https://www.instagram.com/pocket.slimes.cti/" target="_blank" rel="noopener noreferrer"><img src="assets/imagens/redes-sociais/instagram.webp" alt="Instagram do Pocket Slimes"></a>
@@ -32,11 +45,16 @@
             <a href="https://www.tiktok.com/@pocket.slimes.cti" target="_blank" rel="noopener noreferrer"><img src="assets/imagens/redes-sociais/tiktok.webp" alt="Tiktok do Pocket Slimes"></a>
         </div>
     </div>
+
 </footer>
-    <a href="#topo-da-pagina">
-        <nav id="button-subir">
-            <p>Voltar ao topo</p>
-        </nav>
-    </a>
+    
+    <nav>
+        <a href="#top" id="back-to-top">
+                <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+                Voltar ao topo
+                <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+        </a>
+    </nav>
+    
 </body>
 </html>

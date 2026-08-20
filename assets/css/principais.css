@@ -45,6 +45,7 @@ CARTAS
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem 0.5rem;
     margin: auto;
+    padding: 1rem;
 }
 
 #catalogo > img {
@@ -277,37 +278,114 @@ USUÁRIO
 
 /* Logado */
 
-#logado {
-    width: 100%;
+
+@media (min-width: 1024px) {
+    #logado {
+    margin:1rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "pfp profile-prefs";
+    gap:2rem;
+    }
+}
+@media (max-width: 1024px) {
+    #logado {
+    margin:1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "pfp" 
+        "profile-prefs";
+    gap:0;
+    }
+    #logado div {
+        width: 100%;
+    }
+    #user-img {
+         margin-bottom:2rem;
+    }
+}
+#logado h2 {
+    color: var(--middle-color-2);
+}
+
+#user-actions, #mod-powers {
+    grid-area: profile-prefs;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
-
-#logado > h2 {
-    font-size: calc(var(--big-text-size) * 0.8);
-    margin-bottom: 5rem;
+#mod-powers {
+    background-color: rgba(117, 253, 27, 0.55);
+    padding:1rem;
 }
-
-#logado > div {
-    display: flex;
-    gap: 3rem;
+#mod-powers h2 {
+    color:black
 }
-
-#logado a {
+#user-actions a {
     text-decoration: none;
     background-color: var(--middle-color-2);
     color: var(--bigger-color);
     width: auto;
-    padding: 0.4rem;
-    border-radius: 10px;
+    padding: 0.8rem;
+    margin: 2rem;
+}
+#user-img {
+    grid-area: pfp;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    min-width: 0;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
+}
+#user-img h2 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: calc(var(--medium-big-text-size));
+    text-align: center;
+    max-width: 100%;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+#user-img img{
+    height: var(--profile-pic-size);
+    width: var(--profile-pic-size);
 }
 
-#logado a:hover {
-    background-color: var(--middle-color-1);
-    scale: 1.03;
+/* LINKS */
+
+#logado a{
+    min-height:70px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    padding:10px;
+
+    background: var(--middle-color-2);
+    color:var(--bigger-color);
+
+    text-decoration:none;
+    font-size:var(--normal-text-size);
+    font-weight:bold;
+
+    transition: .2s ease-out;
 }
 
-#logado > div > #delete-conta:hover {
-    background-color: red;
+
+/* HOVER */
+
+#logado a:hover{
+    background:var(--middle-color-1);
+    color:var(--bigger-color);
+    transform:translateY(-4px);
+    box-shadow:0 6px 14px #28373930;
+}
+
+#logado #delete-conta:hover{
+    background: red;
+    color:white;
 }

@@ -1,6 +1,8 @@
 <?php 
 $titulo = "Início";
-$css = "geral.css";
+$css = "index.css";
+$js= "index.js";
+
 include "assets/componentes/head-header.php";
 ?>
 
@@ -23,38 +25,61 @@ include "assets/componentes/head-header.php";
         </div>
 
     </section>
+        <a href="produtos.php">
+            <div class="slideshow-container">
 
+            <div class="mySlides">
+            <img src="assets/imagens/slideshow/decksslide.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+            <img src="assets/imagens/slideshow/boosterslide.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+            <img src="assets/imagens/slideshow/moedasslide.png" style="width:100%">
+            </div>
+
+            </div>
+            <br>
+            </a>
+            <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            </div>
+        
     <nav id="other-pages">
 
         <a class="site-navigation" href="tutoriais.php">
-            <img src="assets/imagens/banner.webp" alt="Banner">
-            <div class="site-navigation-text">
+            <img src="assets/imagens/pesquisarbanner.webp" alt="Banner">
+            <div>
                 <h2>Como Jogar?</h2>
-                <p>Nesse artigo, você aprenderá tudo o que precisa saber para jogar Slime Smash! Desde as regras básicas até conceitos mais avançados. Seja mais um jogador e vença contra seus slimes rivais!</p>
+                <p>Aprenda tudo o que precisa para jogar Slime Smash! Desde as regras básicas até conceitos mais avançados.</p>
             </div>
         </a>
 
         <a class="site-navigation" href="f-mvv.php">
-            <img src="assets/imagens/banner.webp" alt="Banner">
-            <div class="site-navigation-text">
+            <img src="assets/imagens/slimeburaconegrobanner.webp" alt="Banner">
+            <div>
                 <h2>Conheça a gente mais a fundo</h2>
-                <p>Nesse artigo, você entenderá um pouco mais sobre a nossa empresa, nossas missões, visões e valores, além dos nossos conteúdos nas redes sociais</p>
+                <p>Entenda um pouco mais sobre a nossa empresa, nossas missões, visões e valores</p>
             </div>
         </a>
     
         <a class="site-navigation" href="faq.php">
-            <img src="assets/imagens/banner.webp" alt="Banner">
-            <div class="site-navigation-text">
+            <img src="assets/imagens/slimeferreirobanner.webp" alt="Banner">
+            <div>
                 <h2>Como comprar e retirar seus produtos?</h2>
-                <p>Nesse artigo você aprenderá como funciona a compra dos produtos de Slime Smash. Você verá como comprá-los no site, onde e quando retirá-los. Não tenha mais dúvidas!</p>
+                <p>Aprenda como funciona a compra dos produtos de Slime Smash. Você verá como comprá-los no site, onde e quando retirá-los.</p>
             </div>
         </a>
 
         <a class="site-navigation" href="carrinho.php">
-            <img src="assets/imagens/banner.webp" alt="Banner">
-            <div class="site-navigation-text">
+            <img src="assets/imagens/apostartudobanner.webp" alt="Banner">
+            <div>
                 <h2>Faça suas compras!</h2>
-                <p>Nesse local, será apresentado uma lista de todos os produtos de Slime Smash para você comprar presencialmente, ou reservar para retirada.</p>
+                <p>Veja todos os produtos de Slime Smash para comprar presencialmente, ou reservar para retirada.</p>
             </div>
         </a>
     </nav>

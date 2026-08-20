@@ -7,23 +7,18 @@
 
     --normal-text-size: clamp(12px, 2.2vw, 20px);
     --medium-text-size: clamp(16px, 3.5vw, 30px);
+    --medium-big-text-size: clamp(18px, 2.2vw, 25px);
     --big-text-size: clamp(30px, 5vw, 60px);
+    
     --title-font-size: clamp(50px, 12vw, 200px);
 
     --logo-size: clamp(80px,8vw,140px);
-
+    --profile-pic-size: clamp(250px, 30vw, 500px);
     
 }
-
 @font-face {
     font-family: 'SlimeFont';
     src: url(../fontes/SlimeSmash20-Regular.otf);
-}
-main {
-    width: 100%; 
-}
-a {
-    text-decoration: none;
 }
 * {
     margin: 0;
@@ -45,9 +40,9 @@ body {
     flex-direction: column;
 }
 
-#contato-main {
+main {
     flex: 1;
-    width: 100%; 
+    width: 100%;
     margin-top: clamp(0.7rem, 1.1vw, 1.2rem);
 }
 
@@ -105,7 +100,7 @@ header a:not(#logo) {
     align-items: center;
     gap: 1.5rem;
 
-    font-size: var(--medium-text-size);
+    font-size: var(--medium-big-text-size);
 }
 
 #acoes-header > a {
@@ -117,6 +112,7 @@ header a:not(#logo) {
 }
 
 #header-navigation {
+    position: sticky;
     top: 0;
     z-index: 5;
 
@@ -195,6 +191,32 @@ footer {
     gap: 1rem;
 }
 
+footer ul {
+    color: white;
+    text-align: start;
+    list-style-type: none;
+}
+#back-to-top {
+    font-family: 'SlimeFont';
+    color: white;
+    -webkit-text-stroke: clamp(5px, 0.7vw, 10px) black;
+    paint-order: stroke fill;
+    font-size: var(--medium-text-size);
+    
+    text-decoration: none;
+}
+#back-to-top {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+
+    padding:1em;
+    background: var(--middle-color-2);
+    width: 100%;
+    border-top: 5px solid var(--middle-color-1);
+}
 /* Textos do footer */
 
 .informacoes {
@@ -247,188 +269,4 @@ footer {
 #redes_contato > a:hover {
     scale: 1.2;
     cursor: pointer;
-}
-
-/*BOTÃO VOLTAR*/
-#button-subir {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-
-    background: var(--middle-color-2);
-    color: white;
-    padding-top: .3rem;
-
-    font-size: var(--medium-text-size);
-    font-family: 'SlimeFont';
-}
-
-
-/* 
---------------------
-HOME PAGE 
--------------------- 
-*/
-
-#hero-section {
-    height: 100dvh;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content:center;
-    position: relative;
-}
-#hero-section > img {
-    position: absolute;
-
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-
-    filter:brightness(.9) sepia(.5);
-}
-#hero-buttons {
-    padding: 5vh;
-    display:flex;
-    flex-direction: row;
-    gap:10vw;
-}
-#hero-buttons a {
-    background-color: white;
-    color:var(--middle-color-1);
-
-    text-decoration: none;
-    text-align: center;
-    font-size: var(--medium-text-size);
-
-    padding: 0.4em;
-    border-radius: 10px;
-    box-shadow: 0px 0px 50px rgba(0,0,0,.5);
-
-    transition: 0.2s ease-out;
-}
-#hero-buttons a:hover {
-    transform: translateY(-5px) scale(1.02);
-    
-    color: white;
-    background: var(--middle-color-1);
-    
-    box-shadow: 0px 10px 5px rgba(0,0,0,.5);
-}
-
-.hero-title, .hero-subtitle {
-    font-family: 'SlimeFont';
-    color: white;
-    -webkit-text-stroke: clamp(5px, 0.7vw, 10px) black;
-    paint-order: stroke fill;
-}
-
-.hero-title {
-    font-size: var(--title-font-size);
-}
-
-.hero-subtitle {
-    font-size: var(--big-text-size);
-}
-
-/* Sections de navegação no site */
-
-
-.site-navigation > img {
-    height: 100%;
-    width:100%;
-    object-fit: cover;
-
-}
-.site-navigation-text {
-    padding:1rem;
-    text-align: left;
-    font-size: var(--normal-text-size);
-}
-.site-navigation-text p {
-    text-align: justify;
-}
-
-
-.site-navigation:hover {
-    transform: scale(1.05);
-}
-
-@media (width >= 1170px) {
-    #other-pages {
-        padding: 3rem;
-        gap: 2rem;
-        display: flex;
-        align-items: center;
-        align-content: start;
-        justify-content: space-evenly;
-        flex-direction: row;
-        
-        text-align: center;
-    }
-    .site-navigation {
-        width: 20vw;
-        padding: 0;
-        border-radius: 30px;
-
-        display:flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: start;
-        gap: 0.3em;
-        
-        background-color: var(--smaller-color);
-
-        text-decoration: none;
-        color: black;
-
-        transition: 0.2s ease-out;
-    }
-    .site-navigation > img {
-        overflow: hidden;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-    }
-}
-
-@media (width < 1170px) {
-    #other-pages {
-        padding: 3rem;
-        gap: 2rem;
-        display: grid;
-        align-items: start;
-        align-content: start;
-        justify-content: space-evenly;
-        
-        text-align: justify;
-    }
-    .site-navigation {
-        width: 100%;
-        min-height: fit-content;
-        /* border: 1rem;  Não faz sentido border: 1rem*/
-
-        display:grid;
-        grid-template-rows: auto auto;
-        grid-template-areas: 
-            "img"
-            "txt";
-        
-        background-color: var(--smaller-color);
-
-        text-decoration: none;
-        color: black;
-
-        transition: 0.2s ease-out;
-    }
-    .site-navigation > img {
-        overflow: hidden;
-        grid-area: img;
-    }
-    .site-navigation-text {
-        grid-area: txt;
-    }
 }

@@ -1,11 +1,13 @@
 <?php
+session_start();
+
 $titulo = "Informações";
 include "assets/componentes/head-header.php";
-session_start();
 ?>
 
 <main>
-    <h2 class="title"><?=$_SESSION["mensagem"] ?? ""?></h2>
+    <h2 class="subtitle"><?=$_SESSION["mensagem"] ?? ""?></h2>
+    <?php unset($_SESSION["mensagem"]);?>
 </main>
 
 <?php include "assets/componentes/footer.php"?>
