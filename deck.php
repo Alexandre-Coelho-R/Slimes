@@ -27,13 +27,13 @@ $select->execute([":id_produto" => $_GET["id"]]);
 $cartas = $select->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<main class="pagina-deck">
+<main id="pagina-deck">
 
-    <section class="cabecalho-deck">
+    <section id="cabecalho-deck">
         <h1><?=$produto["nome"]?></h1>
 
-        <div class="valor-deck">
-            <span>Valor do Deck</span>
+        <div id="valor-deck">
+            <span>Valor do Deck:</span>
             <strong>R$ <?=number_format($produto["valor_unitario"], 2, ",", ".")?></strong>
 
             <form class="form-carrinho">
@@ -55,13 +55,18 @@ $cartas = $select->fetchAll(PDO::FETCH_ASSOC);
         </div>
 
         <?php if (!empty($cartas)): ?>
-            <div class="carta-preview">
+            <div id="container-destaque">
+                <button id="carta-anterior" class="seta-carta" type="button"><i class="fa-solid fa-chevron-left"></i></button>
                 <img id="carta-destaque" src="assets/imagens/cartas/<?=$cartas[0]["imagem"]?>.webp" alt="<?=$cartas[0]["nome"]?>">
+                <button id="carta-proxima" class="seta-carta" type="button"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
         <?php endif; ?>
     </section>
 
-    <script>const usuarioLogado = <?=json_encode($logado)?></script>
+    <script>
+    const cartas = <?= json_encode($cartas) ?>
+    const usuarioLogado = <?=json_encode($logado)?>
+    </script>
 </main>
 
 <?php include "assets/componentes/footer.php"; ?>

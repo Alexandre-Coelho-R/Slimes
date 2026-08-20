@@ -151,6 +151,208 @@ PÁGINA DE PRODUTOS
     }
 }
 
+
+/* =========================
+   PÁGINA DO DECK
+========================= */
+
+
+/* Área principal da página */
+#pagina-deck{
+    max-width:1200px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*HEADER DO DECK*/
+
+/* Organiza o nome e as informações do deck */
+#cabecalho-deck{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 10px;
+    background:transparent;
+    border-bottom:2px solid var(--middle-color-1);
+}
+
+
+/* CONTEÚDO DO DECK*/
+
+/* Divide a página entre a lista e o preview */
+.conteudo-deck{
+    display:grid;
+    grid-template-columns:65% 35%;
+    min-height:500px;
+    background:transparent;
+}
+
+
+/*LISTA DE CARTAS*/
+
+/*Espaçamento da lista*/
+.lista-cartas{
+    padding:25px 20px 25px 10px;
+}
+
+
+/* Título da lista de cartas */
+.lista-cartas h3{
+    margin:0 0 12px;
+    padding-bottom:8px;
+    color:var(--bigger-color);
+    border-bottom:2px solid var(--middle-color-1);
+}
+
+
+/* Cada carta dentro da lista */
+.linha-carta{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:12px 10px;
+    border-bottom:1px solid #ddd;
+    color:var(--bigger-color);
+    transition:0.2s;
+}
+
+
+/* Efeito ao passar o mouse sobre uma carta */
+.linha-carta:hover{
+    background:var(--smaller-color);
+    border-radius:5px;
+    transform:translateX(4px);
+}
+
+
+/*QUANTIDADE DA CARTA*/
+
+/* Número de cartas */
+.qtd{
+    width:35px;
+    color:var(--middle-color-2);
+    font-weight:bold;
+}
+
+
+/* Nome da carta */
+.nome-carta{
+    font-size:14px;
+}
+
+
+/*PREVIEW DA CARTA*/
+
+#container-destaque {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.5rem, 2vw, 1.5rem);
+    padding: 25px;
+    min-width: 0;
+}
+
+#container-destaque img {
+    display: block;
+    width: auto;
+    height: clamp(350px, 45vw, 500px);
+    max-width: 70%;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 15px #28373935);
+}
+
+.seta-carta {
+    flex-shrink: 0;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--middle-color-2);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--middle-color-2);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.seta-carta:hover {
+    background: var(--middle-color-2);
+    color: var(--smaller-color);
+}
+
+/*RESPONSIVIDADE*/
+
+/* Ajustes para telas menores */
+@media (max-width: 700px) {
+
+    .conteudo-deck {
+        grid-template-columns: 1fr;
+    }
+
+    #container-destaque {
+        order: -1;
+        min-height: 0;
+        padding: 20px 10px;
+        gap: 0.5rem;
+    }
+
+    #container-destaque img {
+        width: auto;
+        max-width: 75%;
+        height: clamp(280px, 80vw, 400px);
+    }
+
+    .seta-carta {
+        width: 35px;
+        height: 35px;
+    }
+
+    #cabecalho-deck {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #cabecalho-deck > h1 {
+        margin-bottom: 1.2rem;
+    }
+}
+/* BOTÃO ADICIONAR AO CARRINHO */
+
+#valor-deck {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#valor-deck > form {
+    margin: 0;
+}
+
+#valor-deck > span {
+    margin-right: 0.3rem;
+}
+
+#valor-deck > strong {
+    margin-right: clamp(1rem, 2vw, 2rem);
+}
+
+#valor-deck button{
+    border:1px solid var(--middle-color-2);
+    padding:6px 10px;
+    border-radius:5px;
+    background:transparent;
+    color:var(--middle-color-2);
+    font-size:11px;
+    cursor:pointer;
+}
+
+#valor-deck button:hover{
+    background:var(--middle-color-2);
+    color:var(--smaller-color);
+}
+
 /* =========================
    PÁGINA DO CARRINHO
 ========================= */
@@ -161,9 +363,7 @@ PÁGINA DE PRODUTOS
 }
 
 
-/* =========================
-   TÍTULO
-========================= */
+/* Título */
 
 .pagina-carrinho h1{
     margin:0;
@@ -177,9 +377,7 @@ PÁGINA DE PRODUTOS
 }
 
 
-/* =========================
-   ÁREA PRINCIPAL
-========================= */
+/* Área principal */
 
 .area-carrinho{
     display:grid;
@@ -188,10 +386,7 @@ PÁGINA DE PRODUTOS
     align-items:start;
 }
 
-
-/* =========================
-   LISTA DE PRODUTOS
-========================= */
+/* Lista de produtos */
 
 .carrinho{
     display:flex;
@@ -200,9 +395,7 @@ PÁGINA DE PRODUTOS
 }
 
 
-/* =========================
-   PRODUTO
-========================= */
+/* Produtos */
 
 .item-carrinho{
     display:grid;
@@ -223,10 +416,7 @@ PÁGINA DE PRODUTOS
     border-bottom:1px solid #ddd;
 }
 
-
-/* =========================
-   IMAGEM
-========================= */
+/* Imagens */
 
 .item-carrinho img{
     width:75px;
@@ -234,10 +424,7 @@ PÁGINA DE PRODUTOS
     object-fit:contain;
 }
 
-
-/* =========================
-   INFORMAÇÕES
-========================= */
+/* Informações */
 
 .info-produto{
     text-align:left;
@@ -259,10 +446,7 @@ PÁGINA DE PRODUTOS
     font-size:13px;
 }
 
-
-/* =========================
-   PREÇO
-========================= */
+/* Preços */
 
 .preco{
     color:var(--middle-color-2);
@@ -274,10 +458,7 @@ PÁGINA DE PRODUTOS
     white-space:nowrap;
 }
 
-
-/* =========================
-   QUANTIDADE
-========================= */
+/* Quantidade */
 
 .quantidade-carrinho{
     display:flex;
@@ -321,10 +502,7 @@ PÁGINA DE PRODUTOS
     color:var(--bigger-color);
 }
 
-
-/* =========================
-   REMOVER
-========================= */
+/* Remover */
 
 .remover{
     border:0;
@@ -346,10 +524,7 @@ PÁGINA DE PRODUTOS
     transform:scale(1.1);
 }
 
-
-/* =========================
-   RESUMO
-========================= */
+/* Resumo */
 
 .resumo-carrinho{
     width:100%;
@@ -363,10 +538,7 @@ PÁGINA DE PRODUTOS
     border-left:2px solid var(--middle-color-1);
 }
 
-
-/* =========================
-   TÍTULO DO RESUMO
-========================= */
+/* Título do resumo */
 
 .resumo-carrinho h2{
     margin:0 0 20px;
@@ -376,10 +548,7 @@ PÁGINA DE PRODUTOS
     font-size:1.2rem;
 }
 
-
-/* =========================
-   LINHAS
-========================= */
+/* Linhas */
 
 .resumo-carrinho div{
     display:flex;
@@ -391,10 +560,7 @@ PÁGINA DE PRODUTOS
     color:var(--bigger-color);
 }
 
-
-/* =========================
-   TOTAL
-========================= */
+/* Total */
 
 .resumo-carrinho .total{
     margin-top:8px;
@@ -406,10 +572,7 @@ PÁGINA DE PRODUTOS
     font-size:18px;
 }
 
-
-/* =========================
-   FINALIZAR
-========================= */
+/* Finalizar */
 
 .finalizar{
     width:100%;
@@ -442,9 +605,7 @@ PÁGINA DE PRODUTOS
 }
 
 
-/* =========================
-   TABLET
-========================= */
+/* Responsividade */
 
 @media(max-width:800px){
 
@@ -467,11 +628,6 @@ PÁGINA DE PRODUTOS
     }
 
 }
-
-
-/* =========================
-   CELULAR
-========================= */
 
 @media(max-width:600px){
 
@@ -524,11 +680,6 @@ PÁGINA DE PRODUTOS
 
 }
 
-
-/* =========================
-   CELULAR PEQUENO
-========================= */
-
 @media(max-width:450px){
 
     .item-carrinho{
@@ -568,159 +719,4 @@ PÁGINA DE PRODUTOS
         grid-row:1;
     }
 
-}
-
-/* =========================
-   DECK
-========================= */
-
-
-/* Área principal da página */
-.pagina-deck{
-    max-width:1200px;
-    margin:25px auto;
-    padding:0;
-    background:transparent;
-}
-
-/*HEADER DO DECK*/
-
-/* Organiza o nome e as informações do deck */
-.cabecalho-deck{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 10px;
-    background:transparent;
-    border-bottom:2px solid var(--middle-color-1);
-}
-
-
-/* CONTEÚDO DO DECK*/
-
-/* Divide a página entre a lista e o preview */
-.conteudo-deck{
-    display:grid;
-    grid-template-columns:65% 35%;
-    min-height:500px;
-    background:transparent;
-}
-
-
-/*LISTA DE CARTAS*/
-
-/*Espaçamento da lista*/
-.lista-cartas{
-    padding:25px 20px 25px 10px;
-}
-
-
-/* Título da lista de cartas */
-.lista-cartas h3{
-    margin:0 0 12px;
-    padding-bottom:8px;
-    color:var(--bigger-color);
-    border-bottom:2px solid var(--middle-color-1);
-}
-
-
-/* Cada carta dentro da lista */
-.linha-carta{
-    display:flex;
-    align-items:center;
-    gap:15px;
-    padding:12px 10px;
-    border-bottom:1px solid #ddd;
-    color:var(--bigger-color);
-    cursor:pointer;
-    transition:.2s;
-}
-
-
-/* Efeito ao passar o mouse sobre uma carta */
-.linha-carta:hover{
-    background:var(--smaller-color);
-    border-radius:5px;
-    transform:translateX(4px);
-}
-
-
-/*QUANTIDADE DA CARTA*/
-
-/* Número de cartas */
-.qtd{
-    width:35px;
-    color:var(--middle-color-2);
-    font-weight:bold;
-}
-
-
-/* Nome da carta */
-.nome-carta{
-    font-size:14px;
-}
-
-
-/*PREVIEW DA CARTA*/
-
-/* Área onde aparece a carta grande */
-.carta-preview{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:25px;
-    background:transparent;
-}
-
-
-/* Imagem da carta em destaque */
-.carta-preview img{
-    width:300px;
-    max-height:430px;
-    object-fit:contain;
-    filter:drop-shadow(0 10px 15px #28373935);
-}
-
-
-/*RESPONSIVIDADE*/
-
-/* Ajustes para telas menores */
-@media(max-width:700px){
-
-    /* Coloca a lista em uma única coluna */
-    .conteudo-deck{
-        grid-template-columns:1fr;
-    }
-
-    /* Coloca o preview antes da lista */
-    .carta-preview{
-        order:-1;
-    }
-
-    /* Organiza o cabeçalho verticalmente */
-    .cabecalho-deck{
-        flex-direction:column;
-        align-items:flex-start;
-    }
-}
-/* BOTÃO ADICIONAR AO CARRINHO */
-
-.valor-deck form{
-    margin-top:8px;
-}
-
-.valor-deck button{
-    border:1px solid var(--middle-color-2);
-    padding:6px 10px;
-    border-radius:5px;
-    background:transparent;
-    color:var(--middle-color-2);
-    font-size:11px;
-    cursor:pointer;
-    transition:.2s;
-}
-
-.valor-deck button:hover{
-    background:var(--middle-color-2);
-    color:var(--smaller-color);
 }
