@@ -10,7 +10,7 @@ PÁGINA DE PRODUTOS
 
 #produtos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     width: 85%;
     margin: 2rem auto;
@@ -19,7 +19,8 @@ PÁGINA DE PRODUTOS
 .produto {
     border-radius: 15px;
     padding: 1rem;
-    background-color: var(--middle-color-1);
+    background-color: color-mix(var(--middle-color-2), transparent 90%);
+    border: 1px solid color-mix(black, transparent 65%);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -34,7 +35,7 @@ PÁGINA DE PRODUTOS
     display: flex;
     justify-content: center;
     text-decoration: none;
-    margin-bottom: 0.7rem;
+    margin-bottom: 1.2rem;
     position: relative;
 }
 
@@ -67,17 +68,39 @@ PÁGINA DE PRODUTOS
 
 .produto > p {
     text-align: center;
+    font-size: var(--normal-text-size);
+    font-weight: 500;
 }
 
 .produto > strong {
     text-align: center;
+    font-size: calc(var(--normal-text-size) * 1.1);
+    font-weight: 600;
+    color: var(--middle-color-2);
 }
 
-.form-carrinho > button{
-    width: 100%;
-    background-color: var(--middle-color-2);
+.form-carrinho {
+    margin-top: 0.7rem;
+    display: flex;
+    justify-content: center;
 }
 
+.form-carrinho button{
+    border: 1px solid var(--middle-color-2);
+    padding: 5px 9px;
+    border-radius: 5px;  
+    background: transparent;
+    color: var(--middle-color-2);
+    font-size: calc(var(--normal-text-size) * 0.9);
+    cursor: pointer;
+    transition:.2s;
+    
+}
+
+.produto button:hover{
+    background:var(--middle-color-2);
+    color:var(--smaller-color);
+}
 /* =========================
    PÁGINA DO CARRINHO
 ========================= */

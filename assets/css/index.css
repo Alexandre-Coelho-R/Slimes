@@ -109,6 +109,7 @@ main {
 @media (width >= 1170px) {
     #other-pages {
         padding: 3rem;
+        padding-bottom: 0;
         gap: 2rem;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -179,12 +180,12 @@ main {
 
 /*
 ==========================
-SLIDE SHOW W3SCHOOLS
+SLIDE SHOW
 ==========================
 */
-
+/* Slideshow container */
 .slideshow-container {
-  max-width: 100vw;
+  max-width: 90vw;
   position: relative;
   margin: auto;
   border-top: 3px solid var(--middle-color-1);
