@@ -6,7 +6,7 @@ include "assets/componentes/head-header.php";
 
 <main>
     <h1 class="title">Quem somos?</h1>
-    <h2 class="subtitle">Conheça os princípios que orientam a Pocket Slimes</h2>
+    <h2 class="subtitle">Conheça os princípios que orientam a Slime Smash</h2>
 
     <section id="principles">
         <div>

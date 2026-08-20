@@ -13,25 +13,44 @@ const btProximo = document.getElementById("carta-proxima");
 
 let cartaAtual = 0;
 
+cartas[0].classList.add("ativa");
+
 cartas.forEach((carta, index) => {
     carta.addEventListener("mouseenter", () => {
         cartaAtual = index;
-        destaque.src = carta.dataset.imagem;
+        mostraDestaque();
     });
 });
 
 function mostraDestaque () {
     destaque.src = cartas[cartaAtual].dataset.imagem;
+    cartas.forEach((carta) => {
+        carta.classList.remove("ativa");
+    })
+    cartas[cartaAtual].classList.add("ativa");
 }
 
-btAnterior.addEventListener("click", () => {
+function voltarUm () {
     cartaAtual--;
     if (cartaAtual < 0) cartaAtual = cartas.length - 1;
     mostraDestaque();
-});
+}
 
-btProximo.addEventListener("click", () => {
+function avancarUm () {
     cartaAtual++;
     if (cartaAtual >= cartas.length) cartaAtual = 0;
     mostraDestaque();
+}
+
+btAnterior.addEventListener("click", () => {
+    voltarUm();
 });
+
+btProximo.addEventListener("click", () => {
+    avancarUm();
+});
+
+document.addEventListener("keydown", (evento) => {
+    if (evento.key == "ArrowLeft") voltarUm();
+    if (evento.key == "ArrowRight") avancarUm();
+})

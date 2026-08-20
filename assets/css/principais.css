@@ -49,14 +49,14 @@ CARTAS
 
 #catalogo > img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 6.7px;
     background-color: var(--smaller-color);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 #catalogo > img:hover {
-    transform: scale(1.01);
+    transform: scale(1.02);
     cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 /* Clicar em carta */
@@ -321,7 +321,6 @@ USUÁRIO
     color:black
 }
 #user-actions a {
-    text-decoration: none;
     background-color: var(--middle-color-2);
     color: var(--bigger-color);
     width: auto;

@@ -11,7 +11,7 @@ include "assets/componentes/head-header.php";
         <img src="assets/imagens/banner.webp" alt="Banner">
         
         <h1 class="hero-title">SLIME SMASH</h1>
-        <h2 class="hero-subtitle">O melhor jogo TCG do CTI</h2>
+        <h2 class="hero-subtitle">O melhor jogo de cartas do CTI</h2>
 
         <div id="hero-buttons">
             <a href="#other-pages">
@@ -23,31 +23,19 @@ include "assets/componentes/head-header.php";
                 <i class="fa-solid fa-cart-shopping"></i>
             </a>
         </div>
-
     </section>
 
-        <div class="slideshow-container">
-
-        <div class="mySlides fade">
-        <img src="assets/imagens/slideshow/BoosterSlide.png" style="width:100%">
-        </div>
-
-        <div class="mySlides fade">
-        <img src="assets/imagens/slideshow/BoosterSlide.png" style="width:100%">
-        </div>
-
-        <div class="mySlides fade">
-        <img src="assets/imagens/slideshow/BoosterSlide.png" style="width:100%">
-        </div>
-
-        </div>
-        <br>
-
-        <div style="text-align:center">
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        </div>
+    <div id="slideshow-container">
+        <img class="mySlides fade" src="assets/imagens/slideshow/BoosterSlide.png" style="width:100%">
+        <img class="mySlides fade" src="assets/imagens/slideshow/BoosterSlide.png" style="width:100%">
+        <img class="mySlides fade" src="assets/imagens/slideshow/BoosterSlide.png" style="width:100%">
+    </div>
+    
+    <div style="text-align:center">
+        <span class="dot" id="dot-1"></span> 
+        <span class="dot" id="dot-2"></span> 
+        <span class="dot" id="dot-3"></span> 
+    </div>
 
     <nav id="other-pages">
 

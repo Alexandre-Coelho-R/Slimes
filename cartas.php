@@ -6,8 +6,8 @@ include "assets/componentes/head-header.php";
 ?>
 
 <main>
-    <h1 class="title">Cartas do Pocket Slimes</h1>
-    <h2 class="subtitle">Veja todas as cartas do jogo e monte seu deck!</h2>
+    <h1 class="title">Cartas do Slime Smash</h1>
+    <h2 class="subtitle">Filtre as cartas por categoria e clique em uma delas para ampliá-la</h2>
 
     <nav id="filtros">
         <button id="todos" type="button">

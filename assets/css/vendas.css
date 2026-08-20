@@ -56,13 +56,11 @@ PÁGINA DE PRODUTOS
 .produto:hover {
     transform: translateY(-5px);
     background-color: color-mix(var(--middle-color-1), transparent 60%);
-    border: 1px solid color-mix(black, transparent 75%);
 }
 
 .imagem-produto {
     display: flex;
     justify-content: center;
-    text-decoration: none;
     margin-bottom: 1.2rem;
     position: relative;
 }
@@ -217,11 +215,12 @@ PÁGINA DE PRODUTOS
     transition:0.2s;
 }
 
+.linha-carta.ativa {
+    background-color: var(--smaller-color);
+}
 
-/* Efeito ao passar o mouse sobre uma carta */
 .linha-carta:hover{
-    background:var(--smaller-color);
-    border-radius:5px;
+    border-radius: 12px;
     transform:translateX(4px);
 }
 
