@@ -12,23 +12,24 @@ include "assets/componentes/head-header.php";
         <div>
             <i class="fa-solid fa-bullseye"></i>
             <h2>Missão</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos maiores distinctio, excepturi inventore dolore modi praesentium libero enim est alias dolorem rem nesciunt quas consectetur esse quisquam facere dolorum in!</p>
+            <p>Desenvolver um jogo de cartas indie combinando qualidade alta, desenhos autorais e diversão num produto acessível.</p>
         </div>
 
         <div>
             <i class="fa-solid fa-eye"></i>
             <h2>Visão</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos maiores distinctio, excepturi inventore dolore modi praesentium libero enim est alias dolorem rem nesciunt quas consectetur esse quisquam facere dolorum in!</p>
+            <p>Tornar o Slime Smash um jogo reconhecido por sua inovação e criatividade no mercado dos jogos TCG.</p>
         </div>
         
         <div>
             <i class="fa-solid fa-handshake"></i>
             <h2>Valores</h2>
             <ul>
-                <li>Farmar</li>
-                <li>Aura</li>
-                <li>Desculpa</li>
-                <li>Cabello</li>
+                <li>Criatividade</li>
+                <li>Qualidade</li>
+                <li>Inovação</li>
+                <li>Diversão</li>
+                <li>Autoria</li>
             </ul>
         </div>
     </section>

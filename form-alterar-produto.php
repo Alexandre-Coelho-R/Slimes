@@ -3,7 +3,7 @@ include "assets/funcoes/utilidades.php";
 verificarAdmin();
 
 $titulo = "Alterar produto";
-$css = "usuario.css";
+$css = "admin.css";
 include "assets/componentes/head-header.php";
 
 $conn = conectar_bd();
@@ -36,7 +36,7 @@ if(!$produto) voltarInfo("Produto não encontrado");
         </fieldset>
     </form>
 
-    <a href="editar-produtos.php">Voltar à página de produtos</a>
+    <a href="editar-produtos.php" class="a-form">Voltar à página de produtos</a>
 </main>
     
 <?php include "assets/componentes/footer.php"?> 

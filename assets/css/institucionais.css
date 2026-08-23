@@ -235,7 +235,7 @@ MISSÃO VISÃO E VALORES
 */
 
 #principles {
-    width: min(90%, 1200px);
+    width: min(90%, 1300px);
     margin: 0 auto;
 
     display: grid;
@@ -281,7 +281,7 @@ MISSÃO VISÃO E VALORES
     color: var(--bigger-color);
     text-align: justify;
     hyphens: auto;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 #principles > div > ul {

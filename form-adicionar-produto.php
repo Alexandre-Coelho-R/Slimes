@@ -3,7 +3,7 @@ include "assets/funcoes/utilidades.php";
 verificarAdmin();
 
 $titulo = "Adicionar produto";
-$css = "usuario.css";
+$css = "admin.css";
 include "assets/componentes/head-header.php";
 ?>
 
@@ -23,7 +23,7 @@ include "assets/componentes/head-header.php";
         </fieldset>
     </form>
 
-    <a href="editar-produtos.php">Voltar à página de produtos</a>
+    <a href="editar-produtos.php" class="a-form">Voltar à página de produtos</a>
 </main>
     
 <?php include "assets/componentes/footer.php"?> 

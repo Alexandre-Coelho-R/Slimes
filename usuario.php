@@ -3,7 +3,7 @@
 session_start();
 
 $titulo = "Usuário";
-$css = "principais.css";
+$css = "usuario.css";
 $js = "usuario.js";
 include "assets/componentes/head-header.php";
 ?>
@@ -14,22 +14,24 @@ include "assets/componentes/head-header.php";
     <section id="logado">
         <div id="user-img">
             <h2>Seja bem-vindo, <?=htmlspecialchars($_SESSION["usuario_nome"])?>!</h2>
-            <img src="assets/user-prefs/"<?php echo 'sei la'; ?> alt="Profile picture">
+            <?php if (isset($_SESSION["usuario_imagem"])):?>
+                <img src="" alt="Foto de perfil">
+            <?php else:?>
+                <img src="assets/imagens/usuario-padrao.webp" alt="Foto de perfil">
+            <?php endif;?>
         </div>
         <div id="user-actions">
             <?php if($_SESSION["usuario_admin"] ?? false): ?>
-                <div id="mod-powers">
-                    <h2>PODERES DE MODERADOR</h2>
-                    <a href="editar-produtos.php" class="subtitle">Gerenciar produtos</a>
-                    <a href="editar-estoque.php" class="subtitle">Gerenciar estoque</a>
-                </div>
+                <h2>Poderes de administrador</h2>
+                <a href="editar-produtos.php">Gerenciar produtos</a>
+                <a href="editar-estoque.php">Gerenciar estoque</a>
             <?php endif;?>
             <h2>Tem algo a nos dizer?</h2>
-            <a href="f-contato.php" class="subtitle">Entrar em contato</a>
+            <a href="f-contato.php">Entrar em contato</a>
             <h2>Opções de conta</h2>
-            <a href="" class="subtitle">Alterar Senha</a>
-            <a href="assets/funcoes/logout-usuario.php" class="subtitle">Deslogar no navegador</a>
-            <a href="assets/funcoes/deletar-usuario.php" class="subtitle" id="delete-conta">Deletar conta</a>
+            <a href="">Alterar Senha</a>
+            <a href="assets/funcoes/logout-usuario.php">Deslogar no navegador</a>
+            <a href="assets/funcoes/deletar-usuario.php" id="delete-conta">Deletar conta</a>
         </div>
     </section>
 

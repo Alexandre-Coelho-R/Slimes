@@ -3,7 +3,7 @@ include "assets/funcoes/utilidades.php";
 verificarAdmin();
 
 $titulo = "Alterar estoque";
-$css = "usuario.css";
+$css = "admin.css";
 include "assets/componentes/head-header.php";
 
 $conn = conectar_bd();
@@ -51,7 +51,7 @@ if(!$entrada) voltarInfo("Entrada não encontrado");
         </fieldset>
     </form>
 
-    <a href="editar-estoque.php">Voltar à página de produtos</a>
+    <a href="editar-estoque.php" class="a-form">Voltar à página de estoque</a>
 </main>
     
 <?php include "assets/componentes/footer.php"?> 
