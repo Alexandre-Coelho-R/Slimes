@@ -26,7 +26,6 @@ CONTATO
 #form-contato fieldset {
     width: 75%;
     max-width: 750px;
-    min-width: 0;
 
     display: flex;
     align-items: center;
@@ -55,7 +54,7 @@ CONTATO
     border: 0;
     border-radius: 5px;
 
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     font-size: clamp(1rem, 2vw, 1.15rem);
     margin-bottom: 1.2rem;
 }
@@ -97,13 +96,6 @@ CONTATO
     }
 }
 
-@media (width < 580px) {
-    #form-contato fieldset {
-        width: 85%;
-        padding: 1.2rem;
-    }
-}
-
 @media (width < 480px) {
     #form-contato fieldset {
         width: 95%;
@@ -140,7 +132,7 @@ DESENVOLVEDORES
     border-radius: 10px;
     overflow: hidden;
     border: 3px solid var(--middle-color-2);
-    background-color: color-mix(var(--smaller-color), transparent 0%);
+    background-color: var(--smaller-color);
 
     display: grid;
     grid-template-columns: 35fr 65fr;
@@ -241,7 +233,6 @@ MISSÃO VISÃO E VALORES
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: clamp(1rem, 2vw, 2rem);
-    align-items: stretch;
 }
 
 #principles > div {

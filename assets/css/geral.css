@@ -79,7 +79,6 @@ HEADER
 ----------------------------------- 
 */
 header {
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -99,7 +98,6 @@ header a:not(#logo) {
 
 #logo > img {
     width: var(--logo-size);
-    height: auto;
 }
 
 #acoes-header {
@@ -123,16 +121,13 @@ header a:not(#logo) {
     top: 0;
     z-index: 5;
     display: flex;
-    justify-content: space-evenly;
     background-color: var(--bigger-color);
 }
 
 #header-navigation a {
     width:100%;
     padding: 0.5rem 0;
-    
-    align-items: center;
-    
+        
     font-size: var(--normal-text-size);
     color: white;
     text-align: center;
@@ -141,22 +136,24 @@ header a:not(#logo) {
 
     background-size: 100% 0;
     background-repeat: no-repeat;
+    border-top-style: solid;
+    border-top-width: 5px;
 }
 
 #header-navigation a:nth-child(1) {
-    border-top: 5px solid rgb(255, 0, 0);   
+    border-top-color: rgb(255, 0, 0);   
     background-image:linear-gradient(rgb(255, 0, 0),rgb(255, 0, 0));
 }
 #header-navigation a:nth-child(2) {
-    border-top: 5px solid rgb(255, 145, 0);
+    border-top-color: rgb(255, 145, 0);
     background-image:linear-gradient(rgb(255, 145, 0),rgb(255, 145, 0));
 }
 #header-navigation a:nth-child(3) {
-    border-top: 5px solid rgb(0, 38, 255);
+    border-top-color: rgb(0, 38, 255);
     background-image:linear-gradient(rgb(0, 38, 255),rgb(0, 38, 255));
 }
 #header-navigation a:nth-child(4) {
-    border-top: 5px solid rgb(255, 0, 255);
+    border-top-color: rgb(255, 0, 255);
     background-image:linear-gradient(rgb(255, 0, 255),rgb(255, 0, 255));
 }
 
@@ -171,9 +168,12 @@ FOOTER
 */
 
 footer {
-    padding: 1.5rem;
     background-color: var(--bigger-color);
     margin-top: clamp(1.5rem, 4vw, 4rem);
+}
+
+#conteudo-footer {
+    padding: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -204,12 +204,11 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
     gap: 0.8rem;
-    transition: 0.5s ease-out;
-    cursor: pointer;
 }
 
 #redes_contato > a {
     display: flex;
+    transition: 0.2s ease-out;
 }
 
 #redes_contato > a:hover {
@@ -217,11 +216,30 @@ footer {
 }
 
 #redes_contato > a > img {
-    object-fit: contain;
     border-radius: 30%;
     max-width: 30px;
     margin: auto;
 }
+
+/* Voltar ao topo */
+
+#voltar-topo {
+    display: flex;
+    justify-content: space-around;
+
+    font-family: 'SlimeFont';
+    color: white;
+    -webkit-text-stroke:clamp(3.75px, 0.525vw, 7.5px) black;
+    paint-order: stroke fill;
+    letter-spacing: 2px;
+    font-size: var(--medium-text-size);
+
+    padding: 0.6em;
+    background-color: color-mix(in srgb, var(--middle-color-2) 70%, black);
+    width: 100%;
+}
+
+/* Responsividade */
 
 @media (width < 800px) {
     #redes_contato {

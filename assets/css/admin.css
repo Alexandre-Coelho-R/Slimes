@@ -16,10 +16,6 @@
     text-align: center;
 }
 
-#tabela-produtos thead {
-    font-weight: bold;
-}
-
 /* PÁGINA DE EDIÇÃO OU ALTERAÇÃO DE PRODUTOS */
 
 form {
@@ -67,12 +63,8 @@ button:hover {
 
 .a-form {
     display: flex;
-    justify-content: center; 
-    align-items: center;
     width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2rem;
+    margin: 2rem auto 0;
 
     padding: 8px;
     border-radius: 10px;

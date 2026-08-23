@@ -11,13 +11,9 @@ USUÁRIO
     grid-template-columns: 1fr auto 1fr;
     width: 90%;
     margin: 0 auto;
-    padding-top: 0rem;
     gap: 3rem;
 }
 
-.login-cadastro {
-    border-radius: 8px;
-}
 
 .login-cadastro > form {
     display: flex;
@@ -57,23 +53,14 @@ USUÁRIO
 }
 
 #linha {
-    display: inline-block;
-    position: relative;
     width: 1px;
     height: 100%;
     border-left: 3px solid var(--bigger-color);
-    text-align: center;
 }
 
 @media (width < 1200px) {
     #logar-cadastrar {
-        width: 95%;
-    }
-}
-
-@media (width < 800px) {
-    #logar-cadastrar {
-        width: 97%;
+        width: 96%;
     }
 }
 
@@ -120,7 +107,6 @@ USUÁRIO
     max-width: 100%;
     margin-bottom: 2rem;
 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: var(--medium-big-text-size);
     color: var(--middle-color-2);
     text-align: center;
@@ -165,7 +151,7 @@ USUÁRIO
 
     padding: 0.8rem;
 
-    background-color: color-mix(var(--middle-color-2), transparent 8%);
+    background-color: color-mix(in srgb, var(--middle-color-2) 92%, transparent);
     color: var(--bigger-color);
 
     text-align: center;
@@ -201,10 +187,6 @@ USUÁRIO
     #logado {
         grid-template-columns: 1fr;
         gap: 2rem;
-    }
-
-    #user-img, #user-actions {
-        min-width: 0;
     }
 
     #user-img img {

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     
     <title>Slime Smash - <?= $titulo ?? ""?></title>
+    <script src="assets/js/geral.js" defer></script>
     <?php
     if (isset($css)) echo "<link rel='stylesheet' href='assets/css/$css'>";
     if (isset($js)) echo "<script src='assets/js/$js' type='module'></script>";

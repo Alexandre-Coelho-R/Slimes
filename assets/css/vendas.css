@@ -26,7 +26,6 @@ PÁGINA DE PRODUTOS
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
     
     font-family: 'SlimeFont';
     color: white;
@@ -38,12 +37,10 @@ PÁGINA DE PRODUTOS
 
 #produtos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
     gap: 1.5rem;
     width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1.8rem;
+    margin: 1.8rem auto 0;
 }
 
 .produto {
@@ -57,7 +54,7 @@ PÁGINA DE PRODUTOS
 
 .produto:hover {
     transform: translateY(-5px);
-    background-color: color-mix(var(--middle-color-1), transparent 50%);
+    background-color: color-mix(in srgb, var(--middle-color-1) 50%, transparent);
 }
 
 .imagem-produto {
@@ -69,7 +66,6 @@ PÁGINA DE PRODUTOS
 
 .imagem-produto > img {
     width: 75%;
-    object-fit: contain;
 }
 
 .quantidade {
@@ -130,29 +126,13 @@ PÁGINA DE PRODUTOS
 }
 
 @media (width < 1000px) {
-    #produtos {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
     #banner-produtos {
         transform: scale(1.2);
         height: clamp(150px, 20vw, 200px);
     }
 }
 
-@media (width < 800px) {
-    #produtos {
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-    }
-}
-
 @media (width < 500px) {
-    #produtos {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
     .produto {
         padding: 0.8rem;
     }
@@ -203,8 +183,7 @@ PÁGINA DE PRODUTOS
 #pagina-deck{
     max-width:1200px;
     width: 95%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 /*HEADER DO DECK*/
@@ -215,7 +194,6 @@ PÁGINA DE PRODUTOS
     justify-content:space-between;
     align-items:center;
     padding:15px 10px;
-    background:transparent;
     border-bottom:2px solid var(--middle-color-1);
 }
 
@@ -226,8 +204,6 @@ PÁGINA DE PRODUTOS
 .conteudo-deck{
     display:grid;
     grid-template-columns:65% 35%;
-    min-height:500px;
-    background:transparent;
 }
 
 
@@ -241,7 +217,7 @@ PÁGINA DE PRODUTOS
 
 /* Título da lista de cartas */
 .lista-cartas h3{
-    margin:0 0 12px;
+    margin-bottom: 12px;
     padding-bottom:8px;
     color:var(--bigger-color);
     border-bottom:2px solid var(--middle-color-1);
@@ -298,7 +274,6 @@ PÁGINA DE PRODUTOS
 
 #container-destaque img {
     display: block;
-    width: auto;
     height: clamp(350px, 45vw, 500px);
     max-width: 70%;
     object-fit: contain;
@@ -336,20 +311,13 @@ PÁGINA DE PRODUTOS
 
     #container-destaque {
         order: -1;
-        min-height: 0;
         padding: 20px 10px;
         gap: 0.5rem;
     }
 
     #container-destaque img {
-        width: auto;
         max-width: 75%;
         height: clamp(280px, 80vw, 400px);
-    }
-
-    .seta-carta {
-        width: 35px;
-        height: 35px;
     }
 
     #cabecalho-deck {
@@ -409,7 +377,6 @@ PÁGINA DE PRODUTOS
 /* Título */
 
 .pagina-carrinho h1{
-    margin:0;
     color:var(--bigger-color);
     font-size:2rem;
 }
@@ -469,12 +436,8 @@ PÁGINA DE PRODUTOS
 
 /* Informações */
 
-.info-produto{
-    text-align:left;
-}
-
 .info-produto h2{
-    margin:0 0 5px;
+    margin-bottom:5px;
 
     color:var(--bigger-color);
 
@@ -482,10 +445,7 @@ PÁGINA DE PRODUTOS
 }
 
 .info-produto p{
-    margin:0;
-
     color:#777;
-
     font-size:13px;
 }
 
@@ -496,7 +456,7 @@ PÁGINA DE PRODUTOS
 
     font-size:15px;
 
-    text-align:left;
+    ;
 
     white-space:nowrap;
 }
@@ -570,8 +530,6 @@ PÁGINA DE PRODUTOS
 /* Resumo */
 
 .resumo-carrinho{
-    width:100%;
-
     position:sticky;
 
     top:30px;
@@ -584,7 +542,7 @@ PÁGINA DE PRODUTOS
 /* Título do resumo */
 
 .resumo-carrinho h2{
-    margin:0 0 20px;
+    margin-bottom: 20px;
 
     color:var(--bigger-color);
 
@@ -746,7 +704,7 @@ PÁGINA DE PRODUTOS
     .preco{
         grid-column:2;
 
-        text-align:left;
+        ;
 
         font-size:13px;
     }
