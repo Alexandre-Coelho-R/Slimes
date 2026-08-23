@@ -26,9 +26,9 @@ include "assets/componentes/head-header.php";
     </section>
 
     <div id="slideshow-container">
-        <img class="mySlides fade" src="assets/imagens/slideshow/BoosterSlide.png" style="width:100%">
-        <img class="mySlides fade" src="assets/imagens/slideshow/BoosterSlide.png" style="width:100%">
-        <img class="mySlides fade" src="assets/imagens/slideshow/BoosterSlide.png" style="width:100%">
+        <img class="mySlides fade" src="assets/imagens/slideshow/BoosterSlide.webp" style="width:100%">
+        <img class="mySlides fade" src="assets/imagens/slideshow/decksslide.webp" style="width:100%">
+        <img class="mySlides fade" src="assets/imagens/slideshow/moedasslide.webp" style="width:100%">
     </div>
     
     <div style="text-align:center">
