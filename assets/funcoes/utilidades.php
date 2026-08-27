@@ -12,7 +12,7 @@ function conectar_bd() {
 function voltarInfo($mensagem = "") {
     if (session_status() != PHP_SESSION_ACTIVE) session_start();
     $_SESSION["mensagem"] = $mensagem;
-    header("Location: /2557048/info.php");
+    header("Location: /info.php");
     exit;
 }
 

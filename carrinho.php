@@ -46,14 +46,19 @@ if (isset($_SESSION["usuario_id"])){
                 ?>
 
                 <?php foreach ($resultados as $resultado): ?>
-                    <?php $total += $resultado["valor_unitario"] * $resultado["quantidade"];;?>
+                    <?php
+                    $total += $resultado["valor_unitario"] * $resultado["quantidade"];
+                    $imagem = "assets/imagens/produtos/";
+                    $imagem .= (isset($resultado["imagem"]) ? $resultado["imagem"] : "imagem-substituta") . ".webp";
+                    $valor_unitario = number_format($resultado["valor_unitario"], 2, ",", ".");
+                    ?>
                     <article class="item-carrinho">
-                        <img src="<?=$resultado["imagem"]?>" alt="<?=$resultado["nome"]?>">
+                        <img src="<?=$imagem?>" alt="<?=$resultado["nome"]?>">
                         <div class="info-produto">
                             <h2><?=$resultado["nome"]?></h2>
                             <p>Quantidade: <?=$resultado["quantidade"]?></p>
                         </div>
-                        <strong class="preco"><?=$resultado["valor_unitario"]?></strong>
+                        <strong class="preco"><?=$valor_unitario?></strong>
                         <div class="quantidade-carrinho">
                             <form class="form-carrinho">
                                 <input type="hidden" name="acao" value="diminuir">
@@ -80,12 +85,16 @@ if (isset($_SESSION["usuario_id"])){
             <?php endif;?>
         </section>
                 
+        <?php
+        $total = number_format($total ?? 0, 2, ",", ".");
+        ?>
+        
         <section class="resumo-carrinho">
             <h2>Resumo da compra</h2>
 
             <div>
                 <span>Subtotal</span>
-                <strong>R$ <?= $total ?? 0 ?></strong>
+                <strong>R$ <?=$total?></strong>
             </div>
 
             <div>
@@ -95,7 +104,7 @@ if (isset($_SESSION["usuario_id"])){
 
             <div class="total">
                 <span>Total</span>
-                <strong>R$ <?= $total ?? 0 ?></strong>
+                <strong>R$ <?=$total?></strong>
             </div>
 
             <button class="finalizar">Finalizar compra</button>

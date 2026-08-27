@@ -3,11 +3,6 @@ export function adicionarCarrinho () {
         form.addEventListener("submit", async function(event) {
             event.preventDefault();
 
-            if (!usuarioLogado) {
-                document.getElementById("modal-login").style.display = "block";
-                return;
-            }
-
             const botao = this.querySelector("button");
             const textoOriginal = botao.textContent;
 
@@ -18,9 +13,10 @@ export function adicionarCarrinho () {
                 });
 
                 const resultado = await resposta.text();
-                
-                if (resultado == "erro") botao.textContent = "Erro";
+
                 if (resultado == "sucesso") botao.textContent = "Adicionado ✓";
+                else botao.textContent = "Erro";
+                
             } catch (erro) {
                 botao.textContent = "Erro";
             } finally {

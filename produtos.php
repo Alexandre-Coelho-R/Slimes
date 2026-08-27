@@ -24,7 +24,8 @@ include "assets/componentes/head-header.php";
 
         while ($linha = $select->fetch() ) {
             $categoria = $linha["categoria"] ?? "";
-            if ($categoria == "deck") { // Adicionar mais depois
+            //Adicionar mais depois:
+            if ($categoria == "deck") {
                 $link = "deck.php?id=" . $linha["id_produto"];
             } else {
                 $link = "";
@@ -36,10 +37,14 @@ include "assets/componentes/head-header.php";
                 $imagem = "assets/imagens/produtos/" . $linha["imagem"] . ".webp";
             }
 
-            $imagem = "assets/imagens/cartas/ss_slimedecola.webp"; // Temporário
-
             $quantidade = 76; // Temporário
 
+            $nome = $linha['nome'];
+
+            $valor_unitario = number_format($linha["valor_unitario"], 2, ",", ".");
+
+            $id_produto = $linha["id_produto"];
+            
             echo "
             <div class='produto'>
                 <a href='$link' class='imagem-produto'>
@@ -47,12 +52,12 @@ include "assets/componentes/head-header.php";
                     <span class='quantidade'>$quantidade<br><small>unid</small></span>
                 </a>
 
-                <p>{$linha['nome']}</p>
-                <strong>R$ {$linha['valor_unitario']}</strong>
+                <p>$nome</p>
+                <strong>R$ $valor_unitario</strong>
 
                 <form class='form-carrinho'>
                     <input type='hidden' name='acao' value='adicionar'>
-                    <input type='hidden' name='id_produto' value='{$linha["id_produto"]}'>
+                    <input type='hidden' name='id_produto' value='$id_produto'>
                     <button type='submit'>Adicionar</button>
                 </form>
             </div>
