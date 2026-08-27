@@ -49,12 +49,13 @@ PÁGINA DE PRODUTOS
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    transition: transform 0.2s;
+    transition: 0.2s ease-out;
 }
 
 .produto:hover {
     transform: translateY(-5px);
-    background-color: color-mix(in srgb, var(--middle-color-1) 50%, transparent);
+    scale: 1.05;
+    box-shadow: 0 10px 0px var(--smaller-color);
 }
 
 .imagem-produto {
@@ -110,19 +111,18 @@ PÁGINA DE PRODUTOS
 }
 
 .form-carrinho button{
-    border: 1px solid var(--middle-color-2);
     padding: 5px 9px;
+    width: 80%;
     border-radius: 5px;  
-    background: transparent;
-    color: var(--middle-color-2);
+    background: var(--bigger-color) ;
+    color: white;
     font-size: calc(var(--normal-text-size) * 0.9);
     cursor: pointer;
     transition:.2s;
 }
 
 .produto button:hover{
-    background:var(--middle-color-2);
-    color:var(--smaller-color);
+    background: var(--middle-color-1);
 }
 
 @media (width < 1000px) {
@@ -588,7 +588,7 @@ PÁGINA DE PRODUTOS
 
     background:var(--middle-color-2);
 
-    color:var(--smaller-color);
+    color: white;
 
     font-weight:bold;
 

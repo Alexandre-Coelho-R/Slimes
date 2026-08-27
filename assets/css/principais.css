@@ -10,10 +10,12 @@ CARTAS
     display: flex;
     align-items: center;
     width: 100%;
-    justify-content: center;
+    justify-content: space-evenly;
+    
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     padding-bottom: 2rem;
+    
     gap: 2rem;
     flex-wrap: wrap;
 }
