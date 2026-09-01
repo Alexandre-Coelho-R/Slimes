@@ -9,6 +9,12 @@ function conectar_bd() {
     return $conn;
 }
 
+function mexerSQL($sql, $parametros, $conn) {
+    $variavel = $conn -> prepare($sql);
+    $variavel -> execute($parametros);
+    return $variavel;
+}
+
 function voltarInfo($mensagem = "") {
     if (session_status() != PHP_SESSION_ACTIVE) session_start();
     $_SESSION["mensagem"] = $mensagem;

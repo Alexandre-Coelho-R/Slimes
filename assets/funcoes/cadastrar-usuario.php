@@ -17,27 +17,30 @@ if (strlen($senha) < 5 || strlen($senha) > 30)voltarInfo("Senha inválida.");
 
 // Verificar se email já está cadastrado
 
-$sql = "SELECT id_usuario FROM usuario WHERE email = :email";
-$insert = $conn->prepare($sql);
-$insert->execute([":email" => $email]);
+$insert = mexerSQL(
+    "SELECT id_usuario FROM usuario WHERE email = :email",
+    [":email" => $email],
+    $conn
+);
+
 if ($insert->fetch()) voltarInfo("Este email já está cadastrado.");
 
 // Cadastrar o usuário
 
-$sql = "INSERT INTO usuario (nome, email, senha) VALUES (:nome, :email, :senha)";
-$insert = $conn->prepare($sql);
-$insert->execute([
-    ":nome" => $nome,
-    ":email" => $email,
-    ":senha" => password_hash($senha, PASSWORD_DEFAULT),
-]);
+$insert = mexerSQL(
+    "INSERT INTO usuario (nome, email, senha)
+     VALUES (:nome, :email, :senha)",
+    [
+        ":nome" => $nome,
+        ":email" => $email,
+        ":senha" => password_hash($senha, PASSWORD_DEFAULT)
+    ],
+    $conn
+);
 
 // Pegar ID
 
-$sql = "SELECT id_usuario FROM usuario WHERE email = :email";
-$select = $conn->prepare($sql);
-$select->execute([":email" => $email]);
-$id = $select->fetchColumn();
+$id = $conn -> lastInsertId();
 
 // Colocar informações na session
 

@@ -12,11 +12,13 @@ if ($email === "" || $senha === "") voltarInfo("Preencha todos os campos.");
 
 // Verificar as credenciais
 
-$sql = "SELECT id_usuario, nome, email, senha, admin, excluido
-        FROM usuario
-        WHERE email = :email";
-$select = $conn->prepare($sql);
-$select->execute([":email" => $email]);
+$select = mexerSQL("SELECT id_usuario, nome, email, senha, admin, excluido
+                    FROM usuario
+                    WHERE email = :email",
+                    [":email" => $email],
+                    $conn
+                    );
+
 $usuario = $select->fetch(PDO::FETCH_ASSOC);
 
 // + Consistência de dados
