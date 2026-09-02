@@ -10,13 +10,17 @@ function conectar_bd() {
 }
 
 function mexerSQL($sql, $parametros, $conn) {
-    $variavel = $conn -> prepare($sql);
-    $variavel -> execute($parametros);
-    return $variavel;
+    try {
+        $variavel = $conn -> prepare($sql);
+        $variavel -> execute($parametros);
+        return $variavel;
+    } catch (PDOException $e) {
+        voltarInfo("Erro na conexão com o servidor.");
+    }
 }
 
 function voltarInfo($mensagem = "") {
-    if (session_status() != PHP_SESSION_ACTIVE) session_start();
+    if (session_status() !== PHP_SESSION_ACTIVE) session_start();
     $_SESSION["mensagem"] = $mensagem;
     header("Location: /info.php");
     exit;
