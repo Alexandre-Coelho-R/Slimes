@@ -4,7 +4,7 @@ verificarAdmin();
 
 $titulo = "Adicionar estoque";
 $css = "admin.css";
-include "assets/componentes/head-header.php";
+include "_cabecalho.php";
 ?>
 
 <main>
@@ -41,4 +41,4 @@ include "assets/componentes/head-header.php";
     <a href="editar-estoque.php" class="a-form">Voltar à página de estoque</a>
 </main>
 
-<?php include "assets/componentes/footer.php"?>
+<?php include "_rodape.php"; ?>

@@ -5,7 +5,7 @@ session_start();
 $titulo = "Usuário";
 $css = "usuario.css";
 $js = "usuario.js";
-include "assets/componentes/head-header.php";
+include "_cabecalho.php";
 ?>
 
 <main>
@@ -74,6 +74,4 @@ include "assets/componentes/head-header.php";
     <?php endif;?>
 </main>
 
-<?php
-include "assets/componentes/footer.php";
-?>
+<?php include "_rodape.php"; ?>

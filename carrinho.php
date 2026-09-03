@@ -6,7 +6,7 @@ $titulo = "Carrinho";
 $css = "vendas.css";
 $js = "carrinho.js";
 
-include "assets/componentes/head-header.php";
+include "_cabecalho.php";
 include "assets/funcoes/utilidades.php";
 
 $conn = conectar_bd();
@@ -112,4 +112,4 @@ if (isset($_SESSION["usuario_id"])){
     </div>
 </main>
 
-<?php include "assets/componentes/footer.php"; ?>
+<?php include "_rodape.php"; ?>

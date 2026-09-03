@@ -2,7 +2,7 @@
 $titulo = "Cartas";
 $css = "principais.css";
 $js = "cartas.js";
-include "assets/componentes/head-header.php";
+include "_cabecalho.php";
 ?>
 
 <main>
@@ -41,4 +41,4 @@ include "assets/componentes/head-header.php";
     <section id="carta-ampliada"></section>
 </main>
 
-<?php include "assets/componentes/footer.php"?>
+<?php include "_rodape.php"; ?>

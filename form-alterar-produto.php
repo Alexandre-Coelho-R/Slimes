@@ -4,7 +4,7 @@ verificarAdmin();
 
 $titulo = "Alterar produto";
 $css = "admin.css";
-include "assets/componentes/head-header.php";
+include "_cabecalho.php";
 
 $conn = conectar_bd();
 $sql = "SELECT nome, descricao, valor_unitario
@@ -39,4 +39,4 @@ if(!$produto) voltarInfo("Produto não encontrado");
     <a href="editar-produtos.php" class="a-form">Voltar à página de produtos</a>
 </main>
     
-<?php include "assets/componentes/footer.php"?> 
+<?php include "_rodape.php"; ?>

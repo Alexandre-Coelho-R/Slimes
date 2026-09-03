@@ -1,7 +1,7 @@
 <?php 
 $titulo = "Tutoriais";
 $css = "principais.css";
-include "assets/componentes/head-header.php";
+include "_cabecalho.php";
 ?>
 
 <main>
@@ -38,4 +38,4 @@ include "assets/componentes/head-header.php";
     </article>
 </main>
 
-<?php include "assets/componentes/footer.php"?>
+<?php include "_rodape.php"; ?>

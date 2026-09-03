@@ -7,7 +7,7 @@ $titulo = "Deck";
 $css = "vendas.css";
 $js = "deck.js";
 
-include "assets/componentes/head-header.php";
+include "_cabecalho.php";
 include "assets/funcoes/utilidades.php";
 
 if (!isset($_GET["id"])) voltarInfo("Deck não encontrado.");
@@ -69,4 +69,4 @@ $cartas = $select->fetchAll(PDO::FETCH_ASSOC);
     </script>
 </main>
 
-<?php include "assets/componentes/footer.php"; ?>
+<?php include "_rodape.php"; ?>

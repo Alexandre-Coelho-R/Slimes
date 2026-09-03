@@ -4,7 +4,7 @@ verificarAdmin();
 
 $titulo = "Adicionar produto";
 $css = "admin.css";
-include "assets/componentes/head-header.php";
+include "_cabecalho.php";
 ?>
 
 <main>
@@ -26,4 +26,4 @@ include "assets/componentes/head-header.php";
     <a href="editar-produtos.php" class="a-form">Voltar à página de produtos</a>
 </main>
     
-<?php include "assets/componentes/footer.php"?> 
+<?php include "_rodape.php"; ?>

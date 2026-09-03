@@ -5,7 +5,7 @@ verificarAdmin();
 
 $titulo = "Editar estoque";
 $css = "admin.css";
-include "assets/componentes/head-header.php";
+include "_cabecalho.php";
 ?>
 
 <main class="main-edicao">
@@ -51,4 +51,4 @@ include "assets/componentes/head-header.php";
     </table>
 </main>
 
-<?php include "assets/componentes/footer.php"?>
+<?php include "_rodape.php"; ?>

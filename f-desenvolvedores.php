@@ -1,7 +1,7 @@
 <?php 
 $titulo = "Desenvolvedores";
 $css = "institucionais.css";
-include "assets/componentes/head-header.php";
+include "_cabecalho.php";
 ?>
 
 <main>
@@ -85,4 +85,4 @@ include "assets/componentes/head-header.php";
     </section>
 </main>
 
-<?php include "assets/componentes/footer.php"?>
+<?php include "_rodape.php"; ?>

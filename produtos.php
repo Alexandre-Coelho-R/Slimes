@@ -6,7 +6,7 @@ $logado = isset($_SESSION["usuario_id"]) ? true : false;
 $titulo = "Produtos"; 
 $css = "vendas.css"; 
 $js = "produtos.js"; 
-include "assets/componentes/head-header.php"; 
+include "_cabecalho.php";
 ?> 
  
 <main id="main-produtos"> 
@@ -31,11 +31,12 @@ include "assets/componentes/head-header.php";
                 $link = "";
             }
             
-            if (empty($linha["imagem"])) {
-                $imagem = "assets/imagens/produtos/imagem-substituta.webp";
-            } else {
-                $imagem = "assets/imagens/produtos/" . $linha["imagem"] . ".webp";
-            }
+            // if (empty($linha["imagem"])) {
+            //     $imagem = "assets/imagens/produtos/imagem-substituta.webp";
+            // } else {
+            //     $imagem = "assets/imagens/produtos/" . $linha["imagem"] . ".webp";
+            // }
+            $imagem = "assets/imagens/produtos/imagem-substituta.webp";
 
             $quantidade = 76; // Temporário
 
@@ -69,4 +70,4 @@ include "assets/componentes/head-header.php";
     <script>const usuarioLogado = <?=json_encode($logado)?></script>
 </main> 
  
-<?php include "assets/componentes/footer.php"; ?>
+<?php include "_rodape.php"; ?>

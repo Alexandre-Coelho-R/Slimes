@@ -3,7 +3,7 @@ $titulo = "Início";
 $css = "index.css";
 $js= "index.js";
 
-include "assets/componentes/head-header.php";
+include "_cabecalho.php";
 ?>
 
 <main>
@@ -73,4 +73,4 @@ include "assets/componentes/head-header.php";
     </nav>
 </main>
 
-<?php include "assets/componentes/footer.php"?>
+<?php include "_rodape.php"; ?>

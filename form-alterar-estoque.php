@@ -4,7 +4,7 @@ verificarAdmin();
 
 $titulo = "Alterar estoque";
 $css = "admin.css";
-include "assets/componentes/head-header.php";
+include "_cabecalho.php";
 
 $conn = conectar_bd();
 $sql = "SELECT fk_produto, quantidade, custo_unitario, obs
@@ -54,4 +54,4 @@ if(!$entrada) voltarInfo("Entrada não encontrado");
     <a href="editar-estoque.php" class="a-form">Voltar à página de estoque</a>
 </main>
     
-<?php include "assets/componentes/footer.php"?> 
+<?php include "_rodape.php"; ?>

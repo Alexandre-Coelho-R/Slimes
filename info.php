@@ -2,7 +2,7 @@
 session_start();
 
 $titulo = "Informações";
-include "assets/componentes/head-header.php";
+include "_cabecalho.php";
 ?>
 
 <main>
@@ -10,4 +10,4 @@ include "assets/componentes/head-header.php";
     <?php unset($_SESSION["mensagem"]);?>
 </main>
 
-<?php include "assets/componentes/footer.php"?>
+<?php include "_rodape.php"; ?>

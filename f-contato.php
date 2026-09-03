@@ -2,7 +2,7 @@
 $titulo = "Contato";
 $css = "institucionais.css";
 $js = "contato.js";
-include "assets/componentes/head-header.php";
+include "_cabecalho.php";
 ?>
 
 <main>
@@ -25,4 +25,4 @@ include "assets/componentes/head-header.php";
     </form>
 </main>
     
-<?php include "assets/componentes/footer.php"?> 
+<?php include "_rodape.php"; ?>
