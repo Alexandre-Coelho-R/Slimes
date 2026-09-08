@@ -5,12 +5,14 @@ verificarAdmin();
 $conn = conectar_bd();
 
 mexerSQL(
-    "INSERT INTO produto (nome, descricao, valor_unitario)
-     VALUES (:nome, :descricao, :valor_unitario)",
+    "INSERT INTO produto (nome, descricao, categoria, valor_unitario, imagem)
+     VALUES (:nome, :descricao, :categoria, :valor_unitario, :imagem)",
     [
         ":nome" => $_POST["nome"],
         ":descricao" => $_POST["descricao"],
-        ":valor_unitario" => $_POST["valor"]
+        ":categoria" => $_POST["categoria"],
+        ":valor_unitario" => $_POST["valor"],
+        ":imagem" => $_POST["imagem"]
     ],
     $conn
 );

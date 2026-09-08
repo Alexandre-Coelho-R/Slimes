@@ -26,9 +26,9 @@ include "_cabecalho.php";
     </section>
 
     <div id="slideshow-container">
-        <img class="mySlides fade" src="assets/imagens/slideshow/boosterslide.webp" style="width:100%">
-        <img class="mySlides fade" src="assets/imagens/slideshow/decksslide.webp" style="width:100%">
-        <img class="mySlides fade" src="assets/imagens/slideshow/moedasslide.webp" style="width:100%">
+        <img class="mySlides fade" src="assets/imagens/index/boosterSlide.webp" style="width:100%">
+        <img class="mySlides fade" src="assets/imagens/index/decksslide.webp" style="width:100%">
+        <img class="mySlides fade" src="assets/imagens/index/moedasslide.webp" style="width:100%">
     </div>
     
     <div style="text-align:center">

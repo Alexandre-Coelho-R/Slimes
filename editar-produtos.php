@@ -15,7 +15,9 @@ include "_cabecalho.php";
                 <th>Id</th>
                 <th>Nome</th>
                 <th>Descricao</th>
+                <th>Categoria</th>
                 <th>Valor</th>
+                <th>Imagem</th>
                 <th>Excluido</th>
                 <th>Data exclusão</th>
             </tr>
@@ -36,7 +38,9 @@ include "_cabecalho.php";
                             <td>{$linha['id_produto']}</td>
                             <td>{$linha['nome']}</td>
                             <td>{$linha['descricao']}</td>
+                            <td>{$linha['categoria']}</td>
                             <td>{$linha['valor_unitario']}</td>
+                            <td>{$linha['imagem']}</td>
                             <td>{$excluido}</td>
                             <td>{$data_exclusao}</td>
                             <td><a href='form-alterar-produto.php?id={$linha['id_produto']}'><i class='fa fa-pencil-square' aria-hidden='true'></i></a></td>
@@ -47,10 +51,10 @@ include "_cabecalho.php";
         </tbody>
         <tfoot>
             <tr>
-                <td colspan="6"> <a href='form-adicionar-produto.php'>Adicionar</a></td>
+                <td colspan="10"> <a href='form-adicionar-produto.php'>Adicionar</a></td>
             </tr>
             <tr>
-                <td colspan="6"> <a href='usuario.php'>Voltar à página anterior</a></td>
+                <td colspan="10"> <a href='usuario.php'>Voltar à página anterior</a></td>
             </tr>
         </tfoot>
     </table> 
