@@ -18,6 +18,8 @@ include "_cabecalho.php";
                 <th>Custo unitário</th>
                 <th>Observações</th>
                 <th>Data de entrada</th>
+                <th>Editar</th>
+                <th>Excluir</th>
             </tr>
         </thead>
         <tbody>
@@ -42,10 +44,10 @@ include "_cabecalho.php";
         </tbody>
         <tfoot>
             <tr>
-                <td colspan="6"> <a href='form-adicionar-estoque.php'>Adicionar</a></td>
+                <td colspan="8"> <a href='form-adicionar-estoque.php'>Adicionar</a></td>
             </tr>
             <tr>
-                <td colspan="6"> <a href='usuario.php'>Voltar à página anterior</a></td>
+                <td colspan="8"> <a href='usuario.php'>Voltar à página anterior</a></td>
             </tr>
         </tfoot>
     </table>

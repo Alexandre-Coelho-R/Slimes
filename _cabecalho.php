@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Projeto de jogo de cartas de alunos do curso de informática do Colégio Técnico Industrial "Prof. Isaac Portal Roldán" chamado Slime Smash">
+    <meta name="description" content='Projeto de jogo de cartas de alunos do curso de informática do Colégio Técnico Industrial "Prof. Isaac Portal Roldán" chamado Slime Smash'>
     <link rel="icon" href="assets/imagens/icone.svg" type="image/svg+xml">
     <link rel="stylesheet" href="assets/css/geral.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">

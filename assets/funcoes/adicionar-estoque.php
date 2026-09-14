@@ -16,5 +16,5 @@ mexerSQL(
     $conn
 );
 
-voltarPagina("../../adicionar-estoque.php");
+voltarPagina("../../editar-estoque.php");
 ?>

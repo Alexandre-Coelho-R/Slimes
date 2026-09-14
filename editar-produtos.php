@@ -20,6 +20,8 @@ include "_cabecalho.php";
                 <th>Imagem</th>
                 <th>Excluido</th>
                 <th>Data exclusão</th>
+                <th>Editar</th>
+                <th>Excluir</th>
             </tr>
         </thead>
         <tbody>

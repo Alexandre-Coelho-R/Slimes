@@ -12,27 +12,27 @@ include "_cabecalho.php";
         
         <button id="todos" type="button">
             <i class="fa-solid fa-table-cells-large"></i>
-            <p>Todas as cartas</p>
+            <span>Todas as cartas</span>
         </button>
 
         <button id="slimes" type="button">
             <i class="fa-solid fa-droplet"></i>
-            <p>Slimes</p>
+            <span>Slimes</span>
         </button>
 
         <button id="itens" type="button">
             <i class="fa-solid fa-flask"></i>
-            <p>Itens</p>
+            <span>Itens</span>
         </button>
 
         <button id="acoes" type="button">
             <i class="fa-solid fa-bolt"></i>
-            <p>Ações</p>
+            <span>Ações</span>
         </button>
 
         <button id="ferramentas" type="button">
             <i class="fa-solid fa-screwdriver-wrench"></i>
-            <p>Ferramentas</p>
+            <span>Ferramentas</span>
         </button>
     </nav>
 

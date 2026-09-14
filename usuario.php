@@ -4,7 +4,6 @@ session_start();
 
 $titulo = "Usuário";
 $css = "usuario.css";
-$js = "usuario.js";
 include "_cabecalho.php";
 ?>
 

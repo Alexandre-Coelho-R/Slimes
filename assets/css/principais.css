@@ -70,7 +70,7 @@ CARTAS
     justify-content: center;
     align-items: center;
     top: 0; bottom: 0; right: 0; left: 0;
-    background-color: color-mix(var(--middle-color-2), transparent 30%);
+    background-color: color-mix(in srgb, var(--middle-color-2) 70%, transparent);
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0s linear 0.3s;

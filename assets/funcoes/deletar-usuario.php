@@ -9,7 +9,7 @@ $conn = conectar_bd();
 if (isset($_SESSION["usuario_id"])) {
     mexerSQL(
         "UPDATE usuario
-         SET nome='excluido', email=:email, excluido=TRUE, data_exclusao=CURRENT_TIMESTAMP, imagem=null
+         SET nome='excluido', email=:email, telefone='excluido', excluido=TRUE, data_exclusao=CURRENT_TIMESTAMP, imagem=null
          WHERE id_usuario=:id_usuario",
         [
             ":email" => "excluido_" . $_SESSION["usuario_id"],

@@ -43,6 +43,6 @@ function verificarAdmin() {
 
 function echoFechar($mensagem = "") {
     echo $mensagem;
-    return;
+    exit;
 }
 ?>

@@ -30,7 +30,7 @@ if ($resultado) {
     $id_compra = $resultado["id_compra"];
 }  else {
     mexerSQL("INSERT INTO compra (fk_usuario, sessao)
-              VALUES (:id_usuario, 'seila')", 
+              VALUES (:id_usuario, 'carrinho')", 
               [":id_usuario" => $_SESSION["usuario_id"]],
               $conn);
 
