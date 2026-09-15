@@ -29,12 +29,13 @@ function mostrarCartas(lista){
 
 //Função de remover cores de fundo dos botões
 
-function desativarCores(){
+function mudarCores(){
     btTodos.style.backgroundColor = "";
     btSlimes.style.backgroundColor = "";
     btItens.style.backgroundColor = "";
     btAcoes.style.backgroundColor = "";
     btFerramentas.style.backgroundColor = "";
+    return "var(--bigger-color)";
 }
 
 //Função de ampliar carta quando clica nela
@@ -114,7 +115,7 @@ function mostrarMensagem() {
 //Inicialização
 
 carregarCartas();
-btTodos.style.backgroundColor = "lightgreen";
+btTodos.style.backgroundColor = mudarCores();
 
 cartaAmpliada.addEventListener("click", (evento) => {
     if (evento.target === cartaAmpliada) {
@@ -136,36 +137,31 @@ document.addEventListener("keydown", (evento) => {
 
 btTodos.addEventListener("click", () => {
     mostrarCartas(cartas);
-    desativarCores();
-    btTodos.style.backgroundColor = "lightgreen";
+    btTodos.style.backgroundColor = mudarCores();
     mostrarMensagem();
 });
 
 btSlimes.addEventListener("click", () => {
     mostrarCartas(cartas.filter(carta => carta.categoria === "slime"));
-    desativarCores();
-    btSlimes.style.backgroundColor = "lightgreen";
+    btSlimes.style.backgroundColor = mudarCores();
     mostrarMensagem();
 });
 
 btItens.addEventListener("click", () => {
     mostrarCartas(cartas.filter(carta => carta.categoria === "item"));
-    desativarCores();
-    btItens.style.backgroundColor = "lightgreen";
+    btItens.style.backgroundColor = mudarCores();
     mostrarMensagem();
 });
 
 btAcoes.addEventListener("click", () => {
     mostrarCartas(cartas.filter(carta => carta.categoria === "ação"));
-    desativarCores();
-    btAcoes.style.backgroundColor = "lightgreen";
+    btAcoes.style.backgroundColor = mudarCores();
     mostrarMensagem();
 });
 
 btFerramentas.addEventListener("click", () => {
     mostrarCartas(cartas.filter(carta => carta.categoria === "ferramenta"));
-    desativarCores();
-    btFerramentas.style.backgroundColor = "lightgreen";
+    btFerramentas.style.backgroundColor = mudarCores();
 
     const larguraTela = window.innerWidth;
     if (larguraTela > 800) {
