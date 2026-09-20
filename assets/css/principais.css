@@ -83,10 +83,9 @@ CARTAS
 }
 
 #carta-ampliada > img {
-    max-width: 90vw;
-    max-height: 80dvh;
+    max-width: 90vw;    
+    height: 80dvh;
     width: auto;
-    height: auto;
     object-fit: contain;
     border-radius: 10px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
