@@ -41,34 +41,22 @@ include "_cabecalho.php";
 
         <a class="site-navigation" href="tutoriais.php">
             <img src="assets/imagens/index/pesquisarbanner.webp" alt="Banner">
-            <div>
-                <h2>Como Jogar?</h2>
-                <p>Aprenda tudo o que precisa para jogar Slime Smash! Desde as regras básicas até conceitos mais avançados.</p>
-            </div>
+            <h2>Como Jogar?</h2>
         </a>
 
-        <a class="site-navigation" href="f-mvv.php">
+        <a class="site-navigation" href="f-sobre-nos.php">
             <img src="assets/imagens/index/slimeburaconegrobanner.webp" alt="Banner">
-            <div>
-                <h2>Conheça a gente mais a fundo</h2>
-                <p>Entenda um pouco mais sobre a nossa empresa, nossas missões, visões e valores</p>
-            </div>
+            <h2>Conheça a gente mais a fundo.</h2>
         </a>
     
         <a class="site-navigation" href="faq.php">
             <img src="assets/imagens/index/slimeferreirobanner.webp" alt="Banner">
-            <div>
-                <h2>Como comprar e retirar seus produtos?</h2>
-                <p>Aprenda como funciona a compra dos produtos de Slime Smash. Você verá como comprá-los no site, onde e quando retirá-los.</p>
-            </div>
+            <h2>Como comprar seus produtos?</h2>
         </a>
 
-        <a class="site-navigation" href="carrinho.php">
+        <a class="site-navigation" href="produtos.php">
             <img src="assets/imagens/index/apostartudobanner.webp" alt="Banner">
-            <div>
-                <h2>Faça suas compras!</h2>
-                <p>Veja todos os produtos de Slime Smash para comprar presencialmente, ou reservar para retirada.</p>
-            </div>
+            <h2>Veja nossos produtos!</h2>
         </a>
     </nav>
 </main>
