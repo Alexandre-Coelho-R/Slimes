@@ -301,22 +301,31 @@ Sobre nós
 --------------------------------- 
 */
 
-#sobre-nosotros {
-    width: 75%;
+#sobre-nos {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
 }
 
-.div-sobre {
-    background-color: var(--smaller-color);
-    border: 2px solid var(--middle-color-2);
-    margin-bottom: 2.5rem;
-    border-radius: 10px;
-    padding: 0.8rem;
-}
-
-.div-sobre > h3 {
+#sobre-nos > h3 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: var(--medium-text-size);
+    margin-bottom: 0.67rem;
+}
+
+#sobre-nos > p {
+    text-align: justify;
+    font-size: var(--normal-text-size);
+    text-indent: 2rem;
     margin-bottom: 1rem;
 }
 
-  
+.sobre-figure {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.sobre-figure > img{
+    width: 100%;
+}

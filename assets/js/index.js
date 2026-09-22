@@ -28,5 +28,5 @@ function showSlides() {
 	slides[slideIndex].style.display = "block";  
 	dots[slideIndex].className += " active";
 	
-	tempo = setTimeout(showSlides, 1600);
+	tempo = setTimeout(showSlides, 2500);
 }

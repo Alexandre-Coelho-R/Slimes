@@ -8,25 +8,21 @@ include "_cabecalho.php";
     <h1 class="title">Sobre nós</h1>
     <h2 class="subtitle">Conheça nossa empresa e sua história</h2>
 
-    <section id="sobre-nosotros">
-        <div class="div-sobre">
-            <h3>Nossa história</h3>
-            <p>Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7.</p>
-            <p>Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7.</p>
-            <p>Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7.</p>
-        </div>
-        <div class="div-sobre">
-            <h3>Nossa história</h3>
-            <p>Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7.</p>
-            <p>Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7.</p>
-            <p>Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7.</p>
-        </div>
-        <div class="div-sobre">
-            <h3>Nossa história</h3>
-            <p>Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7.</p>
-            <p>Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7.</p>
-            <p>Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7. Nós farmavamos aura desde a antiguidade, sendo π = 4 e 6 = 7.</p>
-        </div>
+    <section id="sobre-nos">
+        <h3>O início do projeto</h3>
+        <p>Apresentação da marca: história, proposta de valor, o que torna o produto/serviço especial, explicação da logo e identidade. Apresentação da marca: história, proposta de valor, o que torna o produto/serviço especial, explicação da logo e identidadeApresentação da marca: história, proposta de valor, o que torna o produto/serviço especial, explicação da logo e identidade Apresentação da marca: história, proposta de valor, o que torna o produto/serviço especial, explicação da logo e identidade Apresentação da marca: história, proposta de valor, o que torna o produto/serviço especial, explicação da logo e identidades</p>
+        <p>Apresentação da marca: história, proposta de valor, o que torna o produto/serviço especial, explicação da logo e identidade. Apresentação da marca: história, proposta de valor, o que torna o produto/serviço especial, explicação da logo e identidadeApresentação da marca: história, proposta de valor, o que torna o produto/serviço especial, explicação da logo e identidade Apresentação da marca: história, proposta de valor, o que torna o produto/serviço especial, explicação da logo e identidade Apresentação da marca: história, proposta de valor, o que torna o produto/serviço especial, explicação da logo e identidades</p>
+        <figure class="sobre-figure">
+            <img src="assets/imagens/banner.webp" alt="">
+            <figcaption>Imagem do projeto</figcaption>
+        </figure>
+                <h3>O início do projeto</h3>
+        <p>Apresentação da marca: história, proposta de valor, o que torna o produto/serviço especial, explicação da logo e identidade. Apresentação da marca: história, proposta de valor, o que torna o produto/serviço especial, explicação da logo e identidadeApresentação da marca: história, proposta de valor, o que torna o produto/serviço especial, explicação da logo e identidade Apresentação da marca: história, proposta de valor, o que torna o produto/serviço especial, explicação da logo e identidade Apresentação da marca: história, proposta de valor, o que torna o produto/serviço especial, explicação da logo e identidades</p>
+        <p>Apresentação da marca: história, proposta de valor, o que torna o produto/serviço especial, explicação da logo e identidade. Apresentação da marca: história, proposta de valor, o que torna o produto/serviço especial, explicação da logo e identidadeApresentação da marca: história, proposta de valor, o que torna o produto/serviço especial, explicação da logo e identidade Apresentação da marca: história, proposta de valor, o que torna o produto/serviço especial, explicação da logo e identidade Apresentação da marca: história, proposta de valor, o que torna o produto/serviço especial, explicação da logo e identidades</p>
+        <figure class="sobre-figure">
+            <img src="assets/imagens/banner.webp" alt="">
+            <figcaption>Imagem do projeto</figcaption>
+        </figure>
     </section>
 </main>
 

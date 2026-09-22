@@ -31,15 +31,15 @@ main {
     gap: 3vw;
 }
 #hero-buttons a {
-    background-color: white;
-    color:var(--middle-color-1);
+    background-color: var(--middle-color-2);
+    color:white;
 
     text-align: center;
     font-size: var(--medium-text-size);
 
     padding: 0.4em;
-    border-radius: 10px;
-    box-shadow: 0px 0px 50px rgba(0,0,0,.5);
+    border-radius: 12px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
 
     transition: 0.2s ease-out;
 }
