@@ -13,11 +13,13 @@ include "_cabecalho.php";
     <section id="logado">
         <div id="user-img">
             <h2>Seja bem-vindo, <?=htmlspecialchars($_SESSION["usuario_nome"])?>!</h2>
-            <?php if (isset($_SESSION["usuario_imagem"])):?>
-                <img src="" alt="Foto de perfil">
-            <?php else:?>
-                <img src="assets/imagens/usuario-padrao.webp" alt="Foto de perfil">
-            <?php endif;?>
+            <?php $src = isset($_SESSION["usuario_imagem"]) ? "assets/imagens/usuarios/" . htmlspecialchars($_SESSION['usuario_imagem']) : "assets/imagens/usuario-padrao.webp"; ?>
+            <form action="assets/funcoes/mudar-imagem.php" method="POST" enctype="multipart/form-data">
+                <label for="imagem-usuario">
+                    <img src="<?= $src ?>" alt="Foto de perfil">
+                </label>
+                <input type="file" name="imagem" id="imagem-usuario" accept="image/*" onchange="this.form.submit()">
+            </form>
         </div>
         <div id="user-actions">
             <?php if($_SESSION["usuario_admin"] ?? false): ?>
