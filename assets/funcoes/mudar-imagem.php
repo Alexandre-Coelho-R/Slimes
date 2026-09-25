@@ -9,6 +9,7 @@ if ($_FILES["imagem"]["error"] !== 0) voltarPagina("../../usuario.php");
 
 $conn = conectar_bd(); // Alertar os erros?
 
+$imagemAntiga = $_SESSION["usuario_imagem"] ?? false;
 $arquivo = $_FILES["imagem"];
 if ($arquivo["size"] > 2 * 1024 * 1024) voltarPagina("../../usuario.php");
 if (@getimagesize($arquivo['tmp_name']) === false) voltarPagina("../../usuario.php");
@@ -23,8 +24,11 @@ if (move_uploaded_file($arquivo["tmp_name"], $pasta . $nomeArquivo)) {
               WHERE id_usuario=:id_usuario",
               [":imagem" => $nomeArquivo, ":id_usuario" => $_SESSION["usuario_id"]],
               $conn);
-}
 
+    if ($imagemAntiga) {
+        unlink($pasta . $imagemAntiga);
+    }
+}
 
 voltarPagina("../../usuario.php");
 ?>

@@ -17,6 +17,11 @@ if (isset($_SESSION["usuario_id"])) {
         ],
         $conn
     );
+
+    if ($_SESSION["usuario_imagem"]) {
+        unlink("../imagens/usuarios/" . $_SESSION["usuario_imagem"]);
+    }
+
     session_unset();
     session_destroy();
     voltarInfo("Sucesso na operação");

@@ -47,6 +47,7 @@ $id = $conn -> lastInsertId();
 $_SESSION["usuario_id"] = $id;
 $_SESSION["usuario_nome"] = $nome;
 $_SESSION["usuario_email"] = $email;
+$_SESSION["usuario_imagem"] = false;
 
 voltarPagina("../../usuario.php");
 ?>

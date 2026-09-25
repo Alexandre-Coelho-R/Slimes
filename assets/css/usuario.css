@@ -119,7 +119,7 @@ USUÁRIO
     max-height: 90%;
 
     object-fit: contain;
-    border-radius: 50%;
+    border-radius: 1%;
 }
 
 #user-actions {
