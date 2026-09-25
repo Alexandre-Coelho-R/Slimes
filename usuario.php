@@ -13,7 +13,7 @@ include "_cabecalho.php";
     <section id="logado">
         <div id="user-img">
             <h2>Seja bem-vindo, <?=htmlspecialchars($_SESSION["usuario_nome"])?>!</h2>
-            <?php $src = isset($_SESSION["usuario_imagem"]) ? "assets/imagens/usuarios/" . htmlspecialchars($_SESSION['usuario_imagem']) : "assets/imagens/usuario-padrao.webp"; ?>
+            <?php $src = "assets/imagens/usuarios/" . (isset($_SESSION["usuario_imagem"]) ? htmlspecialchars($_SESSION['usuario_imagem']) : "usuario-padrao.webp"); ?>
             <form action="assets/funcoes/mudar-imagem.php" method="POST" enctype="multipart/form-data">
                 <label for="imagem-usuario">
                     <img src="<?= $src ?>" alt="Foto de perfil">
