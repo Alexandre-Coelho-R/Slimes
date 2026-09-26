@@ -302,30 +302,33 @@ Sobre nós
 */
 
 #sobre-nos {
-    width: 85%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
 }
 
-#sobre-nos > h3 {
-    text-align: center;
-    font-size: var(--medium-text-size);
-    margin-bottom: 0.67rem;
-}
-
-#sobre-nos > p {
-    text-align: justify;
-    font-size: var(--normal-text-size);
-    text-indent: 2rem;
-    margin-bottom: 1rem;
-}
-
-.sobre-figure {
-    width: 60%;
-    margin: 0 auto;
-}
-
-.sobre-figure > img{
+.lado-lado {
+    display: grid;
+    grid-template-columns: 70fr 30fr;
+    gap: 2.2rem;
     width: 100%;
+}
+
+.lado-lado > .texto > h3{
+    text-align: center;
+}
+
+.lado-lado > .texto > p{
+    text-align: justify;
+    text-indent: 1rem;
+    margin-top: 1rem;
+}
+
+.lado-lado > .imagem > img{
+    width: 100%;
+}
+
+p {
+    text-align: justify;
 }

@@ -12,7 +12,7 @@ if ($email === "" || $senha === "") voltarInfo("Preencha todos os campos.");
 
 // Verificar as credenciais
 
-$select = mexerSQL("SELECT id_usuario, nome, email, senha, admin, excluido
+$select = mexerSQL("SELECT id_usuario, nome, email, senha, admin, excluido, imagem
                     FROM usuario
                     WHERE email = :email",
                     [":email" => $email],
@@ -33,6 +33,7 @@ $_SESSION["usuario_id"] = $usuario["id_usuario"];
 $_SESSION["usuario_nome"] = $usuario["nome"];
 $_SESSION["usuario_email"] = $usuario["email"];
 $_SESSION["usuario_admin"] = $usuario["admin"];
+$_SESSION["usuario_imagem"] = $usuario["imagem"];
 
 voltarPagina("../../usuario.php");
 ?>
