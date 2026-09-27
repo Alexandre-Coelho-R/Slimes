@@ -35,6 +35,11 @@ function mudarCores(){
     btItens.style.backgroundColor = "";
     btAcoes.style.backgroundColor = "";
     btFerramentas.style.backgroundColor = "";
+    btTodos.style.color = "";
+    btSlimes.style.color = "";
+    btItens.style.color = "";
+    btAcoes.style.color = "";
+    btFerramentas.style.color = "";
     return "var(--bigger-color)";
 }
 
@@ -116,6 +121,7 @@ function mostrarMensagem() {
 
 carregarCartas();
 btTodos.style.backgroundColor = mudarCores();
+btTodos.style.color = "white";
 
 cartaAmpliada.addEventListener("click", (evento) => {
     if (evento.target === cartaAmpliada) {
@@ -138,30 +144,35 @@ document.addEventListener("keydown", (evento) => {
 btTodos.addEventListener("click", () => {
     mostrarCartas(cartas);
     btTodos.style.backgroundColor = mudarCores();
+    btTodos.style.color = "white";
     mostrarMensagem();
 });
 
 btSlimes.addEventListener("click", () => {
     mostrarCartas(cartas.filter(carta => carta.categoria === "slime"));
     btSlimes.style.backgroundColor = mudarCores();
+    btSlimes.style.color = "white";
     mostrarMensagem();
 });
 
 btItens.addEventListener("click", () => {
     mostrarCartas(cartas.filter(carta => carta.categoria === "item"));
     btItens.style.backgroundColor = mudarCores();
+    btItens.style.color = "white";
     mostrarMensagem();
 });
 
 btAcoes.addEventListener("click", () => {
     mostrarCartas(cartas.filter(carta => carta.categoria === "ação"));
     btAcoes.style.backgroundColor = mudarCores();
+    btAcoes.style.color = "white";
     mostrarMensagem();
 });
 
 btFerramentas.addEventListener("click", () => {
     mostrarCartas(cartas.filter(carta => carta.categoria === "ferramenta"));
     btFerramentas.style.backgroundColor = mudarCores();
+    btFerramentas.style.color = "white";
 
     const larguraTela = window.innerWidth;
     if (larguraTela > 800) {

@@ -50,6 +50,7 @@ include "_cabecalho.php";
                 
                 <button type="submit">Logar</button>
             </form>
+            <a href="">esqueci minha senha</a>
         </section>
 
 

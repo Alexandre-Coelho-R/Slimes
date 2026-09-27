@@ -2,8 +2,8 @@
 :root {
     --bigger-color: #283739;
     --middle-color-1: #A9C52F;
-    --middle-color-2: #578E7E;
-    --smaller-color: #F7EEBB;
+    --middle-color-2: #31584d;
+    --smaller-color: #FFF8EC;
 
     --normal-text-size: calc(12.8px + 0.405vw);
     --medium-text-size: calc(13.2px + 0.88vw);

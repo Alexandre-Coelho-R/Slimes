@@ -28,15 +28,13 @@ CONTATO
     max-width: 750px;
 
     display: flex;
-    align-items: center;
+    align-items: left;
     flex-direction: column;
 
     padding: 2rem;
-
-    background-color: var(--smaller-color);
-
-    border: 3px solid var(--middle-color-2);
+    border: none;
     border-radius: 10px;
+
 }
 
 #form-contato label {
@@ -51,10 +49,9 @@ CONTATO
 
     padding: 0.4rem 0.5rem;
 
-    border: 0;
-    border-radius: 5px;
-
+    border: solid 1px var(--middle-color-2);
     background-color: white;
+
     font-size: clamp(1rem, 2vw, 1.15rem);
     margin-bottom: 1.2rem;
 }
@@ -74,9 +71,9 @@ CONTATO
     font-size: clamp(1.2rem, 3vw, 1.6rem);
     font-weight: bold;
 
-    background: linear-gradient(var(--middle-color-1), rgb(96, 155, 1));
+    background: var(--bigger-color);
 
-    color: white;
+    color: var(--smaller-color);
 
     cursor: pointer;
     transition: 0.2s ease-out;
@@ -86,7 +83,9 @@ CONTATO
     transform: translateY(-2px);
     filter: brightness(1.05);
 }
-
+#form-contato button:active {
+    scale: .96;
+}
 /* Responsividade */
 
 @media (width < 800px) {
@@ -131,8 +130,8 @@ DESENVOLVEDORES
 #devs > div {
     border-radius: 10px;
     overflow: hidden;
-    border: 3px solid var(--middle-color-2);
     background-color: var(--smaller-color);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
 
     display: grid;
     grid-template-columns: 35fr 65fr;
@@ -301,34 +300,51 @@ Sobre nós
 --------------------------------- 
 */
 
-#sobre-nos {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-}
-
-.lado-lado {
-    display: grid;
-    grid-template-columns: 70fr 30fr;
-    gap: 2.2rem;
+.topic > .img-area {
+    grid-area: image;
     width: 100%;
 }
-
-.lado-lado > .texto > h3{
-    text-align: center;
+.topic > .img-area > img {
+    max-width:100%;
 }
-
-.lado-lado > .texto > p{
+.topic > .text-area, .topic, .topic-no-img {
+    grid-area: texto;
+    color: var(--middle-color-2);
+    font-size: var(--normal-text-size);
     text-align: justify;
-    text-indent: 1rem;
-    margin-top: 1rem;
+}
+.topic-no-img {
+    padding: 2.5em;
+}
+@media (width >= 630px) {
+    .topic {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "texto image";
+        gap:2vw;
+        padding: 1rem;
+    }
+
+    .topic:nth-child(2n) > .text-area, .topic:nth-child(2n), .topic-no-img:nth-child(2n){
+        background-color: var(--middle-color-2);
+        color: white;
+        grid-template-areas: "image texto";
+    }
 }
 
-.lado-lado > .imagem > img{
-    width: 100%;
-}
+@media (width < 630px) {
+    .topic {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 0fr;
+        grid-template-areas: "image" "texto";
+        gap:2vw;
+        padding: 1rem;
+    }
 
-p {
-    text-align: justify;
+    .topic:nth-child(2n) > .text-area, .topic:nth-child(2n), .topic-no-img:nth-child(2n) {
+        background-color: var(--middle-color-2);
+        color: white;
+        grid-template-areas: "image" "texto";
+    }
 }

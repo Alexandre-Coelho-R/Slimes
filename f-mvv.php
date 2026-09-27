@@ -33,6 +33,20 @@ include "_cabecalho.php";
             </ul>
         </div>
     </section>
+    <article>
+        <section class="topic-no-img">
+                <h3>MISSÃO</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cumque vel quaerat consectetur, fugit magnam architecto reprehenderit expedita distinctio dolorem. Nemo consequatur aliquid laborum corrupti sit, aut consectetur reiciendis itaque.</p>
+        </section>
+        <section class="topic-no-img">
+                <h3>VISÃO</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cumque vel quaerat consectetur, fugit magnam architecto reprehenderit expedita distinctio dolorem. Nemo consequatur aliquid laborum corrupti sit, aut consectetur reiciendis itaque.</p>
+        </section>
+        <section class="topic-no-img">
+                <h3>VALORES</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cumque vel quaerat consectetur, fugit magnam architecto reprehenderit expedita distinctio dolorem. Nemo consequatur aliquid laborum corrupti sit, aut consectetur reiciendis itaque.</p>
+        </section>
+    </article>
 </main>
 
 <?php include "_rodape.php"; ?>

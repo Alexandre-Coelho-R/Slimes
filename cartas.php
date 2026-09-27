@@ -9,7 +9,6 @@ include "_cabecalho.php";
     <h1 class="title">Cartas do Slime Smash</h1>
     <h2 class="subtitle">Filtre as cartas por categoria e clique em uma delas para ampliá-la</h2>
     <nav id="filtros">
-        
         <button id="todos" type="button">
             <i class="fa-solid fa-table-cells-large"></i>
             <span>Todas as cartas</span>

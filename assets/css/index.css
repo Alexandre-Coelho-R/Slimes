@@ -14,6 +14,8 @@ main {
     align-items: center;
     justify-content:center;
     position: relative;
+
+    overflow: hidden;
 }
 #hero-section > img {
     position: absolute;
@@ -24,6 +26,22 @@ main {
     z-index: -1;
 
     filter:brightness(.9) sepia(.5);
+
+    animation: respirate forwards infinite ease-in-out 10s;
+    
+}
+@keyframes respirate {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 #hero-buttons {
     padding: 5vh 0;
@@ -38,7 +56,9 @@ main {
     font-size: var(--medium-text-size);
 
     padding: 0.4em;
-    border-radius: 12px;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    border-radius: 30px;
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
 
     transition: 0.2s ease-out;

@@ -43,15 +43,19 @@ USUÁRIO
     margin-top: 1rem;
     cursor: pointer;
 
-    color: color-mix(in srgb,var(--middle-color-2) 25%, black 75%);
+    color: white;
     background-color: var(--middle-color-2);
 }
 
 .login-cadastro > form > button:hover {
     transform: scale(1.03);
-    background-color: #82D322;
+    background-color: var(--middle-color-1);
 }
-
+.login-cadastro > a {
+    color: var(--middle-color-2);
+    text-decoration: underline;
+    cursor:pointer;
+}
 #linha {
     width: 1px;
     height: 100%;

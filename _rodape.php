@@ -24,9 +24,7 @@
     </div>
 
     <a href="#top" id="voltar-topo">
-        <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
         Voltar ao topo
-        <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
     </a>
 </footer>
 </body>

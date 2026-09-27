@@ -41,22 +41,22 @@ include "_cabecalho.php";
 
         <a class="site-navigation" href="tutoriais.php">
             <img src="assets/imagens/index/pesquisarbanner.webp" alt="Banner">
-            <h2>Como Jogar?</h2>
+            <h2>Como Jogar</h2>
         </a>
 
         <a class="site-navigation" href="f-sobre-nos.php">
             <img src="assets/imagens/index/slimeburaconegrobanner.webp" alt="Banner">
-            <h2>Conheça a gente mais a fundo.</h2>
+            <h2>Conheça a gente melhor</h2>
         </a>
     
         <a class="site-navigation" href="faq.php">
             <img src="assets/imagens/index/slimeferreirobanner.webp" alt="Banner">
-            <h2>Como comprar seus produtos?</h2>
+            <h2>Perguntas frequentes</h2>
         </a>
 
         <a class="site-navigation" href="produtos.php">
             <img src="assets/imagens/index/apostartudobanner.webp" alt="Banner">
-            <h2>Veja nossos produtos!</h2>
+            <h2>Nossos produtos</h2>
         </a>
     </nav>
 </main>
