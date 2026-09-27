@@ -141,6 +141,7 @@ TUTORIAIS
 .topic > .img-area {
     grid-area: image;
     width: 100%;
+    align-content: center;
 }
 .topic > .img-area > img {
     max-width:100%;
@@ -150,6 +151,12 @@ TUTORIAIS
     color: var(--middle-color-2);
     font-size: var(--normal-text-size);
     text-align: justify;
+    align-content: center;
+    padding-left: 1rem;
+}
+.text-area li {
+    padding-bottom: .5rem;
+    padding-top: .5rem;
 }
 
 @media (width >= 630px) {
@@ -169,14 +176,17 @@ TUTORIAIS
 }
 
 @media (width < 630px) {
+    @media (width < 630px) {
     .topic {
         display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 0fr;
-        grid-template-areas: "image" "texto";
-        gap:2vw;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "image"
+            "texto";
+        gap: 2vw;
         padding: 1rem;
     }
+}
 
     .topic:nth-child(2n) > .text-area, .topic:nth-child(2n) {
         background-color: var(--middle-color-2);
