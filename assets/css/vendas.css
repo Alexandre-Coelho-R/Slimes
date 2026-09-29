@@ -12,6 +12,7 @@ PÁGINA DE PRODUTOS
     position: relative;
     width: 100%;
     overflow: hidden;
+    margin-bottom: 0.5rem;
 }
 
 #banner-produtos {
@@ -35,13 +36,117 @@ PÁGINA DE PRODUTOS
     font-size: calc(var(--title-font-size) * 0.85);
 }
 
-#produtos {
+.produtos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
     gap: 1.5rem;
-    width: 85%;
+    width: 95%;
     margin: 1.8rem auto 0;
 }
+
+#produtos-deck {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+
+#produtos-booster {
+    grid-template-columns: 2.5fr 1fr 2.5fr;
+}
+
+#produtos-booster > .produto {
+    grid-column: 2;
+}
+
+#produtos-moeda {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#produtos-moeda > .produto:nth-child(1) {
+    grid-column: 2;
+}
+
+#produtos-moeda > .produto:nth-child(2) {
+    grid-column: 3;
+}
+
+#produtos-moeda > .produto:nth-child(3) {
+    grid-column: 4;
+}
+
+#produtos-moeda > .produto:nth-child(4) {
+    grid-column: 5;
+}
+
+@media (width < 1300px) {
+    #produtos-deck {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #produtos-booster {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #produtos-moeda {
+        grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+    }
+
+    #produtos-moeda > .produto:nth-child(1) {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    #produtos-moeda > .produto:nth-child(2) {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    #produtos-moeda > .produto:nth-child(3) {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    #produtos-moeda > .produto:nth-child(4) {
+        grid-column: 3;
+        grid-row: 2;
+    }
+}
+
+@media (width < 750px) {
+    #produtos-deck {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #produtos-booster {
+        grid-template-columns: 0.5fr 1fr 0.5fr;
+    }
+
+    #produtos-moeda {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #produtos-moeda > .produto {
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+}
+
+@media (width < 500px) {
+    #produtos-deck {
+        grid-template-columns: 1fr;
+    }
+
+    #produtos-booster {
+        grid-template-columns: 1fr;
+    }
+
+    #produtos-booster > .produto {
+        grid-column: 1;
+    }
+
+    #produtos-moeda {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 .produto {
     border-radius: 15px;

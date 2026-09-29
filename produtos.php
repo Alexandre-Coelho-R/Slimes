@@ -7,64 +7,32 @@ $titulo = "Produtos";
 $css = "vendas.css"; 
 $js = "produtos.js"; 
 include "_cabecalho.php";
+include "assets/funcoes/utilidades.php";
+$conn = conectar_bd();
 ?> 
  
 <main id="main-produtos"> 
-
     <div id="banner-container">
         <img id="banner-produtos" src="assets/imagens/banner.webp" alt="Banner da loja"> 
-        <h1>PRODUTOS</h1>
+        <h1>Produtos</h1>
     </div>
 
-    <section id="produtos"> 
-        <?php
-        include "assets/funcoes/utilidades.php";
-        $conn = conectar_bd();
-        $select = $conn -> query("SELECT * FROM produto WHERE excluido=FALSE");
+    <h2 class="title">Decks de batalha</h2>
+    <h3 class="subtitle">Compre baralhos de jogo prontos para duelo com moeda inclusa</h3>
+    <section class="produtos" id="produtos-deck"> 
+        <?php mostrarProduto($conn, "deck");?>
+    </section> 
 
-        while ($linha = $select->fetch() ) {
-            $categoria = $linha["categoria"] ?? "";
-            //Adicionar mais depois:
-            if ($categoria == "deck") {
-                $link = "deck.php?id=" . $linha["id_produto"];
-            } else {
-                $link = "";
-            }
-            
-            // if (empty($linha["imagem"])) {
-            //     $imagem = "assets/imagens/produtos/imagem-substituta.webp";
-            // } else {
-            //     $imagem = "assets/imagens/produtos/" . $linha["imagem"] . ".webp";
-            // }
-            $imagem = "assets/imagens/produtos/imagem-substituta.webp";
+    <h2 class="title">Pacotes de cartas</h2>
+    <h3 class="subtitle">Compre um pacote com 7 cartas aleatórias</h3>
+    <section class="produtos" id="produtos-booster"> 
+        <?php mostrarProduto($conn, "booster");?>
+    </section>
 
-            $quantidade = 76; // Temporário
-
-            $nome = $linha['nome'];
-
-            $valor_unitario = number_format($linha["valor_unitario"], 2, ",", ".");
-
-            $id_produto = $linha["id_produto"];
-            
-            echo "
-            <div class='produto'>
-                <a href='$link' class='imagem-produto'>
-                    <img src='$imagem'>
-                    <span class='quantidade'>$quantidade<br><small>unid</small></span>
-                </a>
-
-                <p>$nome</p>
-                <strong>R$ $valor_unitario</strong>
-
-                <form class='form-carrinho'>
-                    <input type='hidden' name='acao' value='adicionar'>
-                    <input type='hidden' name='id_produto' value='$id_produto'>
-                    <button type='submit'>Adicionar</button>
-                </form>
-            </div>
-            ";
-        }
-        ?>
+    <h2 class="title">Moedas do jogo</h2>
+    <h3 class="subtitle">Compre moedas feitas à mão</h3>
+    <section class="produtos" id="produtos-moeda"> 
+        <?php mostrarProduto($conn, "moeda");?>
     </section> 
 
     <script>const usuarioLogado = <?=json_encode($logado)?></script>

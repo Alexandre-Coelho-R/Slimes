@@ -45,4 +45,49 @@ function echoFechar($mensagem = "") {
     echo $mensagem;
     exit;
 }
+
+function mostrarProduto($conn, $categoria) {
+    $select = $conn -> query("SELECT * FROM produto WHERE excluido=FALSE AND categoria='$categoria'");
+
+    while ($linha = $select->fetch() ) {
+        if ($categoria == "deck") {
+            $link = "deck.php?id=" . $linha["id_produto"];    
+        } else {
+            $link = "produtos.php";
+        }
+        
+        // if (empty($linha["imagem"])) {
+        //     $imagem = "assets/imagens/produtos/imagem-substituta.webp";
+        // } else {
+        //     $imagem = "assets/imagens/produtos/" . $linha["imagem"] . ".webp";
+        // }
+        $imagem = "assets/imagens/produtos/imagem-substituta.webp";
+
+        $quantidade = 76; // Temporário
+
+        $nome = $linha['nome'];
+
+        $valor_unitario = number_format($linha["valor_unitario"], 2, ",", ".");
+
+        $id_produto = $linha["id_produto"];
+        
+        echo "
+        <div class='produto'>
+            <a href='$link' class='imagem-produto'>
+                <img src='$imagem'>
+                <span class='quantidade'>$quantidade<br><small>unid</small></span>
+            </a>
+
+            <p>$nome</p>
+            <strong>R$ $valor_unitario</strong>
+
+            <form class='form-carrinho'>
+                <input type='hidden' name='acao' value='adicionar'>
+                <input type='hidden' name='id_produto' value='$id_produto'>
+                <button type='submit'>Adicionar</button>
+            </form>
+        </div>
+        ";
+    }
+}
 ?>
