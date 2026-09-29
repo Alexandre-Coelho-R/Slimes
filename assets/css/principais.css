@@ -8,18 +8,14 @@ CARTAS
 
 #filtros {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    align-items: center;
-    align-content: center;
-    width: 100%;
-    justify-content: center;
-    
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    width: 90%;
+    margin: 0 auto;    
     padding: 1rem;
-
-    
     gap: 2rem;
-    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
 }
+
 #filtros > button {
     display: flex;
     justify-content: center;
@@ -32,9 +28,7 @@ CARTAS
     border: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     cursor: pointer;
-
     transition: 0.2s ease-out;
-
 }
 
 #filtros > button:hover {
@@ -64,7 +58,7 @@ CARTAS
 #catalogo > img:hover {
     transform: scale(1.02);
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 10p   x rgba(0, 0, 0, 0.05);
 }
 
 /* Clicar em carta */
@@ -102,6 +96,7 @@ CARTAS
 
 @media (width < 800px) {
     #filtros {
+        padding: 0.67rem;
         gap: 1.2rem;
     }
 
@@ -117,6 +112,8 @@ CARTAS
 @media (width < 580px){
     #filtros {
         gap: 0.8rem;
+        grid-template-columns: 1fr;
+        width: 95%;
     }
     
     #catalogo {
