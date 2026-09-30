@@ -29,7 +29,7 @@ $cartas = $select->fetchAll(PDO::FETCH_ASSOC);
 <main id="pagina-deck">
 
     <section id="cabecalho-deck">
-        <h1><?=$produto["nome"]?></h1>
+        <h1 class="title"><?=$produto["nome"]?></h1>
 
         <div id="valor-deck">
             <span>Valor do Deck:</span>

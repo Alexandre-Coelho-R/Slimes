@@ -4,6 +4,9 @@ document.querySelectorAll(".form-carrinho").forEach(form => {
     form.addEventListener("submit", async function(event) {
         event.preventDefault();
 
+        const botao = this.querySelector("button");
+        botao.disabled = true;
+
         try {
             const resposta = await fetch("assets/funcoes/editar-carrinho.php", {
                 method: "POST",
@@ -19,7 +22,9 @@ document.querySelectorAll(".form-carrinho").forEach(form => {
             }
             
         } catch (erro) {
-        
+            alert("Erro na conexão com o servidor.");
+        } finally {
+            botao.disabled = false;
         }
     });
 });

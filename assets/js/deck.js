@@ -6,6 +6,9 @@ document.querySelectorAll(".form-carrinho").forEach(form => {
 
         const botao = this.querySelector("button");
         const textoOriginal = botao.textContent;
+        
+        botao.textContent = "Carregando...";
+        botao.disabled = true;
 
         try {
             const resposta = await fetch("assets/funcoes/editar-carrinho.php", {
@@ -23,11 +26,11 @@ document.querySelectorAll(".form-carrinho").forEach(form => {
         } finally {
             setTimeout(() => {
                 botao.textContent = textoOriginal;
-            }, 1200);
+                botao.disabled = false;
+            }, 1000);
         }
     });
 });
-
 
 // Troca a carta grande no deck
 
