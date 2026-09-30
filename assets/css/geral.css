@@ -73,6 +73,20 @@ a {
     text-decoration: none;
 }
 
+.voltarAtras {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.voltarAtras > span {
+    padding: 10px 12px;
+    background-color: var(--middle-color-2);
+    border-radius: 30px;
+    color: white;
+    font-size: clamp(14px, 1.25vw, 18px);
+}
+
 /* 
 -----------------------------------
 HEADER

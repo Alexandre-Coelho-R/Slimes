@@ -27,6 +27,10 @@ include "_cabecalho.php";
                 <a href="editar-produtos.php">Gerenciar produtos</a>
                 <a href="editar-estoque.php">Gerenciar estoque</a>
             <?php endif;?>
+            <h2>Histórico de compras</h2>
+            <a href="f-contato.php">Visualizar compras concluídas</a>
+            <a href="f-contato.php">Visualizar compras reservadas</a>
+            <a href="f-contato.php">Visualizar compras canceladas</a>
             <h2>Tem algo a nos dizer?</h2>
             <a href="f-contato.php">Entrar em contato</a>
             <h2>Opções de conta</h2>

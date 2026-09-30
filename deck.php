@@ -26,41 +26,44 @@ $select->execute([":id_produto" => $_GET["id"]]);
 $cartas = $select->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<main id="pagina-deck">
+<main>
+    <div id="pagina-deck">
+        <section id="cabecalho-deck">
+            <h1 class="title"><?=$produto["nome"]?></h1>
 
-    <section id="cabecalho-deck">
-        <h1 class="title"><?=$produto["nome"]?></h1>
+            <div id="valor-deck">
+                <span>Valor do Deck:</span>
+                <strong>R$ <?=number_format($produto["valor_unitario"], 2, ",", ".")?></strong>
 
-        <div id="valor-deck">
-            <span>Valor do Deck:</span>
-            <strong>R$ <?=number_format($produto["valor_unitario"], 2, ",", ".")?></strong>
-
-            <form class="form-carrinho">
-                <input type="hidden" name="acao" value="adicionar">
-                <input type="hidden" name="id_produto" value="<?=$_GET["id"]?>">
-                <button type="submit">Adicionar</button>
-            </form>
-        </div>
-    </section>
-
-    <section class="conteudo-deck">
-        <div class="lista-cartas">
-            <?php foreach ($cartas as $carta): ?>
-                <div class="linha-carta" data-imagem="assets/imagens/cartas/<?=$carta["imagem"]?>.webp">
-                    <span class="qtd"><?=$carta["quantidade"]?></span>
-                    <span class="nome-carta"><?=$carta["nome"]?></span>
-                </div>
-            <?php endforeach; ?>
-        </div>
-
-        <?php if (!empty($cartas)): ?>
-            <div id="container-destaque">
-                <button id="carta-anterior" class="seta-carta" type="button"><i class="fa-solid fa-chevron-left"></i></button>
-                <img id="carta-destaque" src="assets/imagens/cartas/<?=$cartas[0]["imagem"]?>.webp" alt="<?=$cartas[0]["nome"]?>">
-                <button id="carta-proxima" class="seta-carta" type="button"><i class="fa-solid fa-chevron-right"></i></button>
+                <form class="form-carrinho">
+                    <input type="hidden" name="acao" value="adicionar">
+                    <input type="hidden" name="id_produto" value="<?=$_GET["id"]?>">
+                    <button type="submit">Adicionar</button>
+                </form>
             </div>
-        <?php endif; ?>
-    </section>
+        </section>
+
+        <section class="conteudo-deck">
+            <div class="lista-cartas">
+                <?php foreach ($cartas as $carta): ?>
+                    <div class="linha-carta" data-imagem="assets/imagens/cartas/<?=$carta["imagem"]?>.webp">
+                        <span class="qtd"><?=$carta["quantidade"]?></span>
+                        <span class="nome-carta"><?=$carta["nome"]?></span>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+
+            <?php if (!empty($cartas)): ?>
+                <div id="container-destaque">
+                    <button id="carta-anterior" class="seta-carta" type="button"><i class="fa-solid fa-chevron-left"></i></button>
+                    <img id="carta-destaque" src="assets/imagens/cartas/<?=$cartas[0]["imagem"]?>.webp" alt="<?=$cartas[0]["nome"]?>">
+                    <button id="carta-proxima" class="seta-carta" type="button"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            <?php endif; ?>
+        </section>
+    </div>
+
+    <a href="produtos.php" class="voltarAtras"><span>Voltar à página de produtos</span></a>
 
     <script>const cartas = <?= json_encode($cartas) ?></script>
 </main>
