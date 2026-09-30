@@ -478,19 +478,17 @@ PÁGINA DE PRODUTOS
     margin:45px auto 70px;
 }
 
-
 /* Título */
 
-.pagina-carrinho h1{
+.pagina-carrinho > h1{
     color:var(--bigger-color);
     font-size:2rem;
 }
 
-.subtitulo{
+.pagina-carrinho > p{
     margin:8px 0 30px;
     color:var(--middle-color-2);
 }
-
 
 /* Área principal */
 

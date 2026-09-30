@@ -53,15 +53,15 @@ function mostrarProduto($conn, $categoria) {
         if ($categoria == "deck") {
             $link = "deck.php?id=" . $linha["id_produto"];    
         } else {
-            $link = "produtos.php";
+            $link = "";
         }
         
-        // if (empty($linha["imagem"])) {
-        //     $imagem = "assets/imagens/produtos/imagem-substituta.webp";
-        // } else {
-        //     $imagem = "assets/imagens/produtos/" . $linha["imagem"] . ".webp";
-        // }
-        $imagem = "assets/imagens/produtos/imagem-substituta.webp";
+        $imagem_bd = $linha["imagem"];
+        if (empty($imagem_bd) || $imagem_bd == "null") {
+            $imagem = "assets/imagens/produtos/imagem-substituta.webp";
+        } else {
+            $imagem = "assets/imagens/produtos/" . $imagem_bd . ".webp";
+        }
 
         $quantidade = 76; // Temporário
 

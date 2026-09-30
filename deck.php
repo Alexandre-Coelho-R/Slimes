@@ -1,7 +1,6 @@
 <?php
 
 session_start();
-$logado = isset($_SESSION["usuario_id"]) ? true : false;
 
 $titulo = "Deck";
 $css = "vendas.css";
@@ -63,10 +62,7 @@ $cartas = $select->fetchAll(PDO::FETCH_ASSOC);
         <?php endif; ?>
     </section>
 
-    <script>
-    const cartas = <?= json_encode($cartas) ?>
-    const usuarioLogado = <?=json_encode($logado)?>
-    </script>
+    <script>const cartas = <?= json_encode($cartas) ?></script>
 </main>
 
 <?php include "_rodape.php"; ?>

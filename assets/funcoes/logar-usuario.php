@@ -27,6 +27,28 @@ if (!$usuario) voltarInfo("Email não cadastrado");
 if ($usuario["excluido"]) voltarInfo("Email não cadastrado");
 if (!password_verify($senha, $usuario["senha"])) voltarInfo("Senha incorreta.");
 
+// Verificar se tem carrinho não logado e, se tiver, colocar para o usuário
+
+if ($_SESSION["carrinho_nao_logado"] ?? false) {
+    // Apagar possível carrinho antigo da conta
+    mexerSQL("DELETE FROM compra
+              WHERE status = 'carrinho'
+              AND fk_usuario = :id_usuario",
+              [":id_usuario" => $usuario["id_usuario"]],
+              $conn);
+
+    // Transformar o carrinho sem logar no carrinho do usuário
+    mexerSQL("UPDATE compra
+              SET fk_usuario = :id_usuario, sessao = NULL
+              WHERE id_compra = :id_compra",
+              [":id_usuario" => $usuario["id_usuario"],
+               ":id_compra" => $_SESSION["carrinho_nao_logado_id_compra"]],
+              $conn);
+
+    unset($_SESSION["carrinho_nao_logado"]);
+    unset($_SESSION["carrinho_nao_logado_id_compra"]);
+}
+
 // Colocar informações na session
 
 $_SESSION["usuario_id"] = $usuario["id_usuario"];

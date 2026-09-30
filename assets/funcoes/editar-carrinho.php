@@ -3,8 +3,6 @@
 session_start();
 include "utilidades.php";
 
-if (!verificarLogin()) voltarInfo("Você não está logado");
-
 $acao = $_POST["acao"] ?? "";
 $id_produto = (int) ($_POST["id_produto"] ?? 0);
 
@@ -14,28 +12,59 @@ if ($id_produto === 0 && $acao !== "limpar") {
 
 $conn = conectar_bd();
 
-// Verificar se usuário tem carrinho ou não
+// Verificar se usuário está logado ou não
 
-$select = mexerSQL("SELECT id_compra
-                    FROM compra
-                    WHERE status='carrinho' AND fk_usuario=:id_usuario",
-                    [":id_usuario" => $_SESSION["usuario_id"]],
-                    $conn);
+if (verificarLogin()) {
+    // Verificar se usuário tem carrinho ou não
 
-$resultado = $select -> fetch(PDO::FETCH_ASSOC);
+    $select = mexerSQL("SELECT id_compra
+                        FROM compra
+                        WHERE status='carrinho' AND fk_usuario=:id_usuario",
+                        [":id_usuario" => $_SESSION["usuario_id"]],
+                        $conn);
 
-// Pegar id_compra
+    $resultado = $select -> fetch(PDO::FETCH_ASSOC);
 
-if ($resultado) {
-    $id_compra = $resultado["id_compra"];
-}  else {
-    mexerSQL("INSERT INTO compra (fk_usuario, sessao)
-              VALUES (:id_usuario, 'carrinho')", 
-              [":id_usuario" => $_SESSION["usuario_id"]],
-              $conn);
+    // Pegar id_compra
 
-    $id_compra = $conn -> lastInsertId();
+    if ($resultado) {
+        $id_compra = $resultado["id_compra"];
+    }  else {
+        mexerSQL("INSERT INTO compra (fk_usuario, status)
+                  VALUES (:id_usuario, 'carrinho')", 
+                  [":id_usuario" => $_SESSION["usuario_id"]],
+                  $conn);
+
+        $id_compra = $conn -> lastInsertId();
+    }
+} else {
+    // Verificar se usuário tem carrinho ou não
+
+    $select = mexerSQL("SELECT id_compra
+                        FROM compra
+                        WHERE status='carrinho' AND sessao=:id_sessao",
+                        [":id_sessao" => session_id()],
+                        $conn);
+
+    $resultado = $select -> fetch(PDO::FETCH_ASSOC);
+
+    // Pegar id_compra
+
+    if ($resultado) {
+        $id_compra = $resultado["id_compra"];
+    }  else {
+        mexerSQL("INSERT INTO compra (sessao, status)
+                  VALUES (:id_sessao, 'carrinho')", 
+                  [":id_sessao" => session_id()],
+                  $conn);
+
+        $id_compra = $conn -> lastInsertId();
+    }
+
+    $_SESSION["carrinho_nao_logado"] = true;
+    $_SESSION["carrinho_nao_logado_id_compra"] = $id_compra;
 }
+
 
 // Tratar as diferentes ações
 

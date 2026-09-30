@@ -19,13 +19,21 @@ if (isset($_SESSION["usuario_id"])){
 
     // Pegar id_compra
     if ($resultado) $id_compra = $resultado["id_compra"];
+} else if ($_SESSION["carrinho_nao_logado"] ?? false) {
+    $sql = "SELECT id_compra FROM compra WHERE status='carrinho' AND sessao=:id_sessao";
+    $select = $conn -> prepare($sql);
+    $select -> execute([":id_sessao" => session_id()]);
+    $resultado = $select -> fetch(PDO::FETCH_ASSOC);
+
+    // Pegar id_compra
+    if ($resultado) $id_compra = $resultado["id_compra"];
 }
 ?>
 
 
 <main class="pagina-carrinho">
     <h1>Seu carrinho</h1>
-    <p class="subtitulo">Confira seus produtos antes de finalizar.</p>
+    <p>Confira seus produtos antes de finalizar.</p>
 
     <div class="area-carrinho">
         <section class="carrinho">
@@ -91,17 +99,7 @@ if (isset($_SESSION["usuario_id"])){
         
         <section class="resumo-carrinho">
             <h2>Resumo da compra</h2>
-
-            <div>
-                <span>Subtotal</span>
-                <strong>R$ <?=$total?></strong>
-            </div>
-
-            <div>
-                <span>Retirada</span>
-                <strong>Grátis</strong>
-            </div>
-
+            
             <div class="total">
                 <span>Total</span>
                 <strong>R$ <?=$total?></strong>

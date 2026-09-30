@@ -38,9 +38,22 @@ $insert = mexerSQL(
     $conn
 );
 
-// Pegar ID
-
 $id = $conn -> lastInsertId();
+
+// Verificar se tem carrinho não logado e, se tiver, colocar para o usuário
+
+if ($_SESSION["carrinho_nao_logado"] ?? false) {
+    // Transformar o carrinho sem logar no carrinho do usuário
+    mexerSQL("UPDATE compra
+              SET fk_usuario = :id_usuario, sessao = NULL
+              WHERE id_compra = :id_compra",
+              [":id_usuario" => $usuario["id_usuario"],
+               ":id_compra" => $_SESSION["carrinho_nao_logado_id_compra"]],
+              $conn);
+
+    unset($_SESSION["carrinho_nao_logado"]);
+    unset($_SESSION["carrinho_nao_logado_id_compra"]);
+}
 
 // Colocar informações na session
 
