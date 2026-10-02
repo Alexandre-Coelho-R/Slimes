@@ -50,12 +50,7 @@ function mostrarProduto($conn, $categoria) {
     $select = $conn -> query("SELECT * FROM produto WHERE excluido=FALSE AND categoria='$categoria'");
 
     while ($linha = $select->fetch() ) {
-        if ($categoria == "deck") {
-            $link = "deck.php?id=" . $linha["id_produto"];    
-        } else {
-            $link = "";
-        }
-        
+
         $imagem_bd = $linha["imagem"];
         if (empty($imagem_bd) || $imagem_bd == "null") {
             $imagem = "assets/imagens/produtos/imagem-substituta.webp";
@@ -70,14 +65,27 @@ function mostrarProduto($conn, $categoria) {
         $valor_unitario = number_format($linha["valor_unitario"], 2, ",", ".");
 
         $id_produto = $linha["id_produto"];
-        
-        echo "
-        <div class='produto'>
-            <a href='$link' class='imagem-produto'>
-                <img src='$imagem'>
-                <span class='quantidade'>$quantidade<br><small>unid</small></span>
-            </a>
 
+        if ($categoria == "deck") {
+            $link = "deck.php?id=" . $linha["id_produto"];
+            echo "
+                <div class='produto'>
+                    <a href='$link' class='imagem-produto'>
+                        <img src='$imagem'>
+                        <span class='quantidade'>$quantidade<br><small>unid</small></span>
+                    </a>
+                ";
+        } else {
+            echo "
+                <div class='produto'>
+                    <section href='deck.php' class='imagem-produto'>
+                        <img src='$imagem'>
+                        <span class='quantidade'>$quantidade<br><small>unid</small></span>
+                    </section>
+                ";
+        }
+
+        echo "
             <p>$nome</p>
             <strong>R$ $valor_unitario</strong>
 
