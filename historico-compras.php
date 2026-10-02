@@ -1,20 +1,4 @@
-
-
-
 <!-- ESTÁ NO CSSS USUARIOS.CSS!!!!!!!!!!!!!!!!! -->
-
-
-
-
-
-
-
-
-
-
-
-
-
 <?php
 
 session_start();
@@ -65,7 +49,7 @@ include "assets/funcoes/utilidades.php";
                     $nomeProduto = $linhaProduto["nome"];
                     $valorProduto = $linhaProduto["valor_unitario"];
                     
-                    echo '<li>' . $quantidadeProduto . 'x ' . $nomeProduto . ' - R$ ' . $valorProduto . '</li>';
+                    echo '<li>' . $quantidadeProduto . 'x ' .'<div>'. $nomeProduto .'</div><div>'. ' R$ ' . $valorProduto . '</div></li>';
                     $total += $quantidadeProduto * $valorProduto;
                 }
 
