@@ -75,7 +75,7 @@ include "_cabecalho.php";
         </section>
         <section class="topic">
             <div class="img-area">
-                <img src="assets/imagens/banner.webp" alt="Banner">
+                <img src="assets/imagens/artigos/condicoesespeciais.webp" alt="Banner">
             </div>
             <div class="text-area">
                 <h3>Habilidades de slimes</h3>
@@ -84,6 +84,7 @@ include "_cabecalho.php";
                 <h3>Condição Especial</h3>
                 <p>Às vezes, um slime ativo pode ficar deteriorado. Esta condição é chamada de “Condição Especial”. Ela só pode atingir o slime Ativo, já que quando um slime vai para o banco, ele se recupera da deterioração. <br>
                 No fim da sua rodada, se o seu slime ativo estiver deteriorado, ele receberá 1 de dano.</p>
+                <p>Outra condição especial presente no jogo é o "atordoamento". Quando um slime fica atordoado, ele não poderá atacar ou usar habilidades até o fim da sua rodada.</p>
             </div>
         </section>
     </article>
