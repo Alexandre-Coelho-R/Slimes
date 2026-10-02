@@ -5,36 +5,35 @@ include "_cabecalho.php";
 ?>
 
 <main>
-    <h1>COMO JOGAR SLIME SMASH?</h1>
+    <h1 class="title">COMO JOGAR SLIME SMASH?</h1>
     
     <article>
         <section class="topic">
             <div class="img-area">
-                <img src="assets/imagens/banner.webp" alt="Banner">
+                <img src="assets/imagens/artigos/partescarta.webp" alt="Banner">
             </div>
             <div class="text-area">
                 <h3>Partes de uma carta</h3>
                 <p>Slime Smash possui quatro tipos diferentes de cartas: Slimes, itens, ações e ferramentas. <br>
                     Uma carta de slime no jogo possuirá, sempre, o nome do slime, a vida, o escudo, uma habilidade(indicada em vermelho) e um ataque. O número de ataques pode variar se um slime não possuir habilidade. <br>
                     Cada ataque possui o seu custo, o seu dano e seu efeito especial.</p>
-            </div>
+                <p>Demais cartas terão somente o seu nome, o nome do seu efeito e o seu efeito.</p>
+                </div>
         </section>
         <section class="topic">
             <div class="img-area">
-                <img src="assets/imagens/banner.webp" alt="Banner">
+                <img src="assets/imagens/artigos/tabuleiro.png" alt="Tabuleiro do jogo">
             </div>
             <div class="text-area">
                 <h3>Antes de começar o jogo</h3>
                 <p>Cada jogador embaralha o seu baralho e o posiciona na mesa virado para baixo. Após isso, decida quem começará jogando uma moeda.</p>
                 <h3>Começando o jogo</h3>
                 <p>Cada jogador deve comprar 5 cartas. Se não houver nenhum slime em sua mão após a compra, devolva sua mão ao baralho e o embaralhe. O oponente deve comprar uma carta a mais do topo do baralho dele para cada vez que isso acontecer. Se acontecer de ambos não comprarem um slime, nenhum compra uma carta extras. Após isso, coloque um slime no campo ativo e, se quiser, alguns no banco. Após isso, ambos os jogadores viram as cartas para cima e inicia-se o jogo</p>
+                <h3>Primeiro turno</h3>
+                <p>O jogador que jogar primeiro não poderá atacar ou jogar uma carta de ação no seu primeiro turno. Demais ações podem ser feitas como jogar itens ou tools, ligar gosmas ou recuar.</p>
             </div>
         </section>
-        <section class="topic">
-            <div class="img-area">
-                <img src="assets/imagens/banner.webp" alt="Banner">
-            </div>
-            <div class="text-area">
+        <section class="topic-no-img">
                 <h3>O que posso fazer durante o meu turno?</h3>
                 <p>No seu turno, você pode: colocar quantos slimes quiser no banco (até preencher os três espaços), recuar o seu slime ativo, atribuir uma gosma a um slime, usar itens, usar uma ação, atribuir ferramentas a slimes, usar habilidades e atacar</p>
                 <ol>
@@ -61,13 +60,8 @@ include "_cabecalho.php";
                         <p>Escolha um ataque (confira se você tem gosmas suficientes). Coloque contadores de dano nos slimes do seu oponente que foram afetados por ele (o número à direita do ataque indica a quantidade de dano que ele causa). Alguns ataques não causam dano, mas têm outros efeitos.</p>
                     </li>
                 </ol>
-            </div>
         </section>
-        <section class="topic">
-            <div class="img-area">
-                <img src="assets/imagens/banner.webp" alt="Banner">
-            </div>
-            <div class="text-area">
+        <section class="topic-no-img">
                 <h3>Causando dano</h3>
                 <p>Quando atacar, o slime ativo oponente receberá o dano e os efeitos especiais do ataque. Normalmente, os ataques começam diminuindo a quantidade de <strong>escudo</strong> do slime oponente, salvo alguns que ignoram essa condição</p>
                 
@@ -78,6 +72,18 @@ include "_cabecalho.php";
                 <h3>Vencendo o jogo</h3>
                 <p>Ao nocautear 3 slimes inimigos, você ganha o jogo.
                 <br>Se o inimigo não conseguir comprar nenhuma carta na rodada dele, o jogo também acabará e você vencerá.</p>
+        </section>
+        <section class="topic">
+            <div class="img-area">
+                <img src="assets/imagens/banner.webp" alt="Banner">
+            </div>
+            <div class="text-area">
+                <h3>Habilidades de slimes</h3>
+                <p>Alguns slimes possuem Habilidades especiais que podem usar. A maioria delas pode ser usada durante o seu turno, antes de atacar. Cada Habilidade é diferente, então leia a descrição de cada Habilidade com cuidado para saber como cada uma funciona. Se você usar uma habilidade, certifique-se de anunciá-la para que seu oponente saiba o que você está fazendo. <br>
+                Lembre-se de que Habilidades não são ataques, por isso você ainda poderá atacar após usar uma Habilidade! Você pode usar a habilidade de qualquer slime que tiver em jogo, Ativo ou no Banco. </p>
+                <h3>Condição Especial</h3>
+                <p>Às vezes, um slime ativo pode ficar deteriorado. Esta condição é chamada de “Condição Especial”. Ela só pode atingir o slime Ativo, já que quando um slime vai para o banco, ele se recupera da deterioração. <br>
+                No fim da sua rodada, se o seu slime ativo estiver deteriorado, ele receberá 1 de dano.</p>
             </div>
         </section>
     </article>

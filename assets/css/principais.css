@@ -143,7 +143,7 @@ TUTORIAIS
 .topic > .img-area > img {
     max-width:100%;
 }
-.topic > .text-area {
+.topic > .text-area, .topic, .topic-no-img {
     grid-area: texto;
     color: var(--middle-color-2);
     font-size: var(--normal-text-size);
@@ -155,7 +155,9 @@ TUTORIAIS
     padding-bottom: .5rem;
     padding-top: .5rem;
 }
-
+.topic-no-img {
+    padding: 2.5em;
+}
 @media (width >= 630px) {
     .topic {
         display: grid;
@@ -165,7 +167,7 @@ TUTORIAIS
         padding: 1rem;
     }
 
-    .topic:nth-child(2n) > .text-area, .topic:nth-child(2n) {
+    .topic:nth-child(2n) > .text-area, .topic:nth-child(2n), .topic-no-img:nth-child(2n) {
         background-color: var(--middle-color-2);
         color: white;
         grid-template-areas: "image texto";
@@ -185,7 +187,7 @@ TUTORIAIS
     }
 }
 
-    .topic:nth-child(2n) > .text-area, .topic:nth-child(2n) {
+    .topic:nth-child(2n) > .text-area, .topic:nth-child(2n), .topic-no-img:nth-child(2n){
         background-color: var(--middle-color-2);
         color: white;
         grid-template-areas: "image" "texto";
