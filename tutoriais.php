@@ -22,7 +22,7 @@ include "_cabecalho.php";
         </section>
         <section class="topic">
             <div class="img-area">
-                <img src="assets/imagens/artigos/tabuleiro.png" alt="Tabuleiro do jogo">
+                <img src="assets/imagens/artigos/tabuleiro.webp" alt="Tabuleiro do jogo">
             </div>
             <div class="text-area">
                 <h3>Antes de começar o jogo</h3>

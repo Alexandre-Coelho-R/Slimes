@@ -13,10 +13,10 @@ include "_cabecalho.php";
         <section class="faq">
             <h3 class="faq-pergunta">
                 Quem nós somos?
-                <i class="fa-solid fa-arrow-up seta"></i>
+                <i class="fa-solid fa-arrow-down seta"></i>
             </h3>
             <div class="faq-resposta">
-                <p>Nós somos um grupo de alunos do curso de informática diurno do Colégio Técnico Industrial "Prof. Isaac Portal Roldán" que está desenvolvendo um projeto para ser vendido no evento da Semana do Colégio (20-24 de outubro).</p>
+                <p>Nós somos um grdowno de alunos do curso de informática diurno do Colégio Técnico Industrial "Prof. Isaac Portal Roldán" que está desenvolvendo um projeto para ser vendido no evento da Semana do Colégio (20-24 de outubro).</p>
                 <p>Nosso produto é um jogo de cartas desenhado por nós com sistema de duelos entre jogadores. Mais informações podem ser vistas na página <a href="f-sobre-nos.php">sobre nós</a>.</p>
             </div>
         </section>
@@ -24,7 +24,7 @@ include "_cabecalho.php";
         <section class="faq">
             <h3 class="faq-pergunta">
                 Onde e quando estaremos na Semana do Colégio?
-                <i class="fa-solid fa-arrow-up seta"></i>
+                <i class="fa-solid fa-arrow-down seta"></i>
             </h3>
             <div class="faq-resposta">
                 <p>Nossa loja estará dentro da sala de estudos do colégio. Essa sala fica próxima da cantina do colégio.</p>
@@ -36,7 +36,7 @@ include "_cabecalho.php";
         <section class="faq">
             <h3 class="faq-pergunta">
                 Como funciona a compra dos produtos?
-                <i class="fa-solid fa-arrow-up seta"></i>
+                <i class="fa-solid fa-arrow-down seta"></i>
             </h3>
             <div class="faq-resposta">
                 <p>Para comprar, há duas possibilidades:</p>
@@ -52,7 +52,7 @@ include "_cabecalho.php";
         <section class="faq">
             <h3 class="faq-pergunta">
                 O que você recebe na compra de baralhos, pacotes e moedas?
-                <i class="fa-solid fa-arrow-up seta"></i>
+                <i class="fa-solid fa-arrow-down seta"></i>
             </h3>
             <div class="faq-resposta">
                 <p>Baralhos (decks):</p>
@@ -73,23 +73,34 @@ include "_cabecalho.php";
 
         <section class="faq">
             <h3 class="faq-pergunta">
+                Como os desenhos do jogo foram feitos?
+                <i class="fa-solid fa-arrow-down seta"></i>
+            </h3>
+            <div class="faq-resposta">
+                <p>Todos os desenhos do jogo foram feitos à mão num tablet por meio do aplicativo Affinity pelo membro Luca Bressan Morretti</p>
+                <p>Depois de fazer os desenhos, colocamos eles em PDFs e imprimimos as cartas com frente e verso em uma impressora que sdownorta o papel mais pesado usado no jogo para ter mais qualidade.</p>
+                <p>A seguir, um vídeo mostrando como uma carta foi feita:</p>
+            </div>
+        </section>
+
+        <!-- <section class="faq">
+            <h3 class="faq-pergunta">
                 O que é um jogo de cartas do estilo TCG?
-                <i class="fa-solid fa-arrow-up seta"></i>
+                <i class="fa-solid fa-arrow-down seta"></i>
             </h3>
             <div class="faq-resposta">
                 <p>Um jogo TCG é um jogo de cartas colecionáveis e trocáveis entre pessoas que tem um sistema de duelos entre jogadores.</p>
             </div>
-        </section>
+        </section> -->
 
         <section class="faq">
             <h3 class="faq-pergunta">
-                Como os desenhos do jogo foram feitos?
-                <i class="fa-solid fa-arrow-up seta"></i>
+                O que acontece com os seus dados ao criar conta?
+                <i class="fa-solid fa-arrow-down seta"></i>
             </h3>
             <div class="faq-resposta">
-                <p>Todos os desenhos do jogo foram feitos à mão num tablet por meio do aplicativo Affinity pelo membro Luca Bressan Morretti</p>
-                <p>Depois de fazer os desenhos, colocamos eles em PDFs e imprimimos as cartas com frente e verso em uma impressora que suporta o papel mais pesado usado no jogo para ter mais qualidade.</p>
-                <p>A seguir, um vídeo mostrando como uma carta foi feita:</p>
+                <p>Os únicos dados pessoais que guardamos são nome (que pode ser ficíticio) e email.</p>
+                <p>Seus dados são salvos num banco de dados da escola.</p>
             </div>
         </section>
     </article>
