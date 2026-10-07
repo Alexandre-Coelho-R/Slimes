@@ -1,7 +1,7 @@
 /*
 ---------------------------------
 GERAL
---------------------------------- 
+---------------------------------
 */
 
 main {    
@@ -10,10 +10,10 @@ main {
     align-items: center;
 }
 
-/* 
+/*
 ---------------------------------
 CONTATO
---------------------------------- 
+---------------------------------
 */
 
 #form-contato {
@@ -114,7 +114,7 @@ CONTATO
 /*
 -----------------------------------------
 DESENVOLVEDORES
------------------------------------------ 
+-----------------------------------------
 */
 
 #devs {
@@ -219,10 +219,10 @@ DESENVOLVEDORES
     }
 }
 
-/* 
+/*
 --------------------------
 MISSÃO VISÃO E VALORES
--------------------------- 
+--------------------------
 */
 
 #principles {
@@ -294,57 +294,88 @@ MISSÃO VISÃO E VALORES
     }
 }
 
-/* 
+/*
 ---------------------------------
 Sobre nós
---------------------------------- 
+---------------------------------
 */
 
-.topic > .img-area {
-    grid-area: image;
-    width: 100%;
+#faq-container {
+    width: 85%;
 }
-.topic > .img-area > img {
-    max-width:100%;
+
+.faq {
+    margin-bottom: 2rem;
+    width: 98%;
+    margin: 2rem auto 0 auto;
 }
-.topic > .text-area, .topic, .topic-no-img {
-    grid-area: texto;
-    color: var(--middle-color-2);
+
+.faq:first-child {
+    margin-top: 0.67vw;
+}
+
+.faq h3 {
+    font-size: var(--medium-text-size);
+    background-color: var(--middle-color-2);
+    padding: 0.67rem;
+    border-radius: 10px;
+    margin-bottom: 0.67rem;
+    color: white;
+}
+
+.faq p, .faq ul {
     font-size: var(--normal-text-size);
-    text-align: justify;
-}
-.topic-no-img {
-    padding: 2.5em;
-}
-@media (width >= 630px) {
-    .topic {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "texto image";
-        gap:2vw;
-        padding: 1rem;
-    }
-
-    .topic:nth-child(2n) > .text-area, .topic:nth-child(2n), .topic-no-img:nth-child(2n){
-        background-color: var(--middle-color-2);
-        color: white;
-        grid-template-areas: "image texto";
-    }
+    margin: 0.67rem auto;
+    width: 99%;
 }
 
-@media (width < 630px) {
-    .topic {
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 0fr;
-        grid-template-areas: "image" "texto";
-        gap:2vw;
-        padding: 1rem;
+.faq ul {
+    padding-left: 3rem;
+}
+
+.faq a {
+    text-decoration: underline;
+}
+
+.faq-pergunta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.seta {
+    transition: transform 0.2s;
+    margin-right: 0.3rem;
+}
+
+.faq-resposta {
+    display: none;
+}
+
+.faq.aberto .faq-resposta {
+    display: block;
+}
+
+.faq.aberto .seta {
+    transform: rotate(180deg);
+}
+
+@media (width < 1000px) {
+    .faq {
+        width: 95%;
+        margin: 1.5rem auto 0 auto;
     }
 
-    .topic:nth-child(2n) > .text-area, .topic:nth-child(2n), .topic-no-img:nth-child(2n) {
-        background-color: var(--middle-color-2);
-        color: white;
-        grid-template-areas: "image" "texto";
+    .faq p, .faq ul {
+        margin: 0.5rem auto;
+    }
+
+    .faq ul {
+        padding-left: 1.8rem;
+    }
+
+    .seta {
+        margin-right: 0.15rem;
     }
 }
