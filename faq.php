@@ -16,7 +16,7 @@ include "_cabecalho.php";
                 <i class="fa-solid fa-arrow-down seta"></i>
             </h3>
             <div class="faq-resposta">
-                <p>Nós somos um grdowno de alunos do curso de informática diurno do Colégio Técnico Industrial "Prof. Isaac Portal Roldán" que está desenvolvendo um projeto para ser vendido no evento da Semana do Colégio (20-24 de outubro).</p>
+                <p>Nós somos um grupo de alunos do curso de informática diurno do Colégio Técnico Industrial "Prof. Isaac Portal Roldán" que está desenvolvendo um projeto para ser vendido no evento da Semana do Colégio (20-24 de outubro).</p>
                 <p>Nosso produto é um jogo de cartas desenhado por nós com sistema de duelos entre jogadores. Mais informações podem ser vistas na página <a href="f-sobre-nos.php">sobre nós</a>.</p>
             </div>
         </section>
