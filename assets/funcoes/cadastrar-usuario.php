@@ -60,7 +60,7 @@ if ($_SESSION["carrinho_nao_logado"] ?? false) {
 $_SESSION["usuario_id"] = $id;
 $_SESSION["usuario_nome"] = $nome;
 $_SESSION["usuario_email"] = $email;
-$_SESSION["usuario_imagem"] = false;
+$_SESSION["usuario_imagem"] = null;
 
 voltarPagina("../../usuario.php");
 ?>
