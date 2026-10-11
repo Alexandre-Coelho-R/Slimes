@@ -28,3 +28,18 @@ document.querySelectorAll(".form-carrinho").forEach(form => {
         }
     });
 });
+
+// Reservar o carrinho
+
+const botaoFinalizar = document.getElementById("finalizar-compra");
+
+botaoFinalizar.addEventListener("click", () => {
+    if (usuarioLogado) {
+        if (confirm("Deseja confirmar a reserva dos produtos do seu carrinho?")) {
+            window.location.href = "assets/funcoes/finalizar-compra.php";
+        }
+    } else {
+        window.alert("Você tem que estar logado numa conta para reservar produtos")
+    }
+
+});

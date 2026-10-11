@@ -10,7 +10,7 @@
     --medium-big-text-size: calc(16.6px + 0.44vw);
     --big-text-size: calc(24px + 1.88vw);
 
-    --title-font-size: clamp(65px, calc(20px + 9.375vw), 200px);
+    --title-font-size: clamp(70px, calc(20px + 9.375vw), 200px);
 
     --logo-size: clamp(80px,8vw,140px);
     --profile-pic-size: clamp(100px, 12vw, 200px);

@@ -1,7 +1,10 @@
 <?php
-
 session_start();
+?>
 
+<script>const usuarioLogado = <?= isset($_SESSION["usuario_id"]) ? "true" : "false" ?>;</script>
+
+<?php
 $titulo = "Carrinho";
 $css = "vendas.css";
 $js = "carrinho.js";
@@ -39,7 +42,9 @@ if (isset($_SESSION["usuario_id"])){
         <section class="carrinho">
             <?php if (!isset($id_compra)): ?>
                 <p>Seu carrinho está vazio.</p>
+                <?php $botaoClicavel = "disabled"?>
             <?php else: ?>
+                <?php $botaoClicavel = ""?>
                 <?php
                 $sql = "SELECT produto.id_produto, produto.nome, produto.valor_unitario, produto.imagem, compra_produto.quantidade
                         FROM produto
@@ -104,8 +109,8 @@ if (isset($_SESSION["usuario_id"])){
                 <span>Total</span>
                 <strong>R$ <?=$total?></strong>
             </div>
-
-            <button class="finalizar">Finalizar compra</button>
+                    
+            <button id="finalizar-compra" class="finalizar" <?=$botaoClicavel?>>Reservar compra</button>
         </section>
     </div>
 </main>

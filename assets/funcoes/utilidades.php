@@ -32,12 +32,12 @@ function voltarPagina($pagina = "") {
 }
 
 function verificarLogin() {
-    if (session_status() != PHP_SESSION_ACTIVE) session_start();
+    if (session_status() !== PHP_SESSION_ACTIVE) session_start();
     return isset($_SESSION["usuario_id"]) ? true : false;
 }
 
 function verificarAdmin() {
-    if (session_status() != PHP_SESSION_ACTIVE) session_start();
+    if (session_status() !== PHP_SESSION_ACTIVE) session_start();
     if (!($_SESSION["usuario_admin"] ?? false)) voltarInfo("Você não tem permissão para acessar essa página");
 }
 

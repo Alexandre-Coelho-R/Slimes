@@ -65,7 +65,6 @@ if (verificarLogin()) {
     $_SESSION["carrinho_nao_logado_id_compra"] = $id_compra;
 }
 
-
 // Tratar as diferentes ações
 
 if ($acao === "adicionar") {
@@ -126,6 +125,28 @@ if ($acao === "adicionar") {
               $conn);
 } else {
     echoFechar("erro");
+}
+
+// Se o carrinho estiver vazio, deleta a compra
+
+$select = mexerSQL("SELECT COUNT(*) AS quantidade
+                    FROM compra_produto
+                    WHERE fk_compra=:id_compra",
+                    [":id_compra" => $id_compra],
+                    $conn);
+
+$resultado = $select->fetch(PDO::FETCH_ASSOC);
+
+if ($resultado["quantidade"] == 0) {
+    mexerSQL("DELETE FROM compra
+              WHERE id_compra=:id_compra",
+              [":id_compra" => $id_compra],
+              $conn);
+
+    if (!verificarLogin()) {
+        unset($_SESSION["carrinho_nao_logado"]);
+        unset($_SESSION["carrinho_nao_logado_id_compra"]);
+    }
 }
 
 echoFechar("sucesso");

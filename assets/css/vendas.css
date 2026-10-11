@@ -30,7 +30,7 @@ PÁGINA DE PRODUTOS
     
     font-family: 'SlimeFont';
     color: white;
-    -webkit-text-stroke: 0.067em black;
+    -webkit-text-stroke: 0.05em black;
     paint-order: stroke fill;
 
     font-size: calc(var(--title-font-size) * 0.85);
@@ -276,6 +276,13 @@ PÁGINA DE PRODUTOS
     #banner-produtos {
         transform: scale(2.0);
         height: clamp(120px, 30vw, 150px);
+    }
+}
+
+@media (width < 300px) {
+    #banner-container h1 {
+        -webkit-text-stroke: 0.05em black;
+        font-size: calc(var(--title-font-size) * 0.70);
     }
 }
 
