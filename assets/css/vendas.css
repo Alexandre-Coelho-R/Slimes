@@ -30,7 +30,7 @@ PÁGINA DE PRODUTOS
     
     font-family: 'SlimeFont';
     color: white;
-    -webkit-text-stroke: clamp(5px, 0.7vw, 10px) black;
+    -webkit-text-stroke: 0.067em black;
     paint-order: stroke fill;
 
     font-size: calc(var(--title-font-size) * 0.85);

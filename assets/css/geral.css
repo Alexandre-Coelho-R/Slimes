@@ -243,7 +243,7 @@ footer {
 
     font-family: 'SlimeFont';
     color: white;
-    -webkit-text-stroke:clamp(3.75px, 0.525vw, 7.5px) black;
+    -webkit-text-stroke: 0.18em black;
     paint-order: stroke fill;
     letter-spacing: 2px;
     font-size: var(--medium-text-size);

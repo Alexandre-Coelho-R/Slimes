@@ -75,17 +75,18 @@ main {
 .hero-title, .hero-subtitle {
     font-family: 'SlimeFont';
     color: white;
-    -webkit-text-stroke: clamp(5px, 0.7vw, 10px) black;
     paint-order: stroke fill;
     text-align: center;
 }
 
 .hero-title {
     font-size: var(--title-font-size);
+    -webkit-text-stroke: 0.05em black;
 }
 
 .hero-subtitle {
     font-size: var(--big-text-size);
+    -webkit-text-stroke: 0.10em black;
     text-wrap: balance;
 }
 
@@ -161,7 +162,7 @@ main {
     font-family: 'SlimeFont';
     font-size: calc(var(--medium-text-size) * 1.25);
     color: white;
-    -webkit-text-stroke: clamp(5px, 0.7vw, 10px) black;
+    -webkit-text-stroke: 0.2em black;
     paint-order: stroke fill;
     text-align: center;
     text-wrap: balance;
