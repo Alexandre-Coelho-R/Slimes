@@ -79,7 +79,7 @@ include "_cabecalho.php";
             <div class="faq-resposta">
                 <p>Todos os desenhos do jogo foram feitos à mão num tablet por meio do aplicativo Affinity pelo membro Luca Bressan Morretti</p>
                 <p>Depois de fazer os desenhos, colocamos eles em PDFs e imprimimos as cartas com frente e verso em uma impressora que sdownorta o papel mais pesado usado no jogo para ter mais qualidade.</p>
-                <p>A seguir, um vídeo mostrando como uma carta foi feita:</p>
+                <p>Você pode clicar <a href="https://www.youtube.com/shorts/Iwb1DHvJe0w">neste link</a> para ver um vídeo mostrando como uma carta foi feita:</p>
             </div>
         </section>
 
