@@ -47,7 +47,6 @@ PÁGINA DE PRODUTOS
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
-
 #produtos-booster {
     grid-template-columns: 2.5fr 1fr 2.5fr;
 }
@@ -57,7 +56,7 @@ PÁGINA DE PRODUTOS
 }
 
 #produtos-moeda {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
 }
 
 #produtos-moeda > .produto:nth-child(1) {
@@ -76,6 +75,10 @@ PÁGINA DE PRODUTOS
     grid-column: 5;
 }
 
+#produtos-moeda > .produto:nth-child(5) {
+    grid-column: 6;
+}
+
 @media (width < 1300px) {
     #produtos-deck {
         grid-template-columns: 1fr 1fr 1fr;
@@ -86,27 +89,12 @@ PÁGINA DE PRODUTOS
     }
 
     #produtos-moeda {
-        grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
-    #produtos-moeda > .produto:nth-child(1) {
-        grid-column: 2;
-        grid-row: 1;
-    }
-
-    #produtos-moeda > .produto:nth-child(2) {
-        grid-column: 3;
-        grid-row: 1;
-    }
-
-    #produtos-moeda > .produto:nth-child(3) {
-        grid-column: 2;
-        grid-row: 2;
-    }
-
-    #produtos-moeda > .produto:nth-child(4) {
-        grid-column: 3;
-        grid-row: 2;
+    #produtos-moeda > .produto {
+        grid-column: auto !important;
+        grid-row: auto !important;
     }
 }
 
@@ -121,11 +109,6 @@ PÁGINA DE PRODUTOS
 
     #produtos-moeda {
         grid-template-columns: 1fr 1fr;
-    }
-
-    #produtos-moeda > .produto {
-        grid-column: auto !important;
-        grid-row: auto !important;
     }
 }
 
@@ -147,7 +130,6 @@ PÁGINA DE PRODUTOS
     }
 }
 
-
 .produto {
     border-radius: 15px;
     padding: 1rem;
@@ -157,12 +139,21 @@ PÁGINA DE PRODUTOS
     transition: 0.2s ease-out;
 }
 
-.produto:hover {
-    transform: translateY(-5px);
-    scale: 1.05;
-    box-shadow: 0 10px 0px var(--smaller-color);
+.produto:nth-child(1n):hover {
+    box-shadow: 0px 10px 0px rgb(255, 0, 0);
 }
-
+.produto:nth-child(2n):hover {
+    box-shadow: 0px 10px 0px rgb(255, 145, 0);
+}
+.produto:nth-child(3n):hover {
+    box-shadow: 0px 10px 0px rgb(0, 38, 255);
+}
+.produto:nth-child(4n):hover {
+    box-shadow: 0px 10px 0px rgb(255, 0, 255);
+}
+.produto:hover {
+    transform: translateY(-10px);
+}
 .imagem-produto {
     display: flex;
     justify-content: center;
@@ -218,18 +209,22 @@ PÁGINA DE PRODUTOS
 .form-carrinho button{
     padding: 5px 9px;
     width: 80%;
-    border-radius: 5px;  
+    border-radius: 50px;  
+    border: none;
     background: var(--bigger-color) ;
     color: white;
     font-size: calc(var(--normal-text-size) * 0.9);
     cursor: pointer;
-    transition:.2s;
+    transition:.2s ease-out;
 }
 
 .produto button:hover{
     background: var(--middle-color-1);
+    color: var(--bigger-color);
 }
-
+.produto button:active {
+    scale: 0.95;
+}
 @media (width < 1000px) {
     #banner-produtos {
         transform: scale(1.2);

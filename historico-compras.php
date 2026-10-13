@@ -10,9 +10,9 @@ include "assets/funcoes/utilidades.php";
 if (!isset($_SESSION["usuario_nome"])) voltarPagina("usuario.php");
 ?>
 
-<main id="main-historico">
+<main>
     <h1 class="title">Compras reservadas</h1>
-    <h2 class="subtitle">Veja mais na página de <a href="faq.php">perguntas frequentes</a></h2>
+    <h2 class="subtitle" id="h2_historico">Veja mais na página de <a href="faq.php">perguntas frequentes</a></h2>
 
     <?php
         $id_usuario = $_SESSION["usuario_id"] ?? 0;

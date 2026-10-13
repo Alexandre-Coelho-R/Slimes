@@ -3,7 +3,7 @@
 session_start();
 
 $titulo = "Compras";
-$css = "admin.css";
+$css = "usuario.css";
 include "_cabecalho.php";
 include "assets/funcoes/utilidades.php";
 
@@ -44,7 +44,7 @@ verificarAdmin();
             $subtotalProdutos = 0;
 
             echo '
-            <section class="secao-compras">
+            <section class="secao-historico">
                 <p>Id compra: ' . $id_compra . '</p>
                 <p>Comprador: ' . $nomeDoCara . '</p>
                 <p>Data: ' . $horarioReserva . '</p>

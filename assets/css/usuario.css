@@ -237,6 +237,10 @@ HISTÓRICO DE COMPRAS
 --------------------
 */
 
+#h1_compras, #h2_compras {
+    margin-bottom: 3rem;
+}
+
 /* Usuário não logado */
 #historico-falar {
     text-align: center;
@@ -247,9 +251,6 @@ HISTÓRICO DE COMPRAS
 }
 
 /* Usuário logado */
-#main-historico > h2 {
-    margin-bottom: 3rem;
-}
 
 .secao-historico {
     background-color: var(--smaller-color);
@@ -257,7 +258,8 @@ HISTÓRICO DE COMPRAS
     margin: 0 auto;
     margin-bottom: 3rem;
     border-radius: 20px;
-    border-bottom: solid 2px var(--middle-color-2);
+    border: solid 2px var(--middle-color-2);
+    border-bottom: solid 4px var(--middle-color-2);
     padding: 2rem;
     color: var(--bigger-color);
     font-size: calc(var(--normal-text-size) * 0.9);
@@ -271,8 +273,7 @@ HISTÓRICO DE COMPRAS
 
 .secao-historico li {
     display: flex;
-    border-bottom: 2px solid var(--middle-color-1);
-    border-radius: 10px;
+    border-bottom: 2px double var(--middle-color-2);
     padding: 1rem;
 
     flex-direction: row-reverse;
