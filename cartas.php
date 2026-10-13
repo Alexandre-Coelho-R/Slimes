@@ -29,9 +29,9 @@ include "_cabecalho.php";
             <span>Ações</span>
         </button>
 
-        <button id="ferramentas" type="button">
-            <i class="fa-solid fa-screwdriver-wrench"></i>
-            <span>Ferramentas</span>
+        <button id="magias" type="button">
+            <i class="fa-solid fa-hat-wizard"></i>
+            <span>Magias</span>
         </button>
     </nav>
 

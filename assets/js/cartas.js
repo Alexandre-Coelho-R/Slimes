@@ -5,7 +5,7 @@ const btTodos = document.getElementById("todos");
 const btSlimes = document.getElementById("slimes");
 const btItens = document.getElementById("itens");
 const btAcoes = document.getElementById("acoes");
-const btFerramentas = document.getElementById("ferramentas");
+const btFerramentas = document.getElementById("magias");
 const cartaAmpliada = document.getElementById("carta-ampliada");
 const possuiMouse = window.matchMedia("(pointer: fine)").matches;
 
