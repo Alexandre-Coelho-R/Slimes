@@ -245,7 +245,6 @@ HISTÓRICO DE COMPRAS
 #historico-falar {
     text-align: center;
     font-size: var(--normal-text-size);
-    width: 95%;
     text-wrap: balance;
     margin: 5rem auto 0 auto;
 }

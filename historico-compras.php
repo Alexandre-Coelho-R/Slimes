@@ -34,7 +34,7 @@ if (!isset($_SESSION["usuario_nome"])) voltarPagina("usuario.php");
 
             echo '
             <section class="secao-historico">
-                <p>Horário da reserva: ' . $horarioReserva . '</p>
+                <p>Dia da reserva: ' . substr($horarioReserva, 8, 2) . '/' . substr($horarioReserva, 5, 2) . '/' . substr($horarioReserva, 0, 4) . '</p>
                 <ul>
             ';
 
@@ -56,13 +56,12 @@ if (!isset($_SESSION["usuario_nome"])) voltarPagina("usuario.php");
 
             echo '
                 </ul>
-                <p>Total = ' . $total . '</p>
+                <p>Total = R$ ' . $total . '</p>
             </section>';
         }
-
         
         if (!$encontrou){
-            echo '<p class="historico-falar">Você não tem nenhum produto pendente de entrega</p>';
+            echo '<p id="historico-falar">Você não tem nenhum produto pendente de entrega</p>';
         }
     ?>
 </main>
