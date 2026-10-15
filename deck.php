@@ -7,7 +7,6 @@ $css = "vendas.css";
 $js = "deck.js";
 
 include "_cabecalho.php";
-include "assets/funcoes/utilidades.php";
 
 if (!isset($_GET["id"])) voltarInfo("Deck não encontrado.");
 

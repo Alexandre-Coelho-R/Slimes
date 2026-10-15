@@ -1,10 +1,11 @@
 <?php
-include "assets/funcoes/utilidades.php";
-verificarAdmin();
+session_start();
 
 $titulo = "Alterar estoque";
 $css = "admin.css";
 include "_cabecalho.php";
+
+verificarAdmin();
 
 $conn = conectar_bd();
 $sql = "SELECT fk_produto, quantidade, custo_unitario, obs

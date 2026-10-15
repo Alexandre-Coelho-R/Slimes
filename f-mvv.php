@@ -1,4 +1,6 @@
 <?php 
+session_start();
+
 $titulo = "Propósito";
 $css = "institucionais.css";
 include "_cabecalho.php";

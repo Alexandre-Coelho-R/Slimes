@@ -7,7 +7,6 @@ $css = "vendas.css";
 $js = "produtos.js";
  
 include "_cabecalho.php";
-include "assets/funcoes/utilidades.php";
 $conn = conectar_bd();
 ?> 
  

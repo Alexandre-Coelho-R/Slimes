@@ -46,6 +46,17 @@ function echoFechar($mensagem = "") {
     exit;
 }
 
+function qtd_prod($paramConn, $paramId) {
+    try {
+        $sql = "SELECT qtd_estoque(:p)";
+        $select = $paramConn->prepare($sql);
+        $select->bindParam(':p',$paramId);
+        if ($select->execute() > 0) return $select->fetchColumn();
+    } catch (PDOException $e) {
+        return -1;
+    }
+}
+
 function mostrarProduto($conn, $categoria) {
     $select = $conn -> query("SELECT * FROM produto WHERE excluido=FALSE AND categoria='$categoria'");
 
@@ -58,13 +69,13 @@ function mostrarProduto($conn, $categoria) {
             $imagem = "assets/imagens/produtos/" . $imagem_bd;
         }
 
-        $quantidade = 76; // Temporário
-
         $nome = $linha['nome'];
 
         $valor_unitario = number_format($linha["valor_unitario"], 2, ",", ".");
 
         $id_produto = $linha["id_produto"];
+
+        $quantidade = qtd_prod($conn, $id_produto);
 
         if ($categoria == "deck") {
             $link = "deck.php?id=" . $linha["id_produto"];

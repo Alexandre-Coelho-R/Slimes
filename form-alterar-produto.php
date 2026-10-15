@@ -1,10 +1,10 @@
 <?php
-include "assets/funcoes/utilidades.php";
-verificarAdmin();
+session_start();
 
 $titulo = "Alterar produto";
 $css = "admin.css";
 include "_cabecalho.php";
+verificarAdmin();
 
 $conn = conectar_bd();
 

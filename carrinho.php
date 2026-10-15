@@ -10,7 +10,6 @@ $css = "vendas.css";
 $js = "carrinho.js";
 
 include "_cabecalho.php";
-include "assets/funcoes/utilidades.php";
 
 $conn = conectar_bd();
 
@@ -62,7 +61,7 @@ if (isset($_SESSION["usuario_id"])){
                     <?php
                     $total += $resultado["valor_unitario"] * $resultado["quantidade"];
                     $imagem = "assets/imagens/produtos/";
-                    $imagem .= (isset($resultado["imagem"]) ? $resultado["imagem"] : "imagem-substituta") . ".webp";
+                    $imagem .= (isset($resultado["imagem"]) ? $resultado["imagem"] : "imagem-substituta.webp");
                     $valor_unitario = number_format($resultado["valor_unitario"], 2, ",", ".");
                     ?>
                     <article class="item-carrinho">

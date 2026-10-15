@@ -1,4 +1,5 @@
 <?php 
+session_start();
 $titulo = "Tutoriais";
 $css = "principais.css";
 include "_cabecalho.php";

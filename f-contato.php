@@ -1,4 +1,5 @@
 <?php 
+session_start();
 $titulo = "Contato";
 $css = "institucionais.css";
 $js = "contato.js";

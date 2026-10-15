@@ -1,4 +1,5 @@
 <?php 
+session_start();
 $titulo = "Início";
 $css = "index.css";
 $js= "index.js";

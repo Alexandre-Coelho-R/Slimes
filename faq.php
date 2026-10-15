@@ -1,4 +1,6 @@
 <?php 
+session_start();
+
 $titulo = "Perguntas frequentes";
 $css = "institucionais.css";
 $js = "faq.js";

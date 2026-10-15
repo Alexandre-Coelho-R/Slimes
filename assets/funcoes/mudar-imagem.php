@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include "utilidades.php";
+require_once "utilidades.php";
 
 if (!isset($_SESSION["usuario_id"])) voltarPagina("../../usuario.php");
 if (!isset($_FILES["imagem"])) voltarPagina("../../usuario.php");

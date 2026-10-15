@@ -1,6 +1,6 @@
 <?php
 
-include "utilidades.php";
+require_once "utilidades.php";
 verificarAdmin();
 $conn = conectar_bd();
 

@@ -5,7 +5,6 @@ session_start();
 $titulo = "Compras";
 $css = "usuario.css";
 include "_cabecalho.php";
-include "assets/funcoes/utilidades.php";
 
 verificarAdmin();
 ?>

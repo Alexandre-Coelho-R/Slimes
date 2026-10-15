@@ -11,7 +11,7 @@
     <title>Slime Smash - <?= $titulo ?? ""?></title>
     <script src="assets/js/geral.js" defer></script>
     <?php
-    if (session_status() === PHP_SESSION_NONE) session_start();
+    include "assets/funcoes/utilidades.php";
     if (isset($css)) echo "<link rel='stylesheet' href='assets/css/$css'>";
     if (isset($js)) echo "<script src='assets/js/$js' type='module'></script>";
     ?>
@@ -33,6 +33,7 @@
         </a>
         <a id="carrinho" href="carrinho.php">
             <i class="fa-solid fa-cart-shopping"></i>
+            <?= include "assets/funcoes/retornar-produtos.php" ?>
         </a>
     </div>
 </header>

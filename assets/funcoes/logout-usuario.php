@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include "utilidades.php";
+require_once "utilidades.php";
 
 session_unset();
 session_destroy();

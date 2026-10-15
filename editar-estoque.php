@@ -1,11 +1,12 @@
 <?php
 session_start();
-include "assets/funcoes/utilidades.php";
-verificarAdmin();
 
 $titulo = "Editar estoque";
 $css = "admin.css";
 include "_cabecalho.php";
+
+verificarAdmin();
+
 ?>
 
 <main class="main-edicao">

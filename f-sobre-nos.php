@@ -1,4 +1,6 @@
 <?php 
+session_start();
+
 $titulo = "Sobre nós";
 $css = "principais.css";
 include "_cabecalho.php";

@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include "utilidades.php";
+require_once "utilidades.php";
 
 $acao = $_POST["acao"] ?? "";
 $id_produto = (int) ($_POST["id_produto"] ?? 0);

@@ -1,4 +1,6 @@
 <?php 
+session_start();
+
 $titulo = "Cartas";
 $css = "principais.css";
 $js = "cartas.js";

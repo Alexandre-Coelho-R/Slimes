@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include "utilidades.php";
+require_once "utilidades.php";
 $conn = conectar_bd();
 
 // Consistência de dados
