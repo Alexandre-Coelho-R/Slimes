@@ -66,33 +66,35 @@ if (isset($_SESSION["usuario_id"])){
                     $valor_unitario = number_format($resultado["valor_unitario"], 2, ",", ".");
                     ?>
                     <article class="item-carrinho">
-                        <img src="<?=$imagem?>" alt="<?=$resultado["nome"]?>">
                         <div class="info-produto">
-                            <h2><?=$resultado["nome"]?></h2>
-                            <p>Quantidade: <?=$resultado["quantidade"]?></p>
+                            <img src="<?=$imagem?>" alt="<?=$resultado["nome"]?>">
+                            <div>
+                                <h2><?=$resultado["nome"]?></h2>
+                                <p>Quantidade: <?=$resultado["quantidade"]?></p>
+                            </div>
+                            <strong class="preco"><?=$valor_unitario?></strong>
                         </div>
-                        <strong class="preco"><?=$valor_unitario?></strong>
                         <div class="quantidade-carrinho">
                             <form class="form-carrinho">
                                 <input type="hidden" name="acao" value="diminuir">
                                 <input type="hidden" name="id_produto" value="<?=$resultado["id_produto"]?>">
                                 <button type="submit">-</button>
                             </form>
-
+                        
+                        
                             <span><?=$resultado["quantidade"]?></span>
-                            
+                                <form class="form-carrinho">
+                                    <input type="hidden" name="acao" value="adicionar">
+                                    <input type="hidden" name="id_produto" value="<?=$resultado["id_produto"]?>">
+                                    <button type="submit">+</button>
+                            </form>
+
                             <form class="form-carrinho">
-                                <input type="hidden" name="acao" value="adicionar">
+                                <input type="hidden" name="acao" value="remover">
                                 <input type="hidden" name="id_produto" value="<?=$resultado["id_produto"]?>">
-                                <button type="submit">+</button>
+                                <button type="submit" class="remover">x</button>
                             </form>
                         </div>
-
-                        <form class="form-carrinho">
-                            <input type="hidden" name="acao" value="remover">
-                            <input type="hidden" name="id_produto" value="<?=$resultado["id_produto"]?>">
-                            <button type="submit" class="remover">x</button>
-                        </form>
                     </article>
                 <?php endforeach;?>
             <?php endif;?>

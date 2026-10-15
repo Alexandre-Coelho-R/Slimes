@@ -12,9 +12,7 @@
 
     --title-font-size: clamp(70px, calc(20px + 9.375vw), 200px);
 
-    --logo-size: clamp(100px,12vw,200px);
-    --profile-pic-size: clamp(100px, 12vw, 200px);
-    
+    --logo-size: clamp(125px,12vw,200px);    
 }
 
 @font-face {
@@ -179,27 +177,29 @@ header a:not(#logo) {
     background-size: 100% 100%;
 }
 @media (width < 500px) {
-    header {
-        width: 100%;
-        display: grid;
-        grid-template-areas: "logo" "acoes";
-        grid-template-rows: 1fr 1fr;
-        justify-content: center;
-        justify-items: center;
+    #user-name {
+        display: none;
     }
+
+    #acoes-header > a {
+        padding: 1.09rem;
+    }
+
     #acoes-header {
-        grid-area: acoes;
-        justify-content: space-around;
-        flex-direction: column; 
+        gap: 1rem;
+    }    
+}
+
+@media (width < 300px) {
+    #acoes-header {
+        gap: 0.5rem;
     }
-    #logo {
-        grid-area: logo;
-        align-self: center;
-    }
-    #logo img {
-        width: 70vw;
+
+    header {
+        padding: clamp(0.375rem, 1.125vh, 0.6rem) clamp(0.6rem, 2.25vw, 1.5rem);
     }
 }
+
 /* 
 -----------------------------------
 FOOTER
