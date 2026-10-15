@@ -35,6 +35,8 @@ include "_cabecalho.php";
                     $excluido3 = $linha["excluido"] ? '<i class="fa-solid fa-rotate-left" aria-hidden="true"></i>' : "<i class='fa-solid fa-trash'  aria-hidden='true'></i>";
                     $data_exclusao = $linha['data_exclusao'];
                     if ($data_exclusao === null) $data_exclusao = "Não possui";
+                    $link_imagem = "assets/imagens/produtos/" .$linha["imagem"];
+                    
                     echo "
                         <tr>
                             <td>{$linha['id_produto']}</td>
@@ -42,7 +44,7 @@ include "_cabecalho.php";
                             <td>{$linha['descricao']}</td>
                             <td>{$linha['categoria']}</td>
                             <td>{$linha['valor_unitario']}</td>
-                            <td>{$linha['imagem']}</td>
+                            <td><img src='$link_imagem'></td>
                             <td>{$excluido}</td>
                             <td>{$data_exclusao}</td>
                             <td><a href='form-alterar-produto.php?id={$linha['id_produto']}'><i class='fa fa-pencil-square' aria-hidden='true'></i></a></td>

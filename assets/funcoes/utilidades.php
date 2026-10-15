@@ -55,7 +55,7 @@ function mostrarProduto($conn, $categoria) {
         if (empty($imagem_bd) || $imagem_bd == "null") {
             $imagem = "assets/imagens/produtos/imagem-substituta.webp";
         } else {
-            $imagem = "assets/imagens/produtos/" . $imagem_bd . ".webp";
+            $imagem = "assets/imagens/produtos/" . $imagem_bd;
         }
 
         $quantidade = 76; // Temporário

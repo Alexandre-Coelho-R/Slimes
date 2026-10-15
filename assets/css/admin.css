@@ -16,6 +16,11 @@
     text-align: center;
 }
 
+#tabela-produtos img{
+    max-width: 100px;
+    max-height: 420px;
+}
+
 /* PÁGINA DE EDIÇÃO OU ALTERAÇÃO DE PRODUTOS */
 
 form {

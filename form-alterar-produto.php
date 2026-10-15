@@ -22,7 +22,7 @@ $categoria = $produto["categoria"]
 ?>
 
 <main>
-    <form method="POST" action="assets/funcoes/alterar-produto.php">
+    <form method="POST" action="assets/funcoes/alterar-produto.php" enctype="multipart/form-data">
         <fieldset>
             <label for="nome">Nome:</label> 
             <input type="text" name="nome" id="nome" required value="<?=$produto["nome"]?>">
@@ -51,7 +51,7 @@ $categoria = $produto["categoria"]
             <input type="number" name="valor" id="valor" min="0" step="0.01" required value="<?=$produto["valor_unitario"]?>">
             
             <label for="imagem">Imagem:</label> 
-            <input type="text" name="imagem" id="imagem" required value="<?=$produto["imagem"]?>">
+            <input type="file" name="imagem" id="imagem" accept="image/*">
 
             <input type="hidden" name="id_produto" value="<?=$_GET["id"]?>">
 

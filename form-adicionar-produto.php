@@ -8,7 +8,7 @@ include "_cabecalho.php";
 ?>
 
 <main>
-    <form method="POST" action="assets/funcoes/adicionar-produto.php">
+    <form method="POST" action="assets/funcoes/adicionar-produto.php" enctype="multipart/form-data">
         <fieldset>
             <label for="nome">Nome:</label> 
             <input type="text" name="nome" id="nome" required>
@@ -28,7 +28,7 @@ include "_cabecalho.php";
             <input type="number" name="valor" id="valor" min="0" step="0.01" required>
 
             <label for="imagem">Imagem:</label> 
-            <input type="text" name="imagem" id="imagem" required>
+            <input type="file" name="imagem" id="imagem" accept="image/*" required>
 
             <button type="submit">Enviar</button>
         </fieldset>
