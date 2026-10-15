@@ -6,14 +6,11 @@ USUÁRIO
 
 /* Logar e cadastrar */
 
-#logar-cadastrar {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    width: 90%;
+.login-cadastro {
+    width: 97%;
     margin: 0 auto;
-    gap: 3rem;
+    max-width: 1500px;
 }
-
 
 .login-cadastro > form {
     display: flex;
@@ -40,7 +37,7 @@ USUÁRIO
     padding: 0.4rem;
     border-radius: 3px;
     border: 0;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     cursor: pointer;
 
     color: white;
@@ -56,33 +53,19 @@ USUÁRIO
     text-decoration: underline;
     cursor:pointer;
 }
-#linha {
-    width: 1px;
-    height: 100%;
-    border-left: 3px solid var(--bigger-color);
+
+.especial {
+    margin-top: 3rem;
 }
 
-@media (width < 1200px) {
-    #logar-cadastrar {
-        width: 96%;
-    }
+.especial > span {
+    font-size: var(--normal-text-size);
 }
 
 @media (width < 700px) {
-    #logar-cadastrar {
-        grid-template-columns: 1fr;
-        gap: 1.8rem;
-    }
-    
-    .login-cadastro > form {
+      .login-cadastro > form {
         padding-top: 0;
         padding-bottom: 0;
-    }
-
-    #linha {
-        height: 1px;
-        width: 100%;
-        border: 1px solid var(--bigger-color);
     }
 }
 
