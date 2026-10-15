@@ -49,7 +49,7 @@ if ($_SESSION["carrinho_nao_logado"] ?? false) {
     mexerSQL("UPDATE compra
               SET fk_usuario = :id_usuario, sessao = NULL
               WHERE id_compra = :id_compra",
-              [":id_usuario" => $_SESSION["id_usuario"],
+              [":id_usuario" => $id,
                ":id_compra" => $_SESSION["carrinho_nao_logado_id_compra"]],
               $conn);
 

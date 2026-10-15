@@ -12,7 +12,7 @@
 
     --title-font-size: clamp(70px, calc(20px + 9.375vw), 200px);
 
-    --logo-size: clamp(125px,12vw,200px);    
+    --logo-size: clamp(125px,11vw,185px);    
 }
 
 @font-face {
@@ -176,7 +176,7 @@ header a:not(#logo) {
 #header-navigation a:hover {
     background-size: 100% 100%;
 }
-@media (width < 500px) {
+@media (width < 450px) {
     #user-name {
         display: none;
     }
