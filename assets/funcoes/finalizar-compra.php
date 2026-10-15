@@ -14,6 +14,26 @@ $resultado = mexerSQL("SELECT id_compra
 
 $id_compra = $resultado->fetchColumn();
 
+if ($id_compra === false) {
+    voltarInfo("Seu carrinho está vazio.");
+}
+
+// Conferir o estoque antes de reservar
+$select = mexerSQL(
+    "SELECT 1
+     FROM compra_produto
+     WHERE fk_compra = :id_compra
+       AND quantidade > COALESCE(qtd_estoque(fk_produto), 0)
+     LIMIT 1",
+    [":id_compra" => $id_compra],
+    $conn
+);
+
+if ($select->fetchColumn() !== false) {
+    voltarInfo("Ao menos um produto não tem estoque suficiente para a compra");
+}
+
+
 mexerSQL("UPDATE compra_produto
           SET valor_unitario = (SELECT valor_unitario FROM produto WHERE id_produto = fk_produto)
           WHERE fk_compra=:id_compra",
@@ -25,6 +45,8 @@ mexerSQL("UPDATE compra
           WHERE id_compra=:id_compra",
           [":id_compra" => $id_compra],
           $conn);
+
+unset($_SESSION["carrinho_id_compra"]);
 
 voltarPagina("../../historico-compras.php");
 ?>

@@ -114,7 +114,7 @@ header a:not(#logo) {
 
 #acoes-header {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     gap: 1.5rem;
 
     font-size: var(--medium-text-size);
@@ -176,7 +176,7 @@ header a:not(#logo) {
 #header-navigation a:hover {
     background-size: 100% 100%;
 }
-@media (width < 450px) {
+@media (width < 600px) {
     #user-name {
         display: none;
     }

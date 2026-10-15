@@ -1,5 +1,7 @@
 // Adicionar ao carrinho
 
+const contador = document.getElementById("contador-carrinho");
+
 document.querySelectorAll(".form-carrinho").forEach(form => {
     form.addEventListener("submit", async function(event) {
         event.preventDefault();
@@ -18,8 +20,13 @@ document.querySelectorAll(".form-carrinho").forEach(form => {
 
             const resultado = await resposta.text();
 
-            if (resultado == "sucesso") botao.textContent = "Adicionado ✓";
-            else botao.textContent = "Erro";
+            if (resultado == "sucesso") {
+                botao.textContent = "Adicionado ✓";
+                const quantidadeAtual = Number(contador.textContent) || 0;
+                contador.textContent = quantidadeAtual + 1;
+            } else {
+                botao.textContent = "Erro";
+            }
             
         } catch (erro) {
             botao.textContent = "Erro";

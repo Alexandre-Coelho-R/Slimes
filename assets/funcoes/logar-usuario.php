@@ -41,11 +41,20 @@ if ($_SESSION["carrinho_nao_logado"] ?? false) {
               SET fk_usuario = :id_usuario, sessao = NULL
               WHERE id_compra = :id_compra",
               [":id_usuario" => $usuario["id_usuario"],
-               ":id_compra" => $_SESSION["carrinho_nao_logado_id_compra"]],
+               ":id_compra" => $_SESSION["carrinho_id_compra"]],
               $conn);
 
     unset($_SESSION["carrinho_nao_logado"]);
-    unset($_SESSION["carrinho_nao_logado_id_compra"]);
+} else {
+    $select = mexerSQL("SELECT id_compra
+                        FROM compra
+                        WHERE status = 'carrinho' AND fk_usuario = :id_usuario",
+                        [":id_usuario" => $usuario["id_usuario"]],
+                        $conn);
+
+    $id_compra = $select->fetchColumn();
+
+    if ($id_compra !== false) $_SESSION["carrinho_id_compra"] = $id_compra;
 }
 
 // Colocar informações na session

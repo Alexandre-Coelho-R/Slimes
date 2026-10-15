@@ -61,7 +61,6 @@ if (verificarLogin()) {
     }
 
     $_SESSION["carrinho_nao_logado"] = true;
-    $_SESSION["carrinho_nao_logado_id_compra"] = $id_compra;
 }
 
 // Guardar o id_compra
@@ -146,10 +145,8 @@ if ($resultado["quantidade"] == 0) {
               [":id_compra" => $id_compra],
               $conn);
 
-    if (!verificarLogin()) {
-        unset($_SESSION["carrinho_nao_logado"]);
-        unset($_SESSION["carrinho_nao_logado_id_compra"]);
-    }
+    unset($_SESSION["carrinho_id_compra"]);
+    if (!verificarLogin()) unset($_SESSION["carrinho_nao_logado"]);
 }
 
 echoFechar("sucesso");

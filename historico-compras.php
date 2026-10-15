@@ -15,7 +15,7 @@ include "_cabecalho.php";
         $id_usuario = $_SESSION["usuario_id"] ?? 0;
         $conn = conectar_bd();
 
-        $select = mexerSQL("SELECT id_compra, data
+        $select = mexerSQL("SELECT id_compra, data, acrescimo_total
                             FROM compra
                             WHERE fk_usuario=:id_usuario AND status='reservado'",
                             [":id_usuario" => $id_usuario],
@@ -27,6 +27,7 @@ include "_cabecalho.php";
             $encontrou = true;
             $id_compra = $linha["id_compra"];
             $horarioReserva = $linha["data"];
+            $acrescimo = $linha["acrescimo_total"] ?? 0;
             $total = 0;
 
             echo '
@@ -51,10 +52,26 @@ include "_cabecalho.php";
                 $total += $quantidadeProduto * $valorProduto;
             }
 
-            echo '
-                </ul>
-                <p>Total = R$ ' . $total . '</p>
-            </section>';
+            $total = $total * (1 + $acrescimo / 100);
+
+            if ($acrescimo > 0) {
+                echo '
+                    </ul>
+                    <p>Acréscimo = ' . number_format($acrescimo, 0) . '%</p>
+                    <p>Total = R$ ' . number_format($total, 2, ",", "." ) . '</p>
+                </section>';
+            } else if ($acrescimo < 0) {
+                echo '
+                    </ul>
+                    <p>Desconto = ' . number_format($acrescimo, 0) . '%</p>
+                    <p>Total = R$ ' . number_format($total, 2, ",", "." ) . '</p>
+                </section>';
+            } else {
+                echo '
+                    </ul>
+                    <p>Total = R$ ' . number_format($total, 2, ",", "." ) . '</p>
+                </section>';
+            }
         }
         
         if (!$encontrou){

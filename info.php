@@ -1,6 +1,7 @@
 <?php
 include "assets/funcoes/utilidades.php";
 
+$mostrar_contador_carrinho = false;
 $titulo = "Informações";
 include "_cabecalho.php";
 ?>

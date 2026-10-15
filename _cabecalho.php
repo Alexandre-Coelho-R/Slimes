@@ -27,12 +27,17 @@
         <a href="usuario.php">
             <i class="fa-solid fa-user"></i>
             <div id="user-name">
-                <?php echo "<p>" . (isset($_SESSION["usuario_nome"])? "Olá, " . $_SESSION["usuario_nome"] : "Entrar | Cadastrar") . "</p>"; ?>
+                <?php echo "<p>" . htmlspecialchars(isset($_SESSION["usuario_nome"])? "Olá, " . $_SESSION["usuario_nome"] : "Entrar | Cadastrar") . "</p>"; ?>
             </div>
         </a>
         <a id="carrinho" href="carrinho.php">
             <i class="fa-solid fa-cart-shopping"></i>
-            <?= include "assets/funcoes/retornar-produtos.php" ?>
+            <?php
+            if ($mostrar_contador_carrinho ?? true) {
+                $quantidade_carrinho = include "assets/funcoes/retornar-produtos.php";
+                if ($quantidade_carrinho !== null) echo "<span id='contador-carrinho'>$quantidade_carrinho</span>";
+            }
+            ?>
         </a>
     </div>
 </header>

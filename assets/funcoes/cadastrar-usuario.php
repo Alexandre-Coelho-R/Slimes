@@ -49,11 +49,10 @@ if ($_SESSION["carrinho_nao_logado"] ?? false) {
               SET fk_usuario = :id_usuario, sessao = NULL
               WHERE id_compra = :id_compra",
               [":id_usuario" => $id,
-               ":id_compra" => $_SESSION["carrinho_nao_logado_id_compra"]],
+               ":id_compra" => $_SESSION["carrinho_id_compra"]],
               $conn);
 
     unset($_SESSION["carrinho_nao_logado"]);
-    unset($_SESSION["carrinho_nao_logado_id_compra"]);
 }
 
 // Colocar informações na session
