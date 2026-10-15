@@ -12,7 +12,7 @@
 
     --title-font-size: clamp(70px, calc(20px + 9.375vw), 200px);
 
-    --logo-size: clamp(80px,8vw,140px);
+    --logo-size: clamp(100px,12vw,200px);
     --profile-pic-size: clamp(100px, 12vw, 200px);
     
 }
@@ -119,15 +119,19 @@ header a:not(#logo) {
     align-items: center;
     gap: 1.5rem;
 
-    font-size: var(--medium-big-text-size);
+    font-size: var(--medium-text-size);
 }
-
+#acoes-header a > div > p {
+    font-size: var(--normal-text-size);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 #acoes-header > a {
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 10%;
-    padding: 0.5rem;
+    justify-content: space-between;
+    gap: 1rem;
+    border-radius: 50px;
+    padding: 1.3rem;
 }
 
 #header-navigation {
@@ -174,7 +178,27 @@ header a:not(#logo) {
 #header-navigation a:hover {
     background-size: 100% 100%;
 }
-
+@media (width < 500px) {
+    header {
+        width: 100%;
+        display: grid;
+        grid-template-areas: "logo" "acoes";
+        grid-template-rows: 1fr 1fr;
+        justify-content: center;
+        justify-items: center;
+    }
+    #acoes-header {
+        grid-area: acoes;
+        justify-content: space-around;
+    }
+    #logo {
+        grid-area: logo;
+        align-self: center;
+    }
+    #logo img {
+        width: 70vw;
+    }
+}
 /* 
 -----------------------------------
 FOOTER

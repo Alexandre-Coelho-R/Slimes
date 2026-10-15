@@ -36,7 +36,6 @@ include "_cabecalho.php";
         <span class="dot" id="dot-2"></span> 
         <span class="dot" id="dot-3"></span> 
     </div>
-
     <nav id="other-pages">
 
         <a class="site-navigation" href="tutoriais.php">

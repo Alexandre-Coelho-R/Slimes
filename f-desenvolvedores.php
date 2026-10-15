@@ -16,9 +16,8 @@ include "_cabecalho.php";
             <div class="devs-texto">
                 <h2>Davi Henrique Fernandes Silva nº 03</h2>
                 <ul>
-                    <li>Escrileitor profissional;</li>
-                    <li>Audioleitor também;</li>
-                    <li>Gerenciador das redes sociais.</li>
+                    <li>Gerenciador das redes sociais;</li>
+                    <li>Analista e coordenador dos dados do projeto.</li>
                 </ul>
             </div>
         </div>
@@ -31,8 +30,11 @@ include "_cabecalho.php";
                 <h2>Frederico Eckhardt nº 07</h2>
                 <ul>
                     <li>Artista plástico;</li>
-                    <li>Produção das moedas comemorativas;</li>
-                    <li>Planejamento e confecção do stand de vendas.</li>
+                    <li>Produção e confecção das moedas comemorativas;</li>
+                    <li>Planejamento e confecção do stand de vendas;</li>
+                    <li>Divulgação da loja durante a Semana do Colégio;</li>
+                    <li>Fotografia dos produtos;</li>
+                    <li>Gerenciamento financeiro da produção das moedas e do stand.</li>
                 </ul>
             </div>
         </div>
@@ -46,8 +48,7 @@ include "_cabecalho.php";
                 <ul>
                     <li>Desenvolvedor das mecânicas de jogo;</li>
                     <li>Balanceamento e confecção dos decks;</li>
-                    <li>Beta tester;</li>
-                    <li>Confecção do stand de vendas.</li>
+                    <li>Confecção das cartas do jogo.</li>
                 </ul>
             </div>
         </div>
@@ -62,7 +63,6 @@ include "_cabecalho.php";
                     <li>Iniciativa do projeto e líder do grupo;</li>
                     <li>Desenvolvedor front-end;</li>
                     <li>Artista gráfico, confecção das cartas e artes para o jogo e à empresa;</li>
-                    <li>Beta tester;</li>
                     <li>Criador do conceito visual do jogo.</li>
                 </ul>
             </div>
@@ -75,10 +75,10 @@ include "_cabecalho.php";
             <div class="devs-texto">
                 <h2>Renan Alexandre Coelho nº 28</h2>
                 <ul>
+                    <li>Desenvolvedor front-end;</li>
                     <li>Desenvolvedor back-end;</li>
                     <li>Integração do website com banco de dados;</li>
-                    <li>Confecção da estrutura do website;</li>
-                    <li>Desenvolvedor da aplicação em C# do caixa.</li>
+                    <li>Gerenciador da impressão das cartas</li>
                 </ul>
             </div>
         </div>

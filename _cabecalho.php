@@ -11,6 +11,7 @@
     <title>Slime Smash - <?= $titulo ?? ""?></title>
     <script src="assets/js/geral.js" defer></script>
     <?php
+    if (session_status() === PHP_SESSION_NONE) session_start();
     if (isset($css)) echo "<link rel='stylesheet' href='assets/css/$css'>";
     if (isset($js)) echo "<script src='assets/js/$js' type='module'></script>";
     ?>
@@ -18,12 +19,17 @@
 
 <body>
 <header>
-    <a href="index.php" id="logo">
-        <img src="assets/imagens/logo.webp" alt="Logo do projeto Slime Smash">
-    </a>
+    <div id="logo-area">
+        <a href="index.php" id="logo">
+            <img src="assets/imagens/logo.webp" alt="Logo do projeto Slime Smash">
+        </a>
+    </div>
     <div id="acoes-header">
         <a href="usuario.php">
             <i class="fa-solid fa-user"></i>
+            <div>
+                <p> <?php echo "<p>" . (isset($_SESSION["usuario_nome"])? "Olá, " . $_SESSION["usuario_nome"] : "Perfil") . "</p>"; ?></p>
+            </div>
         </a>
         <a id="carrinho" href="carrinho.php">
             <i class="fa-solid fa-cart-shopping"></i>

@@ -134,7 +134,10 @@ CARTAS
 TUTORIAIS
 ----------------
 */
-
+article {
+    margin-left: 5%;
+    margin-right: 5%;
+}
 .topic > .img-area {
     grid-area: image;
     width: 100%;
@@ -150,6 +153,7 @@ TUTORIAIS
     text-align: justify;
     align-content: center;
     padding-left: 1rem;
+    letter-spacing: 0.067rem;
 }
 .text-area li {
     padding-bottom: .5rem;

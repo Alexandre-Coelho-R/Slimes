@@ -14,11 +14,11 @@ include "_cabecalho.php";
             </div>
             <div class="text-area">
                 <h3>Partes de uma carta</h3>
-                <p>Slime Smash possui quatro tipos diferentes de cartas: Slimes, itens, ações e ferramentas. <br>
-                    Uma carta de slime no jogo possuirá, sempre, o nome do slime, a vida, o escudo, uma habilidade(indicada em vermelho) e um ataque. O número de ataques pode variar se um slime não possuir habilidade. <br>
+                <p>Slime Smash possui quatro tipos diferentes de cartas: <strong>Slimes, itens, ações e magias</strong>. <br>
+                    Uma carta de <strong>slime</strong> no jogo possuirá, sempre, o <strong>nome</strong> do slime, a <strong>vida</strong>, o <strong>escudo</strong>, uma <strong>habilidade (indicada em vermelho)</strong> e um <strong>ataque</strong>. O número de ataques pode variar se um slime não possuir habilidade. <br>
                     Cada ataque possui o seu custo, o seu dano e seu efeito especial.</p>
                 <p>Demais cartas terão somente o seu nome, o nome do seu efeito e o seu efeito.</p>
-                </div>
+            </div>
         </section>
         <section class="topic">
             <div class="img-area">
@@ -35,7 +35,7 @@ include "_cabecalho.php";
         </section>
         <section class="topic-no-img">
                 <h3>O que posso fazer durante o meu turno?</h3>
-                <p>No seu turno, você pode: colocar quantos slimes quiser no banco (até preencher os três espaços), recuar o seu slime ativo, atribuir uma gosma a um slime, usar itens, usar uma ação, atribuir ferramentas a slimes, usar habilidades e atacar</p>
+                <p>No seu turno, você pode: colocar quantos slimes quiser no banco (até preencher os três espaços), recuar o seu slime ativo, atribuir uma gosma a um slime, usar itens, usar uma ação, atribuir magias a slimes, usar habilidades e atacar</p>
                 <ol>
                     <li>
                         <h4>Colocar slimes no seu Banco</h4>
@@ -47,13 +47,13 @@ include "_cabecalho.php";
                     </li>
                     <li>
                         <h4>Substituir seus slimes</h4>
-                        <p>Uma vez por turno, você pode descartar uma gosma ligada ao seu slime ativo para recuá-lo para o seu banco. Esse valor de gosmas pode alterar dependendo de efeitos especiais de outros slimes, itens, ações ou ferramentas. <br>
+                        <p>Uma vez por turno, você pode descartar uma gosma ligada ao seu slime ativo para recuá-lo para o seu banco. Esse valor de gosmas pode alterar dependendo de efeitos especiais de outros slimes, itens, ações ou magias. <br>
                         Mova 1 dos seus slimes do banco naquele momento para o campo ativo para que ele se torne o seu novo slime ativo. Estes dois passos acontecem ao mesmo tempo, então você pode substituir os seus slimes mesmo se o seu banco já estiver cheio. </p>
                     </li>
                     <li>
-                        <h4>Jogar cartas de ação, itens ou ferramentas</h4>
+                        <h4>Jogar cartas de ação, itens ou magias</h4>
                         <p>Para jogar uma carta de ação ou itens, é só seguir todas as instruções da carta. Não tem mistério! Depois de jogar uma carta de ação ou item, coloque-a na sua pilha de descarte. <br>
-                        Ferramentas: essas cartas  são um pouco diferentes. Atribua-a a um slime para que elas fiquem ligadas a ele até que seja nocauteado, ou até que o efeito dela diga para que seja descartada.</p>
+                        Magias: essas cartas  são um pouco diferentes. Atribua-a a um slime para que elas fiquem ligadas a ele até que seja nocauteado, ou até que o efeito dela diga para que seja descartada.</p>
                     </li>
                     <li>
                         <h4>Atacar</h4>
@@ -81,10 +81,10 @@ include "_cabecalho.php";
                 <h3>Habilidades de slimes</h3>
                 <p>Alguns slimes possuem Habilidades especiais que podem usar. A maioria delas pode ser usada durante o seu turno, antes de atacar. Cada Habilidade é diferente, então leia a descrição de cada Habilidade com cuidado para saber como cada uma funciona. Se você usar uma habilidade, certifique-se de anunciá-la para que seu oponente saiba o que você está fazendo. <br>
                 Lembre-se de que Habilidades não são ataques, por isso você ainda poderá atacar após usar uma Habilidade! Você pode usar a habilidade de qualquer slime que tiver em jogo, Ativo ou no Banco. </p>
-                <h3>Condição Especial</h3>
-                <p>Às vezes, um slime ativo pode ficar deteriorado. Esta condição é chamada de “Condição Especial”. Ela só pode atingir o slime Ativo, já que quando um slime vai para o banco, ele se recupera da deterioração. <br>
-                No fim da sua rodada, se o seu slime ativo estiver deteriorado, ele receberá 1 de dano.</p>
-                <p>Outra condição especial presente no jogo é o "atordoamento". Quando um slime fica atordoado, ele não poderá atacar ou usar habilidades até o fim da sua rodada.</p>
+                <h3>Condições Especiais</h3>
+                <p>Condições especiais são efeitos que podem ser aplicados em seus slimes no meio da batalha. O jogo contempla dois tipos de condições especiais: atordoamento e deterioração. Ambos esses efeitos só podem afetar o slime no seu campo ativo, portanto, se recuar um slime afetado por uma dessas condições, ele será limpo delas</p>
+                <p><strong>Deterioração:</strong> Esse efeito causará <strong>1</strong> de dano ao <strong>seu</strong> slime afetado no fim da sua rodada</p>
+                <p><strong>Atordoamento:</strong> Quando um slime é atordoado, ele não poderá <strong>atacar</strong>, <strong>recuar por conta própria</strong> ou <strong>usar habilidades</strong> até o fim do seu turno.</p>
             </div>
         </section>
     </article>
