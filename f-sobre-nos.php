@@ -26,17 +26,12 @@ include "_cabecalho.php";
                 </p>
         </section>
 
-        <section class="topic">
-                <div class="img-area">
-                        <img src="assets/imagens/artigos/semanacolegio.webp" alt="Banner da 32a semana do colégio CTI">
-                </div>
-                <div class="text-area">
-                        <h3>Uma ideia quase esquecida</h3>
-                        <br>
-                        <p>
-                        Com o passar do tempo, a ideia foi se esvaindo e Luca perdeu a esperança de que um dia Slime Smash pudesse sair do campo das ideias. Contudo, quando Luca entrou no <strong>Colégio Técnico Industrial “Prof. Isaac Portal Roldán”</strong>, foi apresentado à Semana do Colégio e aos trabalhos de e-commerce. A chama da esperança se reacendeu quando percebeu que, finalmente, aquela ideia poderia sair da sua cabeça e ir ao papel, literalmente.
-                        </p>
-                </div>
+        <section class="topic-no-img">
+                <h3>Uma ideia quase esquecida</h3>
+                <br>
+                <p>
+                Com o passar do tempo, a ideia foi se esvaindo e Luca perdeu a esperança de que um dia Slime Smash pudesse sair do campo das ideias. Contudo, quando Luca entrou no <strong>Colégio Técnico Industrial “Prof. Isaac Portal Roldán”</strong>, foi apresentado à Semana do Colégio e aos trabalhos de e-commerce. A chama da esperança se reacendeu quando percebeu que, finalmente, aquela ideia poderia sair da sua cabeça e ir ao papel, literalmente.
+                </p>
         </section>
 
         <section class="topic-no-img">

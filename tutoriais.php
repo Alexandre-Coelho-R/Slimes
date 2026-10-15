@@ -4,7 +4,7 @@ $css = "principais.css";
 include "_cabecalho.php";
 ?>
 
-<main>
+<main id="artigo">
     <h1 class="title">COMO JOGAR SLIME SMASH?</h1>
     
     <article>

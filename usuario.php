@@ -48,7 +48,7 @@ include "_cabecalho.php";
             <h2 class="title">Login</h2>
             <form action="assets/funcoes/logar-usuario.php" method="POST">
                 <label for="email-l">Email:</label>
-                <input type="email" name="email" id="email-l" placeholder="seu-email@gmail.com" required maxlength="100">
+                <input type="email" name="email" id="email-l" placeholder="seu-email@gmail.com" required maxlength="32">
 
                 <label for="senha-l">Senha:</label>
                 <input type="password" name="senha" id="senha-l" placeholder="Digite sua senha..." required minlength="5" maxlength="30">
