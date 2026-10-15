@@ -96,7 +96,7 @@ include "_cabecalho.php";
                 <em>“Sigam seus sonhos. Seja criativo sempre, o mundo precisa de nós pessoas criativas e fora da caixinha.”</em>
                 </p>
                 <p>
-                <strong>Seguir suas ideias foi o que fez Luca reunir todas essas pessoas especiais que compõem a equipe Slime Smash atualmente e que fizeram toda esa estrutura ser possível.</strong>
+                <strong>Seguir suas ideias foi o que fez Luca reunir todas essas pessoas especiais que compõem a equipe Slime Smash atualmente e que fizeram toda essa estrutura ser possível.</strong>
                 </p>
         </section>
         </article>
