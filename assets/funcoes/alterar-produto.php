@@ -23,7 +23,7 @@ if (isset($_FILES["imagem"]) && $_FILES["imagem"]["error"] === UPLOAD_ERR_OK) {
     }
 }
 
-if ($nomeArquivo === null) {
+if ($nomeArquivo !== null) {
     mexerSQL(
         "UPDATE produto
         SET nome=:nome, descricao=:descricao, categoria=:categoria, valor_unitario=:valor_unitario, imagem=:imagem

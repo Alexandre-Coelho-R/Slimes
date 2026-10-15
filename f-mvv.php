@@ -1,5 +1,5 @@
 <?php 
-session_start();
+include "assets/funcoes/utilidades.php";
 
 $titulo = "Propósito";
 $css = "institucionais.css";

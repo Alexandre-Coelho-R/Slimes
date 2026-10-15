@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 require_once "utilidades.php";
 
 session_unset();

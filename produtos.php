@@ -1,12 +1,11 @@
 <?php  
-
-session_start();
+include "assets/funcoes/utilidades.php";
 
 $titulo = "Produtos"; 
 $css = "vendas.css"; 
 $js = "produtos.js";
- 
 include "_cabecalho.php";
+
 $conn = conectar_bd();
 ?> 
  

@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 require_once "utilidades.php";
 
 if (!verificarLogin()) voltarInfo("Tem que estar logado para reservar a compra");

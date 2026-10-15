@@ -1,18 +1,11 @@
 <?php
-
-session_start();
-
-$titulo = "Deck";
-$css = "vendas.css";
-$js = "deck.js";
-
-include "_cabecalho.php";
+include "assets/funcoes/utilidades.php";
 
 if (!isset($_GET["id"])) voltarInfo("Deck não encontrado.");
 
 $conn = conectar_bd();
 
-$sql = "SELECT nome, descricao, valor_unitario FROM produto WHERE id_produto=:id_produto AND excluido=FALSE";
+$sql = "SELECT nome, descricao, valor_unitario FROM produto WHERE excluido=FALSE AND categoria='deck' AND id_produto=:id_produto";
 $select = $conn->prepare($sql);
 $select->execute([":id_produto" => $_GET["id"]]);
 $produto = $select->fetch(PDO::FETCH_ASSOC);
@@ -23,6 +16,11 @@ $sql = "SELECT carta.nome, carta.imagem, deck_carta.quantidade FROM deck_carta I
 $select = $conn->prepare($sql);
 $select->execute([":id_produto" => $_GET["id"]]);
 $cartas = $select->fetchAll(PDO::FETCH_ASSOC);
+
+$titulo = "Deck";
+$css = "vendas.css";
+$js = "deck.js";
+include "_cabecalho.php";
 ?>
 
 <main>

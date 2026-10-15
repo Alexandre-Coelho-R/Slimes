@@ -1,5 +1,6 @@
 <?php 
-session_start();
+include "assets/funcoes/utilidades.php";
+
 $titulo = "Contato";
 $css = "institucionais.css";
 $js = "contato.js";

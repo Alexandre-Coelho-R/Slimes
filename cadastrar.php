@@ -1,14 +1,11 @@
 <?php
-
-session_start();
+include "assets/funcoes/utilidades.php"; 
+if (verificarLogin()) voltarPagina("usuario.php");
 
 $titulo = "Usuário";
 $css = "usuario.css";
 $js = "cadastrar.js";
 include "_cabecalho.php";
-
-if (isset($_SESSION["usuario_nome"])) header("Location: usuario.php");
-
 ?>
 
 <main>

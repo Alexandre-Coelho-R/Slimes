@@ -1,16 +1,22 @@
 <?php
 
 require_once "utilidades.php";
-$conn = conectar_bd();
 
-$quantidade = null;
 if (isset($_SESSION["carrinho_nao_logado_id_compra"])) {
-    $id_usuario = $_SESSION["carrinho_nao_logado_id_compra"];
-} else if (isset($_SESSION["usuario_id"])){
-    $id_usuario = $_SESSION["usuario_id"];
+    $id_compra = $_SESSION["carrinho_nao_logado_id_compra"];
+} else if (isset($_SESSION["carrinho_id_compra"])){
+    $id_compra = $_SESSION["carrinho_id_compra"];
 } else {
     return "";
 }
 
-return "<p>" . mexerSQL("SELECT COUNT(fk_produto) FROM compra_produto WHERE fk_usuario=:id_usuario", [":id_usuario" => $id_usuario], $conn) . "</p>";
+$conn = conectar_bd();
+
+$select = mexerSQL("SELECT SUM(quantidade)
+                    FROM compra_produto
+                    WHERE fk_compra=:id_compra",
+                    [":id_compra" => $id_compra],
+                    $conn);
+               
+return (int) ($select -> fetchColumn());
 ?>

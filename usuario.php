@@ -1,12 +1,10 @@
 <?php
-
-session_start();
+include "assets/funcoes/utilidades.php";
+if (!verificarLogin()) voltarPagina("logar.php");
 
 $titulo = "Usuário";
 $css = "usuario.css";
 include "_cabecalho.php";
-
-if (!isset($_SESSION["usuario_nome"])) header("Location: logar.php");
 ?>
 
 <main>

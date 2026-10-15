@@ -1,12 +1,10 @@
 <?php
-
-session_start();
+include "assets/funcoes/utilidades.php";
+if (!isset($_SESSION["usuario_nome"])) voltarPagina("usuario.php");
 
 $titulo = "Compras";
 $css = "usuario.css";
 include "_cabecalho.php";
-
-if (!isset($_SESSION["usuario_nome"])) voltarPagina("usuario.php");
 ?>
 
 <main>

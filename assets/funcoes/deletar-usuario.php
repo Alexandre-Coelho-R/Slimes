@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 require_once "utilidades.php";
 $conn = conectar_bd();
 

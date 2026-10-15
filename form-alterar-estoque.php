@@ -1,13 +1,8 @@
 <?php
-session_start();
-
-$titulo = "Alterar estoque";
-$css = "admin.css";
-include "_cabecalho.php";
-
+include "assets/funcoes/utilidades.php";
 verificarAdmin();
-
 $conn = conectar_bd();
+
 $sql = "SELECT fk_produto, quantidade, custo_unitario, obs
         FROM  entrada
         WHERE id_entrada = :id_entrada";
@@ -15,8 +10,11 @@ $select = $conn->prepare($sql);
 $select->bindValue(":id_entrada", $_GET["id"]);
 $select->execute();
 $entrada = $select->fetch(PDO::FETCH_ASSOC);
-
 if(!$entrada) voltarInfo("Entrada não encontrado");
+
+$titulo = "Alterar estoque";
+$css = "admin.css";
+include "_cabecalho.php";
 ?>
 
 <main>

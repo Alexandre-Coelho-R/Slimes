@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 require_once "utilidades.php";
 $conn = conectar_bd();
 
@@ -63,6 +62,7 @@ $_SESSION["usuario_id"] = $id;
 $_SESSION["usuario_nome"] = $nome;
 $_SESSION["usuario_email"] = $email;
 $_SESSION["usuario_telefone"] = $cellphone;
+$_SESSION["usuario_admin"] = false;
 $_SESSION["usuario_imagem"] = null;
 
 voltarPagina("../../usuario.php");

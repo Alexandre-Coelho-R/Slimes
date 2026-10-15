@@ -170,7 +170,7 @@ btAcoes.addEventListener("click", () => {
 });
 
 btFerramentas.addEventListener("click", () => {
-    mostrarCartas(cartas.filter(carta => carta.categoria === "ferramenta"));
+    mostrarCartas(cartas.filter(carta => carta.categoria === "magia"));
     btFerramentas.style.backgroundColor = mudarCores();
     btFerramentas.style.color = "white";
 

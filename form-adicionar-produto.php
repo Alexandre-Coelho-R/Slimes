@@ -1,11 +1,10 @@
 <?php 
-session_start();
+include "assets/funcoes/utilidades.php";
+verificarAdmin();
 
 $titulo = "Adicionar produto";
 $css = "admin.css";
 include "_cabecalho.php";
-
-verificarAdmin();
 ?>
 
 <main>

@@ -1,9 +1,9 @@
 <?php 
-session_start();
+include "assets/funcoes/utilidades.php";
+
 $titulo = "Início";
 $css = "index.css";
 $js= "index.js";
-
 include "_cabecalho.php";
 ?>
 

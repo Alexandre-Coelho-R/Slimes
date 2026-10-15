@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 require_once "utilidades.php";
 
 if (!isset($_SESSION["usuario_id"])) voltarPagina("../../usuario.php");

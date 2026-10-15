@@ -1,11 +1,6 @@
 <?php
-session_start();
-
-$titulo = "Alterar produto";
-$css = "admin.css";
-include "_cabecalho.php";
+include "assets/funcoes/utilidades.php";
 verificarAdmin();
-
 $conn = conectar_bd();
 
 $select = mexerSQL("SELECT nome, descricao, categoria, valor_unitario, imagem
@@ -13,12 +8,13 @@ $select = mexerSQL("SELECT nome, descricao, categoria, valor_unitario, imagem
                     WHERE id_produto = :id_produto",
                     [":id_produto" => $_GET["id"]],
                     $conn);
-
 $produto = $select->fetch(PDO::FETCH_ASSOC);
-
 if(!$produto) voltarInfo("Produto não encontrado");
+$categoria = $produto["categoria"];
 
-$categoria = $produto["categoria"]
+$titulo = "Alterar produto";
+$css = "admin.css";
+include "_cabecalho.php";
 ?>
 
 <main>

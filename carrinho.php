@@ -1,16 +1,5 @@
 <?php
-session_start();
-?>
-
-<script>const usuarioLogado = <?= isset($_SESSION["usuario_id"]) ? "true" : "false" ?>;</script>
-
-<?php
-$titulo = "Carrinho";
-$css = "vendas.css";
-$js = "carrinho.js";
-
-include "_cabecalho.php";
-
+include "assets/funcoes/utilidades.php"; 
 $conn = conectar_bd();
 
 if (isset($_SESSION["usuario_id"])){
@@ -30,8 +19,14 @@ if (isset($_SESSION["usuario_id"])){
     // Pegar id_compra
     if ($resultado) $id_compra = $resultado["id_compra"];
 }
+
+$titulo = "Carrinho";
+$css = "vendas.css";
+$js = "carrinho.js";
+include "_cabecalho.php";
 ?>
 
+<script>const usuarioLogado = <?= isset($_SESSION["usuario_id"]) ? "true" : "false" ?>;</script>
 
 <main class="pagina-carrinho">
     <h1>Seu carrinho</h1>

@@ -1,12 +1,11 @@
 <?php
 
-session_start();
+include "assets/funcoes/utilidades.php";
+verificarAdmin();
 
 $titulo = "Compras";
 $css = "usuario.css";
 include "_cabecalho.php";
-
-verificarAdmin();
 ?>
 
 <main>
@@ -31,7 +30,7 @@ verificarAdmin();
             $id_compra = $linha_compra["id_compra"];
             $horarioReserva = $linha_compra["data"];
             $status = $linha_compra["status"];
-            $acrescimo = $linha_compra["acrescimo_total"] ?? 1;
+            $acrescimo = $linha_compra["acrescimo_total"] ?? 0;
             $idUsuario = $linha_compra["fk_usuario"] ?? 0;
 
             if ($idUsuario) {
@@ -76,7 +75,7 @@ verificarAdmin();
             echo '
                 </ul>
                 <p>Acréscimo: ' . $acrescimo . '%</p>
-                <p>Total = R$ ' . number_format($total * $acrescimo, 2, ',', '.') . '</p>
+                <p>Total = R$ ' . number_format($total * (1 + $acrescimo/100), 2, ',', '.') . '</p>
             </section>';
         }
     ?>

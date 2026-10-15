@@ -11,7 +11,6 @@
     <title>Slime Smash - <?= $titulo ?? ""?></title>
     <script src="assets/js/geral.js" defer></script>
     <?php
-    include "assets/funcoes/utilidades.php";
     if (isset($css)) echo "<link rel='stylesheet' href='assets/css/$css'>";
     if (isset($js)) echo "<script src='assets/js/$js' type='module'></script>";
     ?>

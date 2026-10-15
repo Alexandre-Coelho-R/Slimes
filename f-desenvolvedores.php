@@ -1,5 +1,6 @@
 <?php 
-session_start();
+include "assets/funcoes/utilidades.php";
+
 $titulo = "Desenvolvedores";
 $css = "institucionais.css";
 include "_cabecalho.php";

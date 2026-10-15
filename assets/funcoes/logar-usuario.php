@@ -1,13 +1,12 @@
 <?php
 
-session_start();
 require_once "utilidades.php";
 $conn = conectar_bd();
 
 // Consistência de dados
 
 $email = trim($_POST["email"] ?? "");
-$senha = $_POST["senha"] ?? "";
+$senha = trim($_POST["senha"] ?? "");
 if ($email === "" || $senha === "") voltarInfo("Preencha todos os campos.");
 
 // Verificar as credenciais

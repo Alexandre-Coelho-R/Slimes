@@ -1,5 +1,5 @@
 <?php 
-session_start();
+include "assets/funcoes/utilidades.php";
 
 $titulo = "Cartas";
 $css = "principais.css";

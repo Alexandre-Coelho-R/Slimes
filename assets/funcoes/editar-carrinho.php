@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 require_once "utilidades.php";
 
 $acao = $_POST["acao"] ?? "";
@@ -64,6 +63,10 @@ if (verificarLogin()) {
     $_SESSION["carrinho_nao_logado"] = true;
     $_SESSION["carrinho_nao_logado_id_compra"] = $id_compra;
 }
+
+// Guardar o id_compra
+
+$_SESSION["carrinho_id_compra"] = $id_compra;
 
 // Tratar as diferentes ações
 
