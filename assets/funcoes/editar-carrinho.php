@@ -80,18 +80,22 @@ if ($acao === "adicionar") {
                         $conn);
                         
     $resultado = $select -> fetch(PDO::FETCH_ASSOC);
-
-    if ($resultado) { // Se já existe
+    
+    $quantidade_estoque = qtd_prod($conn, $id_produto);
+    
+    if ($resultado && $resultado["quantidade"] < $quantidade_estoque) { // Se já existe
         mexerSQL("UPDATE compra_produto
                   SET quantidade = quantidade + 1
                   WHERE fk_compra=:id_compra AND fk_produto=:id_produto",
                   [":id_produto" => $id_produto, ":id_compra" => $id_compra],
                   $conn);
-    } else { // Se não existe
+    } else if ($quantidade_estoque > 0) { // Se não existe
         mexerSQL("INSERT INTO compra_produto (fk_produto, fk_compra, quantidade)
                   VALUES (:id_produto, :id_compra, 1)",
                   [":id_produto" => $id_produto, ":id_compra" => $id_compra],
                   $conn);
+    } else {
+        echoFechar("Sem estoque");
     }
 } else if ($acao === "diminuir") {
     $select = mexerSQL("SELECT quantidade

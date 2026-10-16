@@ -24,6 +24,9 @@ document.querySelectorAll(".form-carrinho").forEach(form => {
                 botao.textContent = "Adicionado ✓";
                 const quantidadeAtual = Number(contador.textContent) || 0;
                 contador.textContent = quantidadeAtual + 1;
+            } else if (resultado == "Sem estoque") {
+                botao.textContent = textoOriginal;
+                window.alert("Não há estoque suficiente desse produto");
             } else {
                 botao.textContent = "Erro";
             }
