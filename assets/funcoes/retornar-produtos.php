@@ -2,7 +2,7 @@
 
 require_once "utilidades.php";
 
-if (!isset($_SESSION["carrinho_id_compra"])) return null;
+if (!isset($_SESSION["carrinho_id_compra"])) return 0;
 
 $conn = conectar_bd();
 

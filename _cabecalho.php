@@ -35,7 +35,7 @@
             <?php
             if ($mostrar_contador_carrinho ?? true) {
                 $quantidade_carrinho = include "assets/funcoes/retornar-produtos.php";
-                if ($quantidade_carrinho !== null) echo "<span id='contador-carrinho'>$quantidade_carrinho</span>";
+                echo "<span id='contador-carrinho'>$quantidade_carrinho</span>";
             }
             ?>
         </a>
