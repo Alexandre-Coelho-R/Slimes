@@ -18,7 +18,7 @@ document.querySelectorAll(".form-carrinho").forEach(form => {
                 body: new FormData(this)
             });
 
-            const resultado = await resposta.text();
+            const resultado = (await resposta.text()).trim();
 
             if (resultado == "sucesso") {
                 botao.textContent = "Adicionado ✓";

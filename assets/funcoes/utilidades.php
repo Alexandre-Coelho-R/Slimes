@@ -52,7 +52,7 @@ function qtd_prod($paramConn, $paramId) {
         $sql = "SELECT qtd_estoque(:p)";
         $select = $paramConn->prepare($sql);
         $select->bindParam(':p',$paramId);
-        if ($select->execute() > 0) return $select->fetchColumn();
+        if ($select->execute()) return $select->fetchColumn();
     } catch (PDOException $e) {
         return -1;
     }
