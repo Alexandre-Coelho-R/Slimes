@@ -83,7 +83,8 @@ if ($acao === "adicionar") {
     
     $quantidade_estoque = qtd_prod($conn, $id_produto);
     
-    if ($resultado && $resultado["quantidade"] < $quantidade_estoque) { // Se já existe
+    if ($resultado) { // Se já existe
+        if ($resultado["quantidade"] >= $quantidade_estoque) echoFechar("Sem estoque");
         mexerSQL("UPDATE compra_produto
                   SET quantidade = quantidade + 1
                   WHERE fk_compra=:id_compra AND fk_produto=:id_produto",
