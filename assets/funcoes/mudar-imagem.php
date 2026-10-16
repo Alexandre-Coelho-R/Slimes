@@ -13,7 +13,17 @@ $arquivo = $_FILES["imagem"];
 if ($arquivo["size"] > 2 * 1024 * 1024) voltarPagina("../../usuario.php");
 if (@getimagesize($arquivo['tmp_name']) === false) voltarPagina("../../usuario.php");
 
-$extensao = pathinfo($arquivo["name"], PATHINFO_EXTENSION);
+$extensoes = [
+    "image/jpeg" => "jpg",
+    "image/png" => "png",
+    "image/gif" => "gif",
+    "image/webp" => "webp"
+];
+
+$extensao = $extensoes[mime_content_type($arquivo["tmp_name"])] ?? null;
+
+if ($extensao === null) voltarInfo("Envie uma imagem JPG, JPEG, PNG, GIF ou WEBP.");
+
 $pasta = "../imagens/usuarios/";
 $nomeArquivo = 'usuario_' . time() . '_' . uniqid() . '.' . $extensao;
 if (move_uploaded_file($arquivo["tmp_name"], $pasta . $nomeArquivo)) {

@@ -13,10 +13,12 @@ document.querySelectorAll(".form-carrinho").forEach(form => {
                 body: new FormData(this)
             });
 
-            const resultado = await resposta.text();
+            const resultado = (await resposta.text()).trim();
 
-            if (resultado === "sucesso") {
+            if (resultado == "sucesso") {
                 location.reload();
+            } else if (resultado == "Sem estoque") {
+                window.alert("Não há estoque suficiente desse produto");
             } else {
                 console.error(resultado);
             }

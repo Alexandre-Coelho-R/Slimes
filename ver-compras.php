@@ -34,7 +34,7 @@ include "_cabecalho.php";
             $idUsuario = $linha_compra["fk_usuario"] ?? 0;
 
             if ($idUsuario) {
-                $nomeDoCara = $linha_compra["usuario_nome"] . ' (ID: '. $idUsuario .')';
+                $nomeDoCara = htmlspecialchars($linha_compra["usuario_nome"] . ' (ID: '. $idUsuario .')');
             } else {
                 $nomeDoCara = "Sem login";
             }

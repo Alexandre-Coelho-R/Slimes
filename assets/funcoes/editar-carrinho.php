@@ -11,6 +11,14 @@ if ($id_produto === 0 && $acao !== "limpar") {
 
 $conn = conectar_bd();
 
+if ($acao === "adicionar") {
+    $quantidade_estoque = qtd_prod($conn, $id_produto);
+
+    if ($quantidade_estoque <= 0) {
+        echoFechar("Sem estoque");
+    }
+}
+
 // Verificar se usuário está logado ou não
 
 if (verificarLogin()) {
@@ -80,9 +88,7 @@ if ($acao === "adicionar") {
                         $conn);
                         
     $resultado = $select -> fetch(PDO::FETCH_ASSOC);
-    
-    $quantidade_estoque = qtd_prod($conn, $id_produto);
-    
+        
     if ($resultado) { // Se já existe
         if ($resultado["quantidade"] >= $quantidade_estoque) echoFechar("Sem estoque");
         mexerSQL("UPDATE compra_produto
