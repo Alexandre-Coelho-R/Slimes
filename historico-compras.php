@@ -9,7 +9,7 @@ include "_cabecalho.php";
 
 <main>
     <h1 class="title">Compras reservadas</h1>
-    <h2 class="subtitle" id="h2_historico">Veja mais na página de <a href="faq.php">perguntas frequentes</a></h2>
+    <h2 class="subtitle" id="h2_historico">Tire suas dúvidas na página de <a href="faq.php">perguntas frequentes</a></h2>
 
     <?php
         $id_usuario = $_SESSION["usuario_id"] ?? 0;
@@ -75,9 +75,12 @@ include "_cabecalho.php";
         }
         
         if (!$encontrou){
-            echo '<p id="historico-falar">Você não tem nenhum produto pendente de entrega</p>';
+            echo '<p id="historico-falar">Você não tem nenhum produto pendente de entrega, compre na página <a href="produtos.php">produtos</a></p>';
+        } else {
+            echo '<p id="historico-falar-2">Você deve retirar seus produtos na sala 7 do CTI Bauru.</p>';
         }
     ?>
+    
 </main>
 
 <?php include "_rodape.php"; ?>
