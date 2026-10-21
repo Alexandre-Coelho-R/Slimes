@@ -59,6 +59,16 @@ include "_cabecalho.php";
             <h2>Nossos produtos</h2>
         </a>
     </nav>
+
+    <h3 id="texto-video">Veja nosso tutorial do jogo:</h3>
+    <div id="video-index">
+        <iframe
+            src="https://www.youtube.com/embed/uBrBRnzYqrk"
+            style="width: 100%; height: 100%; border: none;"
+            title="YouTube video player"
+            allowfullscreen>
+        </iframe>
+    </div> 
 </main>
 
 <?php include "_rodape.php"; ?>

@@ -89,6 +89,20 @@ include "_cabecalho.php";
                 <p><strong>Atordoamento:</strong> Quando um slime é atordoado, ele não poderá <strong>atacar</strong>, <strong>recuar por conta própria</strong> ou <strong>usar habilidades</strong> até o fim do seu turno.</p>
             </div>
         </section>
+        <section class="topic">
+            <div class="img-area">
+<div style="width: 100%; aspect-ratio: 16 / 9;">
+  <iframe
+    src="https://www.youtube.com/embed/uBrBRnzYqrk"
+    style="width: 100%; height: 100%; border: none;"
+    title="YouTube video player"
+    allowfullscreen>
+  </iframe>
+</div>            </div>
+            <div class="text-area">
+                <h3>Você também pode ver nosso tutorial em vídeo!</h3>
+            </div>
+        </section>
     </article>
 </main>
 
