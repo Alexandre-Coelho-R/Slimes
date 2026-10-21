@@ -53,6 +53,17 @@ include "_cabecalho.php";
 
         <section class="faq">
             <h3 class="faq-pergunta">
+                Sobre as moedas do jogo
+                <i class="fa-solid fa-arrow-down seta"></i>
+            </h3>
+            <div class="faq-resposta">
+                <p>O membro do grupo responsável pelas moedas teve problemas de saúde e, portanto, talvez elas não possam ser vendidas.</p>
+                <p>Por enquanto, ainda não temos as moedas, mas é possível que consigamos completá-las durante ou após a Semana do Colégio.</p>
+            </div>
+        </section>
+
+        <section class="faq">
+            <h3 class="faq-pergunta">
                 O que faço se alguma reserva feita no site sumiu?
                 <i class="fa-solid fa-arrow-down seta"></i>
             </h3>
@@ -71,7 +82,7 @@ include "_cabecalho.php";
                 <p>Baralhos (decks):</p>
                 <ul>
                     <li>30 cartas do jogo</li>
-                    <li>1 moeda personalizada do jogo</li>
+                    <li>1 moeda personalizada do jogo (talvez não consigamos entregá-las)</li>
                 </ul>
                 <p>Pacotes (boosters):</p>
                 <ul>
@@ -79,7 +90,7 @@ include "_cabecalho.php";
                 </ul>
                 <p>Moedas:</p>
                 <ul>
-                    <li>1 moeda feita à mão inspirada num slime do jogo</li>
+                    <li>1 moeda feita à mão inspirada num slime do jogo (por enquanto, indisponíveis para venda)</li>
                 </ul>
             </div>
         </section>

@@ -162,7 +162,7 @@ PÁGINA DE PRODUTOS
 }
 
 .imagem-produto > img {
-    width: 75%;
+    width: 90%;
 }
 
 .quantidade {
@@ -238,7 +238,7 @@ PÁGINA DE PRODUTOS
     }
 
     .imagem-produto > img {
-        width: 60%;
+        width: 85%;
     }
 
     .quantidade {

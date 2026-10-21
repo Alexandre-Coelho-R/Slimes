@@ -16,7 +16,7 @@ $conn = conectar_bd();
     </div>
 
     <h2 class="title">Decks de batalha</h2>
-    <h3 class="subtitle">Compre baralhos de jogo prontos para duelo com moeda inclusa (clique num deck para ver as cartas dele)
+    <h3 class="subtitle">Compre baralhos de jogo prontos para duelo (clique num deck para ver as cartas dele)
     </h3>
     <section class="produtos" id="produtos-deck"> 
         <?php mostrarProduto($conn, "deck");?>
@@ -27,12 +27,6 @@ $conn = conectar_bd();
     <section class="produtos" id="produtos-booster"> 
         <?php mostrarProduto($conn, "booster");?>
     </section>
-
-    <h2 class="title">Moedas do jogo</h2>
-    <h3 class="subtitle">Compre moedas feitas à mão</h3>
-    <section class="produtos" id="produtos-moeda"> 
-        <?php mostrarProduto($conn, "moeda");?>
-    </section> 
 </main> 
  
 <?php include "_rodape.php"; ?>
