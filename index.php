@@ -29,13 +29,11 @@ include "_cabecalho.php";
     <div id="slideshow-container">
         <a href="produtos.php"><img class="mySlides fade" src="assets/imagens/index/boosterSlide.webp" style="width:100%"></a>
         <a href="produtos.php"><img class="mySlides fade" src="assets/imagens/index/decksslide.webp" style="width:100%"></a>
-        <a href="produtos.php"><img class="mySlides fade" src="assets/imagens/index/moedasslide.webp" style="width:100%"></a>
     </div>
     
     <div style="text-align:center">
         <span class="dot" id="dot-1"></span> 
         <span class="dot" id="dot-2"></span> 
-        <span class="dot" id="dot-3"></span> 
     </div>
     <nav id="other-pages">
 
