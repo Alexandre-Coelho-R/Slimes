@@ -2,6 +2,14 @@
 
 if (session_status() !== PHP_SESSION_ACTIVE) session_start();
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
+require_once __DIR__ . '/PHPMailer-master/src/Exception.php';
+require_once __DIR__ . '/PHPMailer-master/src/PHPMailer.php';
+require_once __DIR__ . '/PHPMailer-master/src/SMTP.php';
+
+
 function conectar_bd() {   
     try {
         $conn = new PDO("pgsql:host=projetoscti.com.br;port=54432;dbname=loja2a;user=loja2a;password=OcZahD4zvDa0FhJ");
@@ -55,6 +63,36 @@ function qtd_prod($paramConn, $paramId) {
         if ($select->execute()) return $select->fetchColumn();
     } catch (PDOException $e) {
         return -1;
+    }
+}
+
+function EnviaEmail($titulo, $texto, $destino = 'pocket.slimes.cti@gmail.com') {
+    $mail = new PHPMailer(true);
+
+    try {
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';               
+        $mail->SMTPAuth = true;
+        
+        $mail->Username = 'pocket.slimes.cti@gmail.com';         
+        $mail->Password = 'SUA_SENHA_DE_APP_DE_16_LETRAS';
+        
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 587;                          
+        $mail->CharSet = 'UTF-8';
+
+        $mail->setFrom('pocket.slimes.cti@gmail.com', 'Pocket Slimes - Formulario');
+        $mail->addAddress($destino);
+
+        $mail->isHTML(true);
+        $mail->Subject = $titulo;
+        $mail->Body    = $texto;
+        $mail->AltBody = strip_tags($texto);
+
+        $mail->send();
+        return true;
+    } catch (Exception $e) {
+        return false;
     }
 }
 
