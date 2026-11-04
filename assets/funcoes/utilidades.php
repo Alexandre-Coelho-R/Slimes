@@ -66,34 +66,44 @@ function qtd_prod($paramConn, $paramId) {
     }
 }
 
-function EnviaEmail($titulo, $texto, $destino = 'pocket.slimes.cti@gmail.com') {
-    $mail = new PHPMailer(true);
+function EnviaEmail($pEmailDestino,$pAssunto,$pHtml,$pUsuario = "pocket.slimes.cti@gmail.com",$pSenha = "qktw guvg kakp lpgq",$pSMTP = "smtp.gmail.com"
+) {
+    $mail = new PHPMailer();
+    
+    $mail->IsSMTP(); // diz ao PHP que o servidor é SMTP
+    $mail->Host = $pSMTP; // configura o servidor
 
-    try {
-        $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';               
-        $mail->SMTPAuth = true;
-        
-        $mail->Username = 'pocket.slimes.cti@gmail.com';         
-        $mail->Password = 'SUA_SENHA_DE_APP_DE_16_LETRAS';
-        
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port = 587;                          
-        $mail->CharSet = 'UTF-8';
+    $mail->SMTPAuth = true; // requer autenticação no servidor
+    $mail->SMTPSecure = 'tls'; // nível de segurança
 
-        $mail->setFrom('pocket.slimes.cti@gmail.com', 'Pocket Slimes - Formulario');
-        $mail->addAddress($destino);
+    $mail->SMTPOptions = array('ssl' => array('verify_peer' => false,'verify_peer_name' => false,'allow_self_signed' => true)
+    );
 
-        $mail->isHTML(true);
-        $mail->Subject = $titulo;
-        $mail->Body    = $texto;
-        $mail->AltBody = strip_tags($texto);
+    $mail->Port = 587; // porta do serviço no servidor
 
-        $mail->send();
-        return true;
-    } catch (Exception $e) {
-        return false;
+    $mail->Username = $pUsuario;
+    $mail->Password = $pSenha;
+
+    $mail->From = $pUsuario;
+    $mail->FromName = "Suporte de senhas - Slime Smash";
+
+    $mail->AddAddress($pEmailDestino, $_SESSION["usuario_nome"]);
+
+    $mail->IsHTML(true); // o conteúdo enviado é HTML
+    $mail->CharSet = 'UTF-8';
+    $mail->Encoding = 'base64';
+
+    $mail->Subject = $pAssunto;
+    $mail->Body = $pHtml;
+
+    $enviado = $mail->Send(); // dispara o envio
+
+    if (!$enviado) {
+        echo "<br>Erro: " . $mail->ErrorInfo;
+    } else {
+        return "Email enviado";
     }
+    
 }
 
 function mostrarProduto($conn, $categoria) {
