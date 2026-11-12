@@ -1,4 +1,6 @@
-document.querySelector("textarea").addEventListener("input", () => {
+const textarea = document.querySelector("textarea");
+
+textarea.addEventListener("input", () => {
     textarea.style.height = "auto";
-    textarea.style.height = textarea.scrollHeight + 10 + "px"; 
-})
+    textarea.style.height = textarea.scrollHeight + 10 + "px";
+});

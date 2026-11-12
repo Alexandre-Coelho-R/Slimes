@@ -74,14 +74,14 @@ function EnviaEmail($titulo, $texto, $destino = 'pocket.slimes.cti@gmail.com') {
         $mail->Host = 'smtp.gmail.com';               
         $mail->SMTPAuth = true;
         
-        $mail->Username = 'pocket.slimes.cti@gmail.com';         
-        $mail->Password = 'SUA_SENHA_DE_APP_DE_16_LETRAS';
+        $mail->Username = 'renancoelho1221@gmail.com';
+        $mail->Password = 'tolqzworeavtuvxj';
         
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;                          
         $mail->CharSet = 'UTF-8';
 
-        $mail->setFrom('pocket.slimes.cti@gmail.com', 'Pocket Slimes - Formulario');
+        $mail->setFrom('renancoelho1221@gmail.com', 'Slime Smash - Formulário');
         $mail->addAddress($destino);
 
         $mail->isHTML(true);
