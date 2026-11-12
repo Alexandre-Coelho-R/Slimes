@@ -20,7 +20,8 @@ include "_cabecalho.php";
             <button type="submit">Logar</button>
         </form>
     </section>
-
+    
+    <a href="esqueci.php" class="voltarAtras especial"><span>Esqueci minha senha</span></a>
     <a href="cadastrar.php" class="voltarAtras especial"><span>Não tem conta?</span></a>
 </main>
 
