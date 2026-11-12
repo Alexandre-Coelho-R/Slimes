@@ -3,13 +3,48 @@
 include "assets/funcoes/utilidades.php";
 verificarAdmin();
 
+if (isset($_GET["pdf"])) {
+    include "assets/bibliotecas/vendor/autoload.php";
+    $dompdf = new Dompdf\Dompdf();
+    ob_start();
+}
+
 $titulo = "Compras";
 $css = "usuario.css";
-include "_cabecalho.php";
+if (!isset($_GET["pdf"])) {
+    include "_cabecalho.php";
+} else {
+    echo '
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                font-family: sans-serif;
+            }
+            h1 {
+                text-align: center;
+            }
+            .secao-historico {
+                border: 1px solid #ccc;
+                padding: 1rem;
+                margin-bottom: 1.5rem;
+                page-break-inside: avoid;
+            }
+        </style>
+    </head>
+    <body>';
+}
 ?>
 
 <main>
     <h1 id="h1_compras" class="title">Todas as compras</h1>
+    
+    <?php if (!isset($_GET['pdf'])): ?>
+        <a href="ver-compras.php?pdf=1" target="_blank" id="gerar-pdf">Gerar PDF</a>
+    <?php endif; ?>
+
     <?php
         $conn = conectar_bd();
 
@@ -81,4 +116,17 @@ include "_cabecalho.php";
     ?>
 </main>
 
-<?php include "_rodape.php"; ?>
+<?php
+if (isset($_GET['pdf'])) {
+    echo '</body></html>';
+    $html = ob_get_clean();
+    $dompdf->loadHtml($html);
+    $dompdf->setPaper('A4', 'portrait');
+    $dompdf->render();
+
+    $dompdf->stream("relatorio_compras.pdf", ["Attachment" => false]);
+    exit;
+}
+
+include '_rodape.php';
+?>

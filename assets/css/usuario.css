@@ -224,6 +224,18 @@ HISTÓRICO DE COMPRAS
     margin-bottom: 3rem;
 }
 
+#gerar-pdf {
+    border: 1px solid var(--middle-color-2);
+    padding: 2px;
+    border-radius: 10px;
+    font-size: var(--normal-text-size);
+    color: var(--middle-color-2);
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
 /* Usuário não logado */
 #historico-falar {
     text-align: center;
